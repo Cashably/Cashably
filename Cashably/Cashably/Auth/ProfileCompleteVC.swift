@@ -19,6 +19,8 @@ class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndica
     
     @IBOutlet weak var btnComplete: UIButton!
     
+    var window: UIWindow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -68,6 +70,9 @@ class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndica
                 }
                 
                 self.showToast(message: "Updated successfully")
+                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+                self.window?.rootViewController = mainVC
+                self.navigationController?.pushViewController(mainVC, animated: true)
             }
         }
     }
