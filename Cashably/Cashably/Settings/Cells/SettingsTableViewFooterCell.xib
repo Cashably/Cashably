@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsFooter" rowHeight="55" id="gS5-BT-wlx" customClass="SettingsTableViewFooterCell" customModule="Cashably" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gS5-BT-wlx" id="rCg-EI-trf">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pe4-G6-7MN">
+                        <rect key="frame" x="0.0" y="0.0" width="419" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App v12.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL4-6o-nev">
+                                <rect key="frame" x="181.5" y="15" width="56" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All rights  @ reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVs-WN-DOQ">
+                                <rect key="frame" x="147.5" y="34.5" width="124.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pVs-WN-DOQ" firstAttribute="top" secondItem="iL4-6o-nev" secondAttribute="bottom" constant="5" id="04E-xS-fC6"/>
+                            <constraint firstItem="pVs-WN-DOQ" firstAttribute="centerX" secondItem="pe4-G6-7MN" secondAttribute="centerX" id="DFC-Ck-sba"/>
+                            <constraint firstItem="iL4-6o-nev" firstAttribute="centerX" secondItem="pe4-G6-7MN" secondAttribute="centerX" id="cVe-fM-YFw"/>
+                            <constraint firstItem="iL4-6o-nev" firstAttribute="top" secondItem="pe4-G6-7MN" secondAttribute="top" constant="15" id="me9-BY-kMs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="pe4-G6-7MN" secondAttribute="trailing" id="BWU-xI-8ww"/>
+                    <constraint firstAttribute="bottom" secondItem="pe4-G6-7MN" secondAttribute="bottom" id="IbK-Qj-uAn"/>
+                    <constraint firstItem="pe4-G6-7MN" firstAttribute="top" secondItem="rCg-EI-trf" secondAttribute="top" id="OLC-ir-EIJ"/>
+                    <constraint firstItem="pe4-G6-7MN" firstAttribute="leading" secondItem="rCg-EI-trf" secondAttribute="leading" id="g3s-B1-8Rp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lbVersion" destination="iL4-6o-nev" id="OG8-4m-BR8"/>
+            </connections>
+            <point key="canvasLocation" x="141.30434782608697" y="87.388392857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
