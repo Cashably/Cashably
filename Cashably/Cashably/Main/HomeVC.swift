@@ -34,6 +34,7 @@ class HomeVC: UIViewController {
         lbName.text = Auth.auth().currentUser?.displayName
         
         self.checkPermissions()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -124,6 +125,17 @@ class HomeVC: UIViewController {
     
     
     @IBAction func actionRequest(_ sender: Any) {
+        guard let connectedBankId = UserDefaults.standard.string(forKey: "connectedBankId") else {
+            let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
+            connectBankVC.delegate = self
+            self.navigationController?.pushViewController(connectBankVC, animated: true)
+            return
+        }
+        
+        let depositVC = self.storyboard?.instantiateViewController(withIdentifier: "DepositsVC") as! DepositsVC
+        depositVC.connectedBankId = connectedBankId
+        self.navigationController?.pushViewController(depositVC, animated: true)
+        
     }
     
 }
@@ -153,4 +165,11 @@ extension HomeVC: RequestOverdraftEnableDelegate {
     func dissmissOverdraft() {
         
     }
+}
+
+extension HomeVC: ConnectBankDelegate {
+    func connected() {
+        let depositsVC = self.storyboard?.instantiateViewController(withIdentifier: "DepositsVC") as! DepositsVC
+        self.navigationController?.pushViewController(depositsVC, animated: true)
+    }    
 }

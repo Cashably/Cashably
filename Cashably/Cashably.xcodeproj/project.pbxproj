@@ -21,11 +21,24 @@
 		F05365BC285F650500B771D9 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05365BB285F650500B771D9 /* SettingsTableViewCell.xib */; };
 		F05365BE285F665100B771D9 /* SettingsTableViewFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365BD285F665100B771D9 /* SettingsTableViewFooterCell.swift */; };
 		F05365C0285F667700B771D9 /* SettingsTableViewFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05365BF285F667700B771D9 /* SettingsTableViewFooterCell.xib */; };
-		F05365C2285F706F00B771D9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365C1285F706F00B771D9 /* HomeVC.swift */; };
 		F05365C5285F764D00B771D9 /* RequestFaceEnableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365C4285F764D00B771D9 /* RequestFaceEnableVC.swift */; };
 		F05365C7285F76A200B771D9 /* RequestActivitiesEnableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365C6285F76A200B771D9 /* RequestActivitiesEnableVC.swift */; };
 		F05365C9285F76D700B771D9 /* RequestNotificationEnableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365C8285F76D700B771D9 /* RequestNotificationEnableVC.swift */; };
 		F05365CB285F770D00B771D9 /* RequestOverdraftEnableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365CA285F770D00B771D9 /* RequestOverdraftEnableVC.swift */; };
+		F05365CE285FE98A00B771D9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365C1285F706F00B771D9 /* HomeVC.swift */; };
+		F05365D1285FEA5900B771D9 /* EmptyRequestPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365D0285FEA5900B771D9 /* EmptyRequestPay.swift */; };
+		F05365D3285FEAB000B771D9 /* RequestPayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365D2285FEAB000B771D9 /* RequestPayVC.swift */; };
+		F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365D4285FF27100B771D9 /* ConnectBankVC.swift */; };
+		F05365D7285FF2C300B771D9 /* ConnectProcessingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365D6285FF2C300B771D9 /* ConnectProcessingVC.swift */; };
+		F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365D8285FF32F00B771D9 /* DepositsVC.swift */; };
+		F05365DB285FF36400B771D9 /* PaycheckDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365DA285FF36400B771D9 /* PaycheckDetailVC.swift */; };
+		F05365DD285FF3A200B771D9 /* PaycheckDetailEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365DC285FF3A200B771D9 /* PaycheckDetailEditVC.swift */; };
+		F05365DF285FF40300B771D9 /* ApprovedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365DE285FF40300B771D9 /* ApprovedVC.swift */; };
+		F05365E1285FF43500B771D9 /* CashoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E0285FF43500B771D9 /* CashoutVC.swift */; };
+		F05365E3285FF47C00B771D9 /* CashoutTipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */; };
+		F05365E5285FF4D200B771D9 /* DonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E4285FF4D200B771D9 /* DonationVC.swift */; };
+		F05365E8285FF59600B771D9 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E7285FF59600B771D9 /* AddCard.swift */; };
+		F05365EA285FF5DF00B771D9 /* CashoutSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -44,6 +57,8 @@
 		F0A04358285DD48E00E29CE0 /* TopCornerRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */; };
 		F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04359285EA6E200E29CE0 /* InputView.swift */; };
 		F0A0435C285EB28C00E29CE0 /* ProfileCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */; };
+		F0B853562860044C002F90DA /* DepositTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853552860044C002F90DA /* DepositTableViewCell.swift */; };
+		F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B8535728600462002F90DA /* DepositTableViewCell.xib */; };
 		F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B87A02285F2C4E00414FFD /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +105,19 @@
 		F05365C6285F76A200B771D9 /* RequestActivitiesEnableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestActivitiesEnableVC.swift; sourceTree = "<group>"; };
 		F05365C8285F76D700B771D9 /* RequestNotificationEnableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationEnableVC.swift; sourceTree = "<group>"; };
 		F05365CA285F770D00B771D9 /* RequestOverdraftEnableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOverdraftEnableVC.swift; sourceTree = "<group>"; };
+		F05365D0285FEA5900B771D9 /* EmptyRequestPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequestPay.swift; sourceTree = "<group>"; };
+		F05365D2285FEAB000B771D9 /* RequestPayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPayVC.swift; sourceTree = "<group>"; };
+		F05365D4285FF27100B771D9 /* ConnectBankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectBankVC.swift; sourceTree = "<group>"; };
+		F05365D6285FF2C300B771D9 /* ConnectProcessingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectProcessingVC.swift; sourceTree = "<group>"; };
+		F05365D8285FF32F00B771D9 /* DepositsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositsVC.swift; sourceTree = "<group>"; };
+		F05365DA285FF36400B771D9 /* PaycheckDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycheckDetailVC.swift; sourceTree = "<group>"; };
+		F05365DC285FF3A200B771D9 /* PaycheckDetailEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycheckDetailEditVC.swift; sourceTree = "<group>"; };
+		F05365DE285FF40300B771D9 /* ApprovedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedVC.swift; sourceTree = "<group>"; };
+		F05365E0285FF43500B771D9 /* CashoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutVC.swift; sourceTree = "<group>"; };
+		F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutTipVC.swift; sourceTree = "<group>"; };
+		F05365E4285FF4D200B771D9 /* DonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationVC.swift; sourceTree = "<group>"; };
+		F05365E7285FF59600B771D9 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
+		F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutSuccessVC.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +140,8 @@
 		F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCornerRoundView.swift; sourceTree = "<group>"; };
 		F0A04359285EA6E200E29CE0 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCompleteVC.swift; sourceTree = "<group>"; };
+		F0B853552860044C002F90DA /* DepositTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositTableViewCell.swift; sourceTree = "<group>"; };
+		F0B8535728600462002F90DA /* DepositTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositTableViewCell.xib; sourceTree = "<group>"; };
 		F0B87A02285F2C4E00414FFD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		FCA47C7B2F17468B86FA6D3D /* Pods-CashablyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.release.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,9 +200,9 @@
 		F00E4DDD285CBE0300CB8DD6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F05365C1285F706F00B771D9 /* HomeVC.swift */,
 				F00E4DDE285CBE1E00CB8DD6 /* SplashVC.swift */,
 				F00E4DE6285CC4DE00CB8DD6 /* MainVC.swift */,
-				F05365C1285F706F00B771D9 /* HomeVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -229,6 +259,41 @@
 			path = PermissionViews;
 			sourceTree = "<group>";
 		};
+		F05365CC285FE8C800B771D9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F05365CF285FEA3700B771D9 /* RequestPay */ = {
+			isa = PBXGroup;
+			children = (
+				F0B853542860041B002F90DA /* Cells */,
+				F05365D0285FEA5900B771D9 /* EmptyRequestPay.swift */,
+				F05365D2285FEAB000B771D9 /* RequestPayVC.swift */,
+				F05365D4285FF27100B771D9 /* ConnectBankVC.swift */,
+				F05365D6285FF2C300B771D9 /* ConnectProcessingVC.swift */,
+				F05365D8285FF32F00B771D9 /* DepositsVC.swift */,
+				F05365DA285FF36400B771D9 /* PaycheckDetailVC.swift */,
+				F05365DC285FF3A200B771D9 /* PaycheckDetailEditVC.swift */,
+				F05365DE285FF40300B771D9 /* ApprovedVC.swift */,
+				F05365E4285FF4D200B771D9 /* DonationVC.swift */,
+			);
+			path = RequestPay;
+			sourceTree = "<group>";
+		};
+		F05365E6285FF55100B771D9 /* Cashout */ = {
+			isa = PBXGroup;
+			children = (
+				F05365E0285FF43500B771D9 /* CashoutVC.swift */,
+				F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */,
+				F05365E7285FF59600B771D9 /* AddCard.swift */,
+				F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */,
+			);
+			path = Cashout;
+			sourceTree = "<group>";
+		};
 		F0643CF52856C62600CAB86F = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +319,9 @@
 		F0643D002856C62600CAB86F /* Cashably */ = {
 			isa = PBXGroup;
 			children = (
+				F05365E6285FF55100B771D9 /* Cashout */,
+				F05365CF285FEA3700B771D9 /* RequestPay */,
+				F05365CC285FE8C800B771D9 /* Home */,
 				F05365C3285F75FF00B771D9 /* PermissionViews */,
 				F0B87A01285F2C3500414FFD /* Settings */,
 				F0A0434E285DBF6100E29CE0 /* Extensions */,
@@ -300,6 +368,15 @@
 				F0A04359285EA6E200E29CE0 /* InputView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0B853542860041B002F90DA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F0B853552860044C002F90DA /* DepositTableViewCell.swift */,
+				F0B8535728600462002F90DA /* DepositTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F0B87A01285F2C3500414FFD /* Settings */ = {
@@ -423,6 +500,7 @@
 				F0643D0E2856C62700CAB86F /* LaunchScreen.storyboard in Resources */,
 				F0A0434D285D71CF00E29CE0 /* GoogleService-Info.plist in Resources */,
 				F0643D0B2856C62700CAB86F /* Assets.xcassets in Resources */,
+				F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */,
 				F05365BC285F650500B771D9 /* SettingsTableViewCell.xib in Resources */,
 				F0643D092856C62600CAB86F /* Main.storyboard in Resources */,
 				F05365C0285F667700B771D9 /* SettingsTableViewFooterCell.xib in Resources */,
@@ -557,27 +635,41 @@
 				F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */,
 				F0A04354285DC40100E29CE0 /* UIViewController.swift in Sources */,
 				F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */,
+				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,
+				F05365DB285FF36400B771D9 /* PaycheckDetailVC.swift in Sources */,
+				F05365E5285FF4D200B771D9 /* DonationVC.swift in Sources */,
 				F0A04358285DD48E00E29CE0 /* TopCornerRoundView.swift in Sources */,
 				F05365CB285F770D00B771D9 /* RequestOverdraftEnableVC.swift in Sources */,
 				F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */,
 				F05365C5285F764D00B771D9 /* RequestFaceEnableVC.swift in Sources */,
 				F00E4DEF285D1C1000CB8DD6 /* VerifyPhoneVC.swift in Sources */,
+				F05365D1285FEA5900B771D9 /* EmptyRequestPay.swift in Sources */,
 				F00E4DE7285CC4DE00CB8DD6 /* MainVC.swift in Sources */,
+				F05365DF285FF40300B771D9 /* ApprovedVC.swift in Sources */,
+				F05365E3285FF47C00B771D9 /* CashoutTipVC.swift in Sources */,
 				F05365BE285F665100B771D9 /* SettingsTableViewFooterCell.swift in Sources */,
 				F00E4DE5285CC3FF00CB8DD6 /* UserAuthModel.swift in Sources */,
-				F05365C2285F706F00B771D9 /* HomeVC.swift in Sources */,
 				F0A0435C285EB28C00E29CE0 /* ProfileCompleteVC.swift in Sources */,
+				F05365D3285FEAB000B771D9 /* RequestPayVC.swift in Sources */,
 				F0A04350285DBF8D00E29CE0 /* Alert.swift in Sources */,
 				F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */,
 				F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */,
+				F05365EA285FF5DF00B771D9 /* CashoutSuccessVC.swift in Sources */,
 				F00E4DEA285CC58600CB8DD6 /* SignInVC.swift in Sources */,
+				F05365CE285FE98A00B771D9 /* HomeVC.swift in Sources */,
 				F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */,
+				F05365E1285FF43500B771D9 /* CashoutVC.swift in Sources */,
 				F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */,
+				F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */,
 				F05365C9285F76D700B771D9 /* RequestNotificationEnableVC.swift in Sources */,
+				F05365DD285FF3A200B771D9 /* PaycheckDetailEditVC.swift in Sources */,
+				F0B853562860044C002F90DA /* DepositTableViewCell.swift in Sources */,
 				F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */,
 				F00E4DEC285CC5DB00CB8DD6 /* ProfileEditVC.swift in Sources */,
 				F0A04352285DC08000E29CE0 /* UIView.swift in Sources */,
 				F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */,
+				F05365E8285FF59600B771D9 /* AddCard.swift in Sources */,
+				F05365D7285FF2C300B771D9 /* ConnectProcessingVC.swift in Sources */,
 				F00E4DDF285CBE1E00CB8DD6 /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
