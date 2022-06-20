@@ -18,9 +18,27 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDeleg
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnAddCard: UIButton!
     
-    @IBOutlet weak var tfCardNo: UITextField!
-    @IBOutlet weak var tfCardDate: UITextField!
-    @IBOutlet weak var tfCardCVV: UITextField!
+    @IBOutlet weak var tfCardNo: UITextField! {
+        didSet {
+            tfCardNo.delegate = self
+        }
+    }
+    @IBOutlet weak var tfCardDate: UITextField! {
+        didSet {
+            tfCardDate.delegate = self
+            tfCardDate.layer.cornerRadius = 10
+            tfCardDate.layer.borderWidth = 1
+            tfCardDate.layer.borderColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1).cgColor
+        }
+    }
+    @IBOutlet weak var tfCardCVV: UITextField! {
+        didSet {
+            tfCardCVV.delegate = self
+            tfCardCVV.layer.cornerRadius = 10
+            tfCardCVV.layer.borderWidth = 1
+            tfCardCVV.layer.borderColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1).cgColor
+        }
+    }
     
     var delegate: AddCardDelegate!
     
