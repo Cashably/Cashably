@@ -57,6 +57,19 @@ class SettingsVC: UIViewController {
        self.navigationController?.isNavigationBarHidden = false
    }
     
+    func logout() {
+        try! Auth.auth().signOut()
+        let splashVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+        navigationController?.pushViewController(splashVC, animated: true)
+    }
+    
+    func showLogoutAlert() {
+        let alert = Alert.showConfirmAlert(message: "Are you sure logout?") { _ in
+            self.logout()
+        }
+        self.presentVC(alert)
+    }
+    
     @IBAction func actionEdit(_ sender: Any) {
         let profileEditVC = storyboard?.instantiateViewController(withIdentifier: "ProfileEditVC") as! ProfileEditVC
         navigationController?.pushViewController(profileEditVC, animated: true)
@@ -77,9 +90,7 @@ extension SettingsVC: UITableViewDelegate {
             navigationController?.pushViewController(helpVC, animated: true)
             break
         case .logout:
-            try! Auth.auth().signOut()
-            let splashVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-            navigationController?.pushViewController(splashVC, animated: true)
+            self.showLogoutAlert()
             break
         case .none:
             break
