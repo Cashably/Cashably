@@ -24,5 +24,16 @@ open class RoundView: UIView {
         self.layer.cornerRadius = 10
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor(red: 0.918, green: 0.922, blue: 0.937, alpha: 1).cgColor
+        
+        let shadows = UIView()
+        shadows.frame = self.frame
+        shadows.clipsToBounds = false
+        self.addSubview(shadows)
+        self.layer.shadowPath = UIBezierPath(roundedRect: shadows.bounds, cornerRadius: 15).cgPath
+        self.layer.shadowColor = UIColor(red: 0.075, green: 0.306, blue: 0.251, alpha: 0.05).cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 110
+        self.layer.shadowOffset = CGSize(width: 30, height: 50)
+        self.layer.bounds = shadows.bounds
     }
 }

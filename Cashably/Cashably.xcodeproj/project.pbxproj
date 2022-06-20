@@ -67,6 +67,10 @@
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
 		F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F482860C09D004B1515 /* ToggleButton.swift */; };
+		F0CE9F4B2860C963004B1515 /* EmptyRequestPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F4A2860C963004B1515 /* EmptyRequestPayView.swift */; };
+		F0CE9F4D2860C989004B1515 /* EmptyRequestPayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F4C2860C989004B1515 /* EmptyRequestPayView.xib */; };
+		F0CE9F4F2860CAA8004B1515 /* RequestPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F4E2860CAA8004B1515 /* RequestPayView.swift */; };
+		F0CE9F512860CADE004B1515 /* RequestPayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F502860CADE004B1515 /* RequestPayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,10 @@
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
 		F0CE9F482860C09D004B1515 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		F0CE9F4A2860C963004B1515 /* EmptyRequestPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequestPayView.swift; sourceTree = "<group>"; };
+		F0CE9F4C2860C989004B1515 /* EmptyRequestPayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyRequestPayView.xib; sourceTree = "<group>"; };
+		F0CE9F4E2860CAA8004B1515 /* RequestPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPayView.swift; sourceTree = "<group>"; };
+		F0CE9F502860CADE004B1515 /* RequestPayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestPayView.xib; sourceTree = "<group>"; };
 		FCA47C7B2F17468B86FA6D3D /* Pods-CashablyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.release.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -394,6 +402,10 @@
 			children = (
 				F0B853552860044C002F90DA /* DepositTableViewCell.swift */,
 				F0B8535728600462002F90DA /* DepositTableViewCell.xib */,
+				F0CE9F4A2860C963004B1515 /* EmptyRequestPayView.swift */,
+				F0CE9F4C2860C989004B1515 /* EmptyRequestPayView.xib */,
+				F0CE9F4E2860CAA8004B1515 /* RequestPayView.swift */,
+				F0CE9F502860CADE004B1515 /* RequestPayView.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -529,7 +541,9 @@
 				F0643D0E2856C62700CAB86F /* LaunchScreen.storyboard in Resources */,
 				F0A0434D285D71CF00E29CE0 /* GoogleService-Info.plist in Resources */,
 				F0643D0B2856C62700CAB86F /* Assets.xcassets in Resources */,
+				F0CE9F512860CADE004B1515 /* RequestPayView.xib in Resources */,
 				F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */,
+				F0CE9F4D2860C989004B1515 /* EmptyRequestPayView.xib in Resources */,
 				F05365BC285F650500B771D9 /* SettingsTableViewCell.xib in Resources */,
 				F0643D092856C62600CAB86F /* Main.storyboard in Resources */,
 				F05365C0285F667700B771D9 /* SettingsTableViewFooterCell.xib in Resources */,
@@ -690,6 +704,7 @@
 				F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */,
 				F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */,
 				F05365EA285FF5DF00B771D9 /* CashoutSuccessVC.swift in Sources */,
+				F0CE9F4F2860CAA8004B1515 /* RequestPayView.swift in Sources */,
 				F00E4DEA285CC58600CB8DD6 /* SignInVC.swift in Sources */,
 				F05365CE285FE98A00B771D9 /* HomeVC.swift in Sources */,
 				F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */,
@@ -698,6 +713,7 @@
 				F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */,
 				F05365C9285F76D700B771D9 /* RequestNotificationEnableVC.swift in Sources */,
 				F05365DD285FF3A200B771D9 /* PaycheckDetailEditVC.swift in Sources */,
+				F0CE9F4B2860C963004B1515 /* EmptyRequestPayView.swift in Sources */,
 				F0B853562860044C002F90DA /* DepositTableViewCell.swift in Sources */,
 				F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */,
 				F00E4DEC285CC5DB00CB8DD6 /* ProfileEditVC.swift in Sources */,

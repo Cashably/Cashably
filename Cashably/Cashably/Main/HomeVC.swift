@@ -14,7 +14,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var lbEmail: UILabel!
     @IBOutlet weak var lbName: UILabel!
     
-    @IBOutlet weak var btnRequest: UIButton!
+    @IBOutlet weak var bottomView: UIView!
+    
     
     private enum Permissions: Int {
         case faceid
@@ -30,8 +31,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        lbEmail.text = Auth.auth().currentUser?.email
-        lbName.text = Auth.auth().currentUser?.displayName
+        self.configure()
         
         self.checkPermissions()
         
@@ -51,6 +51,35 @@ class HomeVC: UIViewController {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+    private func configure() {
+        lbEmail.text = Auth.auth().currentUser?.email
+        lbName.text = Auth.auth().currentUser?.displayName
+        
+        
+        
+        if UserDefaults.standard.float(forKey: "received") == 0 {
+            let subview: EmptyRequestPayView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as! EmptyRequestPayView
+            subview.onRequest = {() in self.onRequest()}
+            self.bottomView.addSubview(subview)
+            subview.translatesAutoresizingMaskIntoConstraints = false
+            subview.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
+            subview.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
+            subview.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
+            subview.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
+        } else {
+            let subview = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as! RequestPayView
+            subview.onRequest = {() in self.onRequest()}
+            subview.onPay = {() in self.onPay()}
+            self.bottomView.addSubview(subview)
+            subview.translatesAutoresizingMaskIntoConstraints = false
+            subview.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
+            subview.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
+            subview.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
+            subview.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
+        }
+        
+    }
     
     private func checkFaceEnable() {
         let face = UserDefaults.standard.bool(forKey: "enableFaceID")
@@ -128,8 +157,7 @@ class HomeVC: UIViewController {
         
     }
     
-    
-    @IBAction func actionRequest(_ sender: Any) {
+    func onRequest() {
         guard let connectedBankId = UserDefaults.standard.string(forKey: "connectedBankId") else {
             let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
             connectBankVC.delegate = self
@@ -140,6 +168,15 @@ class HomeVC: UIViewController {
         let depositVC = self.storyboard?.instantiateViewController(withIdentifier: "DepositsVC") as! DepositsVC
         depositVC.connectedBankId = connectedBankId
         self.navigationController?.pushViewController(depositVC, animated: true)
+        
+    }
+    
+    func onPay() {
+        let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
+        self.navigationController?.pushViewController(cashoutVC, animated: true)
+    }
+    
+    func onSnooze() {
         
     }
     

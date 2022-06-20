@@ -38,6 +38,7 @@ class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
    }
     
     @IBAction func actionAccept(_ sender: UIButton) {
+        UserDefaults.standard.set(50, forKey: "received")
         let cashoutVC = storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
         self.navigationController?.pushViewController(cashoutVC, animated: true)
     }

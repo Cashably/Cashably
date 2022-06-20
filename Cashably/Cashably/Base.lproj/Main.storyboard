@@ -2404,90 +2404,14 @@ your Affirm account and loans.</string>
                                             <constraint firstItem="ZwW-vs-zoh" firstAttribute="top" secondItem="jzg-sE-xav" secondAttribute="bottom" constant="10" id="yQC-OH-l76"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB5-gk-ajg">
-                                        <rect key="frame" x="0.0" y="788" width="414" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="E7y-bB-8ye"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2R-48-vhz" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2R-48-vhz">
                                         <rect key="frame" x="0.0" y="340" width="414" height="473"/>
-                                        <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0U-2u-fnq">
-                                                <rect key="frame" x="0.0" y="30" width="414" height="443"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIq-TY-zvn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="375"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="request_loan_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ybE-pQ-J0Y">
-                                                                <rect key="frame" x="117" y="0.0" width="180" height="180"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e32-Oc-mkw">
-                                                                <rect key="frame" x="112.5" y="185" width="189.5" height="60"/>
-                                                                <string key="text">Request Instant 
-Cash Loan</string>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                                <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXU-oc-5C9">
-                                                                <rect key="frame" x="132" y="255" width="150" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="72k-aa-7qs"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="vRG-VY-ikt"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Request Now">
-                                                                    <backgroundConfiguration key="background" cornerRadius="10">
-                                                                        <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </backgroundConfiguration>
-                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </buttonConfiguration>
-                                                                <connections>
-                                                                    <action selector="actionRequest:" destination="IgX-CQ-l0W" eventType="primaryActionTriggered" id="d9W-jS-mZb"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstItem="XXU-oc-5C9" firstAttribute="top" secondItem="e32-Oc-mkw" secondAttribute="bottom" constant="10" id="0Et-7G-lOD"/>
-                                                            <constraint firstItem="e32-Oc-mkw" firstAttribute="centerX" secondItem="YIq-TY-zvn" secondAttribute="centerX" id="3Hg-Kf-IdO"/>
-                                                            <constraint firstItem="XXU-oc-5C9" firstAttribute="centerX" secondItem="YIq-TY-zvn" secondAttribute="centerX" id="Cwa-5A-d8X"/>
-                                                            <constraint firstItem="ybE-pQ-J0Y" firstAttribute="centerX" secondItem="YIq-TY-zvn" secondAttribute="centerX" id="RfO-1Q-fGP"/>
-                                                            <constraint firstItem="e32-Oc-mkw" firstAttribute="top" secondItem="ybE-pQ-J0Y" secondAttribute="bottom" constant="5" id="b1I-rb-ym9"/>
-                                                            <constraint firstItem="ybE-pQ-J0Y" firstAttribute="top" secondItem="YIq-TY-zvn" secondAttribute="top" id="fQF-Lh-gM9"/>
-                                                            <constraint firstAttribute="height" constant="375" id="lAM-u2-fhi"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="YIq-TY-zvn" firstAttribute="leading" secondItem="j0U-2u-fnq" secondAttribute="leading" id="Clq-FG-5Lq"/>
-                                                    <constraint firstAttribute="trailing" secondItem="YIq-TY-zvn" secondAttribute="trailing" id="GEc-6v-OF0"/>
-                                                    <constraint firstItem="YIq-TY-zvn" firstAttribute="trailing" secondItem="Vsn-yC-Lhm" secondAttribute="trailing" id="Q9j-nT-a8h"/>
-                                                    <constraint firstAttribute="bottom" secondItem="YIq-TY-zvn" secondAttribute="bottom" id="b8e-5l-pNE"/>
-                                                    <constraint firstItem="YIq-TY-zvn" firstAttribute="top" secondItem="j0U-2u-fnq" secondAttribute="top" id="hVl-a3-3Iq"/>
-                                                </constraints>
-                                                <viewLayoutGuide key="contentLayoutGuide" id="TVg-UY-EkJ"/>
-                                                <viewLayoutGuide key="frameLayoutGuide" id="Vsn-yC-Lhm"/>
-                                            </scrollView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="j0U-2u-fnq" firstAttribute="top" secondItem="n2R-48-vhz" secondAttribute="top" constant="30" id="88F-Sg-Lie"/>
-                                            <constraint firstAttribute="bottom" secondItem="j0U-2u-fnq" secondAttribute="bottom" id="dhC-Vi-RSd"/>
-                                            <constraint firstAttribute="trailing" secondItem="j0U-2u-fnq" secondAttribute="trailing" id="ex3-8H-yLP"/>
-                                            <constraint firstItem="j0U-2u-fnq" firstAttribute="leading" secondItem="n2R-48-vhz" secondAttribute="leading" id="lzR-DP-Cgr"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="n2R-48-vhz" firstAttribute="leading" secondItem="M2R-zz-6JX" secondAttribute="leading" id="89d-XL-Zl8"/>
-                                    <constraint firstAttribute="bottom" secondItem="tB5-gk-ajg" secondAttribute="bottom" id="AV0-MY-Q6Y"/>
-                                    <constraint firstAttribute="trailing" secondItem="tB5-gk-ajg" secondAttribute="trailing" id="M2i-7a-LV4"/>
                                     <constraint firstItem="Iw4-nJ-rEh" firstAttribute="centerX" secondItem="M2R-zz-6JX" secondAttribute="centerX" id="NLg-WM-1ta"/>
-                                    <constraint firstItem="tB5-gk-ajg" firstAttribute="leading" secondItem="M2R-zz-6JX" secondAttribute="leading" id="TlG-MQ-LRK"/>
                                     <constraint firstAttribute="bottom" secondItem="n2R-48-vhz" secondAttribute="bottom" id="Vft-rZ-TPh"/>
                                     <constraint firstItem="n2R-48-vhz" firstAttribute="top" secondItem="Iw4-nJ-rEh" secondAttribute="bottom" constant="50" id="had-wq-STp"/>
                                     <constraint firstAttribute="trailing" secondItem="n2R-48-vhz" secondAttribute="trailing" id="ltu-p1-87z"/>
@@ -2508,7 +2432,7 @@ Cash Loan</string>
                         <color key="badgeColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="btnRequest" destination="XXU-oc-5C9" id="bZt-QP-tga"/>
+                        <outlet property="bottomView" destination="n2R-48-vhz" id="8b2-r1-zpY"/>
                         <outlet property="lbEmail" destination="ZwW-vs-zoh" id="ZDJ-pt-AF9"/>
                         <outlet property="lbName" destination="jzg-sE-xav" id="dn3-d6-VCS"/>
                     </connections>
@@ -6437,7 +6361,6 @@ if you want..</string>
         <image name="pig_connect" width="229" height="184"/>
         <image name="processing_account_logo" width="230" height="450"/>
         <image name="receipt_box" width="300" height="330"/>
-        <image name="request_loan_logo" width="180" height="180"/>
         <image name="sad_animal" width="187" height="224"/>
         <image name="splash_logo" width="100" height="100"/>
         <image name="txt_approved" width="284" height="96"/>
