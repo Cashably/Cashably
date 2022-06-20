@@ -3775,10 +3775,10 @@ Cash Loan</string>
             </objects>
             <point key="canvasLocation" x="808.69565217391312" y="2580.1339285714284"/>
         </scene>
-        <!--SettingsVC-->
+        <!--Settings-->
         <scene sceneID="RMG-LY-aDv">
             <objects>
-                <viewController storyboardIdentifier="SettingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w3c-jk-JHg" userLabel="SettingsVC" customClass="SettingsVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w3c-jk-JHg" customClass="SettingsVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cC-jW-9fe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3850,7 +3850,7 @@ Cash Loan</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="inl-lb-zHd" firstAttribute="centerX" secondItem="LE0-QY-9S3" secondAttribute="centerX" id="HuY-Ft-vmj"/>
                                     <constraint firstAttribute="trailing" secondItem="Ngh-JX-lfc" secondAttribute="trailing" id="NWN-pk-ISC"/>
@@ -5678,7 +5678,7 @@ for amount credited.</string>
         <!--HelpVC-->
         <scene sceneID="pWM-wA-KMF">
             <objects>
-                <viewController id="mkr-JQ-Mz2" userLabel="HelpVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mkr-JQ-Mz2" customClass="HelpVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccc-B0-9Ev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5709,14 +5709,21 @@ for amount credited.</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-CC-WY1" userLabel="btn_back">
-                                        <rect key="frame" x="20" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="20" y="20" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Law-7e-iHa"/>
                                             <constraint firstAttribute="width" constant="50" id="nG0-fP-07j"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="ic_back_white"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_back_black">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="strokeColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionBack:" destination="mkr-JQ-Mz2" eventType="primaryActionTriggered" id="x6f-g5-ufC"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’re here to help!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59M-Tq-TB2">
                                         <rect key="frame" x="20" y="335" width="374" height="30"/>
@@ -5732,7 +5739,7 @@ you within 1-2 Business Days.</string>
                                         <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIA-nT-SsQ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIA-nT-SsQ" customClass="InputView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="20" y="733" width="374" height="55"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_smile" translatesAutoresizingMaskIntoConstraints="NO" id="PV0-pq-U7F">
@@ -5757,7 +5764,6 @@ you within 1-2 Business Days.</string>
                                                         <rect key="frame" x="5.5" y="5.5" width="29" height="29"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="vFJ-MH-pLx" firstAttribute="centerY" secondItem="E2K-eW-cXw" secondAttribute="centerY" id="33N-8t-mpK"/>
                                                     <constraint firstItem="1kI-0W-D8v" firstAttribute="centerX" secondItem="E2K-eW-cXw" secondAttribute="centerX" id="EYc-rH-9IM"/>
@@ -5779,13 +5785,19 @@ you within 1-2 Business Days.</string>
                                             <constraint firstItem="PV0-pq-U7F" firstAttribute="leading" secondItem="nIA-nT-SsQ" secondAttribute="leading" constant="17" id="qY7-uc-aqu"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help center!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKu-Ga-vnx">
+                                        <rect key="frame" x="149" y="33" width="116" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="59M-Tq-TB2" firstAttribute="top" secondItem="ivO-2Z-tgp" secondAttribute="bottom" id="03c-YR-nKN"/>
                                     <constraint firstItem="jEB-CC-WY1" firstAttribute="leading" secondItem="8G4-dr-OEX" secondAttribute="leading" constant="20" id="1dj-EE-WnD"/>
                                     <constraint firstAttribute="trailing" secondItem="59M-Tq-TB2" secondAttribute="trailing" constant="20" id="72X-a4-ch1"/>
-                                    <constraint firstItem="jEB-CC-WY1" firstAttribute="top" secondItem="8G4-dr-OEX" secondAttribute="top" id="8t1-rm-cmw"/>
+                                    <constraint firstItem="jEB-CC-WY1" firstAttribute="top" secondItem="8G4-dr-OEX" secondAttribute="top" constant="20" id="8t1-rm-cmw"/>
                                     <constraint firstAttribute="trailing" secondItem="nIA-nT-SsQ" secondAttribute="trailing" constant="20" id="GYJ-6r-qdZ"/>
                                     <constraint firstItem="59M-Tq-TB2" firstAttribute="leading" secondItem="8G4-dr-OEX" secondAttribute="leading" constant="20" id="Ilf-Tz-sxf"/>
                                     <constraint firstItem="ivO-2Z-tgp" firstAttribute="centerX" secondItem="8G4-dr-OEX" secondAttribute="centerX" id="Jus-h2-T5s"/>
@@ -5794,7 +5806,9 @@ you within 1-2 Business Days.</string>
                                     <constraint firstItem="nIA-nT-SsQ" firstAttribute="leading" secondItem="8G4-dr-OEX" secondAttribute="leading" constant="20" id="WbT-et-Uvw"/>
                                     <constraint firstAttribute="bottom" secondItem="nIA-nT-SsQ" secondAttribute="bottom" constant="30" id="eqE-lJ-EVX"/>
                                     <constraint firstItem="6DC-Ow-T5V" firstAttribute="leading" secondItem="8G4-dr-OEX" secondAttribute="leading" constant="30" id="hJg-er-PhG"/>
+                                    <constraint firstItem="LKu-Ga-vnx" firstAttribute="centerX" secondItem="8G4-dr-OEX" secondAttribute="centerX" id="nKc-IB-CD7"/>
                                     <constraint firstAttribute="trailing" secondItem="6DC-Ow-T5V" secondAttribute="trailing" constant="30" id="qMm-L5-3bM"/>
+                                    <constraint firstItem="LKu-Ga-vnx" firstAttribute="centerY" secondItem="jEB-CC-WY1" secondAttribute="centerY" id="x1N-rC-DYI"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -5807,6 +5821,11 @@ you within 1-2 Business Days.</string>
                             <constraint firstItem="8G4-dr-OEX" firstAttribute="trailing" secondItem="bit-9s-Axh" secondAttribute="trailing" id="yhb-0r-umA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnBack" destination="jEB-CC-WY1" id="4xl-ak-efr"/>
+                        <outlet property="sendView" destination="E2K-eW-cXw" id="HZS-SZ-wxG"/>
+                        <outlet property="tfMsg" destination="mOd-Ud-f6Q" id="7Hc-5c-fSP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X63-fN-O7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

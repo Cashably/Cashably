@@ -17,6 +17,7 @@
 		F00E4DEA285CC58600CB8DD6 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DE9285CC58600CB8DD6 /* SignInVC.swift */; };
 		F00E4DEC285CC5DB00CB8DD6 /* ProfileEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DEB285CC5DB00CB8DD6 /* ProfileEditVC.swift */; };
 		F00E4DEF285D1C1000CB8DD6 /* VerifyPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DEE285D1C1000CB8DD6 /* VerifyPhoneVC.swift */; };
+		F025F8DB28606F4B00BABB3D /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F025F8DA28606F4B00BABB3D /* HelpVC.swift */; };
 		F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365B9285F64E200B771D9 /* SettingsTableViewCell.swift */; };
 		F05365BC285F650500B771D9 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05365BB285F650500B771D9 /* SettingsTableViewCell.xib */; };
 		F05365BE285F665100B771D9 /* SettingsTableViewFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365BD285F665100B771D9 /* SettingsTableViewFooterCell.swift */; };
@@ -97,6 +98,7 @@
 		F00E4DEB285CC5DB00CB8DD6 /* ProfileEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditVC.swift; sourceTree = "<group>"; };
 		F00E4DED285D19F400CB8DD6 /* Cashably.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cashably.entitlements; sourceTree = "<group>"; };
 		F00E4DEE285D1C1000CB8DD6 /* VerifyPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneVC.swift; sourceTree = "<group>"; };
+		F025F8DA28606F4B00BABB3D /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		F05365B9285F64E200B771D9 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		F05365BB285F650500B771D9 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		F05365BD285F665100B771D9 /* SettingsTableViewFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewFooterCell.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 			children = (
 				F05365B8285F64AF00B771D9 /* Cells */,
 				F0B87A02285F2C4E00414FFD /* SettingsVC.swift */,
+				F025F8DA28606F4B00BABB3D /* HelpVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				F00E4DEF285D1C1000CB8DD6 /* VerifyPhoneVC.swift in Sources */,
 				F05365D1285FEA5900B771D9 /* EmptyRequestPay.swift in Sources */,
 				F00E4DE7285CC4DE00CB8DD6 /* MainVC.swift in Sources */,
+				F025F8DB28606F4B00BABB3D /* HelpVC.swift in Sources */,
 				F05365DF285FF40300B771D9 /* ApprovedVC.swift in Sources */,
 				F05365E3285FF47C00B771D9 /* CashoutTipVC.swift in Sources */,
 				F05365BE285F665100B771D9 /* SettingsTableViewFooterCell.swift in Sources */,

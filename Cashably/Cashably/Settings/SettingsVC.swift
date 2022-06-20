@@ -70,7 +70,11 @@ extension SettingsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch self.settings[indexPath.row] {
-        case .transactions, .notification, .cards, .about, .chat:
+        case .transactions, .notification, .cards, .about:
+            break
+        case .chat:
+            let helpVC = storyboard?.instantiateViewController(withIdentifier: "HelpVC") as! HelpVC
+            navigationController?.pushViewController(helpVC, animated: true)
             break
         case .logout:
             try! Auth.auth().signOut()
