@@ -43,8 +43,7 @@ class PaycheckDetailEditVC: UIViewController, UITextFieldDelegate, NVActivityInd
     }
     
     @IBAction func actionRemove(_ sender: UIButton) {
-        let depositVC = storyboard?.instantiateViewController(withIdentifier: "DepositsVC") as! DepositsVC
-        self.navigationController?.popToViewController(depositVC, animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func actionBack(_ sender: UIButton) {
