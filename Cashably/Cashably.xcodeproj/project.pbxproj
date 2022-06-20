@@ -66,6 +66,7 @@
 		F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B87A02285F2C4E00414FFD /* SettingsVC.swift */; };
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
+		F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F482860C09D004B1515 /* ToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		F0B87A02285F2C4E00414FFD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
+		F0CE9F482860C09D004B1515 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		FCA47C7B2F17468B86FA6D3D /* Pods-CashablyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.release.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -382,6 +384,7 @@
 				F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */,
 				F0A04359285EA6E200E29CE0 /* InputView.swift */,
 				F0B853592860145B002F90DA /* RoundView.swift */,
+				F0CE9F482860C09D004B1515 /* ToggleButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				F05365C7285F76A200B771D9 /* RequestActivitiesEnableVC.swift in Sources */,
 				F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */,
 				F0A04354285DC40100E29CE0 /* UIViewController.swift in Sources */,
+				F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */,
 				F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */,
 				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,
 				F05365DB285FF36400B771D9 /* PaycheckDetailVC.swift in Sources */,

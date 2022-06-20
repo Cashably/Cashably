@@ -26,10 +26,14 @@ class BankVC: UIViewController {
         
         self.btnWeek.backgroundColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1)
         self.btnWeek.layer.cornerRadius = 10
-        self.btnWeek.titleLabel?.textColor = .white
-        self.btnMonth.backgroundColor = .clear
-        self.btnMonth.titleLabel?.textColor = UIColor(red: 0.388, green: 0.384, blue: 0.384, alpha: 1)
+        self.btnWeek.configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var container = incoming
+            container.foregroundColor = .white
+            return container
+        }
+
         self.btnMonth.layer.cornerRadius = 10
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,20 +56,34 @@ class BankVC: UIViewController {
     
     @IBAction func actionWeek(_ sender: UIButton) {
         self.btnWeek.backgroundColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1)
-        self.btnWeek.titleLabel?.textColor = .white
-        self.btnWeek.layer.cornerRadius = 10
+        self.btnWeek.configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var container = incoming
+            container.foregroundColor = .white
+            return container
+        }
+
         self.btnMonth.backgroundColor = .clear
-        self.btnMonth.titleLabel?.textColor = UIColor(red: 0.388, green: 0.384, blue: 0.384, alpha: 1)
-        self.btnMonth.layer.cornerRadius = 10
+        self.btnMonth.configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var container = incoming
+            container.foregroundColor = UIColor(red: 0.388, green: 0.384, blue: 0.384, alpha: 1)
+            return container
+        }
     }
     
     @IBAction func actionMonth(_ sender: UIButton) {
         self.btnMonth.backgroundColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1)
-        self.btnMonth.titleLabel?.textColor = .white
-        self.btnMonth.layer.cornerRadius = 10
+        self.btnMonth.configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var container = incoming
+            container.foregroundColor = .white
+            return container
+        }
+
         self.btnWeek.backgroundColor = .clear
-        self.btnWeek.titleLabel?.textColor = UIColor(red: 0.388, green: 0.384, blue: 0.384, alpha: 1)
-        self.btnWeek.layer.cornerRadius = 10
+        self.btnWeek.configuration?.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var container = incoming
+            container.foregroundColor = UIColor(red: 0.388, green: 0.384, blue: 0.384, alpha: 1)
+            return container
+        }
     }
     
     
