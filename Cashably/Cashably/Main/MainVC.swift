@@ -16,6 +16,12 @@ class MainVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
+    }
+    
+    override var childForStatusBarStyle: UIViewController? {
+        return selectedViewController
     }
     
     override func viewWillAppear(_ animated: Bool) {

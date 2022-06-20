@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().tintColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1)
+        
         return true
     }
 

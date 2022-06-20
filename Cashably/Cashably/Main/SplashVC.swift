@@ -41,7 +41,6 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
         self.startAnimating()
         
         if let user = Auth.auth().currentUser {
-            print(user.displayName)
             if user.displayName == nil {
                 self.moveToCompleteProfile()
             } else {
@@ -55,7 +54,7 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
     func moveToMain() {
         self.stopAnimating()
         let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-        self.window?.rootViewController = mainVC
+//        self.window?.rootViewController = mainVC
         navigationController?.pushViewController(mainVC, animated: true)
     }
     
