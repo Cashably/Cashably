@@ -3007,6 +3007,13 @@ Cash Loan</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syO-hM-BAi">
+                                        <rect key="frame" x="0.0" y="793" width="414" height="25"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="cLo-rl-RUf"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H99-y1-Cju">
                                         <rect key="frame" x="20" y="170" width="374" height="49.5"/>
                                         <subviews>
@@ -3096,13 +3103,16 @@ Cash Loan</string>
                                     <constraint firstAttribute="trailing" secondItem="uq5-9k-nf9" secondAttribute="trailing" id="IHO-Pb-kHS"/>
                                     <constraint firstItem="IRw-ul-wGo" firstAttribute="top" secondItem="gFp-qL-jIG" secondAttribute="bottom" constant="20" id="Lo2-2K-JuI"/>
                                     <constraint firstItem="gFp-qL-jIG" firstAttribute="top" secondItem="8v1-CG-jBU" secondAttribute="top" constant="20" id="N9S-uQ-nRY"/>
+                                    <constraint firstAttribute="bottom" secondItem="syO-hM-BAi" secondAttribute="bottom" id="NRP-eg-kOw"/>
                                     <constraint firstItem="H99-y1-Cju" firstAttribute="leading" secondItem="8v1-CG-jBU" secondAttribute="leading" constant="20" id="Qls-ff-ScM"/>
                                     <constraint firstItem="ssG-gf-Yqh" firstAttribute="leading" secondItem="8v1-CG-jBU" secondAttribute="leading" constant="20" id="R0i-iJ-MvP"/>
+                                    <constraint firstItem="syO-hM-BAi" firstAttribute="leading" secondItem="8v1-CG-jBU" secondAttribute="leading" id="U1s-4N-1gW"/>
                                     <constraint firstItem="H99-y1-Cju" firstAttribute="top" secondItem="IRw-ul-wGo" secondAttribute="bottom" constant="20" id="Z9B-5p-gPg"/>
                                     <constraint firstItem="uq5-9k-nf9" firstAttribute="leading" secondItem="8v1-CG-jBU" secondAttribute="leading" id="ZZv-4Z-bZ3"/>
                                     <constraint firstItem="gFp-qL-jIG" firstAttribute="leading" secondItem="8v1-CG-jBU" secondAttribute="leading" constant="20" id="bKH-hl-Asp"/>
                                     <constraint firstAttribute="bottom" secondItem="uq5-9k-nf9" secondAttribute="bottom" id="pbM-Ri-Bhc"/>
                                     <constraint firstAttribute="trailing" secondItem="gFp-qL-jIG" secondAttribute="trailing" constant="20" id="qGD-BL-0th"/>
+                                    <constraint firstAttribute="trailing" secondItem="syO-hM-BAi" secondAttribute="trailing" id="wiW-1R-Nbt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -4100,12 +4110,12 @@ your money.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cg_loan_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9Ee-Sa-Wtf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vww-8p-Jeo">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cg_loan_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9Ee-Sa-Wtf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PO-pn-PLM" userLabel="btn_back">
                                         <rect key="frame" x="20" y="20" width="50" height="50"/>
                                         <constraints>
@@ -4122,12 +4132,28 @@ your money.</string>
                                             <action selector="actionBack:" destination="pHY-dE-YWh" eventType="primaryActionTriggered" id="Icu-5q-ik4"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B64-FC-vtv">
-                                        <rect key="frame" x="157.5" y="200" width="99.5" height="48"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNv-S9-E06">
+                                        <rect key="frame" x="117" y="140" width="180" height="180"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="Jjo-8z-ecX">
+                                                <rect key="frame" x="14" y="14" width="152" height="152"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-06-4fC">
+                                                <rect key="frame" x="22.5" y="57" width="135.5" height="66"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Jjo-8z-ecX" firstAttribute="centerX" secondItem="eNv-S9-E06" secondAttribute="centerX" id="1fI-co-t2v"/>
+                                            <constraint firstItem="Adc-06-4fC" firstAttribute="centerX" secondItem="eNv-S9-E06" secondAttribute="centerX" id="2eh-Xk-XWf"/>
+                                            <constraint firstItem="Adc-06-4fC" firstAttribute="centerY" secondItem="eNv-S9-E06" secondAttribute="centerY" id="5UL-He-6Uo"/>
+                                            <constraint firstAttribute="width" constant="180" id="XKR-4G-g0q"/>
+                                            <constraint firstItem="Jjo-8z-ecX" firstAttribute="centerY" secondItem="eNv-S9-E06" secondAttribute="centerY" id="bUm-46-3cZ"/>
+                                            <constraint firstAttribute="height" constant="180" id="vYM-rS-0mx"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBD-Hb-hTS">
                                         <rect key="frame" x="20" y="718" width="374" height="60"/>
                                         <constraints>
@@ -4147,17 +4173,13 @@ your money.</string>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="9Ee-Sa-Wtf" firstAttribute="leading" secondItem="vww-8p-Jeo" secondAttribute="leading" id="4gs-hf-TLC"/>
-                                    <constraint firstItem="9Ee-Sa-Wtf" firstAttribute="top" secondItem="vww-8p-Jeo" secondAttribute="top" id="Ae4-au-WBn"/>
-                                    <constraint firstItem="B64-FC-vtv" firstAttribute="centerX" secondItem="vww-8p-Jeo" secondAttribute="centerX" id="KZn-a1-AMM"/>
                                     <constraint firstAttribute="trailing" secondItem="xBD-Hb-hTS" secondAttribute="trailing" constant="20" id="LiT-4e-d3H"/>
                                     <constraint firstItem="xBD-Hb-hTS" firstAttribute="leading" secondItem="vww-8p-Jeo" secondAttribute="leading" constant="20" id="QmP-Jo-r2T"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Ee-Sa-Wtf" secondAttribute="trailing" id="Ta1-1M-8HO"/>
                                     <constraint firstItem="4PO-pn-PLM" firstAttribute="leading" secondItem="vww-8p-Jeo" secondAttribute="leading" constant="20" id="a05-U8-hs4"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Ee-Sa-Wtf" secondAttribute="bottom" id="jbN-61-QAm"/>
+                                    <constraint firstItem="eNv-S9-E06" firstAttribute="centerX" secondItem="vww-8p-Jeo" secondAttribute="centerX" id="kr8-DX-P8M"/>
+                                    <constraint firstItem="eNv-S9-E06" firstAttribute="top" secondItem="4PO-pn-PLM" secondAttribute="bottom" constant="70" id="lfe-Ls-4f3"/>
                                     <constraint firstAttribute="bottom" secondItem="xBD-Hb-hTS" secondAttribute="bottom" constant="40" id="rLl-w5-tGO"/>
                                     <constraint firstItem="4PO-pn-PLM" firstAttribute="top" secondItem="vww-8p-Jeo" secondAttribute="top" constant="20" id="t3u-1V-bGn"/>
-                                    <constraint firstItem="B64-FC-vtv" firstAttribute="top" secondItem="vww-8p-Jeo" secondAttribute="top" constant="200" id="ya4-Sy-Iys"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -4165,15 +4187,18 @@ your money.</string>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Tis-g0-SBH" firstAttribute="bottom" secondItem="vww-8p-Jeo" secondAttribute="bottom" id="D5H-t8-f9W"/>
+                            <constraint firstItem="9Ee-Sa-Wtf" firstAttribute="top" secondItem="fGQ-4L-Wk4" secondAttribute="top" id="MFV-Pe-FEo"/>
                             <constraint firstItem="Tis-g0-SBH" firstAttribute="trailing" secondItem="vww-8p-Jeo" secondAttribute="trailing" id="NyO-pZ-qsC"/>
+                            <constraint firstItem="9Ee-Sa-Wtf" firstAttribute="leading" secondItem="Tis-g0-SBH" secondAttribute="leading" id="VYv-cL-Jt9"/>
+                            <constraint firstAttribute="bottom" secondItem="9Ee-Sa-Wtf" secondAttribute="bottom" id="fXi-iL-f4O"/>
                             <constraint firstItem="vww-8p-Jeo" firstAttribute="leading" secondItem="Tis-g0-SBH" secondAttribute="leading" id="mtg-dz-lWp"/>
                             <constraint firstItem="vww-8p-Jeo" firstAttribute="top" secondItem="Tis-g0-SBH" secondAttribute="top" id="n3P-n3-UP8"/>
+                            <constraint firstItem="9Ee-Sa-Wtf" firstAttribute="trailing" secondItem="Tis-g0-SBH" secondAttribute="trailing" id="wW9-FI-9Qj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnAccept" destination="xBD-Hb-hTS" id="vqu-NF-bUm"/>
                         <outlet property="btnBack" destination="4PO-pn-PLM" id="UgY-L7-sSO"/>
-                        <outlet property="lbAmount" destination="B64-FC-vtv" id="Sp4-Gt-raj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="563-uW-Vbi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4750,6 +4775,9 @@ checking account you provided.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instant_cash_success_bg" translatesAutoresizingMaskIntoConstraints="NO" id="lSf-HD-PCK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2M-BC-v37">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
@@ -4759,9 +4787,6 @@ checking account you provided.</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-C2-wyU">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instant_cash_success_bg" translatesAutoresizingMaskIntoConstraints="NO" id="lSf-HD-PCK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
-                                                    </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbe-07-9bn" userLabel="receipt box">
                                                         <rect key="frame" x="38" y="335" width="338" height="330"/>
                                                         <subviews>
@@ -4769,7 +4794,7 @@ checking account you provided.</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="330"/>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-yy-Rz9">
-                                                                <rect key="frame" x="97" y="30" width="143.5" height="36"/>
+                                                                <rect key="frame" x="97.5" y="30" width="143.5" height="36"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow_left" translatesAutoresizingMaskIntoConstraints="NO" id="j7d-3C-Q2D">
                                                                         <rect key="frame" x="0.0" y="0.0" width="22" height="36"/>
@@ -4900,33 +4925,29 @@ for amount credited.</string>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="lSf-HD-PCK" secondAttribute="bottom" id="0IL-NA-krs"/>
                                                     <constraint firstItem="Wbe-07-9bn" firstAttribute="top" secondItem="QC0-C2-wyU" secondAttribute="top" constant="335" id="69q-ZU-Xbz"/>
                                                     <constraint firstAttribute="trailing" secondItem="J4c-xc-Wr0" secondAttribute="trailing" constant="20" id="CMY-Rv-Zbb"/>
-                                                    <constraint firstItem="lSf-HD-PCK" firstAttribute="leading" secondItem="QC0-C2-wyU" secondAttribute="leading" id="GQh-QJ-bUd"/>
                                                     <constraint firstItem="J4c-xc-Wr0" firstAttribute="leading" secondItem="QC0-C2-wyU" secondAttribute="leading" constant="20" id="QB1-G1-Obw"/>
                                                     <constraint firstItem="Wbe-07-9bn" firstAttribute="leading" secondItem="QC0-C2-wyU" secondAttribute="leading" constant="38" id="Rr8-Cp-jck"/>
-                                                    <constraint firstAttribute="bottom" secondItem="J4c-xc-Wr0" secondAttribute="bottom" constant="40" id="Tdy-HT-31K"/>
                                                     <constraint firstAttribute="height" constant="850" id="U8m-0q-32a"/>
-                                                    <constraint firstItem="lSf-HD-PCK" firstAttribute="top" secondItem="QC0-C2-wyU" secondAttribute="top" id="XT6-b1-LLN"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lSf-HD-PCK" secondAttribute="trailing" id="jLa-4P-8is"/>
+                                                    <constraint firstItem="J4c-xc-Wr0" firstAttribute="top" secondItem="Wbe-07-9bn" secondAttribute="bottom" constant="85" id="gdm-yR-HEz"/>
                                                     <constraint firstAttribute="trailing" secondItem="Wbe-07-9bn" secondAttribute="trailing" constant="38" id="lvO-mE-sho"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="QC0-C2-wyU" secondAttribute="bottom" id="BZC-cI-db9"/>
-                                            <constraint firstItem="QC0-C2-wyU" firstAttribute="top" secondItem="4sa-tM-M3k" secondAttribute="top" id="DY7-Jm-H8m"/>
-                                            <constraint firstItem="QC0-C2-wyU" firstAttribute="leading" secondItem="4sa-tM-M3k" secondAttribute="leading" id="KBa-95-NfO"/>
-                                            <constraint firstItem="4sa-tM-M3k" firstAttribute="trailing" secondItem="QC0-C2-wyU" secondAttribute="trailing" id="OXs-4V-7tY"/>
-                                            <constraint firstAttribute="trailing" secondItem="QC0-C2-wyU" secondAttribute="trailing" id="r7o-GN-rlH"/>
+                                            <constraint firstItem="QC0-C2-wyU" firstAttribute="leading" secondItem="fyx-ch-N7n" secondAttribute="leading" id="0DK-PU-Un6"/>
+                                            <constraint firstAttribute="bottom" secondItem="QC0-C2-wyU" secondAttribute="bottom" id="BQ4-V9-WzO"/>
+                                            <constraint firstItem="QC0-C2-wyU" firstAttribute="top" secondItem="fyx-ch-N7n" secondAttribute="top" id="FqF-Dz-yEt"/>
+                                            <constraint firstItem="QC0-C2-wyU" firstAttribute="trailing" secondItem="4sa-tM-M3k" secondAttribute="trailing" id="L7O-wV-rUV"/>
+                                            <constraint firstAttribute="trailing" secondItem="QC0-C2-wyU" secondAttribute="trailing" id="mYq-N1-m8d"/>
                                         </constraints>
                                         <viewLayoutGuide key="contentLayoutGuide" id="RUV-fh-seK"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="4sa-tM-M3k"/>
                                     </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fyx-ch-N7n" firstAttribute="centerY" secondItem="o2M-BC-v37" secondAttribute="centerY" id="3ox-KW-qws"/>
+                                    <constraint firstAttribute="bottom" secondItem="fyx-ch-N7n" secondAttribute="bottom" id="Gy7-RV-AFb"/>
                                     <constraint firstAttribute="trailing" secondItem="fyx-ch-N7n" secondAttribute="trailing" id="Ir1-aN-xXQ"/>
                                     <constraint firstItem="fyx-ch-N7n" firstAttribute="top" secondItem="o2M-BC-v37" secondAttribute="top" id="dhF-hr-JAD"/>
                                     <constraint firstItem="fyx-ch-N7n" firstAttribute="leading" secondItem="o2M-BC-v37" secondAttribute="leading" id="eKZ-ow-fD3"/>
@@ -4936,7 +4957,11 @@ for amount credited.</string>
                         <viewLayoutGuide key="safeArea" id="m9z-oS-O6k"/>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="lSf-HD-PCK" firstAttribute="leading" secondItem="m9z-oS-O6k" secondAttribute="leading" id="Cvt-r0-XzT"/>
+                            <constraint firstItem="lSf-HD-PCK" firstAttribute="top" secondItem="C4d-uw-x5i" secondAttribute="top" id="D9p-jI-eAB"/>
+                            <constraint firstItem="lSf-HD-PCK" firstAttribute="trailing" secondItem="m9z-oS-O6k" secondAttribute="trailing" id="Ky2-v5-nDA"/>
                             <constraint firstItem="o2M-BC-v37" firstAttribute="top" secondItem="m9z-oS-O6k" secondAttribute="top" id="MtB-NF-ajl"/>
+                            <constraint firstAttribute="bottom" secondItem="lSf-HD-PCK" secondAttribute="bottom" id="PQm-ph-zqy"/>
                             <constraint firstItem="m9z-oS-O6k" firstAttribute="bottom" secondItem="o2M-BC-v37" secondAttribute="bottom" id="V9o-uh-xLo"/>
                             <constraint firstItem="m9z-oS-O6k" firstAttribute="trailing" secondItem="o2M-BC-v37" secondAttribute="trailing" id="eqS-vq-Oa2"/>
                             <constraint firstItem="o2M-BC-v37" firstAttribute="leading" secondItem="m9z-oS-O6k" secondAttribute="leading" id="xca-2Z-Ax5"/>
