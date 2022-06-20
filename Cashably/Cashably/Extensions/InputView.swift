@@ -32,6 +32,16 @@ open class InputView: UIView {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1).cgColor
         self.layer.cornerRadius = 10
+        
+        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.07).cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 25
+        self.layer.shadowOffset = CGSize(width: 0, height: 20)
+        let shadows = UIView()
+        shadows.frame = self.frame
+        shadows.clipsToBounds = false
+        self.addSubview(shadows)
+        self.layer.shadowPath = UIBezierPath(roundedRect: shadows.bounds, cornerRadius: 10).cgPath
 
     }
     

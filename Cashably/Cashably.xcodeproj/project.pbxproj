@@ -37,7 +37,7 @@
 		F05365E1285FF43500B771D9 /* CashoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E0285FF43500B771D9 /* CashoutVC.swift */; };
 		F05365E3285FF47C00B771D9 /* CashoutTipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */; };
 		F05365E5285FF4D200B771D9 /* DonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E4285FF4D200B771D9 /* DonationVC.swift */; };
-		F05365E8285FF59600B771D9 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E7285FF59600B771D9 /* AddCard.swift */; };
+		F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E7285FF59600B771D9 /* AddCardVC.swift */; };
 		F05365EA285FF5DF00B771D9 /* CashoutSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
@@ -59,6 +59,7 @@
 		F0A0435C285EB28C00E29CE0 /* ProfileCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */; };
 		F0B853562860044C002F90DA /* DepositTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853552860044C002F90DA /* DepositTableViewCell.swift */; };
 		F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B8535728600462002F90DA /* DepositTableViewCell.xib */; };
+		F0B8535A2860145B002F90DA /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853592860145B002F90DA /* RoundView.swift */; };
 		F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B87A02285F2C4E00414FFD /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +117,7 @@
 		F05365E0285FF43500B771D9 /* CashoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutVC.swift; sourceTree = "<group>"; };
 		F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutTipVC.swift; sourceTree = "<group>"; };
 		F05365E4285FF4D200B771D9 /* DonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationVC.swift; sourceTree = "<group>"; };
-		F05365E7285FF59600B771D9 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
+		F05365E7285FF59600B771D9 /* AddCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardVC.swift; sourceTree = "<group>"; };
 		F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutSuccessVC.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCompleteVC.swift; sourceTree = "<group>"; };
 		F0B853552860044C002F90DA /* DepositTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositTableViewCell.swift; sourceTree = "<group>"; };
 		F0B8535728600462002F90DA /* DepositTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositTableViewCell.xib; sourceTree = "<group>"; };
+		F0B853592860145B002F90DA /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		F0B87A02285F2C4E00414FFD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		FCA47C7B2F17468B86FA6D3D /* Pods-CashablyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.release.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,7 +290,7 @@
 			children = (
 				F05365E0285FF43500B771D9 /* CashoutVC.swift */,
 				F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */,
-				F05365E7285FF59600B771D9 /* AddCard.swift */,
+				F05365E7285FF59600B771D9 /* AddCardVC.swift */,
 				F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */,
 			);
 			path = Cashout;
@@ -366,6 +368,7 @@
 				F0A04353285DC40100E29CE0 /* UIViewController.swift */,
 				F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */,
 				F0A04359285EA6E200E29CE0 /* InputView.swift */,
+				F0B853592860145B002F90DA /* RoundView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				F05365DB285FF36400B771D9 /* PaycheckDetailVC.swift in Sources */,
 				F05365E5285FF4D200B771D9 /* DonationVC.swift in Sources */,
 				F0A04358285DD48E00E29CE0 /* TopCornerRoundView.swift in Sources */,
+				F0B8535A2860145B002F90DA /* RoundView.swift in Sources */,
 				F05365CB285F770D00B771D9 /* RequestOverdraftEnableVC.swift in Sources */,
 				F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */,
 				F05365C5285F764D00B771D9 /* RequestFaceEnableVC.swift in Sources */,
@@ -668,7 +672,7 @@
 				F00E4DEC285CC5DB00CB8DD6 /* ProfileEditVC.swift in Sources */,
 				F0A04352285DC08000E29CE0 /* UIView.swift in Sources */,
 				F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */,
-				F05365E8285FF59600B771D9 /* AddCard.swift in Sources */,
+				F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */,
 				F05365D7285FF2C300B771D9 /* ConnectProcessingVC.swift in Sources */,
 				F00E4DDF285CBE1E00CB8DD6 /* SplashVC.swift in Sources */,
 			);
