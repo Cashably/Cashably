@@ -3912,19 +3912,19 @@ your Affirm account and loans.</string>
                                                                                 <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LJf-wq-yfe">
-                                                                                <rect key="frame" x="20" y="61.5" width="374" height="178.5"/>
-                                                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dxK-bE-5vc">
+                                                                                <rect key="frame" x="20" y="51.5" width="374" height="178.5"/>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                             </tableView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                                         <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="dxK-bE-5vc" secondAttribute="trailing" constant="20" id="1mB-GV-Wcb"/>
                                                                             <constraint firstItem="N9n-6Q-Y72" firstAttribute="leading" secondItem="0Y8-B3-sZe" secondAttribute="leading" constant="20" id="CbX-Pi-Xnl"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="LJf-wq-yfe" secondAttribute="trailing" constant="20" id="TpB-Co-asH"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="dxK-bE-5vc" secondAttribute="bottom" constant="10" id="QX4-cq-VnQ"/>
+                                                                            <constraint firstItem="dxK-bE-5vc" firstAttribute="leading" secondItem="0Y8-B3-sZe" secondAttribute="leading" constant="20" id="WXc-Gm-hjg"/>
                                                                             <constraint firstItem="N9n-6Q-Y72" firstAttribute="top" secondItem="0Y8-B3-sZe" secondAttribute="top" constant="20" id="XW4-d5-t01"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="LJf-wq-yfe" secondAttribute="bottom" id="nSC-IH-W92"/>
-                                                                            <constraint firstItem="LJf-wq-yfe" firstAttribute="top" secondItem="N9n-6Q-Y72" secondAttribute="bottom" constant="20" id="nbM-Jf-EFl"/>
-                                                                            <constraint firstItem="LJf-wq-yfe" firstAttribute="leading" secondItem="0Y8-B3-sZe" secondAttribute="leading" constant="20" id="vlE-2k-RVI"/>
+                                                                            <constraint firstItem="dxK-bE-5vc" firstAttribute="top" secondItem="N9n-6Q-Y72" secondAttribute="bottom" constant="10" id="zAl-2Q-NUI"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
@@ -3943,7 +3943,7 @@ your Affirm account and loans.</string>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="yGM-pb-N9Q" secondAttribute="bottom" id="KLb-Sq-830"/>
-                                                            <constraint firstItem="LUZ-Nb-5zd" firstAttribute="trailing" secondItem="yGM-pb-N9Q" secondAttribute="trailing" id="UX0-uV-fCf"/>
+                                                            <constraint firstItem="yGM-pb-N9Q" firstAttribute="trailing" secondItem="LUZ-Nb-5zd" secondAttribute="trailing" id="UX0-uV-fCf"/>
                                                             <constraint firstAttribute="trailing" secondItem="yGM-pb-N9Q" secondAttribute="trailing" id="bT5-a8-Zpz"/>
                                                             <constraint firstItem="yGM-pb-N9Q" firstAttribute="leading" secondItem="gwa-ij-KGI" secondAttribute="leading" id="bpB-ks-JKU"/>
                                                             <constraint firstItem="yGM-pb-N9Q" firstAttribute="top" secondItem="gwa-ij-KGI" secondAttribute="top" id="lQC-N5-gts"/>
@@ -4004,7 +4004,7 @@ your Affirm account and loans.</string>
                         <outlet property="lbWeekScore" destination="Qpj-Md-0Bo" id="XZf-lV-n8e"/>
                         <outlet property="monthIcon" destination="pex-Ap-wdl" id="HzQ-Dj-Mle"/>
                         <outlet property="scoreChatView" destination="3Ws-rQ-OO8" id="2eh-6B-Y0V"/>
-                        <outlet property="tableView" destination="LJf-wq-yfe" id="gqx-6h-JXP"/>
+                        <outlet property="tableView" destination="dxK-bE-5vc" id="yeQ-ZC-OZ1"/>
                         <outlet property="weekIcon" destination="cJG-LO-fwt" id="Msn-2R-Aas"/>
                     </connections>
                 </viewController>

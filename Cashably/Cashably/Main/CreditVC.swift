@@ -34,8 +34,8 @@ class CreditVC: UIViewController, ChartViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "MerchantTableViewCell", bundle: nil), forCellReuseIdentifier: "mercantCell")
-        tableView.backgroundColor = .secondarySystemBackground
-        tableView.rowHeight = 80
+        tableView.backgroundColor = .clear
+//        tableView.rowHeight = 80
         
         self.drawChart()
         self.drawPieChart()
@@ -126,7 +126,7 @@ extension CreditVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MerchantTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "mercantCell") as! MerchantTableViewCell
-        
+//        cell.progress.progress = 0.9
         return cell
     }
 }
