@@ -84,6 +84,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.7.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.7.2)
+  - MKRingProgressView (2.3.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -101,6 +102,7 @@ DEPENDENCIES:
   - FirebaseAnalytics
   - FirebaseAuth
   - FlagPhoneNumber
+  - MKRingProgressView
   - NVActivityIndicatorView/Extended
   - Plaid
   - "UITextField+Shake"
@@ -118,6 +120,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - MKRingProgressView
     - nanopb
     - NVActivityIndicatorView
     - Plaid
@@ -136,12 +139,13 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
+  MKRingProgressView: f534209b9a1edc0beb2ea613e6b953ea2195b565
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   Plaid: 024ce0c2b8d10dae27218331917ee5a824eda63b
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   "UITextField+Shake": 298ac5a0f239d731bdab999b19b628c956ca0ac3
 
-PODFILE CHECKSUM: 673a3ea146d9f31f0db89b4aae27e00497cfd81e
+PODFILE CHECKSUM: 66049196494a67de7241f1e655fbad4dd21366a7
 
 COCOAPODS: 1.11.2

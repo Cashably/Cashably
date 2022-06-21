@@ -37,6 +37,9 @@ class SettingsVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        lbEmail.text = Auth.auth().currentUser?.email
+        lbName.text = Auth.auth().currentUser?.displayName
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "settingsCell")

@@ -13,6 +13,8 @@ target 'Cashably' do
     pod 'UITextField+Shake'
 
     pod 'FlagPhoneNumber'
+    
+    pod 'MKRingProgressView'
 
     pod 'Plaid'
 
