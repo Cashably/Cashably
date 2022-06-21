@@ -59,7 +59,7 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
    }
     
     func moveToMain() {
-        let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+        let mainVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
         self.window?.rootViewController = mainVC
         navigationController?.pushViewController(mainVC, animated: true)
     }
@@ -108,11 +108,9 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
                 // User is signed in
                 // ...
                 if let user = Auth.auth().currentUser {
-                    if user.displayName == nil || user.email == nil {
-                        self.moveToCompleteProfile()
-                    } else {
+                    
                         self.moveToMain()
-                    }
+                    
                 } else {
                     self.moveToLogin()
                 }

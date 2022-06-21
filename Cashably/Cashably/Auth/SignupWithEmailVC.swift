@@ -36,7 +36,7 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
    }
     
     func moveToProfile() {
-        let profileEditVC = storyboard?.instantiateViewController(withIdentifier: "ProfileEditVC") as! ProfileEditVC
+        let profileEditVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
         navigationController?.pushViewController(profileEditVC, animated: true)
     }
     

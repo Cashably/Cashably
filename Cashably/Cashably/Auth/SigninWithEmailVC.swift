@@ -17,8 +17,8 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
-    @IBOutlet weak var btnBack: UIButton!
-    
+    @IBOutlet weak var btnToOtp: UIButton!
+    @IBOutlet weak var btnPassword: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +36,7 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
    }
     
     func moveToMain() {
-        let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-        self.window?.rootViewController = mainVC
+        let mainVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
         navigationController?.pushViewController(mainVC, animated: true)
     }
     
@@ -51,8 +50,15 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    @IBAction func actionPassword(_ sender: Any) {
+    }
     
-    @IBAction func actionBack(_ sender: UIButton) {
+    @IBAction func actionToSignUP(_ sender: UIButton) {
+        let signupVC = storyboard?.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+        navigationController?.pushViewController(signupVC, animated: true)
+    }
+    
+    @IBAction func actionToOtp(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 }
