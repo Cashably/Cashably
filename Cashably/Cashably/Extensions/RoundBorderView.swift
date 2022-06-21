@@ -1,14 +1,14 @@
 //
-//  RoundView.swift
+//  RoundBorderView.swift
 //  Cashably
 //
-//  Created by apollo on 6/21/22.
+//  Created by apollo on 6/19/22.
 //
 
 import Foundation
 import UIKit
 
-open class RoundView: UIView {
+open class RoundBorderView: UIView {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
@@ -20,9 +20,10 @@ open class RoundView: UIView {
     }
     
     private func configure() {
-        
+        self.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
         self.layer.cornerRadius = 10
-        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor(red: 0.918, green: 0.922, blue: 0.937, alpha: 1).cgColor
         
         let shadows = UIView()
         shadows.frame = self.frame
@@ -36,4 +37,3 @@ open class RoundView: UIView {
         self.layer.bounds = shadows.bounds
     }
 }
-

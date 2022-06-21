@@ -42,15 +42,18 @@ class CashoutVC: UIViewController {
         self.navigationController?.pushViewController(successVC, animated: true)
     }
     
+    
     @IBAction func actionWithdraw(_ sender: UIButton) {
-        guard let cardId = UserDefaults.standard.string(forKey: "cardid") else {
-            let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
-            addcardVC.delegate = self
-            self.navigationController?.pushViewController(addcardVC, animated: true)
-            return
+        let tipVC = storyboard?.instantiateViewController(withIdentifier: "CashoutTipVC") as! CashoutTipVC
+//        tipVC.isModalInPresentation = true
+        tipVC.delegate = self
+        let nav = UINavigationController(rootViewController: tipVC)
+        nav.modalTransitionStyle = .coverVertical
+        if let sheet = nav.sheetPresentationController {
+            sheet.detents = [.large()]
+            sheet.preferredCornerRadius = 25
         }
-        
-        self.withdraw()
+        self.presentVC(nav)
         
     }
     
@@ -60,6 +63,32 @@ class CashoutVC: UIViewController {
     @IBAction func actionBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+}
+
+extension CashoutVC: CashoutTipDelegate {
+    func cashout() {
+        guard let cardId = UserDefaults.standard.string(forKey: "cardid") else {
+            let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
+            addcardVC.delegate = self
+            self.navigationController?.pushViewController(addcardVC, animated: true)
+            return
+        }
+        
+        self.withdraw()
+    }
+    
+    func cashoutWithTip() {
+        guard let cardId = UserDefaults.standard.string(forKey: "cardid") else {
+            let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
+            addcardVC.delegate = self
+            self.navigationController?.pushViewController(addcardVC, animated: true)
+            return
+        }
+        
+        self.withdraw()
+    }
+    
     
 }
 

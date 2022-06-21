@@ -2653,7 +2653,7 @@ your Affirm account and loans.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjU-8e-WD6" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="354" width="414" height="459"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXz-zI-n6B" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXz-zI-n6B" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="-30" width="374" height="60"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmp-EW-IUp">
@@ -2950,7 +2950,7 @@ your Affirm account and loans.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8v1-CG-jBU">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRw-ul-wGo">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRw-ul-wGo" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="20" y="90" width="60" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_airbnb" translatesAutoresizingMaskIntoConstraints="NO" id="0kU-Rp-l7O">
@@ -3687,7 +3687,7 @@ your Affirm account and loans.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vd6-sD-sKp" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="342" width="414" height="471"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9D-ee-yAR" userLabel="header" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9D-ee-yAR" userLabel="header" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="-40" width="374" height="80"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyJ-Bh-169">
@@ -4487,6 +4487,124 @@ approved </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="563-uW-Vbi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4803" y="1231"/>
+        </scene>
+        <!--Cashout TipVC-->
+        <scene sceneID="ygv-g9-m27">
+            <objects>
+                <viewController storyboardIdentifier="CashoutTipVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A7H-jV-YU0" customClass="CashoutTipVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dil-DQ-nI2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2j9-Cu-K4j">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips are Optional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0F-b4-2HX">
+                                        <rect key="frame" x="20" y="30" width="116.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip what you feel is Fair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2I4-EN-Wv6">
+                                        <rect key="frame" x="20" y="58" width="238" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuT-bT-nAM">
+                                        <rect key="frame" x="20" y="94.5" width="19" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Do-cXB">
+                                        <rect key="frame" x="20" y="132.5" width="374" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-g7-IVf">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                                <string key="text">You can choose from the list where the 20% 
+of the tip will be donated.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Kg-cFX">
+                                        <rect key="frame" x="0.0" y="203.5" width="414" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="oI9-F8-yCD"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIs-Z7-tUM">
+                                        <rect key="frame" x="146" y="798.5" width="122" height="33.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Only Cashout">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionCashout:" destination="A7H-jV-YU0" eventType="primaryActionTriggered" id="X91-rB-bzX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhF-G9-ulE">
+                                        <rect key="frame" x="20" y="718.5" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="tye-wV-T4B"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cash out + Tip">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="backgroundColor" red="0.023529411764705882" green="0.792156862745098" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionCashoutWithTip:" destination="A7H-jV-YU0" eventType="primaryActionTriggered" id="fUA-fS-1F6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="x88-Kg-cFX" firstAttribute="top" secondItem="K7D-Do-cXB" secondAttribute="bottom" constant="30" id="6Gs-RZ-pmq"/>
+                                    <constraint firstItem="cIs-Z7-tUM" firstAttribute="top" secondItem="FhF-G9-ulE" secondAttribute="bottom" constant="20" id="6sd-bt-86J"/>
+                                    <constraint firstItem="U0F-b4-2HX" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="8Gp-wt-2Y1"/>
+                                    <constraint firstItem="cIs-Z7-tUM" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="EjO-W5-9aN"/>
+                                    <constraint firstItem="2I4-EN-Wv6" firstAttribute="top" secondItem="U0F-b4-2HX" secondAttribute="bottom" constant="10" id="Huz-9D-Jas"/>
+                                    <constraint firstAttribute="bottom" secondItem="cIs-Z7-tUM" secondAttribute="bottom" constant="20" id="OqB-ag-nTX"/>
+                                    <constraint firstItem="U0F-b4-2HX" firstAttribute="top" secondItem="2j9-Cu-K4j" secondAttribute="top" constant="30" id="PfQ-gT-qN5"/>
+                                    <constraint firstAttribute="trailing" secondItem="K7D-Do-cXB" secondAttribute="trailing" constant="20" id="Psb-CK-De6"/>
+                                    <constraint firstItem="K7D-Do-cXB" firstAttribute="top" secondItem="XuT-bT-nAM" secondAttribute="bottom" constant="20" id="Pv6-jD-PaH"/>
+                                    <constraint firstItem="XuT-bT-nAM" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="Tsc-34-qaF"/>
+                                    <constraint firstItem="2I4-EN-Wv6" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="VlV-Z4-VXh"/>
+                                    <constraint firstAttribute="trailing" secondItem="FhF-G9-ulE" secondAttribute="trailing" constant="20" id="YEZ-oQ-Ohp"/>
+                                    <constraint firstItem="K7D-Do-cXB" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="YqK-vj-bgm"/>
+                                    <constraint firstItem="FhF-G9-ulE" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="dFx-cQ-upn"/>
+                                    <constraint firstItem="FhF-G9-ulE" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="eNi-g8-89u"/>
+                                    <constraint firstAttribute="trailing" secondItem="x88-Kg-cFX" secondAttribute="trailing" id="isB-JR-B0s"/>
+                                    <constraint firstItem="XuT-bT-nAM" firstAttribute="top" secondItem="2I4-EN-Wv6" secondAttribute="bottom" constant="10" id="mXx-nd-ahe"/>
+                                    <constraint firstItem="x88-Kg-cFX" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" id="zUh-Hg-Xsr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lpi-Xp-pQn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2j9-Cu-K4j" firstAttribute="top" secondItem="Lpi-Xp-pQn" secondAttribute="top" id="Rfr-pQ-Qc1"/>
+                            <constraint firstAttribute="bottom" secondItem="2j9-Cu-K4j" secondAttribute="bottom" id="WQE-hD-TsE"/>
+                            <constraint firstItem="2j9-Cu-K4j" firstAttribute="trailing" secondItem="Lpi-Xp-pQn" secondAttribute="trailing" id="dcK-ef-dpI"/>
+                            <constraint firstItem="2j9-Cu-K4j" firstAttribute="leading" secondItem="Lpi-Xp-pQn" secondAttribute="leading" id="koA-hQ-n9c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCashout" destination="cIs-Z7-tUM" id="hB4-IL-1SP"/>
+                        <outlet property="btnCashoutWithTip" destination="FhF-G9-ulE" id="STs-fX-fU6"/>
+                        <outlet property="lbAmount" destination="XuT-bT-nAM" id="Efh-9n-irU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4k-DN-JSk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5580" y="542"/>
         </scene>
         <!--CashoutVC-->
         <scene sceneID="MfY-4K-aEF">
@@ -5355,7 +5473,7 @@ for amount credited.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahl-Z7-K5j" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="361" width="414" height="457"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2t-zQ-yV7" userLabel="header view" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2t-zQ-yV7" userLabel="header view" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="-40" width="374" height="80"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuS-Q1-V9o">
@@ -5666,7 +5784,7 @@ for amount credited.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFs-tD-f1o" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="350" width="414" height="512"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-pq-qMk" userLabel="header" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-pq-qMk" userLabel="header" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="-40" width="374" height="80"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lc-vg-H8r">

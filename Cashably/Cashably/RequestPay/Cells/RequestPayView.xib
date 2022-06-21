@@ -32,7 +32,7 @@ Cash Loan</string>
                                     <rect key="frame" x="20" y="76" width="109.5" height="31"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Request Now">
-                                        <backgroundConfiguration key="background" cornerRadius="10">
+                                        <backgroundConfiguration key="background" cornerRadius="5">
                                             <color key="backgroundColor" red="0.023529411764705882" green="0.792156862745098" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                         </backgroundConfiguration>
                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,7 +82,7 @@ Cash Loan</string>
                                                                             <rect key="frame" x="10" y="10" width="20" height="20"/>
                                                                         </imageView>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" red="0.13725490196078433" green="0.25098039215686274" blue="0.22352941176470587" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="40" id="PK6-HS-jK0"/>
                                                                         <constraint firstItem="pHx-b2-eHn" firstAttribute="centerY" secondItem="l5n-XA-1Vv" secondAttribute="centerY" id="aHe-eL-aHv"/>
@@ -129,7 +129,7 @@ Cash Loan</string>
                                                                             <rect key="frame" x="10" y="9" width="20" height="22"/>
                                                                         </imageView>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" red="0.13725490196078433" green="0.25098039215686274" blue="0.22352941176470587" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="DIu-9u-jUD"/>
                                                                         <constraint firstItem="hfg-fL-ehW" firstAttribute="centerY" secondItem="m9P-Ki-MCh" secondAttribute="centerY" id="HkK-GS-0Gl"/>

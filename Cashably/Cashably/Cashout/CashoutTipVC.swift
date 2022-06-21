@@ -8,7 +8,19 @@
 import Foundation
 import UIKit
 
+protocol CashoutTipDelegate {
+    func cashout()
+    func cashoutWithTip()
+}
+
 class CashoutTipVC: UIViewController {
+    @IBOutlet weak var lbAmount: UILabel!
+    
+    @IBOutlet weak var btnCashoutWithTip: UIButton!
+    @IBOutlet weak var btnCashout: UIButton!
+    
+    var delegate: CashoutTipDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,4 +36,18 @@ class CashoutTipVC: UIViewController {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+   
+    @IBAction func actionCashout(_ sender: UIButton) {
+        self.dismiss(animated: true) {
+            self.delegate?.cashout()
+        }
+    }
+    
+    @IBAction func actionCashoutWithTip(_ sender: UIButton) {
+        
+        self.dismiss(animated: true) {
+            self.delegate?.cashoutWithTip()
+        }
+    }
 }
