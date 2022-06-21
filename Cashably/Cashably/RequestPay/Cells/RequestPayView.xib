@@ -268,6 +268,8 @@ Cash Loan</string>
                 <outlet property="btnSnooze" destination="3ky-aX-fbd" id="BBX-az-2eq"/>
                 <outlet property="lbAmount" destination="NGr-nh-Sjt" id="fly-DF-pil"/>
                 <outlet property="lbDueDate" destination="CZ6-Iy-zbp" id="IVS-Zb-fVM"/>
+                <outlet property="payView" destination="O2Z-W7-nZQ" id="qC8-sM-UP0"/>
+                <outlet property="snoozeView" destination="7Ga-vg-4Kn" id="DFF-5f-EXz"/>
             </connections>
             <point key="canvasLocation" x="393" y="139"/>
         </view>

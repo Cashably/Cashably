@@ -37,7 +37,7 @@ class BankVC: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        return .lightContent
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -71,6 +71,11 @@ class HomeVC: UIViewController {
             let subview = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as! RequestPayView
             subview.onRequest = {() in self.onRequest()}
             subview.onPay = {() in self.onPay()}
+            subview.onSnooze = {() in self.onSnooze()}
+            let payGesture = UITapGestureRecognizer(target: self, action: #selector(self.payAction(_:)))
+            let snoozeGesture = UITapGestureRecognizer(target: self, action: #selector(self.snoozeAction(_:)))
+            subview.payView.addGestureRecognizer(payGesture)
+            subview.snoozeView.addGestureRecognizer(snoozeGesture)
             self.bottomView.addSubview(subview)
             subview.translatesAutoresizingMaskIntoConstraints = false
             subview.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
@@ -172,14 +177,21 @@ class HomeVC: UIViewController {
     }
     
     func onPay() {
-        let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
-        self.navigationController?.pushViewController(cashoutVC, animated: true)
+        let repayVC = self.storyboard?.instantiateViewController(withIdentifier: "RepayVC") as! RepayVC
+        self.navigationController?.pushViewController(repayVC, animated: true)
     }
     
     func onSnooze() {
-        
+        let paySnoozeVC = self.storyboard?.instantiateViewController(withIdentifier: "PaySnoozeVC") as! PaySnoozeVC
+        self.navigationController?.pushViewController(paySnoozeVC, animated: true)
     }
     
+    @objc func payAction(_ sender:UITapGestureRecognizer){
+        self.onPay()
+    }
+    @objc func snoozeAction(_ sender:UITapGestureRecognizer){
+        self.onSnooze()
+    }
 }
 
 extension HomeVC: RequestFaceEnableDelegate {

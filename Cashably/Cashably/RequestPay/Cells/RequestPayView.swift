@@ -17,6 +17,10 @@ class RequestPayView: UIView {
     @IBOutlet weak var lbAmount: UILabel!
     @IBOutlet weak var lbDueDate: UILabel!
     
+    @IBOutlet weak var payView: RoundView!
+    @IBOutlet weak var snoozeView: RoundView!
+    
+    
     @IBAction func actionRequest(_ sender: UIButton) {
         self.onRequest?()
     }
