@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 import MKRingProgressView
+import Charts
 
-class CreditVC: UIViewController {
+class CreditVC: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var scoreChatView: UIView!
     
@@ -19,9 +20,11 @@ class CreditVC: UIViewController {
     @IBOutlet weak var monthIcon: UIImageView!
     @IBOutlet weak var lbMonthScore: UILabel!
     
-    @IBOutlet weak var breakdownChatView: UIView!
+    @IBOutlet weak var breakdownChatView: PieChartView!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    private var parties: [Double] = [235.0, 123.0, 203.0]
     
     
     override func viewDidLoad() {
@@ -34,7 +37,8 @@ class CreditVC: UIViewController {
         tableView.backgroundColor = .secondarySystemBackground
         tableView.rowHeight = 80
         
-        self.drawChat()
+        self.drawChart()
+        self.drawPieChart()
         
     }
     
@@ -48,7 +52,7 @@ class CreditVC: UIViewController {
        self.navigationController?.isNavigationBarHidden = false
    }
     
-    func drawChat() {
+    func drawChart() {
         let ringProgressView = RingProgressView(frame: CGRect(x: 0, y: 0, width: 180, height: 180))
         ringProgressView.startColor = UIColor(red: 0.886, green: 0.314, blue: 0.31, alpha: 1)
         ringProgressView.endColor = UIColor(red: 0.291, green: 0.896, blue: 0.078, alpha: 1)
@@ -61,6 +65,50 @@ class CreditVC: UIViewController {
         ringProgressView.widthAnchor.constraint(equalTo: self.scoreChatView.widthAnchor).isActive = true
         ringProgressView.heightAnchor.constraint(equalTo: self.scoreChatView.heightAnchor).isActive = true
         
+    }
+    
+    func drawPieChart() {
+        breakdownChatView.delegate = self
+        breakdownChatView.holeColor = .white
+        breakdownChatView.legend.enabled = false
+        breakdownChatView.drawEntryLabelsEnabled = false
+//        breakdownChatView.
+        self.setDataCount(3, range: 100)
+    }
+    
+    
+    func setDataCount(_ count: Int, range: UInt32) {
+        let entries = (0..<count).map { (i) -> PieChartDataEntry in
+            // IMPORTANT: In a PieChart, no values (Entry) should have the same xIndex (even if from different DataSets), since no values can be drawn above each other.
+            return PieChartDataEntry(value: parties[i % parties.count],
+                                     label: "")
+        }
+        
+        let set = PieChartDataSet(entries: entries, label: "Election Results")
+        set.sliceSpace = 0
+        set.selectionShift = 0
+        set.colors = [
+            NSUIColor(red: 0.996, green: 0.808, blue: 0.631, alpha: 1.0),
+            NSUIColor(red: 0.38, green: 0.024, blue: 0.294, alpha: 1.0),
+            NSUIColor(red: 0.976, green: 0.545, blue: 0.522, alpha: 1.0)
+        ]
+        
+        let data = PieChartData(dataSet: set)
+        
+        let pFormatter = NumberFormatter()
+        pFormatter.numberStyle = .currency
+        pFormatter.maximumFractionDigits = 1
+        pFormatter.multiplier = 1
+        pFormatter.currencySymbol = " $"
+        pFormatter.percentSymbol = " %"
+        data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
+    
+        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 11)!)
+        data.setValueTextColor(.white)
+        
+        breakdownChatView.data = data
+        
+        breakdownChatView.setNeedsDisplay()
     }
 }
 

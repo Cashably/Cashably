@@ -3883,7 +3883,7 @@ your Affirm account and loans.</string>
                                                                                             <constraint firstAttribute="trailing" secondItem="jCF-1g-u9g" secondAttribute="trailing" id="rJ7-mj-b7v"/>
                                                                                         </constraints>
                                                                                     </view>
-                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgi-M4-KOn">
+                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgi-M4-KOn" customClass="PieChartView" customModule="Charts">
                                                                                         <rect key="frame" x="227" y="0.0" width="107" height="107"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" secondItem="Sgi-M4-KOn" secondAttribute="height" multiplier="1:1" id="FvJ-7n-bC1"/>

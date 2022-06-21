@@ -15,6 +15,7 @@ target 'Cashably' do
     pod 'FlagPhoneNumber'
     
     pod 'MKRingProgressView'
+    pod 'Charts'
 
     pod 'Plaid'
 
