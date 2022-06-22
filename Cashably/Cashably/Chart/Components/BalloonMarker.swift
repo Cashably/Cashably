@@ -108,6 +108,7 @@ open class BalloonMarker: MarkerImage
             context.addLine(to: CGPoint(
                 x: rect.origin.x + (rect.size.width - arrowSize.width) / 2.0,
                 y: rect.origin.y + arrowSize.height))
+            
             //arrow vertex
             context.addLine(to: CGPoint(
                 x: point.x,
@@ -118,29 +119,38 @@ open class BalloonMarker: MarkerImage
             context.addLine(to: CGPoint(
                 x: rect.origin.x + rect.size.width,
                 y: rect.origin.y + arrowSize.height))
-            context.addLine(to: CGPoint(
-                x: rect.origin.x + rect.size.width,
-                y: rect.origin.y + rect.size.height))
-            context.addLine(to: CGPoint(
-                x: rect.origin.x,
-                y: rect.origin.y + rect.size.height))
-            context.addLine(to: CGPoint(
-                x: rect.origin.x,
-                y: rect.origin.y + arrowSize.height))
+//            context.addLine(to: CGPoint(
+//                x: rect.origin.x + rect.size.width,
+//                y: rect.origin.y + rect.size.height))
+            let rect1 = CGRect(x: rect.origin.x , y: rect.origin.y + arrowSize.height, width: rect.size.width, height: rect.size.height - arrowSize.height)
+            let clipPath: CGPath = UIBezierPath(roundedRect: rect1, cornerRadius: 15).cgPath
+            context.addPath(clipPath)
+//            context.addLine(to: CGPoint(
+//                x: rect.origin.x,
+//                y: rect.origin.y + rect.size.height))
+//            context.addLine(to: CGPoint(
+//                x: rect.origin.x,
+//                y: rect.origin.y + arrowSize.height))
+            
+            
             context.fillPath()
+            
         }
         else
         {
             context.beginPath()
+//            context.move(to: CGPoint(
+//                            x: rect.origin.x,
+//                            y: rect.origin.y))
             context.move(to: CGPoint(
-                x: rect.origin.x,
-                y: rect.origin.y))
-            context.addLine(to: CGPoint(
-                x: rect.origin.x + rect.size.width,
-                y: rect.origin.y))
-            context.addLine(to: CGPoint(
                 x: rect.origin.x + rect.size.width,
                 y: rect.origin.y + rect.size.height - arrowSize.height))
+//            context.addLine(to: CGPoint(
+//                x: rect.origin.x + rect.size.width,
+//                y: rect.origin.y))
+//            context.addLine(to: CGPoint(
+//                x: rect.origin.x + rect.size.width,
+//                y: rect.origin.y + rect.size.height - arrowSize.height))
             context.addLine(to: CGPoint(
                 x: rect.origin.x + (rect.size.width + arrowSize.width) / 2.0,
                 y: rect.origin.y + rect.size.height - arrowSize.height))
@@ -148,15 +158,20 @@ open class BalloonMarker: MarkerImage
             context.addLine(to: CGPoint(
                 x: point.x,
                 y: point.y))
+            
             context.addLine(to: CGPoint(
                 x: rect.origin.x + (rect.size.width - arrowSize.width) / 2.0,
                 y: rect.origin.y + rect.size.height - arrowSize.height))
-            context.addLine(to: CGPoint(
-                x: rect.origin.x,
-                y: rect.origin.y + rect.size.height - arrowSize.height))
-            context.addLine(to: CGPoint(
-                x: rect.origin.x,
-                y: rect.origin.y))
+            
+            let rect1 = CGRect(x: rect.origin.x , y: rect.origin.y , width: rect.size.width, height: rect.size.height - arrowSize.height)
+            let clipPath: CGPath = UIBezierPath(roundedRect: rect1, cornerRadius: 15).cgPath
+            context.addPath(clipPath)
+//            context.addLine(to: CGPoint(
+//                x: rect.origin.x,
+//                y: rect.origin.y + rect.size.height - arrowSize.height))
+//            context.addLine(to: CGPoint(
+//                x: rect.origin.x,
+//                y: rect.origin.y))
             context.fillPath()
         }
         
