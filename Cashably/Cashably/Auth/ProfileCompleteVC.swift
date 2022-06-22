@@ -28,6 +28,8 @@ class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndica
         tfEmail.delegate = self
         tfDOB.delegate = self
         tfSSN.delegate = self
+        
+        tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +41,15 @@ class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndica
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
-    
+    @objc func tapDone() {
+        if let datePicker = self.tfDOB.inputView as? UIDatePicker {
+            let dateformatter = DateFormatter()
+//            dateformatter.dateStyle = .long
+            dateformatter.dateFormat = "dd/MM/YYYY"
+            self.tfDOB.text = dateformatter.string(from: datePicker.date)
+        }
+        self.tfDOB.resignFirstResponder()
+    }
     
     @IBAction func actionComplete(_ sender: UIButton) {
         

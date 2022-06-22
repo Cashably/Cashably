@@ -64,13 +64,13 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDeleg
    }
     
     @objc func tapDone() {
-        if let datePicker = self.tfCardDate.inputView as? UIDatePicker { // 2-1
-            let dateformatter = DateFormatter() // 2-2
-//            dateformatter.dateStyle = .short // 2-3
+        if let datePicker = self.tfCardDate.inputView as? UIDatePicker {
+            let dateformatter = DateFormatter()
+//            dateformatter.dateStyle = .short
             dateformatter.dateFormat = "MM/YY"
-            self.tfCardDate.text = dateformatter.string(from: datePicker.date) //2-4
+            self.tfCardDate.text = dateformatter.string(from: datePicker.date)
         }
-        self.tfCardDate.resignFirstResponder() // 2-5
+        self.tfCardDate.resignFirstResponder()
     }
     
     @IBAction func actionAddCard(_ sender: UIButton) {
