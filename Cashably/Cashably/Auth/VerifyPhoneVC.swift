@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import NVActivityIndicatorView
 import FirebaseAuth
+import DPOTPView
 
 class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -22,27 +23,32 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var lbPhone: UILabel!
     
-    @IBOutlet weak var tfCode1: UITextField!
-    @IBOutlet weak var tfCode2: UITextField!
-    @IBOutlet weak var tfCode3: UITextField!
-    @IBOutlet weak var tfCode4: UITextField!
-    @IBOutlet weak var tfCode5: UITextField!
-    @IBOutlet weak var tfCode6: UITextField!
+    @IBOutlet weak var optView: DPOTPView!
+    //    @IBOutlet weak var tfCode1: UITextField!
+//    @IBOutlet weak var tfCode2: UITextField!
+//    @IBOutlet weak var tfCode3: UITextField!
+//    @IBOutlet weak var tfCode4: UITextField!
+//    @IBOutlet weak var tfCode5: UITextField!
+//    @IBOutlet weak var tfCode6: UITextField!
     
     private var authError: NSError!
+    private var otpCode = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tfCode1.delegate = self
-        tfCode2.delegate = self
-        tfCode3.delegate = self
-        tfCode4.delegate = self
-        tfCode5.delegate = self
-        tfCode6.delegate = self
-        tfCode1.keyboardType = .numberPad
-        tfCode1.textContentType = .oneTimeCode
+//        tfCode1.delegate = self
+//        tfCode2.delegate = self
+//        tfCode3.delegate = self
+//        tfCode4.delegate = self
+//        tfCode5.delegate = self
+//        tfCode6.delegate = self
+//        tfCode1.keyboardType = .numberPad
+//        tfCode1.textContentType = .oneTimeCode
         self.lbPhone.text = phone
+        self.btnConfirm.isEnabled = false
+        
+        self.optView.dpOTPViewDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,7 +92,7 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
             return
         }
         
-        let code = "\(tfCode1.text!)\(tfCode2.text!)\(tfCode3.text!)\(tfCode4.text!)\(tfCode5.text!)\(tfCode6.text!)"
+        let code = otpCode// "\(tfCode1.text!)\(tfCode2.text!)\(tfCode3.text!)\(tfCode4.text!)\(tfCode5.text!)\(tfCode6.text!)"
         print(code)
         self.startAnimating()
         
@@ -125,7 +131,6 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
         
         
     }
-    
     
     @IBAction func actionTryAgain(_ sender: UIButton) {
         if self.authError.code == AuthErrorCode.secondFactorRequired.rawValue {
@@ -181,4 +186,34 @@ extension VerifyPhoneVC: UITextFieldDelegate {
         // make sure the result is under 16 characters
         return updatedText.count <= 1
     }
+}
+
+extension VerifyPhoneVC: DPOTPViewDelegate {
+    func dpOTPViewAddText(_ text: String, at position: Int) {
+        otpCode = text
+        print("otp: \(otpCode)")
+        if otpCode.count == 6 {
+            self.btnConfirm.isEnabled = true
+        } else {
+            self.btnConfirm.isEnabled = false
+        }
+    }
+    
+    func dpOTPViewRemoveText(_ text: String, at position: Int) {
+        self.btnConfirm.isEnabled = false
+    }
+    
+    func dpOTPViewChangePositionAt(_ position: Int) {
+        
+    }
+    
+    func dpOTPViewBecomeFirstResponder() {
+        
+    }
+    
+    func dpOTPViewResignFirstResponder() {
+        
+    }
+    
+    
 }

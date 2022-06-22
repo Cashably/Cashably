@@ -75,6 +75,7 @@ class SignupVC: UIViewController, NVActivityIndicatorViewable {
             
                 let verifyPhoneVC = self.storyboard?.instantiateViewController(withIdentifier: "VerifyPhoneVC") as! VerifyPhoneVC
                 verifyPhoneVC.type = "signup"
+                verifyPhoneVC.phone = self.phoneNumber
                 self.navigationController?.pushViewController(verifyPhoneVC, animated: true)
           }
     }

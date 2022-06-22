@@ -72,11 +72,13 @@ class SignInVC: UIViewController, NVActivityIndicatorViewable {
               // Sign in using the verificationID and the code sent to the user
               // ...
                 UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
-            
+
                 let verifyPhoneVC = self.storyboard?.instantiateViewController(withIdentifier: "VerifyPhoneVC") as! VerifyPhoneVC
                 verifyPhoneVC.type = "signin"
+                verifyPhoneVC.phone = self.phoneNumber
                 self.navigationController?.pushViewController(verifyPhoneVC, animated: true)
           }
+        
     }
     
     @IBAction func actionLogin(_ sender: UIButton) {
