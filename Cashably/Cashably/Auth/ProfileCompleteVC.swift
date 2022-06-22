@@ -43,7 +43,25 @@ class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndica
     
     @IBAction func actionComplete(_ sender: UIButton) {
         
-        if self.tfName.text!.isEmpty || self.tfEmail.text!.isEmpty || self.tfDOB.text!.isEmpty || self.tfSSN.text!.isEmpty {
+        if tfName.text?.isEmpty == true {
+            self.tfName.shake(6, withDelta: 10, speed: 0.06)
+            tfName.becomeFirstResponder()
+            return
+        }
+        if tfEmail.text?.isEmpty == true {
+            self.tfEmail.shake(6, withDelta: 10, speed: 0.06)
+            tfEmail.becomeFirstResponder()
+            return
+        }
+        
+        if tfDOB.text?.isEmpty == true {
+            self.tfDOB.shake(6, withDelta: 10, speed: 0.06)
+            tfDOB.becomeFirstResponder()
+            return
+        }
+        if tfSSN.text?.isEmpty == true {
+            self.tfSSN.shake(6, withDelta: 10, speed: 0.06)
+            tfSSN.becomeFirstResponder()
             return
         }
         

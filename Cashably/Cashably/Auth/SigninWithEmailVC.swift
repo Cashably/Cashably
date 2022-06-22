@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import NVActivityIndicatorView
+import UITextField_Shake
 
 class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -23,6 +24,7 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tfEmail.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +43,16 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     @IBAction func actionSignin(_ sender: UIButton) {
+        if tfEmail.text?.isEmpty == true {
+            self.tfEmail.shake(6, withDelta: 10, speed: 0.06)
+            tfEmail.becomeFirstResponder()
+            return
+        }
+        if tfPassword.text?.isEmpty == true {
+            self.tfPassword.shake(6, withDelta: 10, speed: 0.06)
+            tfPassword.becomeFirstResponder()
+            return
+        }
         self.startAnimating()
         Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) { [weak self] authResult, error in
             self?.stopAnimating()

@@ -20,14 +20,20 @@ class MainVC: UITabBarController {
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        print("mainvc staus bar prefered")
+        return .lightContent
+    }
+    
     override var childForStatusBarStyle: UIViewController? {
+        print("change status bar")
         return selectedViewController
     }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
-        
+        setNeedsStatusBarAppearanceUpdate()
         handle = Auth.auth().addStateDidChangeListener { auth, user in
           // ...
             

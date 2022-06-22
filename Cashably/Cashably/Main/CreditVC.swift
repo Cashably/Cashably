@@ -42,9 +42,15 @@ class CreditVC: UIViewController, ChartViewDelegate {
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        print("crdit staus bar prefered")
+        return .default
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
+        setNeedsStatusBarAppearanceUpdate()
    }
 
     override func viewWillDisappear(_ animated: Bool) {

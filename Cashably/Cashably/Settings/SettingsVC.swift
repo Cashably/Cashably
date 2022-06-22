@@ -44,11 +44,18 @@ class SettingsVC: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "settingsCell")
         tableView.register(UINib(nibName: "SettingsTableViewFooterCell", bundle: nil), forCellReuseIdentifier: "settingsFooter")
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        print("seting staus bar prefered")
+        return .default
     }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
+        setNeedsStatusBarAppearanceUpdate()
    }
 
     override func viewWillDisappear(_ animated: Bool) {

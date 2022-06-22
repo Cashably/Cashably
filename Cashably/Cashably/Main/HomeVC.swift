@@ -38,6 +38,7 @@ class HomeVC: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
+        print("home staus bar prefered")
         return .lightContent
     }
     
