@@ -240,16 +240,26 @@ Cash Loan</string>
                                 <constraint firstAttribute="bottom" secondItem="ckE-A5-ePz" secondAttribute="bottom" id="pEY-7Q-aV2"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfr-cC-Lw9">
+                            <rect key="frame" x="0.0" y="871" width="414" height="25"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="8Vc-PU-i3V"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="kxy-fe-24p" firstAttribute="centerY" secondItem="3rt-Ny-DAi" secondAttribute="top" id="0F1-C7-yib"/>
                         <constraint firstItem="kxy-fe-24p" firstAttribute="leading" secondItem="3rt-Ny-DAi" secondAttribute="leading" constant="20" id="7TU-rY-Yf1"/>
                         <constraint firstItem="qe0-1O-ekJ" firstAttribute="leading" secondItem="3rt-Ny-DAi" secondAttribute="leading" id="EbV-qx-3dL"/>
+                        <constraint firstAttribute="bottom" secondItem="Mfr-cC-Lw9" secondAttribute="bottom" id="FHY-gg-DKw"/>
                         <constraint firstAttribute="trailing" secondItem="kxy-fe-24p" secondAttribute="trailing" constant="20" id="Fb0-uJ-8uQ"/>
+                        <constraint firstItem="Mfr-cC-Lw9" firstAttribute="leading" secondItem="3rt-Ny-DAi" secondAttribute="leading" id="MoY-ui-fb0"/>
                         <constraint firstAttribute="trailing" secondItem="qe0-1O-ekJ" secondAttribute="trailing" id="Pj4-WO-U8R"/>
                         <constraint firstAttribute="trailing" secondItem="qe0-1O-ekJ" secondAttribute="trailing" id="QQO-TN-1Bc"/>
                         <constraint firstAttribute="bottom" secondItem="qe0-1O-ekJ" secondAttribute="bottom" id="XH3-7t-z1h"/>
+                        <constraint firstAttribute="trailing" secondItem="Mfr-cC-Lw9" secondAttribute="trailing" id="Xqf-9N-e3F"/>
                         <constraint firstItem="qe0-1O-ekJ" firstAttribute="top" secondItem="kxy-fe-24p" secondAttribute="bottom" constant="20" id="c2O-sv-Wy5"/>
                         <constraint firstItem="qe0-1O-ekJ" firstAttribute="leading" secondItem="3rt-Ny-DAi" secondAttribute="leading" id="yu1-Xn-Me8"/>
                     </constraints>
