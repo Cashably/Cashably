@@ -49,6 +49,7 @@
 		F062A83828629D9700DBBCE4 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83728629D9700DBBCE4 /* DateValueFormatter.swift */; };
 		F062A83A28629E2200DBBCE4 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83928629E2200DBBCE4 /* DayAxisValueFormatter.swift */; };
 		F062A83C2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83B2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift */; };
+		F062A83E2863AEFA00DBBCE4 /* UITextField+InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -148,6 +149,7 @@
 		F062A83728629D9700DBBCE4 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		F062A83928629E2200DBBCE4 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		F062A83B2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntAxisValueFormatter.swift; sourceTree = "<group>"; };
+		F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+InputView.swift"; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 				F0B853592860145B002F90DA /* RoundBorderView.swift */,
 				F0CE9F482860C09D004B1515 /* ToggleButton.swift */,
 				F062A7812861C37C00DBBCE4 /* RoundView.swift */,
+				F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				F0A04350285DBF8D00E29CE0 /* Alert.swift in Sources */,
 				F025F8DD2860730800BABB3D /* BankVC.swift in Sources */,
 				F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */,
+				F062A83E2863AEFA00DBBCE4 /* UITextField+InputView.swift in Sources */,
 				F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */,
 				F05365EA285FF5DF00B771D9 /* CashoutSuccessVC.swift in Sources */,
 				F0CE9F4F2860CAA8004B1515 /* RequestPayView.swift in Sources */,

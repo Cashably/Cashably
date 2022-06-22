@@ -32,6 +32,7 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDeleg
         }
     }
     @IBOutlet weak var tfCardCVV: UITextField! {
+        
         didSet {
             tfCardCVV.delegate = self
             tfCardCVV.layer.cornerRadius = 10
@@ -42,9 +43,13 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDeleg
     
     var delegate: AddCardDelegate!
     
+    var timePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        tfCardDate.setInputViewDatePicker(target: self, selector: #selector(tapDone))
         
     }
     
@@ -57,6 +62,16 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDeleg
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+    @objc func tapDone() {
+        if let datePicker = self.tfCardDate.inputView as? UIDatePicker { // 2-1
+            let dateformatter = DateFormatter() // 2-2
+//            dateformatter.dateStyle = .short // 2-3
+            dateformatter.dateFormat = "MM/YY"
+            self.tfCardDate.text = dateformatter.string(from: datePicker.date) //2-4
+        }
+        self.tfCardDate.resignFirstResponder() // 2-5
+    }
     
     @IBAction func actionAddCard(_ sender: UIButton) {
         UserDefaults.standard.set("123456789", forKey: "cardid")
