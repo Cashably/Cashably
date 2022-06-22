@@ -30,7 +30,8 @@ class BankVC: UIViewController {
             container.foregroundColor = .white
             return container
         }
-
+        self.btnMonth.layer.cornerRadius = 10
+        
         self.drawChart()
         
     }
