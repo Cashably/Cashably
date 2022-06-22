@@ -2707,9 +2707,19 @@ your Affirm account and loans.</string>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPo-HR-DDA">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuT-Z5-Y2s" customClass="LineChartView" customModule="Charts">
+                                                                <rect key="frame" x="20" y="20" width="394" height="310"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="350" id="BSa-jR-MSJ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="LuT-Z5-Y2s" secondAttribute="bottom" constant="20" id="MQ9-Cb-95L"/>
+                                                            <constraint firstItem="LuT-Z5-Y2s" firstAttribute="leading" secondItem="KPo-HR-DDA" secondAttribute="leading" constant="20" id="ft4-F6-dlK"/>
+                                                            <constraint firstAttribute="trailing" secondItem="LuT-Z5-Y2s" secondAttribute="trailing" id="ksM-sM-1c5"/>
+                                                            <constraint firstItem="LuT-Z5-Y2s" firstAttribute="top" secondItem="KPo-HR-DDA" secondAttribute="top" constant="20" id="tMW-oh-BXQ"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -2784,7 +2794,7 @@ your Affirm account and loans.</string>
                         <outlet property="btnFilter" destination="Rfw-k5-Zcu" id="iSg-kD-4v6"/>
                         <outlet property="btnMonth" destination="ONU-M4-exd" id="To5-QD-Zrh"/>
                         <outlet property="btnWeek" destination="R4y-Nb-829" id="wfl-Py-A5A"/>
-                        <outlet property="chatView" destination="KPo-HR-DDA" id="5e9-cf-w0f"/>
+                        <outlet property="chartView" destination="LuT-Z5-Y2s" id="nzQ-Wo-Yum"/>
                         <outlet property="lbBalance" destination="bzj-md-wTt" id="72i-OC-OdR"/>
                     </connections>
                 </viewController>
