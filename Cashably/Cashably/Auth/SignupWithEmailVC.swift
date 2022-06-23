@@ -22,6 +22,7 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var emailView: InputView!
     @IBOutlet weak var passwordView: InputView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

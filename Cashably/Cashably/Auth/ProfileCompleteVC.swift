@@ -20,6 +20,8 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var emailView: InputView!
     @IBOutlet weak var ssnView: UIStackView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var btnComplete: UIButton!
     
     var window: UIWindow?

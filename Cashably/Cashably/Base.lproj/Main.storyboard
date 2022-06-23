@@ -530,6 +530,7 @@
                         <outlet property="btnLoginWithEmail" destination="P67-pj-xeZ" id="ZJ4-Ef-T2k"/>
                         <outlet property="btnSendOTP" destination="ax7-Q6-kl1" id="6Ik-XQ-BSe"/>
                         <outlet property="btnSignup" destination="Bej-ky-yj9" id="Kg0-Tr-16b"/>
+                        <outlet property="scrollView" destination="Zes-Ux-ctb" id="CMR-hr-GUk"/>
                         <outlet property="tfPhone" destination="NiE-D1-yeR" id="zUB-tJ-OqR"/>
                     </connections>
                 </viewController>
@@ -1538,6 +1539,7 @@
                         <outlet property="btnSIgnup" destination="tTN-v8-b67" id="tc2-xI-imN"/>
                         <outlet property="emailView" destination="SDT-57-HbW" id="zJy-9H-1sG"/>
                         <outlet property="passwordView" destination="mt0-WD-PY2" id="jaN-kD-lS6"/>
+                        <outlet property="scrollView" destination="X2B-r0-v8V" id="6zA-hx-64u"/>
                         <outlet property="tfEmail" destination="eZp-Zp-HgQ" id="Xc1-DB-Mqi"/>
                         <outlet property="tfPassword" destination="bCZ-TQ-V17" id="73J-qf-S9k"/>
                     </connections>
@@ -1905,6 +1907,7 @@
                         <outlet property="btnComplete" destination="Jt0-fR-NW9" id="RTJ-vK-QHM"/>
                         <outlet property="emailView" destination="UOY-cK-3qm" id="NbS-4O-JeM"/>
                         <outlet property="nameView" destination="aqP-XC-giJ" id="HMJ-PM-KNY"/>
+                        <outlet property="scrollView" destination="G2F-Kc-lXN" id="3mT-8n-xmJ"/>
                         <outlet property="ssnView" destination="dnY-W5-QDP" id="cJ5-l7-Lde"/>
                         <outlet property="tfDOB" destination="Vho-Ol-AkR" id="rSx-RM-4jA"/>
                         <outlet property="tfEmail" destination="q2g-HK-6xf" id="VA5-R8-vhG"/>
@@ -2246,6 +2249,7 @@
                         <outlet property="btnToOtp" destination="Bcy-Ur-dEn" id="LKw-ZK-882"/>
                         <outlet property="emailView" destination="Jx9-NI-LRK" id="hR5-N6-Rlu"/>
                         <outlet property="passwordView" destination="EEx-x4-ysb" id="B4C-eX-DVx"/>
+                        <outlet property="scrollView" destination="KXG-Po-Muz" id="INR-Kn-wcx"/>
                         <outlet property="tfEmail" destination="QIs-IC-aWR" id="NIa-mp-W8z"/>
                         <outlet property="tfPassword" destination="Ncx-Ov-XCl" id="AJ5-fK-zsY"/>
                     </connections>
@@ -5214,6 +5218,7 @@ checking account you provided.</string>
                         <outlet property="btnAddCard" destination="ZKs-e5-ZPN" id="rHa-Pe-fIF"/>
                         <outlet property="btnBack" destination="rG3-9r-GRR" id="k3D-Li-fDA"/>
                         <outlet property="cardNoView" destination="ir1-2C-v9N" id="Pah-7i-GJj"/>
+                        <outlet property="scrollView" destination="K6Z-3J-Sdl" id="Io8-DE-CIy"/>
                         <outlet property="tfCardCVV" destination="eeP-bi-c2t" id="f29-ID-AmX"/>
                         <outlet property="tfCardDate" destination="5xi-Sm-K9p" id="LQX-Me-pai"/>
                         <outlet property="tfCardNo" destination="vUE-1Y-Vsf" id="qhB-Gf-nMy"/>

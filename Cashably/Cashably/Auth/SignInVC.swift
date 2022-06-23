@@ -23,6 +23,8 @@ class SignInVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     var listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     
     private var phoneNumber: String!

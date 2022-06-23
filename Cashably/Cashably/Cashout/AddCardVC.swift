@@ -19,6 +19,7 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var btnAddCard: UIButton!
     @IBOutlet weak var cardNoView: InputView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tfCardNo: UITextField! {
         didSet {
             tfCardNo.delegate = self
