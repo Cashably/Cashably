@@ -10,12 +10,15 @@ import UIKit
 import FirebaseAuth
 import NVActivityIndicatorView
 
-class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
+class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
    
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfDOB: UITextField!
     @IBOutlet weak var tfSSN: UITextField!
+    @IBOutlet weak var nameView: InputView!
+    @IBOutlet weak var emailView: InputView!
+    @IBOutlet weak var ssnView: UIStackView!
     
     @IBOutlet weak var btnComplete: UIButton!
     
@@ -29,7 +32,15 @@ class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndica
         tfDOB.delegate = self
         tfSSN.delegate = self
         
+        tfName.tag = 1
+        tfEmail.tag = 2
+        tfDOB.tag = 3
+        tfSSN.tag = 4
+        
         tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        
+        self.addKeyboardWillShowNotification()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,4 +115,22 @@ class ProfileCompleteVC: UIViewController, UITextFieldDelegate, NVActivityIndica
             }
         }
     }
+    
+    @IBAction func actionBakc(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
+
+extension ProfileCompleteVC: UITextFieldDelegate {
+ 
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Check if there is any other text-field in the view whose tag is +1 greater than the current text-field on which the return key was pressed. If yes → then move the cursor to that next text-field. If No → Dismiss the keyboard
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+ }

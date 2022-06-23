@@ -19,7 +19,7 @@ class SignInVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var tfPhone: FPNTextField! {
         didSet {
             tfPhone.delegate = self
-            
+            tfPhone.tag = 1
         }
     }
     
@@ -34,7 +34,9 @@ class SignInVC: UIViewController, NVActivityIndicatorViewable {
         self.flagPhoneNumber()
         
         self.btnSendOTP.isEnabled = false
-
+//        self.tfPhone.becomeFirstResponder()
+        self.addKeyboardWillShowNotification()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +60,10 @@ class SignInVC: UIViewController, NVActivityIndicatorViewable {
             self?.tfPhone.setFlag(countryCode: country.code)
         }
     }
+    
+//    override func keyboardWillShowWithFrame(_ frame: CGRect) {
+//        print("keyboardwillshowwithfram")
+//    }
     
     @IBAction func actionSendOTP(_ sender: UIButton) {
         self.startAnimating()
@@ -118,3 +124,17 @@ extension SignInVC: FPNTextFieldDelegate {
           }
        }
 }
+
+extension SignInVC: UITextFieldDelegate {
+ 
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Check if there is any other text-field in the view whose tag is +1 greater than the current text-field on which the return key was pressed. If yes → then move the cursor to that next text-field. If No → Dismiss the keyboard
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+//            textField.resignFirstResponder()
+            self.dismissKeyboard()
+        }
+        return false
+    }
+ }

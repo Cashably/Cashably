@@ -19,6 +19,7 @@ class SignupVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var tfPhone: FPNTextField! {
         didSet {
             tfPhone.delegate = self
+            tfPhone.tag = 1
         }
     }
     @IBOutlet weak var btnBack: UIButton!
@@ -119,3 +120,17 @@ extension SignupVC: FPNTextFieldDelegate {
           }
        }
 }
+
+extension SignupVC: UITextFieldDelegate {
+ 
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Check if there is any other text-field in the view whose tag is +1 greater than the current text-field on which the return key was pressed. If yes → then move the cursor to that next text-field. If No → Dismiss the keyboard
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+//            textField.resignFirstResponder()
+            self.dismissKeyboard()
+        }
+        return false
+    }
+ }

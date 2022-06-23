@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+class CustomTapGestureRecognizer: UITapGestureRecognizer {
+    var textfield: UITextField!
+}
+
 open class InputView: UIView {
     
     init() {
@@ -45,5 +49,17 @@ open class InputView: UIView {
 
     }
     
+    func didTap(target: Any) {
+        let textfield = target as! UITextField
+        let tap: CustomTapGestureRecognizer = CustomTapGestureRecognizer(
+                    target: self,
+                    action: #selector(focus(sender:)))
+        tap.textfield = textfield
+        //Add this tap gesture recognizer to the parent view
+        self.addGestureRecognizer(tap)
+    }
     
+    @objc func focus(sender: CustomTapGestureRecognizer) {
+        sender.textfield.becomeFirstResponder()
+    }
 }

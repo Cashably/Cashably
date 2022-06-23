@@ -1536,6 +1536,8 @@
                     <connections>
                         <outlet property="btnBack" destination="ZfM-x5-drI" id="FcD-xE-tg8"/>
                         <outlet property="btnSIgnup" destination="tTN-v8-b67" id="tc2-xI-imN"/>
+                        <outlet property="emailView" destination="SDT-57-HbW" id="zJy-9H-1sG"/>
+                        <outlet property="passwordView" destination="mt0-WD-PY2" id="jaN-kD-lS6"/>
                         <outlet property="tfEmail" destination="eZp-Zp-HgQ" id="Xc1-DB-Mqi"/>
                         <outlet property="tfPassword" destination="bCZ-TQ-V17" id="73J-qf-S9k"/>
                     </connections>
@@ -1869,12 +1871,31 @@
                                     <constraint firstItem="2WJ-O4-MLq" firstAttribute="leading" secondItem="apF-UK-gES" secondAttribute="leading" id="pIp-Kd-9tg"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xr6-fh-Yca" userLabel="btn_back">
+                                <rect key="frame" x="20" y="60" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="l2t-Fc-dGV"/>
+                                    <constraint firstAttribute="width" constant="50" id="tru-kD-Kk6"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_back_black">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="strokeColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionBakc:" destination="C4N-CU-wWF" eventType="primaryActionTriggered" id="D7u-GC-KCR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ou7-bi-03Y"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="apF-UK-gES" firstAttribute="leading" secondItem="Ou7-bi-03Y" secondAttribute="leading" id="4iz-bW-UQt"/>
+                            <constraint firstItem="Xr6-fh-Yca" firstAttribute="top" secondItem="pbv-aI-gE4" secondAttribute="top" constant="60" id="P1h-NR-nN8"/>
                             <constraint firstItem="Ou7-bi-03Y" firstAttribute="bottom" secondItem="apF-UK-gES" secondAttribute="bottom" id="h5h-IH-eeK"/>
+                            <constraint firstItem="Xr6-fh-Yca" firstAttribute="leading" secondItem="Ou7-bi-03Y" secondAttribute="leading" constant="20" id="igM-2D-sxm"/>
                             <constraint firstItem="apF-UK-gES" firstAttribute="trailing" secondItem="Ou7-bi-03Y" secondAttribute="trailing" id="soO-Yy-Rao"/>
                             <constraint firstItem="apF-UK-gES" firstAttribute="top" secondItem="pbv-aI-gE4" secondAttribute="top" id="uj1-Qp-3Op"/>
                         </constraints>
@@ -1882,6 +1903,9 @@
                     <size key="freeformSize" width="414" height="1044"/>
                     <connections>
                         <outlet property="btnComplete" destination="Jt0-fR-NW9" id="RTJ-vK-QHM"/>
+                        <outlet property="emailView" destination="UOY-cK-3qm" id="NbS-4O-JeM"/>
+                        <outlet property="nameView" destination="aqP-XC-giJ" id="HMJ-PM-KNY"/>
+                        <outlet property="ssnView" destination="dnY-W5-QDP" id="cJ5-l7-Lde"/>
                         <outlet property="tfDOB" destination="Vho-Ol-AkR" id="rSx-RM-4jA"/>
                         <outlet property="tfEmail" destination="q2g-HK-6xf" id="VA5-R8-vhG"/>
                         <outlet property="tfName" destination="XdR-2r-pWs" id="QZS-g9-ANk"/>
@@ -2220,6 +2244,8 @@
                         <outlet property="btnLogin" destination="LN6-NJ-EFl" id="1JB-eb-Ye2"/>
                         <outlet property="btnPassword" destination="m91-Kh-hkC" id="qWx-Q5-DDh"/>
                         <outlet property="btnToOtp" destination="Bcy-Ur-dEn" id="LKw-ZK-882"/>
+                        <outlet property="emailView" destination="Jx9-NI-LRK" id="hR5-N6-Rlu"/>
+                        <outlet property="passwordView" destination="EEx-x4-ysb" id="B4C-eX-DVx"/>
                         <outlet property="tfEmail" destination="QIs-IC-aWR" id="NIa-mp-W8z"/>
                         <outlet property="tfPassword" destination="Ncx-Ov-XCl" id="AJ5-fK-zsY"/>
                     </connections>
@@ -5187,6 +5213,7 @@ checking account you provided.</string>
                     <connections>
                         <outlet property="btnAddCard" destination="ZKs-e5-ZPN" id="rHa-Pe-fIF"/>
                         <outlet property="btnBack" destination="rG3-9r-GRR" id="k3D-Li-fDA"/>
+                        <outlet property="cardNoView" destination="ir1-2C-v9N" id="Pah-7i-GJj"/>
                         <outlet property="tfCardCVV" destination="eeP-bi-c2t" id="f29-ID-AmX"/>
                         <outlet property="tfCardDate" destination="5xi-Sm-K9p" id="LQX-Me-pai"/>
                         <outlet property="tfCardNo" destination="vUE-1Y-Vsf" id="qhB-Gf-nMy"/>

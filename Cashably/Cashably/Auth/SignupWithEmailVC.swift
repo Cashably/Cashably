@@ -19,11 +19,25 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnBack: UIButton!
     
+    @IBOutlet weak var emailView: InputView!
+    @IBOutlet weak var passwordView: InputView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tfEmail.becomeFirstResponder()
+//        tfEmail.becomeFirstResponder()
+        tfEmail.delegate = self
+        tfPassword.delegate = self
+        
+        emailView.didTap(target: tfEmail)
+        passwordView.didTap(target: tfPassword)
+        
+        tfEmail.tag = 1
+        tfPassword.tag = 2
+        
+        self.addKeyboardWillShowNotification()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,3 +80,17 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+extension SignupWithEmailVC: UITextFieldDelegate {
+ 
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Check if there is any other text-field in the view whose tag is +1 greater than the current text-field on which the return key was pressed. If yes → then move the cursor to that next text-field. If No → Dismiss the keyboard
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+//            textField.resignFirstResponder()
+            self.dismissKeyboard()
+        }
+        return false
+    }
+ }

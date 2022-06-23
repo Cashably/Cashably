@@ -13,10 +13,11 @@ protocol AddCardDelegate {
     func addCard()
 }
 
-class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDelegate {
+class AddCardVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnAddCard: UIButton!
+    @IBOutlet weak var cardNoView: InputView!
     
     @IBOutlet weak var tfCardNo: UITextField! {
         didSet {
@@ -51,6 +52,15 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDeleg
         
         tfCardDate.setInputViewDatePicker(target: self, selector: #selector(tapDone))
         
+        cardNoView.didTap(target: tfCardNo)
+        
+        tfCardNo.tag = 1
+        tfCardDate.tag = 2
+        tfCardCVV.tag = 3
+        
+        self.addKeyboardWillShowNotification()
+        self.hideKeyboardWhenTappedAround()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,3 +93,17 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable, UITextFieldDeleg
     }
     
 }
+
+extension AddCardVC: UITextFieldDelegate {
+ 
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Check if there is any other text-field in the view whose tag is +1 greater than the current text-field on which the return key was pressed. If yes → then move the cursor to that next text-field. If No → Dismiss the keyboard
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+//            textField.resignFirstResponder()
+            self.dismissKeyboard()
+        }
+        return false
+    }
+ }

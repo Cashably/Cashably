@@ -13,7 +13,6 @@ extension UIViewController {
     
     ///EZSE: Adds an NotificationCenter with name and Selector
     open func addNotificationObserver(_ name: String, selector: Selector) {
-        print("addnotificatoinobberser")
         NotificationCenter.default.addObserver(self, selector: selector, name: NSNotification.Name(rawValue: name), object: nil)
     }
     
@@ -32,7 +31,7 @@ extension UIViewController {
     ///EZSE: Adds a NotificationCenter Observer for keyboardWillShowNotification()
     ///
     /// ⚠️ You also need to implement ```keyboardWillShowNotification(_ notification: Notification)```
-    open func addKeyboardWillShowNotification() {
+    public func addKeyboardWillShowNotification() {
         self.addNotificationObserver(UIResponder.keyboardWillShowNotification.rawValue, selector: #selector(UIViewController.keyboardWillShowNotification(_:)))
     }
     
@@ -46,34 +45,34 @@ extension UIViewController {
     ///EZSE:  Adds a NotificationCenter Observer for keyboardWillHideNotification()
     ///
     /// ⚠️ You also need to implement ```keyboardWillHideNotification(_ notification: Notification)```
-    open func addKeyboardWillHideNotification() {
+    public func addKeyboardWillHideNotification() {
         self.addNotificationObserver(UIResponder.keyboardWillHideNotification.rawValue, selector: #selector(UIViewController.keyboardWillHideNotification(_:)))
     }
     
     ///EZSE:  Adds a NotificationCenter Observer for keyboardDidHideNotification()
     ///
     /// ⚠️ You also need to implement ```keyboardDidHideNotification(_ notification: Notification)```
-    open func addKeyboardDidHideNotification() {
+    public func addKeyboardDidHideNotification() {
         self.addNotificationObserver(UIResponder.keyboardDidHideNotification.rawValue, selector: #selector(UIViewController.keyboardDidHideNotification(_:)))
     }
     
     ///EZSE: Removes keyboardWillShowNotification()'s NotificationCenter Observer
-    open func removeKeyboardWillShowNotification() {
+    public func removeKeyboardWillShowNotification() {
         self.removeNotificationObserver(UIResponder.keyboardWillShowNotification.rawValue)
     }
     
     ///EZSE: Removes keyboardDidShowNotification()'s NotificationCenter Observer
-    open func removeKeyboardDidShowNotification() {
+    public func removeKeyboardDidShowNotification() {
         self.removeNotificationObserver(UIResponder.keyboardWillShowNotification.rawValue)
     }
     
     ///EZSE: Removes keyboardWillHideNotification()'s NotificationCenter Observer
-    open func removeKeyboardWillHideNotification() {
+    public func removeKeyboardWillHideNotification() {
         self.removeNotificationObserver(UIResponder.keyboardWillShowNotification.rawValue)
     }
     
     ///EZSE: Removes keyboardDidHideNotification()'s NotificationCenter Observer
-    open func removeKeyboardDidHideNotification() {
+    public func removeKeyboardDidHideNotification() {
         self.removeNotificationObserver(UIResponder.keyboardWillShowNotification.rawValue)
     }
     
