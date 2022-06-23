@@ -3689,9 +3689,41 @@ your Affirm account and loans.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jP8-di-tyD" userLabel="chat view">
                                         <rect key="frame" x="117" y="120" width="180" height="180"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ws-rQ-OO8">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ws-rQ-OO8" customClass="MKMagneticProgress" customModule="MKMagneticProgress">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundShapeColor">
+                                                        <color key="value" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="spaceDegree">
+                                                        <real key="value" value="45"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                        <real key="value" value="0.69999999999999996"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="percentColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+900" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-1X-rNp">
+                                                <rect key="frame" x="145" y="153" width="35" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3h-5e-sA9">
+                                                <rect key="frame" x="0.0" y="153" width="35" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="824" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVb-2A-kHD">
                                                 <rect key="frame" x="66.5" y="75" width="47" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -3707,14 +3739,18 @@ your Affirm account and loans.</string>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="3Ws-rQ-OO8" firstAttribute="top" secondItem="jP8-di-tyD" secondAttribute="top" id="6T5-bA-cu3"/>
+                                            <constraint firstItem="Z3h-5e-sA9" firstAttribute="leading" secondItem="jP8-di-tyD" secondAttribute="leading" id="8UB-em-Aa1"/>
                                             <constraint firstAttribute="height" constant="180" id="AqB-zZ-K57"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z3h-5e-sA9" secondAttribute="bottom" constant="10" id="BWl-4n-pME"/>
                                             <constraint firstAttribute="width" constant="180" id="Daa-oX-WdS"/>
                                             <constraint firstItem="d3b-3f-B9g" firstAttribute="top" secondItem="OVb-2A-kHD" secondAttribute="bottom" constant="5" id="HF2-bV-lmu"/>
                                             <constraint firstAttribute="bottom" secondItem="3Ws-rQ-OO8" secondAttribute="bottom" id="Iyy-dS-81c"/>
                                             <constraint firstItem="OVb-2A-kHD" firstAttribute="centerX" secondItem="jP8-di-tyD" secondAttribute="centerX" id="KO9-1S-t0Q"/>
                                             <constraint firstItem="3Ws-rQ-OO8" firstAttribute="leading" secondItem="jP8-di-tyD" secondAttribute="leading" id="Nhz-JG-Lhv"/>
+                                            <constraint firstAttribute="trailing" secondItem="G7F-1X-rNp" secondAttribute="trailing" id="PkG-Tq-l27"/>
                                             <constraint firstItem="d3b-3f-B9g" firstAttribute="centerX" secondItem="jP8-di-tyD" secondAttribute="centerX" id="fEg-QB-aPw"/>
                                             <constraint firstAttribute="trailing" secondItem="3Ws-rQ-OO8" secondAttribute="trailing" id="sSH-LM-wV1"/>
+                                            <constraint firstItem="G7F-1X-rNp" firstAttribute="bottom" secondItem="Z3h-5e-sA9" secondAttribute="bottom" id="vgZ-OY-OZH"/>
                                             <constraint firstItem="OVb-2A-kHD" firstAttribute="centerY" secondItem="jP8-di-tyD" secondAttribute="centerY" id="x7C-mK-mku"/>
                                         </constraints>
                                     </view>
@@ -4027,7 +4063,11 @@ your Affirm account and loans.</string>
                     </tabBarItem>
                     <connections>
                         <outlet property="breakdownChatView" destination="Sgi-M4-KOn" id="Gih-Xz-FPE"/>
+                        <outlet property="lbMaxPercent" destination="G7F-1X-rNp" id="S8r-TN-sSM"/>
+                        <outlet property="lbMinPercent" destination="Z3h-5e-sA9" id="1zb-2m-kBY"/>
                         <outlet property="lbMonthScore" destination="4rH-Io-xcu" id="Sgt-IH-5Cn"/>
+                        <outlet property="lbPercent" destination="OVb-2A-kHD" id="iKX-qC-R5a"/>
+                        <outlet property="lbTitle" destination="d3b-3f-B9g" id="Zq4-zc-Pyw"/>
                         <outlet property="lbWeekScore" destination="Qpj-Md-0Bo" id="XZf-lV-n8e"/>
                         <outlet property="monthIcon" destination="pex-Ap-wdl" id="HzQ-Dj-Mle"/>
                         <outlet property="scoreChatView" destination="3Ws-rQ-OO8" id="2eh-6B-Y0V"/>

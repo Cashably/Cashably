@@ -89,6 +89,7 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.7.2)
   - IQKeyboardManagerSwift (6.5.9)
+  - MKMagneticProgress (1.4)
   - MKRingProgressView (2.3.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -110,6 +111,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - FlagPhoneNumber
   - IQKeyboardManagerSwift
+  - MKMagneticProgress
   - MKRingProgressView
   - NVActivityIndicatorView/Extended
   - Plaid
@@ -131,6 +133,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
+    - MKMagneticProgress
     - MKRingProgressView
     - nanopb
     - NVActivityIndicatorView
@@ -153,6 +156,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  MKMagneticProgress: 006b8c763d62986661bcde03794a3dcf56cd084a
   MKRingProgressView: f534209b9a1edc0beb2ea613e6b953ea2195b565
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
@@ -160,6 +164,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   "UITextField+Shake": 298ac5a0f239d731bdab999b19b628c956ca0ac3
 
-PODFILE CHECKSUM: b9b8b7a80eb49b719617f88b55054cee4c49777e
+PODFILE CHECKSUM: 1f659d211ffb5ab80c882ac797ce6993bd95d369
 
 COCOAPODS: 1.11.2

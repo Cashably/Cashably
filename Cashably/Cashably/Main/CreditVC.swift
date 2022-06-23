@@ -9,10 +9,15 @@ import Foundation
 import UIKit
 import MKRingProgressView
 import Charts
+import MKMagneticProgress
 
 class CreditVC: UIViewController, ChartViewDelegate {
     
-    @IBOutlet weak var scoreChatView: UIView!
+    @IBOutlet weak var lbPercent: UILabel!
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lbMinPercent: UILabel!
+    @IBOutlet weak var lbMaxPercent: UILabel!
+    @IBOutlet weak var scoreChatView: MKMagneticProgress!
     
     @IBOutlet weak var weekIcon: UIImageView!
     @IBOutlet weak var lbWeekScore: UILabel!
@@ -37,7 +42,8 @@ class CreditVC: UIViewController, ChartViewDelegate {
         tableView.backgroundColor = .clear
 //        tableView.rowHeight = 80
         
-        self.drawChart()
+//        self.drawChart()
+        self.drawHalfProgressBar()
         self.drawPieChart()
         
     }
@@ -58,12 +64,35 @@ class CreditVC: UIViewController, ChartViewDelegate {
        self.navigationController?.isNavigationBarHidden = false
    }
     
+    func drawHalfProgressBar() {
+//        lbPercent.isHidden = true
+//        lbTitle.isHidden = true
+        
+        
+//        scoreChatView.progressShapeColor = UIColor(red: 0.886, green: 0.314, blue: 0.31, alpha: 1)
+//        scoreChatView.lineWidth = 0
+        scoreChatView.progressShapeColors = [
+            UIColor(red: 0.886, green: 0.314, blue: 0.31, alpha: 1),
+            UIColor(red: 1, green: 0.675, blue: 0.375, alpha: 1),
+            UIColor(red: 0.759, green: 1, blue: 0.246, alpha: 1),
+            UIColor(red: 0.291, green: 0.896, blue: 0.078, alpha: 1)
+          ]
+        scoreChatView.orientation = .bottom
+        scoreChatView.percentLabelFormat = "%d"
+//        scoreChatView.title = "Greate score"
+//        scoreChatView.titleLabel = lbTitle
+        scoreChatView.setProgress(progress: 0.9)
+        scoreChatView.percent = ""
+        
+    }
+    
     func drawChart() {
         let ringProgressView = RingProgressView(frame: CGRect(x: 0, y: 0, width: 180, height: 180))
         ringProgressView.startColor = UIColor(red: 0.886, green: 0.314, blue: 0.31, alpha: 1)
         ringProgressView.endColor = UIColor(red: 0.291, green: 0.896, blue: 0.078, alpha: 1)
         ringProgressView.ringWidth = 15
         ringProgressView.progress = 0.9
+        
         ringProgressView.translatesAutoresizingMaskIntoConstraints = false
         self.scoreChatView.addSubview(ringProgressView)
         ringProgressView.centerXAnchor.constraint(equalTo: self.scoreChatView.centerXAnchor).isActive = true
