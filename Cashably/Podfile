@@ -18,6 +18,8 @@ target 'Cashably' do
     
     pod 'MKRingProgressView'
     pod 'Charts'
+    
+    pod 'IQKeyboardManagerSwift'
 
     pod 'Plaid'
 
