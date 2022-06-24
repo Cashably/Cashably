@@ -677,8 +677,7 @@ public class MSCircularSlider: UIControl {
     internal func drawArc(ctx: CGContext, center: CGPoint, radius: CGFloat, lineWidth: CGFloat, fromAngle: CGFloat, toAngle: CGFloat, lineCap: CGLineCap) {
         let cartesianFromAngle = toCartesian(toRad(Double(fromAngle)))
         let cartesianToAngle = toCartesian(toRad(Double(toAngle)))
-        print("cartestiatoangle\(cartesianToAngle)")
-        print("cartestiafromangle\(cartesianFromAngle)")
+
         ctx.addArc(center: center, radius: radius, startAngle: CGFloat(cartesianFromAngle), endAngle: CGFloat(cartesianToAngle), clockwise: false)
         
         ctx.setLineWidth(lineWidth)

@@ -198,7 +198,7 @@ public class MSCircularSliderHandle: CALayer {
         bitmap?.translateBy(x: rotatedSize.width / 2.0, y: rotatedSize.height / 2.0)
         
         //   // Rotate the image context
-        bitmap?.rotate(by: CGFloat(toRad(Double(degrees))));
+        bitmap?.rotate(by: CGFloat(toRad(Double(degrees + 180))));
         
         // Now, draw the rotated/scaled image into the context
         bitmap?.draw(img.cgImage!, in: CGRect(x: -rotatedSize.width / 2, y: -rotatedSize.height / 2, width: rotatedSize.width, height: rotatedSize.height))
