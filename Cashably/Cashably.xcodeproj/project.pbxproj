@@ -51,6 +51,8 @@
 		F062A83C2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83B2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift */; };
 		F062A83E2863AEFA00DBBCE4 /* UITextField+InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */; };
 		F062A84028642E3000DBBCE4 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83F28642E3000DBBCE4 /* UIViewController+Keyboard.swift */; };
+		F062A84B286545AC00DBBCE4 /* PolarKit in Resources */ = {isa = PBXBuildFile; fileRef = F062A84A286545AC00DBBCE4 /* PolarKit */; };
+		F062A84D286545C600DBBCE4 /* MTCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -152,6 +154,8 @@
 		F062A83B2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntAxisValueFormatter.swift; sourceTree = "<group>"; };
 		F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+InputView.swift"; sourceTree = "<group>"; };
 		F062A83F28642E3000DBBCE4 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		F062A84A286545AC00DBBCE4 /* PolarKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PolarKit; sourceTree = "<group>"; };
+		F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCircularSlider.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -448,8 +452,10 @@
 		F0A0434E285DBF6100E29CE0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F062A84A286545AC00DBBCE4 /* PolarKit */,
 				F0A0434F285DBF8D00E29CE0 /* Alert.swift */,
 				F0A04351285DC08000E29CE0 /* UIView.swift */,
+				F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */,
 				F0A04353285DC40100E29CE0 /* UIViewController.swift */,
 				F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */,
 				F0A04359285EA6E200E29CE0 /* InputView.swift */,
@@ -609,6 +615,7 @@
 				F0643D0B2856C62700CAB86F /* Assets.xcassets in Resources */,
 				F0CE9F512860CADE004B1515 /* RequestPayView.xib in Resources */,
 				F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */,
+				F062A84B286545AC00DBBCE4 /* PolarKit in Resources */,
 				F0CE9F4D2860C989004B1515 /* EmptyRequestPayView.xib in Resources */,
 				F05365BC285F650500B771D9 /* SettingsTableViewCell.xib in Resources */,
 				F0643D092856C62600CAB86F /* Main.storyboard in Resources */,
@@ -749,6 +756,7 @@
 				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,
 				F062A83A28629E2200DBBCE4 /* DayAxisValueFormatter.swift in Sources */,
 				F062A83C2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift in Sources */,
+				F062A84D286545C600DBBCE4 /* MTCircularSlider.swift in Sources */,
 				F05365DB285FF36400B771D9 /* PaycheckDetailVC.swift in Sources */,
 				F05365E5285FF4D200B771D9 /* DonationVC.swift in Sources */,
 				F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */,
