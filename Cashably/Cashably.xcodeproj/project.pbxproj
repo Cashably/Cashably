@@ -54,6 +54,18 @@
 		F062A84D286545C600DBBCE4 /* MTCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */; };
 		F062A85128654AC200DBBCE4 /* PolarCoordinatedLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85028654AC200DBBCE4 /* PolarCoordinatedLayer.swift */; };
 		F062A85328654AD500DBBCE4 /* PolarCoordinatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85228654AD500DBBCE4 /* PolarCoordinatedView.swift */; };
+		F062A85528654CE800DBBCE4 /* MSCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85428654CE800DBBCE4 /* MSCircularSlider.swift */; };
+		F062A85728654DB400DBBCE4 /* MSCircularSlider+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85628654DB400DBBCE4 /* MSCircularSlider+IB.swift */; };
+		F062A85928654DCA00DBBCE4 /* MSCircularSliderHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85828654DCA00DBBCE4 /* MSCircularSliderHandle.swift */; };
+		F062A85B28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85A28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift */; };
+		F062A85D28654E4000DBBCE4 /* MSDoubleHandleCircularSlider+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85C28654E4000DBBCE4 /* MSDoubleHandleCircularSlider+IB.swift */; };
+		F062A85F28654E5400DBBCE4 /* MSGradientCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A85E28654E5400DBBCE4 /* MSGradientCircularSlider.swift */; };
+		F062A86128654E7A00DBBCE4 /* MSGradientCircularSlider+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A86028654E7A00DBBCE4 /* MSGradientCircularSlider+IB.swift */; };
+		F062A8642865A48B00DBBCE4 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A8632865A48B00DBBCE4 /* CircularSlider.swift */; };
+		F062A8662865A4A400DBBCE4 /* CircularSliderHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A8652865A4A400DBBCE4 /* CircularSliderHandle.swift */; };
+		F062A8682865A4C200DBBCE4 /* CircularTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A8672865A4C200DBBCE4 /* CircularTrig.swift */; };
+		F062A86A2865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A8692865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift */; };
+		F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A86B2865A4F300DBBCE4 /* GradientCircularSlider.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -158,6 +170,18 @@
 		F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCircularSlider.swift; sourceTree = "<group>"; };
 		F062A85028654AC200DBBCE4 /* PolarCoordinatedLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarCoordinatedLayer.swift; sourceTree = "<group>"; };
 		F062A85228654AD500DBBCE4 /* PolarCoordinatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarCoordinatedView.swift; sourceTree = "<group>"; };
+		F062A85428654CE800DBBCE4 /* MSCircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCircularSlider.swift; sourceTree = "<group>"; };
+		F062A85628654DB400DBBCE4 /* MSCircularSlider+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSCircularSlider+IB.swift"; sourceTree = "<group>"; };
+		F062A85828654DCA00DBBCE4 /* MSCircularSliderHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSCircularSliderHandle.swift; sourceTree = "<group>"; };
+		F062A85A28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDoubleHandleCircularSlider.swift; sourceTree = "<group>"; };
+		F062A85C28654E4000DBBCE4 /* MSDoubleHandleCircularSlider+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSDoubleHandleCircularSlider+IB.swift"; sourceTree = "<group>"; };
+		F062A85E28654E5400DBBCE4 /* MSGradientCircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSGradientCircularSlider.swift; sourceTree = "<group>"; };
+		F062A86028654E7A00DBBCE4 /* MSGradientCircularSlider+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSGradientCircularSlider+IB.swift"; sourceTree = "<group>"; };
+		F062A8632865A48B00DBBCE4 /* CircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
+		F062A8652865A4A400DBBCE4 /* CircularSliderHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderHandle.swift; sourceTree = "<group>"; };
+		F062A8672865A4C200DBBCE4 /* CircularTrig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTrig.swift; sourceTree = "<group>"; };
+		F062A8692865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleHandleCircularSlider.swift; sourceTree = "<group>"; };
+		F062A86B2865A4F300DBBCE4 /* GradientCircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCircularSlider.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -389,6 +413,13 @@
 		F062A84E286545EE00DBBCE4 /* MSCircularSlider */ = {
 			isa = PBXGroup;
 			children = (
+				F062A85428654CE800DBBCE4 /* MSCircularSlider.swift */,
+				F062A85628654DB400DBBCE4 /* MSCircularSlider+IB.swift */,
+				F062A85828654DCA00DBBCE4 /* MSCircularSliderHandle.swift */,
+				F062A85A28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift */,
+				F062A85C28654E4000DBBCE4 /* MSDoubleHandleCircularSlider+IB.swift */,
+				F062A85E28654E5400DBBCE4 /* MSGradientCircularSlider.swift */,
+				F062A86028654E7A00DBBCE4 /* MSGradientCircularSlider+IB.swift */,
 			);
 			path = MSCircularSlider;
 			sourceTree = "<group>";
@@ -400,6 +431,18 @@
 				F062A85228654AD500DBBCE4 /* PolarCoordinatedView.swift */,
 			);
 			path = PolarKit;
+			sourceTree = "<group>";
+		};
+		F062A8622865A47100DBBCE4 /* CirclularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				F062A8632865A48B00DBBCE4 /* CircularSlider.swift */,
+				F062A8652865A4A400DBBCE4 /* CircularSliderHandle.swift */,
+				F062A8672865A4C200DBBCE4 /* CircularTrig.swift */,
+				F062A8692865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift */,
+				F062A86B2865A4F300DBBCE4 /* GradientCircularSlider.swift */,
+			);
+			path = CirclularSlider;
 			sourceTree = "<group>";
 		};
 		F0643CF52856C62600CAB86F = {
@@ -470,6 +513,7 @@
 		F0A0434E285DBF6100E29CE0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F062A8622865A47100DBBCE4 /* CirclularSlider */,
 				F062A84F28654AA500DBBCE4 /* PolarKit */,
 				F062A84E286545EE00DBBCE4 /* MSCircularSlider */,
 				F0A0434F285DBF8D00E29CE0 /* Alert.swift */,
@@ -773,7 +817,9 @@
 				F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */,
 				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,
 				F062A83A28629E2200DBBCE4 /* DayAxisValueFormatter.swift in Sources */,
+				F062A8662865A4A400DBBCE4 /* CircularSliderHandle.swift in Sources */,
 				F062A83C2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift in Sources */,
+				F062A86128654E7A00DBBCE4 /* MSGradientCircularSlider+IB.swift in Sources */,
 				F062A84D286545C600DBBCE4 /* MTCircularSlider.swift in Sources */,
 				F05365DB285FF36400B771D9 /* PaycheckDetailVC.swift in Sources */,
 				F05365E5285FF4D200B771D9 /* DonationVC.swift in Sources */,
@@ -784,6 +830,7 @@
 				F05365CB285F770D00B771D9 /* RequestOverdraftEnableVC.swift in Sources */,
 				F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */,
 				F05365C5285F764D00B771D9 /* RequestFaceEnableVC.swift in Sources */,
+				F062A86A2865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift in Sources */,
 				F00E4DEF285D1C1000CB8DD6 /* VerifyPhoneVC.swift in Sources */,
 				F05365D1285FEA5900B771D9 /* EmptyRequestPay.swift in Sources */,
 				F00E4DE7285CC4DE00CB8DD6 /* MainVC.swift in Sources */,
@@ -793,10 +840,15 @@
 				F05365E3285FF47C00B771D9 /* CashoutTipVC.swift in Sources */,
 				F05365BE285F665100B771D9 /* SettingsTableViewFooterCell.swift in Sources */,
 				F062A83528629D5400DBBCE4 /* BalloonMarker.swift in Sources */,
+				F062A85D28654E4000DBBCE4 /* MSDoubleHandleCircularSlider+IB.swift in Sources */,
 				F00E4DE5285CC3FF00CB8DD6 /* UserAuthModel.swift in Sources */,
 				F0A0435C285EB28C00E29CE0 /* ProfileCompleteVC.swift in Sources */,
 				F05365D3285FEAB000B771D9 /* RequestPayVC.swift in Sources */,
+				F062A85728654DB400DBBCE4 /* MSCircularSlider+IB.swift in Sources */,
 				F0A04350285DBF8D00E29CE0 /* Alert.swift in Sources */,
+				F062A85528654CE800DBBCE4 /* MSCircularSlider.swift in Sources */,
+				F062A85F28654E5400DBBCE4 /* MSGradientCircularSlider.swift in Sources */,
+				F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */,
 				F025F8DD2860730800BABB3D /* BankVC.swift in Sources */,
 				F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */,
 				F062A83E2863AEFA00DBBCE4 /* UITextField+InputView.swift in Sources */,
@@ -809,20 +861,24 @@
 				F05365CE285FE98A00B771D9 /* HomeVC.swift in Sources */,
 				F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */,
 				F05365E1285FF43500B771D9 /* CashoutVC.swift in Sources */,
+				F062A85B28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift in Sources */,
 				F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */,
 				F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */,
 				F05365C9285F76D700B771D9 /* RequestNotificationEnableVC.swift in Sources */,
 				F05365DD285FF3A200B771D9 /* PaycheckDetailEditVC.swift in Sources */,
 				F0CE9F4B2860C963004B1515 /* EmptyRequestPayView.swift in Sources */,
+				F062A8682865A4C200DBBCE4 /* CircularTrig.swift in Sources */,
 				F0B853562860044C002F90DA /* DepositTableViewCell.swift in Sources */,
 				F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */,
 				F062A84028642E3000DBBCE4 /* UIViewController+Keyboard.swift in Sources */,
 				F00E4DEC285CC5DB00CB8DD6 /* ProfileEditVC.swift in Sources */,
 				F0A04352285DC08000E29CE0 /* UIView.swift in Sources */,
+				F062A8642865A48B00DBBCE4 /* CircularSlider.swift in Sources */,
 				F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */,
 				F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */,
 				F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */,
 				F025F8DF2860738800BABB3D /* CreditVC.swift in Sources */,
+				F062A85928654DCA00DBBCE4 /* MSCircularSliderHandle.swift in Sources */,
 				F062A83828629D9700DBBCE4 /* DateValueFormatter.swift in Sources */,
 				F062A7822861C37C00DBBCE4 /* RoundView.swift in Sources */,
 				F05365D7285FF2C300B771D9 /* ConnectProcessingVC.swift in Sources */,
