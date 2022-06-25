@@ -4757,9 +4757,9 @@ approved </string>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="pwb-V9-WZM">
                                                 <rect key="frame" x="14" y="14" width="152" height="152"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-He-gck">
-                                                <rect key="frame" x="22.5" y="57" width="135.5" height="66"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-He-gck">
+                                                <rect key="frame" x="31" y="69" width="118" height="42"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -4773,16 +4773,77 @@ approved </string>
                                             <constraint firstItem="8ob-He-gck" firstAttribute="centerX" secondItem="icP-nN-F04" secondAttribute="centerX" id="wY5-04-NJG"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdG-zz-KSv">
+                                        <rect key="frame" x="0.0" y="402.5" width="414" height="250"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdI-en-Cjq">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="220"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="220" id="kL6-BU-cMs"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_minimumValue">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_maximumValue">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_currentValue">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_maximumAngle">
+                                                        <real key="value" value="120"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_lineWidth">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_unfilledColor">
+                                                        <color key="value" red="0.21568627450980393" green="0.76470588235294112" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_filledColor">
+                                                        <color key="value" red="0.21568627450980393" green="0.76470588235294112" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="_markerImage" value="ic_pointer"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_snapToLabels" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="_commaSeparatedLabels" value="$10,$20,$40,$50,$80,$90,$100"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_markerColor">
+                                                        <color key="value" red="1" green="0.9137254901960784" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="_labelColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_handleType">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="trackMaxAngle">
+                                                        <real key="value" value="170"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="trackMinAngle">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UdI-en-Cjq" secondAttribute="trailing" id="4vA-RH-640"/>
+                                            <constraint firstItem="UdI-en-Cjq" firstAttribute="leading" secondItem="NdG-zz-KSv" secondAttribute="leading" id="BQU-WA-JLA"/>
+                                            <constraint firstAttribute="height" constant="250" id="C28-NA-wqc"/>
+                                            <constraint firstItem="UdI-en-Cjq" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="50" id="ish-3K-3h4"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Dfd-1l-t25" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" constant="20" id="Dbd-tV-YWn"/>
+                                    <constraint firstAttribute="trailing" secondItem="NdG-zz-KSv" secondAttribute="trailing" id="Lq0-n1-tXX"/>
                                     <constraint firstItem="8Yo-dg-Y7U" firstAttribute="centerX" secondItem="rE2-uQ-AUc" secondAttribute="centerX" id="MAf-U0-4L5"/>
+                                    <constraint firstItem="NdG-zz-KSv" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" id="NJy-7q-gtI"/>
                                     <constraint firstAttribute="trailing" secondItem="1Zm-rP-zgf" secondAttribute="trailing" constant="20" id="PJn-b1-7Ym"/>
                                     <constraint firstItem="1Zm-rP-zgf" firstAttribute="top" secondItem="rE2-uQ-AUc" secondAttribute="top" constant="20" id="XGR-9k-mdU"/>
                                     <constraint firstItem="icP-nN-F04" firstAttribute="top" secondItem="B2L-BO-Hlz" secondAttribute="bottom" constant="22" id="Xld-6q-jFE"/>
                                     <constraint firstItem="Dfd-1l-t25" firstAttribute="top" secondItem="rE2-uQ-AUc" secondAttribute="top" constant="20" id="a3G-3g-GcA"/>
                                     <constraint firstAttribute="trailing" secondItem="fGn-Xg-FqC" secondAttribute="trailing" constant="20" id="czq-5C-d4E"/>
                                     <constraint firstItem="8Yo-dg-Y7U" firstAttribute="top" secondItem="rE2-uQ-AUc" secondAttribute="top" constant="106" id="kT6-S1-P2S"/>
+                                    <constraint firstItem="NdG-zz-KSv" firstAttribute="top" secondItem="icP-nN-F04" secondAttribute="bottom" constant="40" id="o6S-Gc-aSZ"/>
                                     <constraint firstItem="fGn-Xg-FqC" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" constant="20" id="smD-bX-fHv"/>
                                     <constraint firstAttribute="bottom" secondItem="fGn-Xg-FqC" secondAttribute="bottom" constant="40" id="uXC-Zj-MPx"/>
                                     <constraint firstItem="icP-nN-F04" firstAttribute="centerX" secondItem="rE2-uQ-AUc" secondAttribute="centerX" id="vX7-CI-En5"/>
@@ -4805,6 +4866,8 @@ approved </string>
                         <outlet property="btnInfo" destination="1Zm-rP-zgf" id="lkh-4D-NdL"/>
                         <outlet property="btnWithdraw" destination="fGn-Xg-FqC" id="9b5-4h-rdl"/>
                         <outlet property="lbAmount" destination="8ob-He-gck" id="vCd-x2-vQD"/>
+                        <outlet property="selectView" destination="NdG-zz-KSv" id="Lgu-TX-CRX"/>
+                        <outlet property="sliderView" destination="UdI-en-Cjq" id="gMt-ck-xAV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgK-OP-MOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -7086,6 +7149,7 @@ if you want..</string>
         <image name="ic_increase" width="20" height="20"/>
         <image name="ic_info" width="24" height="24"/>
         <image name="ic_password" width="20" height="22"/>
+        <image name="ic_pointer" width="39" height="34"/>
         <image name="ic_remove" width="18" height="22"/>
         <image name="ic_remove_black" width="18" height="22"/>
         <image name="ic_send" width="29" height="29"/>
