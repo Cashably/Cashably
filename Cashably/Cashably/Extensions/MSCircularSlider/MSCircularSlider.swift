@@ -78,6 +78,7 @@ public class MSCircularSlider: UIControl {
             let val = min(max(minimumValue, newValue), maximumValue)
             handle.currentValue = val
             angle = angleFrom(value: val)
+            print("angel: \(angle)")
             
             castDelegate?.circularSlider(self, valueChangedTo: val, fromUser: false)
             
@@ -85,6 +86,7 @@ public class MSCircularSlider: UIControl {
             
             setNeedsDisplay()
         } get {
+            print("HANDLE angle: \(handle.angle)")
             return valueFrom(angle: handle.angle)
         }
     }
@@ -101,6 +103,10 @@ public class MSCircularSlider: UIControl {
                 maximumAngle = 360.0
             }
             
+            if maximumAngle < 0 {
+                maximumAngle = 0
+            }
+            
             currentValue = valueFrom(angle: angle)
             
             setNeedsDisplay()
@@ -109,10 +115,22 @@ public class MSCircularSlider: UIControl {
     
     public var minimumAngle: CGFloat = 0 {
         didSet {
-            currentValue = valueFrom(angle: angle)
+//            currentValue = valueFrom(angle: angle)
             
             setNeedsDisplay()
         }
+    }
+    
+    public var startAngle: CGFloat {
+        return clockwise ? 180 + spaceDegree : 180 - spaceDegree
+    }
+    
+    public var endAngle: CGFloat {
+        return clockwise ? 180 - spaceDegree : 180 + spaceDegree
+    }
+    
+    public var spaceAngle: CGFloat {
+        return 360 - spaceDegree * 2
     }
     
     /** The slider layer's rotation - *default: nil / pointing north* */
@@ -159,6 +177,31 @@ public class MSCircularSlider: UIControl {
     
     /** The slider's line width - *default: 5*  */
     public var lineWidth: Int = 5 {
+        didSet {
+            setNeedsUpdateConstraints()
+            invalidateIntrinsicContentSize()
+            setNeedsDisplay()
+        }
+    }
+    
+    public var spaceDegree: CGFloat = 95.0 {
+        didSet {
+
+            setNeedsUpdateConstraints()
+            invalidateIntrinsicContentSize()
+            setNeedsDisplay()
+        }
+    }
+    public var spaceUnFilledDegree: CGFloat = 95.0 {
+        didSet {
+
+            setNeedsUpdateConstraints()
+            invalidateIntrinsicContentSize()
+            setNeedsDisplay()
+        }
+    }
+    
+    public var clockwise: Bool = true {
         didSet {
             setNeedsUpdateConstraints()
             invalidateIntrinsicContentSize()
@@ -367,7 +410,7 @@ public class MSCircularSlider: UIControl {
     
     /** The slider's calculated radius based on the components' sizes */
     public var calculatedRadius: CGFloat {
-        let minimumSize = min(bounds.size.height - sliderPadding, bounds.size.width - sliderPadding)
+        let minimumSize = min(bounds.size.height, bounds.size.width)
         let halfLineWidth = ceilf(Float(lineWidth) / 2.0)
         let halfHandleWidth = ceilf(Float(handleDiameter) / 2.0)
         radius = minimumSize * 0.5 - CGFloat(max(halfHandleWidth, halfLineWidth))
@@ -377,12 +420,12 @@ public class MSCircularSlider: UIControl {
     
     /** The slider's center point */
     internal var centerPoint: CGPoint {
-        return CGPoint(x: bounds.size.width * 0.5, y: bounds.size.height * 0.5)
+        return CGPoint(x: bounds.size.width * 0.5, y: bounds.size.height * 0.5 + sliderPadding)
     }
     
     /** A read-only property that indicates whether or not the slider is a full circle */
     public var fullCircle: Bool {
-        return maximumAngle == 360.0
+        return spaceAngle == 360.0
     }
     
     /** A read-only property that indicates whether the slider endlessly loops or is bounded by a number of revolutions */
@@ -469,11 +512,11 @@ public class MSCircularSlider: UIControl {
         drawLabels(ctx: ctx!)
         
         // Rotate slider
-        let rotationalTransform = getRotationalTransform()
-        self.transform = rotationalTransform
-        for view in subviews {      // cancel rotation on all subviews added by the user
-            view.transform = rotationalTransform.inverted()
-        }
+//        let rotationalTransform = getRotationalTransform()
+//        self.transform = rotationalTransform
+//        for view in subviews {      // cancel rotation on all subviews added by the user
+//            view.transform = rotationalTransform.inverted()
+//        }
     }
     
     override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
@@ -613,13 +656,14 @@ public class MSCircularSlider: UIControl {
                 let labelFrame = frameForLabelAt(i)
                 
                 ctx.saveGState()
+//                ctx.beginPath()
                 
                 // Invert transform to cancel rotation on labels
-                ctx.concatenate(CGAffineTransform(translationX: labelFrame.origin.x + (labelFrame.width / 2),
-                                                  y: labelFrame.origin.y + (labelFrame.height / 2)))
-                ctx.concatenate(getRotationalTransform().inverted())
-                ctx.concatenate(CGAffineTransform(translationX: -(labelFrame.origin.x + (labelFrame.width / 2)),
-                                                  y: -(labelFrame.origin.y + (labelFrame.height / 2))))
+//                ctx.concatenate(CGAffineTransform(translationX: labelFrame.origin.x + (labelFrame.width / 2),
+//                                                  y: labelFrame.origin.y + (labelFrame.height / 2)))
+//                ctx.concatenate(getRotationalTransform().inverted())
+//                ctx.concatenate(CGAffineTransform(translationX: -(labelFrame.origin.x + (labelFrame.width / 2)),
+//                                                  y: -(labelFrame.origin.y + (labelFrame.height / 2))))
                 
                 // Draw label
                 label.draw(in: labelFrame, withAttributes: attributes)
@@ -670,7 +714,14 @@ public class MSCircularSlider: UIControl {
     /** Draws an unfilled circle in context */
     internal func drawUnfilledCircle(ctx: CGContext, center: CGPoint, radius: CGFloat, lineWidth: CGFloat, minimumAngle: CGFloat, maximumAngle: CGFloat, lineCap: CGLineCap) {
         
-        drawArc(ctx: ctx, center: center, radius: radius, lineWidth: lineWidth, fromAngle: minimumAngle, toAngle: maximumAngle, lineCap: lineCap)
+//        drawArc(ctx: ctx, center: center, radius: radius, lineWidth: lineWidth, fromAngle: minimumAngle, toAngle: maximumAngle, lineCap: lineCap)
+        let rect = rectForShape()
+        
+        ctx.addPath(pathForUnFilledShape(rect: rect).cgPath)
+        
+        ctx.setLineWidth(lineWidth)
+        ctx.setLineCap(lineCap)
+        ctx.drawPath(using: CGPathDrawingMode.stroke)
     }
     
     /** Draws an arc in context */
@@ -678,11 +729,57 @@ public class MSCircularSlider: UIControl {
         let cartesianFromAngle = toCartesian(toRad(Double(fromAngle)))
         let cartesianToAngle = toCartesian(toRad(Double(toAngle)))
 
-        ctx.addArc(center: center, radius: radius, startAngle: CGFloat(cartesianFromAngle), endAngle: CGFloat(cartesianToAngle), clockwise: false)
+//        ctx.addArc(center: center, radius: radius, startAngle: CGFloat(cartesianFromAngle), endAngle: CGFloat(cartesianToAngle), clockwise: false)
+        let rect = rectForShape()
+        
+        ctx.addPath(pathForShape(rect: rect).cgPath)
         
         ctx.setLineWidth(lineWidth)
         ctx.setLineCap(lineCap)
         ctx.drawPath(using: CGPathDrawingMode.stroke)
+        
+    }
+    
+    private func rectForShape() -> CGRect {
+        return bounds.insetBy(dx: CGFloat(lineWidth) / 2.0, dy: CGFloat(lineWidth) / 2.0)
+    }
+    
+    private func pathForShape(rect: CGRect) -> UIBezierPath {
+        let fromAngle:CGFloat!
+        let toAngle:CGFloat!
+        
+        if clockwise{
+            fromAngle = CGFloat(spaceDegree * .pi / 180.0) + (0.5 * .pi)
+            toAngle = CGFloat((360.0 - spaceDegree) * (.pi / 180.0)) + (0.5 * .pi)
+        }else{
+            fromAngle = CGFloat((360.0 - spaceDegree) * (.pi / 180.0)) + (0.5 * .pi)
+            toAngle = CGFloat(spaceDegree * .pi / 180.0) + (0.5 * .pi)
+        }
+        
+        
+        let path = UIBezierPath(arcCenter: CGPoint(x: rect.midX, y: rect.midY + sliderPadding), radius: rect.size.width / 2.0, startAngle: fromAngle, endAngle: toAngle
+            , clockwise: clockwise)
+    
+        return path
+    }
+    
+    private func pathForUnFilledShape(rect: CGRect) -> UIBezierPath {
+        let fromAngle:CGFloat!
+        let toAngle:CGFloat!
+        
+        if clockwise{
+            fromAngle = CGFloat(spaceUnFilledDegree * .pi / 180.0) + (0.5 * .pi)
+            toAngle = CGFloat((360.0 - spaceUnFilledDegree) * (.pi / 180.0)) + (0.5 * .pi)
+        }else{
+            fromAngle = CGFloat((360.0 - spaceUnFilledDegree) * (.pi / 180.0)) + (0.5 * .pi)
+            toAngle = CGFloat(spaceUnFilledDegree * .pi / 180.0) + (0.5 * .pi)
+        }
+        
+        
+        let path = UIBezierPath(arcCenter: CGPoint(x: rect.midX, y: rect.midY + sliderPadding), radius: rect.size.width / 2.0, startAngle: fromAngle, endAngle: toAngle
+            , clockwise: clockwise)
+    
+        return path
     }
     
     //================================================================================
@@ -710,7 +807,7 @@ public class MSCircularSlider: UIControl {
     /** Returns a `CGPoint` on a circle given its radius and an angle */
     private func pointOn(radius: CGFloat, angle: CGFloat) -> CGPoint {
         var result = CGPoint()
-        
+
         let cartesianAngle = CGFloat(toCartesian(toRad(Double(angle))))
         result.y = Darwin.round(radius * sin(cartesianAngle))
         result.x = Darwin.round(radius * cos(cartesianAngle))
@@ -732,7 +829,7 @@ public class MSCircularSlider: UIControl {
         percentageAlongCircle = fullCircle ? ((100.0 / CGFloat(markerCount)) * CGFloat(index)) / 100.0 : ((100.0 / CGFloat(markerCount - 1)) * CGFloat(index)) / 100.0
         
         
-        let markerDegrees = percentageAlongCircle * maximumAngle
+        let markerDegrees = percentageAlongCircle * spaceAngle
         let pointOnCircle = pointOnCircleAt(angle: markerDegrees)
         
         let markSize = CGSize(width: ((CGFloat(lineWidth) + handleDiameter) / CGFloat(2)),
@@ -756,8 +853,7 @@ public class MSCircularSlider: UIControl {
         // calculate degrees for label
         percentageAlongCircle = fullCircle ? ((100.0 / CGFloat(labels.count)) * CGFloat(index)) / 100.0 : ((100.0 / CGFloat(labels.count - 1)) * CGFloat(index)) / 100.0
         
-        
-        let labelDegrees = percentageAlongCircle * maximumAngle
+        let labelDegrees = startAngle + percentageAlongCircle * spaceAngle
         let pointOnCircle = pointOnCircleAt(angle: labelDegrees)
         
         let labelSize = sizeOf(string: label, withFont: labelFont)
@@ -772,9 +868,8 @@ public class MSCircularSlider: UIControl {
     /** Calculates the labels' offset so it would not intersect with the slider's line */
     private func offsetForLabelAt(index: Int, withSize labelSize: CGSize) -> CGPoint {
         let percentageAlongCircle = fullCircle ? ((100.0 / CGFloat(labels.count)) * CGFloat(index)) / 100.0 : ((100.0 / CGFloat(labels.count - 1)) * CGFloat(index)) / 100.0
-        let labelDegrees = percentageAlongCircle * maximumAngle
-        
-        let radialDistance = labelInwardsDistance + labelOffset
+        let labelDegrees = startAngle + percentageAlongCircle * spaceAngle
+        let radialDistance = labelOffset + labelInwardsDistance
         let inwardOffset = pointOn(radius: radialDistance, angle: CGFloat(labelDegrees))
         
         return CGPoint(x: -labelSize.width * 0.5 + inwardOffset.x, y: -labelSize.height * 0.5 + inwardOffset.y)
@@ -896,12 +991,13 @@ public class MSCircularSlider: UIControl {
     
     /** Calculates the angle from north given a value */
     internal func angleFrom(value: Double) -> CGFloat {
-        return (CGFloat(value - minimumValue) * maximumAngle) / CGFloat(maximumValue - minimumValue)
+        return (CGFloat(value - minimumValue) * spaceAngle) / CGFloat(maximumValue - minimumValue) + startAngle
     }
     
     /** Calculates the value given an angle from north */
     internal func valueFrom(angle: CGFloat) -> Double {
-        return ((maximumValue - minimumValue) * Double(angle) / Double(maximumAngle)) + minimumValue
+        let diff = angle < startAngle ? angle - startAngle + 360 : angle - startAngle
+        return ((maximumValue - minimumValue) * Double(diff) / Double(spaceAngle)) + minimumValue
     }
     
     /** Converts degrees to radians */
@@ -954,5 +1050,4 @@ public class MSCircularSlider: UIControl {
     }
     
 }
-
 

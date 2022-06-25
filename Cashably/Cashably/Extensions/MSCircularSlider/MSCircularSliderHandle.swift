@@ -127,7 +127,7 @@ public class MSCircularSliderHandle: CALayer {
         // Handle drawing
         if image != nil {
             frame = CGRect(x: center().x - diameter * 0.5,
-                           y: center().y - diameter * 0.5,
+                           y: center().y - CGFloat(slider.lineWidth),
                            width: diameter,
                            height: diameter)
             if isRotatable {
