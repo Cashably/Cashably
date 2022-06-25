@@ -76,8 +76,8 @@ class CashoutVC: UIViewController {
             
             slider.minimumValue = 0
             slider.maximumValue = 100
-            slider.maximumAngle = 140
-            slider.
+//            slider.maximumAngle = 140
+            slider.spaceDegree = 110
     //        slider.minimumAngle = 0
             slider.filledColor = .white// UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
             slider.unfilledColor = .blue // UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
