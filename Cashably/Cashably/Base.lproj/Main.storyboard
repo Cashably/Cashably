@@ -4603,9 +4603,9 @@ approved </string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Kg-cFX">
-                                        <rect key="frame" x="0.0" y="203.5" width="414" height="128"/>
+                                        <rect key="frame" x="0.0" y="203.5" width="414" height="414"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="oI9-F8-yCD"/>
+                                            <constraint firstAttribute="width" secondItem="x88-Kg-cFX" secondAttribute="height" multiplier="1:1" id="vhV-A9-Mrv"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIs-Z7-tUM">
@@ -4672,6 +4672,7 @@ approved </string>
                         <outlet property="btnCashout" destination="cIs-Z7-tUM" id="hB4-IL-1SP"/>
                         <outlet property="btnCashoutWithTip" destination="FhF-G9-ulE" id="STs-fX-fU6"/>
                         <outlet property="lbAmount" destination="XuT-bT-nAM" id="Efh-9n-irU"/>
+                        <outlet property="sliderView" destination="x88-Kg-cFX" id="EiN-RG-CQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4k-DN-JSk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

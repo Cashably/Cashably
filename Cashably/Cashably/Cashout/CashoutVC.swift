@@ -198,6 +198,4 @@ extension CashoutVC: MSCircularSliderDelegate {
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
         self.lbAmount.text = "$\(ceil(value))"
     }
-    
-    
 }
