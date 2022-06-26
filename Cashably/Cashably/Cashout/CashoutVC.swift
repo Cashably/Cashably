@@ -67,7 +67,7 @@ class CashoutVC: UIViewController {
     }
     
     private func setupSliderView() {
-        let width = sliderView.bounds.width
+        let width = sliderView.frame.width + 100
         let frame = CGRect(x: sliderView.center.x-width/2, y: sliderView.center.y - width/2, width: width, height: width)     // center in superview
         let slider = MSCircularSlider(frame: frame)
         slider.delegate = self
@@ -76,12 +76,12 @@ class CashoutVC: UIViewController {
         
         slider.minimumValue = 0
         slider.maximumValue = 100
-//        slider.maximumAngle = 140
+//        slider.maximumAngle = 100
 //        slider.minimumAngle = 0
 
         slider.filledColor =  UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
         slider.unfilledColor =  UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
-        slider.backgroundColor = UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
+//        slider.backgroundColor = UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
 
         slider.handleImage = UIImage(named: "ic_pointer")
         slider.handleRotatable = true
@@ -89,14 +89,14 @@ class CashoutVC: UIViewController {
         
         slider.labels = self.rates
         slider.labelColor = .white
-        slider.snapToLabels = true
+//        slider.snapToLabels = true
         slider.labelOffset = 100
         
         slider.sliderPadding = 80
         
         slider.isSliding = false
         
-        slider.spaceDegree = 130
+        slider.spaceDegree = 140
         slider.spaceUnFilledDegree = 110
         slider.clockwise = true
         

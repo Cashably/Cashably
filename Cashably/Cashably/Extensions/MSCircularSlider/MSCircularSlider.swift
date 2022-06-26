@@ -78,7 +78,6 @@ public class MSCircularSlider: UIControl {
             let val = min(max(minimumValue, newValue), maximumValue)
             handle.currentValue = val
             angle = angleFrom(value: val)
-            print("angel: \(angle)")
             
             castDelegate?.circularSlider(self, valueChangedTo: val, fromUser: false)
             
@@ -86,13 +85,12 @@ public class MSCircularSlider: UIControl {
             
             setNeedsDisplay()
         } get {
-            print("HANDLE angle: \(handle.angle)")
             return valueFrom(angle: handle.angle)
         }
     }
     
     /** The slider's circular angle - *default: 360.0 (full circle)* */
-    public var maximumAngle: CGFloat = 360.0 {     // Full circle by default
+    public var maximumAngle: CGFloat = 360 {     // Full circle by default
         didSet {
             if maximumAngle > 360.0 {
                 print("maximumAngle \(maximumAngle) should be 360° or less - setting member to 360°")
@@ -111,6 +109,7 @@ public class MSCircularSlider: UIControl {
             
             setNeedsDisplay()
         }
+        
     }
     
     public var minimumAngle: CGFloat = 0 {
@@ -923,17 +922,17 @@ public class MSCircularSlider: UIControl {
     
     /** Moves the handle to `newAngle` */
     private func moveHandle(newAngle: CGFloat) {
-        if newAngle > maximumAngle {    // for incomplete circles
-            if newAngle > maximumAngle + (360 - maximumAngle) / 2.0 {
-                angle = 0
+        print("hanlde move angle \(newAngle)")
+        if newAngle > endAngle && newAngle < startAngle {
+            if newAngle > endAngle && newAngle < 180 {
+                angle = endAngle
                 setNeedsDisplay()
             }
-            else {
-                angle = maximumAngle
+            if newAngle < startAngle && newAngle > 180 {
+                angle = startAngle
                 setNeedsDisplay()
             }
-        }
-        else {
+        } else {
             angle = newAngle
         }
         setNeedsDisplay()
