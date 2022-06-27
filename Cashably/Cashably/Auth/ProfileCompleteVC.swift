@@ -18,7 +18,8 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var tfSSN: UITextField!
     @IBOutlet weak var nameView: InputView!
     @IBOutlet weak var emailView: InputView!
-    @IBOutlet weak var ssnView: UIStackView!
+    @IBOutlet weak var ssnView: InputView!
+    @IBOutlet weak var dobView: InputView!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -40,6 +41,11 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
         tfSSN.tag = 4
         
         tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        
+        nameView.didTap(target: tfName)
+        emailView.didTap(target: tfEmail)
+        ssnView.didTap(target: tfSSN)
+        dobView.didTap(target: tfDOB)
         
         self.addKeyboardWillShowNotification()
         self.hideKeyboardWhenTappedAround()

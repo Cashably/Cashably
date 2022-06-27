@@ -13,9 +13,11 @@ class BankVC: UIViewController {
     
     @IBOutlet weak var viewBalance: RoundView! {
         didSet {
-            viewBalance.layer.opacity = 0.15
+            viewBalance.alpha = 0.15
+            viewBalance.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         }
     }
+    
     @IBOutlet weak var lbBalance: UILabel!
     
     @IBOutlet weak var btnFilter: UIButton!
