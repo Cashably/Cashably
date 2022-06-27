@@ -9,6 +9,17 @@ import Foundation
 import UIKit
 
 open class RoundView: UIView {
+    
+    private var radius: CGFloat = 10
+    @IBInspectable public var _radius:CGFloat {
+        get {
+            return radius
+        }
+        set {
+            radius = newValue
+        }
+    }
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
@@ -21,7 +32,7 @@ open class RoundView: UIView {
     
     private func configure() {
         
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = radius
         
         
         let shadows = UIView()

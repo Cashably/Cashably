@@ -2625,9 +2625,34 @@ your Affirm account and loans.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yfa-7c-EOc">
                                         <rect key="frame" x="20" y="110" width="374" height="120"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balance_bg" translatesAutoresizingMaskIntoConstraints="NO" id="aDO-5O-NjZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
-                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-QV-hL1" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_balance" translatesAutoresizingMaskIntoConstraints="NO" id="eUz-BW-R86">
+                                                        <rect key="frame" x="20" y="35" width="40" height="40"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="eUz-BW-R86" firstAttribute="centerY" secondItem="eDT-QV-hL1" secondAttribute="centerY" id="1xy-ne-h0Z"/>
+                                                    <constraint firstAttribute="height" constant="110" id="RPT-04-26z"/>
+                                                    <constraint firstItem="eUz-BW-R86" firstAttribute="leading" secondItem="eDT-QV-hL1" secondAttribute="leading" constant="20" id="tf4-Yt-gN7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqN-Qz-jHW" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="10" width="334" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iij-Sf-D1y">
                                                 <rect key="frame" x="74" y="25" width="94.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -2642,13 +2667,16 @@ your Affirm account and loans.</string>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="aDO-5O-NjZ" firstAttribute="leading" secondItem="Yfa-7c-EOc" secondAttribute="leading" id="Sld-X2-RHK"/>
+                                            <constraint firstAttribute="bottom" secondItem="WqN-Qz-jHW" secondAttribute="bottom" id="L9Q-zN-tZR"/>
+                                            <constraint firstItem="eDT-QV-hL1" firstAttribute="leading" secondItem="Yfa-7c-EOc" secondAttribute="leading" id="MOx-px-PSh"/>
+                                            <constraint firstAttribute="trailing" secondItem="WqN-Qz-jHW" secondAttribute="trailing" constant="20" id="Oif-aF-VKn"/>
+                                            <constraint firstItem="WqN-Qz-jHW" firstAttribute="top" secondItem="Yfa-7c-EOc" secondAttribute="top" constant="10" id="RO1-bf-FM0"/>
                                             <constraint firstItem="bzj-md-wTt" firstAttribute="leading" secondItem="Yfa-7c-EOc" secondAttribute="leading" constant="74" id="Ubs-P2-r6T"/>
                                             <constraint firstItem="iij-Sf-D1y" firstAttribute="leading" secondItem="Yfa-7c-EOc" secondAttribute="leading" constant="74" id="bqM-eP-1Ss"/>
-                                            <constraint firstAttribute="trailing" secondItem="aDO-5O-NjZ" secondAttribute="trailing" id="iiU-KD-hka"/>
+                                            <constraint firstAttribute="trailing" secondItem="eDT-QV-hL1" secondAttribute="trailing" id="cpH-K2-8YZ"/>
+                                            <constraint firstItem="WqN-Qz-jHW" firstAttribute="leading" secondItem="Yfa-7c-EOc" secondAttribute="leading" constant="20" id="dnW-J5-LUp"/>
                                             <constraint firstItem="bzj-md-wTt" firstAttribute="top" secondItem="Yfa-7c-EOc" secondAttribute="centerY" constant="1" id="l0q-u8-2h9"/>
-                                            <constraint firstAttribute="bottom" secondItem="aDO-5O-NjZ" secondAttribute="bottom" id="l75-gt-c5s"/>
-                                            <constraint firstItem="aDO-5O-NjZ" firstAttribute="top" secondItem="Yfa-7c-EOc" secondAttribute="top" id="shB-8R-MBh"/>
+                                            <constraint firstItem="eDT-QV-hL1" firstAttribute="top" secondItem="Yfa-7c-EOc" secondAttribute="top" id="pnW-OT-WvE"/>
                                             <constraint firstAttribute="height" constant="120" id="w09-IE-Tuf"/>
                                             <constraint firstItem="iij-Sf-D1y" firstAttribute="top" secondItem="Yfa-7c-EOc" secondAttribute="top" constant="25" id="yTZ-6v-jW3"/>
                                         </constraints>
@@ -2815,6 +2843,7 @@ your Affirm account and loans.</string>
                         <outlet property="btnWeek" destination="R4y-Nb-829" id="wfl-Py-A5A"/>
                         <outlet property="chartView" destination="LuT-Z5-Y2s" id="nzQ-Wo-Yum"/>
                         <outlet property="lbBalance" destination="bzj-md-wTt" id="72i-OC-OdR"/>
+                        <outlet property="viewBalance" destination="WqN-Qz-jHW" id="SHf-54-EH4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPK-Cl-nv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5888,7 +5917,7 @@ for amount credited.</string>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.71764705882352942" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="nAS-sZ-n2K" firstAttribute="top" secondItem="G96-Lx-cv4" secondAttribute="bottom" constant="20" id="7ms-Fb-L3O"/>
                                     <constraint firstItem="Ahl-Z7-K5j" firstAttribute="leading" secondItem="aF3-cm-qIL" secondAttribute="leading" id="EYh-DD-Y2t"/>
@@ -6188,7 +6217,7 @@ for amount credited.</string>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.61960784313725492" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="kFs-tD-f1o" firstAttribute="leading" secondItem="fUz-lN-YKo" secondAttribute="leading" id="3uW-0e-Sge"/>
                                     <constraint firstItem="UlC-tm-2CW" firstAttribute="centerX" secondItem="fUz-lN-YKo" secondAttribute="centerX" id="FA9-t9-IfO"/>
@@ -7108,7 +7137,6 @@ if you want..</string>
     <resources>
         <image name="allow_logo" width="180" height="180"/>
         <image name="avatar" width="102" height="102"/>
-        <image name="balance_bg" width="241" height="80"/>
         <image name="bg_success" width="375" height="812"/>
         <image name="card_logo" width="184" height="142"/>
         <image name="cash_logo" width="100" height="100"/>
@@ -7127,6 +7155,7 @@ if you want..</string>
         <image name="ic_back" width="6" height="12"/>
         <image name="ic_back_black" width="6" height="12"/>
         <image name="ic_back_white" width="50" height="50"/>
+        <image name="ic_balance" width="40" height="40"/>
         <image name="ic_building" width="24" height="24"/>
         <image name="ic_calendar" width="20" height="22"/>
         <image name="ic_card" width="22" height="18"/>

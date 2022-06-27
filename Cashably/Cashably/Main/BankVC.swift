@@ -11,6 +11,11 @@ import Charts
 
 class BankVC: UIViewController {
     
+    @IBOutlet weak var viewBalance: RoundView! {
+        didSet {
+            viewBalance.layer.opacity = 0.15
+        }
+    }
     @IBOutlet weak var lbBalance: UILabel!
     
     @IBOutlet weak var btnFilter: UIButton!
@@ -78,7 +83,7 @@ class BankVC: UIViewController {
         leftAxis.yOffset = -9
         leftAxis.granularityEnabled = true
         leftAxis.gridLineDashLengths = [5, 5]
-        leftAxis.gridColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
+        leftAxis.gridColor = UIColor(red: 0.842, green: 0.824, blue: 0.824, alpha: 1)
         leftAxis.labelTextColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
         leftAxis.labelPosition = .outsideChart
         leftAxis.drawAxisLineEnabled = false
