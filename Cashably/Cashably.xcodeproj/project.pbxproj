@@ -470,25 +470,25 @@
 		F0643D002856C62600CAB86F /* Cashably */ = {
 			isa = PBXGroup;
 			children = (
-				F062A83228629CBB00DBBCE4 /* Chart */,
-				F05365E6285FF55100B771D9 /* Cashout */,
-				F05365CF285FEA3700B771D9 /* RequestPay */,
-				F05365CC285FE8C800B771D9 /* Home */,
-				F05365C3285F75FF00B771D9 /* PermissionViews */,
-				F0B87A01285F2C3500414FFD /* Settings */,
-				F0A0434E285DBF6100E29CE0 /* Extensions */,
 				F00E4DED285D19F400CB8DD6 /* Cashably.entitlements */,
 				F0A0434C285D71CE00E29CE0 /* GoogleService-Info.plist */,
-				F00E4DE8285CC56900CB8DD6 /* Auth */,
-				F00E4DE1285CBED500CB8DD6 /* Models */,
-				F00E4DE0285CBE6400CB8DD6 /* User */,
-				F00E4DDD285CBE0300CB8DD6 /* Main */,
+				F0643D0F2856C62700CAB86F /* Info.plist */,
 				F0643D012856C62600CAB86F /* AppDelegate.swift */,
 				F0643D032856C62600CAB86F /* SceneDelegate.swift */,
-				F0643D072856C62600CAB86F /* Main.storyboard */,
 				F0643D0A2856C62700CAB86F /* Assets.xcassets */,
+				F00E4DE8285CC56900CB8DD6 /* Auth */,
+				F05365E6285FF55100B771D9 /* Cashout */,
+				F062A83228629CBB00DBBCE4 /* Chart */,
+				F0A0434E285DBF6100E29CE0 /* Extensions */,
+				F05365CC285FE8C800B771D9 /* Home */,
 				F0643D0C2856C62700CAB86F /* LaunchScreen.storyboard */,
-				F0643D0F2856C62700CAB86F /* Info.plist */,
+				F00E4DDD285CBE0300CB8DD6 /* Main */,
+				F0643D072856C62600CAB86F /* Main.storyboard */,
+				F00E4DE1285CBED500CB8DD6 /* Models */,
+				F05365C3285F75FF00B771D9 /* PermissionViews */,
+				F05365CF285FEA3700B771D9 /* RequestPay */,
+				F0B87A01285F2C3500414FFD /* Settings */,
+				F00E4DE0285CBE6400CB8DD6 /* User */,
 			);
 			path = Cashably;
 			sourceTree = "<group>";
@@ -1063,7 +1063,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1077,7 +1077,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1096,7 +1096,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1110,7 +1110,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";

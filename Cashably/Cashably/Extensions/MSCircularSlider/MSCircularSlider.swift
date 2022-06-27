@@ -642,7 +642,7 @@ public class MSCircularSlider: UIControl {
         
         filledColor.set()
         // Draw filled circle
-        drawArc(ctx: ctx, center: centerPoint, radius: calculatedRadius, lineWidth: CGFloat(lineWidth), fromAngle: CGFloat(minimumAngle), toAngle: CGFloat(angle), lineCap: filledLineCap)
+//        drawArc(ctx: ctx, center: centerPoint, radius: calculatedRadius, lineWidth: CGFloat(lineWidth), fromAngle: CGFloat(minimumAngle), toAngle: CGFloat(angle), lineCap: filledLineCap)
     }
     
     /** Draws the slider's labels (if any exist) in the given context */
@@ -721,21 +721,26 @@ public class MSCircularSlider: UIControl {
         ctx.setLineWidth(lineWidth)
         ctx.setLineCap(lineCap)
         ctx.drawPath(using: CGPathDrawingMode.stroke)
+        
+        
+        
     }
     
     /** Draws an arc in context */
     internal func drawArc(ctx: CGContext, center: CGPoint, radius: CGFloat, lineWidth: CGFloat, fromAngle: CGFloat, toAngle: CGFloat, lineCap: CGLineCap) {
-        let cartesianFromAngle = toCartesian(toRad(Double(fromAngle)))
-        let cartesianToAngle = toCartesian(toRad(Double(toAngle)))
+//        let cartesianFromAngle = toCartesian(toRad(Double(fromAngle)))
+//        let cartesianToAngle = toCartesian(toRad(Double(toAngle)))
 
 //        ctx.addArc(center: center, radius: radius, startAngle: CGFloat(cartesianFromAngle), endAngle: CGFloat(cartesianToAngle), clockwise: false)
         let rect = rectForShape()
         
-        ctx.addPath(pathForShape(rect: rect).cgPath)
+//        ctx.addPath(pathForShape(rect: rect).cgPath)
+//
+//        ctx.setLineWidth(lineWidth)
+//        ctx.setLineCap(lineCap)
+//        ctx.drawPath(using: CGPathDrawingMode.stroke)
         
-        ctx.setLineWidth(lineWidth)
-        ctx.setLineCap(lineCap)
-        ctx.drawPath(using: CGPathDrawingMode.stroke)
+        drawFilledCircle(ctx: ctx, center: CGPoint(x: rect.midX, y: rect.midY + sliderPadding), radius: rect.size.width / 2.0 - lineWidth/2)
         
     }
     
@@ -776,6 +781,12 @@ public class MSCircularSlider: UIControl {
         
         
         let path = UIBezierPath(arcCenter: CGPoint(x: rect.midX, y: rect.midY + sliderPadding), radius: rect.size.width / 2.0, startAngle: fromAngle, endAngle: toAngle
+            , clockwise: clockwise)
+    
+        return path
+    }
+    private func pathCircle(rect: CGRect) -> UIBezierPath {
+        let path = UIBezierPath(arcCenter: CGPoint(x: rect.midX, y: rect.midY + sliderPadding), radius: rect.size.width / 2.0, startAngle: 0, endAngle: 360
             , clockwise: clockwise)
     
         return path

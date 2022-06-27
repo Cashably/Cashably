@@ -28,7 +28,6 @@ class CashoutVC: UIViewController {
         // Do any additional setup after loading the view.
 //        setupRateLabels()
         setupSliderView()
-//        setupSliderView1()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -45,30 +44,13 @@ class CashoutVC: UIViewController {
        self.navigationController?.isNavigationBarHidden = false
    }
     
-    private func setupSliderView1() {
-        let frame = CGRect(x: sliderView.center.x-sliderView.frame.width/2, y: sliderView.center.y - sliderView.frame.height, width: sliderView.frame.width, height: sliderView.frame.width)
-        let slider = CircularSlider(frame: frame)
-        // setup target to watch for value change
-        slider.addTarget(self, action: #selector(valueChanged(_:)), for: UIControl.Event.valueChanged)
-        
-        // setup slider defaults
-        slider.handleType = .bigCircle
-        slider.currentValue = 10
-        slider.lineWidth = 15
-        slider.maximumAngle = 110
-        slider.backgroundColor = UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
-        slider.transform = slider.getRotationalTransform()
-        // add to view
-        sliderView.addSubview(slider)
-    }
-    
     @objc func valueChanged(_ slider: CircularSlider) {
         lbAmount.text = "$\(slider.currentValue)"
     }
     
     private func setupSliderView() {
         let width = sliderView.frame.width + 100
-        let frame = CGRect(x: sliderView.center.x-width/2, y: sliderView.center.y - width/2, width: width, height: width)     // center in superview
+        let frame = CGRect(x: sliderView.center.x-width/2, y: sliderView.center.y + width/2, width: width, height: width)     // center in superview
         let slider = MSCircularSlider(frame: frame)
         slider.delegate = self
         
@@ -79,7 +61,7 @@ class CashoutVC: UIViewController {
 //        slider.maximumAngle = 100
 //        slider.minimumAngle = 0
 
-        slider.filledColor =  UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
+        slider.filledColor =  UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
         slider.unfilledColor =  UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
 //        slider.backgroundColor = UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
 

@@ -21,6 +21,13 @@ class CashoutTipVC: UIViewController {
     
     @IBOutlet weak var sliderView: UIView!
     
+    @IBOutlet weak var emoSmile: UILabel! {
+        didSet {
+            emoSmile.text = "😟 🙂 😀 😍 🥰"
+//            emoSmile.textColor = .gray
+//            emoSmile.layer.compositingFilter = "luminosityBlendMode"
+        }
+    }
     var delegate: CashoutTipDelegate!
     
     private var rates = ["$2", "$4", "$6", "$8", "$10", "$12", "$14"]

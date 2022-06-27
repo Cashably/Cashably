@@ -4660,7 +4660,25 @@ approved </string>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Kg-cFX">
                                         <rect key="frame" x="0.0" y="203.5" width="414" height="414"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6V-6L-IFI">
+                                                <rect key="frame" x="207" y="140" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-jk-px1">
+                                                <rect key="frame" x="149" y="155" width="116.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <constraints>
+                                            <constraint firstItem="Kkg-jk-px1" firstAttribute="centerX" secondItem="x88-Kg-cFX" secondAttribute="centerX" id="7xZ-dn-k1A"/>
+                                            <constraint firstItem="Kkg-jk-px1" firstAttribute="top" secondItem="w6V-6L-IFI" secondAttribute="bottom" constant="15" id="E3h-3r-xlw"/>
+                                            <constraint firstItem="w6V-6L-IFI" firstAttribute="top" secondItem="x88-Kg-cFX" secondAttribute="top" constant="140" id="hZS-21-MID"/>
+                                            <constraint firstItem="w6V-6L-IFI" firstAttribute="centerX" secondItem="x88-Kg-cFX" secondAttribute="centerX" id="kgD-51-4La"/>
                                             <constraint firstAttribute="width" secondItem="x88-Kg-cFX" secondAttribute="height" multiplier="1:1" id="vhV-A9-Mrv"/>
                                         </constraints>
                                     </view>
@@ -4727,6 +4745,7 @@ approved </string>
                     <connections>
                         <outlet property="btnCashout" destination="cIs-Z7-tUM" id="hB4-IL-1SP"/>
                         <outlet property="btnCashoutWithTip" destination="FhF-G9-ulE" id="STs-fX-fU6"/>
+                        <outlet property="emoSmile" destination="w6V-6L-IFI" id="X09-XX-LE3"/>
                         <outlet property="lbAmount" destination="XuT-bT-nAM" id="Efh-9n-irU"/>
                         <outlet property="sliderView" destination="x88-Kg-cFX" id="EiN-RG-CQh"/>
                     </connections>
@@ -4880,11 +4899,19 @@ approved </string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-Tg-fmp">
+                                                <rect key="frame" x="149" y="100" width="116.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="UdI-en-Cjq" secondAttribute="trailing" id="4vA-RH-640"/>
                                             <constraint firstItem="UdI-en-Cjq" firstAttribute="leading" secondItem="NdG-zz-KSv" secondAttribute="leading" id="BQU-WA-JLA"/>
                                             <constraint firstAttribute="height" constant="250" id="C28-NA-wqc"/>
+                                            <constraint firstItem="xOx-Tg-fmp" firstAttribute="centerX" secondItem="NdG-zz-KSv" secondAttribute="centerX" id="L0F-Eh-RyM"/>
+                                            <constraint firstItem="xOx-Tg-fmp" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="100" id="eu1-Le-A87"/>
                                             <constraint firstItem="UdI-en-Cjq" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="50" id="ish-3K-3h4"/>
                                         </constraints>
                                     </view>
