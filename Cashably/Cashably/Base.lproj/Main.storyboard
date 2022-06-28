@@ -4961,7 +4961,7 @@ approved </string>
         <!--DonationThanksVC-->
         <scene sceneID="NeR-5M-MtT">
             <objects>
-                <viewController id="2lR-Tp-c1z" userLabel="DonationThanksVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DonationThanksVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2lR-Tp-c1z" userLabel="DonationThanksVC" customClass="DonationThanksVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0a4-Ed-DXf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4998,8 +4998,16 @@ approved </string>
                                             <constraint firstAttribute="height" constant="50" id="wxg-HZ-kLR"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="ic_back_white"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="ic_back_black"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_back_black">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="strokeColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionBack:" destination="2lR-Tp-c1z" eventType="primaryActionTriggered" id="LYS-qy-H42"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="120-A7-969">
                                         <rect key="frame" x="20" y="335" width="374" height="60"/>
@@ -5030,6 +5038,9 @@ donation centers.</string>
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionContinue:" destination="2lR-Tp-c1z" eventType="primaryActionTriggered" id="CQP-nG-JQ2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -5067,7 +5078,7 @@ donation centers.</string>
         <!--DonationProblemVC-->
         <scene sceneID="gn3-7f-hpT">
             <objects>
-                <viewController id="Rwt-aw-vdh" userLabel="DonationProblemVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoDonationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rwt-aw-vdh" userLabel="DonationProblemVC" customClass="NoDonationVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RTP-UW-ywB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5105,7 +5116,14 @@ donation centers.</string>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="ic_back_white"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_back_black">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="strokeColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionBack:" destination="Rwt-aw-vdh" eventType="primaryActionTriggered" id="ypn-l6-vZR"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01z-cC-GxI">
                                         <rect key="frame" x="20" y="335" width="374" height="60"/>
@@ -5136,6 +5154,9 @@ donation centers.</string>
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionContinue:" destination="Rwt-aw-vdh" eventType="primaryActionTriggered" id="XCi-1c-ZMX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

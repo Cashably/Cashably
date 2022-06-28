@@ -115,10 +115,7 @@ class CashoutVC: UIViewController {
         self.selectView.addSubview(view)
     }
     
-    private func withdraw() {
-        let successVC = storyboard?.instantiateViewController(withIdentifier: "CashoutSuccessVC") as! CashoutSuccessVC
-        self.navigationController?.pushViewController(successVC, animated: true)
-    }
+    
     
     
     @IBAction func actionWithdraw(_ sender: UIButton) {
@@ -146,33 +143,13 @@ class CashoutVC: UIViewController {
 
 extension CashoutVC: CashoutTipDelegate {
     func cashout() {
-        guard let cardId = UserDefaults.standard.string(forKey: "cardid") else {
-            let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
-            addcardVC.delegate = self
-            self.navigationController?.pushViewController(addcardVC, animated: true)
-            return
-        }
-        
-        self.withdraw()
+        let nodonationvc = storyboard?.instantiateViewController(withIdentifier: "NoDonationVC") as! NoDonationVC
+        self.navigationController?.pushViewController(nodonationvc, animated: true)
     }
     
     func cashoutWithTip() {
-        guard let cardId = UserDefaults.standard.string(forKey: "cardid") else {
-            let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
-            addcardVC.delegate = self
-            self.navigationController?.pushViewController(addcardVC, animated: true)
-            return
-        }
-        
-        self.withdraw()
-    }
-    
-    
-}
-
-extension CashoutVC: AddCardDelegate {
-    func addCard() {
-        self.withdraw()
+        let donationvc = storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
+        self.navigationController?.pushViewController(donationvc, animated: true)
     }
 }
 
