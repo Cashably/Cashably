@@ -4519,8 +4519,8 @@ your money.</string>
                                                 <rect key="frame" x="14" y="14" width="152" height="152"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-06-4fC">
-                                                <rect key="frame" x="22.5" y="57" width="135.5" height="66"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
+                                                <rect key="frame" x="37" y="66" width="106.5" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -4932,8 +4932,8 @@ approved </string>
                                                 <rect key="frame" x="14" y="14" width="152" height="152"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-He-gck">
-                                                <rect key="frame" x="31" y="69" width="118" height="42"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                <rect key="frame" x="27" y="69" width="126" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -7351,7 +7351,7 @@ if you want..</string>
         <image name="deposits_logo" width="218" height="156"/>
         <image name="eclipse_bg" width="260" height="260"/>
         <image name="eclipse_inner" width="152" height="152"/>
-        <image name="emo_blush" width="40" height="40"/>
+        <image name="emo_blush" width="20" height="20"/>
         <image name="emo_hert_eye" width="20" height="20"/>
         <image name="emo_love" width="20" height="20"/>
         <image name="emo_smile" width="20" height="20"/>
