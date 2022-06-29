@@ -16,7 +16,7 @@ target 'Cashably' do
 #    pod 'SVPinView', '~> 1.0'
     pod 'DPOTPView'
     
-#    pod 'FittedSheets'
+    pod 'FittedSheets'
     
     pod 'MKRingProgressView'
     pod 'Charts'

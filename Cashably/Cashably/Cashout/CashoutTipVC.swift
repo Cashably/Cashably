@@ -79,7 +79,7 @@ class CashoutTipVC: UIViewController {
         
         slider.isSliding = false
         
-        slider.spaceDegree = 120
+        slider.spaceDegree = 140
         slider.spaceUnFilledDegree = 110
         slider.clockwise = true
         

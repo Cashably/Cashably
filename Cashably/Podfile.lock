@@ -41,6 +41,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/UserDefaults (~> 7.7)
     - PromisesObjC (< 3.0, >= 1.2)
+  - FittedSheets (2.4.2)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
@@ -109,6 +110,7 @@ DEPENDENCIES:
   - DPOTPView
   - FirebaseAnalytics
   - FirebaseAuth
+  - FittedSheets
   - FlagPhoneNumber
   - IQKeyboardManagerSwift
   - MKMagneticProgress
@@ -127,6 +129,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseInstallations
+    - FittedSheets
     - FlagPhoneNumber
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -150,6 +153,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 5743c5785c074a794d35f2fff7ecc254a91e08b1
   FirebaseCoreDiagnostics: 92e07a649aeb66352b319d43bdd2ee3942af84cb
   FirebaseInstallations: 40bd9054049b2eae9a2c38ef1c3dd213df3605cd
+  FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   GoogleAppMeasurement: a3311dbcf3ea651e5a070fe8559b57c174ada081
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
@@ -164,6 +168,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   "UITextField+Shake": 298ac5a0f239d731bdab999b19b628c956ca0ac3
 
-PODFILE CHECKSUM: e695aa4cf66d09cdf985ad0a498d2aff88acf1b5
+PODFILE CHECKSUM: 8f32de4a4d26ea3aae01e3760c14d2c604191ea3
 
 COCOAPODS: 1.11.2

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FittedSheets
 
 class CashoutVC: UIViewController {
     
@@ -125,14 +126,23 @@ class CashoutVC: UIViewController {
         let tipVC = storyboard?.instantiateViewController(withIdentifier: "CashoutTipVC") as! CashoutTipVC
 //        tipVC.isModalInPresentation = true
         tipVC.delegate = self
-        let nav = UINavigationController(rootViewController: tipVC)
-        nav.modalTransitionStyle = .crossDissolve
-        if let sheet = nav.sheetPresentationController {
-            sheet.detents = [.large()]
-            sheet.preferredCornerRadius = 25
-        }
-        self.presentVC(nav)
+//        let nav = UINavigationController(rootViewController: tipVC)
+//        nav.modalTransitionStyle = .crossDissolve
+//        if let sheet = nav.sheetPresentationController {
+//            sheet.detents = [.large()]
+//            sheet.preferredCornerRadius = 25
+//        }
+//        self.presentVC(nav)
         
+        let sheetController = SheetViewController(
+            controller: tipVC,
+            sizes: [.fixed(650)])
+        sheetController.cornerRadius = 25
+        sheetController.shouldRecognizePanGestureWithUIControls = false
+//        sheetController.hasBlurBackground = true
+//        sheetController.dismissOnPull = false
+//        sheetController.allowGestureThroughOverlay = true
+        self.present(sheetController, animated: false, completion: nil)
     }
     
     @IBAction func actionInfo(_ sender: UIButton) {
