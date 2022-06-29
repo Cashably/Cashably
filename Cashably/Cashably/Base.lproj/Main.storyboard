@@ -2542,6 +2542,16 @@ your Affirm account and loans.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iw4-nJ-rEh" userLabel="avata view">
                                         <rect key="frame" x="77" y="20" width="260" height="260"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="h85-yX-CSM">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="L0e-wS-9U2">
+                                                <rect key="frame" x="50" y="50" width="160" height="160"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="160" id="FtA-XU-0XB"/>
+                                                    <constraint firstAttribute="height" constant="160" id="jbl-l3-G82"/>
+                                                </constraints>
+                                            </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-gz-43w">
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
                                                 <constraints>
@@ -2568,11 +2578,17 @@ your Affirm account and loans.</string>
                                         <constraints>
                                             <constraint firstItem="nW3-g0-duE" firstAttribute="centerX" secondItem="Iw4-nJ-rEh" secondAttribute="centerX" id="2Dn-qE-d4p"/>
                                             <constraint firstAttribute="width" constant="260" id="6bW-mP-pKf"/>
+                                            <constraint firstItem="h85-yX-CSM" firstAttribute="leading" secondItem="Iw4-nJ-rEh" secondAttribute="leading" id="C6g-To-VVF"/>
                                             <constraint firstItem="nW3-g0-duE" firstAttribute="centerY" secondItem="Iw4-nJ-rEh" secondAttribute="centerY" id="Lah-g3-BVu"/>
                                             <constraint firstItem="ZwW-vs-zoh" firstAttribute="centerX" secondItem="Iw4-nJ-rEh" secondAttribute="centerX" id="Lcq-F4-DHn"/>
+                                            <constraint firstAttribute="bottom" secondItem="h85-yX-CSM" secondAttribute="bottom" id="NxM-Lt-XV2"/>
+                                            <constraint firstItem="L0e-wS-9U2" firstAttribute="centerX" secondItem="Iw4-nJ-rEh" secondAttribute="centerX" id="Rz7-W6-0cY"/>
+                                            <constraint firstItem="h85-yX-CSM" firstAttribute="top" secondItem="Iw4-nJ-rEh" secondAttribute="top" id="VKQ-0L-Bal"/>
                                             <constraint firstAttribute="height" constant="260" id="VZ5-6R-MBa"/>
+                                            <constraint firstItem="L0e-wS-9U2" firstAttribute="centerY" secondItem="Iw4-nJ-rEh" secondAttribute="centerY" id="dec-63-is8"/>
                                             <constraint firstItem="jzg-sE-xav" firstAttribute="centerX" secondItem="Iw4-nJ-rEh" secondAttribute="centerX" id="du7-y9-Lam"/>
                                             <constraint firstItem="CB1-gz-43w" firstAttribute="centerY" secondItem="Iw4-nJ-rEh" secondAttribute="centerY" id="huq-7G-W6L"/>
+                                            <constraint firstAttribute="trailing" secondItem="h85-yX-CSM" secondAttribute="trailing" id="slu-ln-rOB"/>
                                             <constraint firstItem="CB1-gz-43w" firstAttribute="centerX" secondItem="Iw4-nJ-rEh" secondAttribute="centerX" id="wEj-ck-7Rq"/>
                                             <constraint firstItem="jzg-sE-xav" firstAttribute="top" secondItem="nW3-g0-duE" secondAttribute="bottom" constant="10" id="wf3-Xf-TqP"/>
                                             <constraint firstItem="ZwW-vs-zoh" firstAttribute="top" secondItem="jzg-sE-xav" secondAttribute="bottom" constant="10" id="yQC-OH-l76"/>
@@ -4140,6 +4156,16 @@ your Affirm account and loans.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHM-PK-LZi" userLabel="avata view">
                                         <rect key="frame" x="77" y="10" width="260" height="260"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-RD-GeP">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="pXc-15-A2d">
+                                                <rect key="frame" x="50" y="50" width="160" height="160"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="160" id="XOX-Fm-WGZ"/>
+                                                    <constraint firstAttribute="height" constant="160" id="bZe-Xe-yt3"/>
+                                                </constraints>
+                                            </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-Xk-KDL">
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
                                                 <constraints>
@@ -4151,13 +4177,13 @@ your Affirm account and loans.</string>
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selena Grander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-qk-asE">
-                                                <rect key="frame" x="40" y="191" width="180" height="30"/>
+                                                <rect key="frame" x="40" y="191" width="180" height="59"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selena@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYb-qv-iMH">
-                                                <rect key="frame" x="62" y="231" width="136" height="19.5"/>
+                                                <rect key="frame" x="62" y="260" width="136" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4165,12 +4191,18 @@ your Affirm account and loans.</string>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="CqC-aI-xMl"/>
+                                            <constraint firstItem="pXc-15-A2d" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="F5c-8Y-Z5y"/>
                                             <constraint firstItem="14O-GJ-UYh" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="Lis-6z-eu7"/>
+                                            <constraint firstAttribute="trailing" secondItem="JGn-RD-GeP" secondAttribute="trailing" id="V1K-jQ-uEB"/>
+                                            <constraint firstItem="JGn-RD-GeP" firstAttribute="leading" secondItem="oHM-PK-LZi" secondAttribute="leading" id="WKN-R5-wBO"/>
                                             <constraint firstItem="ds9-Xk-KDL" firstAttribute="centerY" secondItem="oHM-PK-LZi" secondAttribute="centerY" id="ccj-nY-Rp1"/>
                                             <constraint firstItem="iYb-qv-iMH" firstAttribute="top" secondItem="iI7-qk-asE" secondAttribute="bottom" constant="10" id="chG-NI-VrU"/>
+                                            <constraint firstItem="iYb-qv-iMH" firstAttribute="top" secondItem="JGn-RD-GeP" secondAttribute="bottom" id="ekW-9d-s1o"/>
                                             <constraint firstItem="ds9-Xk-KDL" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="mpj-tb-Hgv"/>
                                             <constraint firstItem="iYb-qv-iMH" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="mxb-9a-Kn3"/>
                                             <constraint firstItem="14O-GJ-UYh" firstAttribute="centerY" secondItem="oHM-PK-LZi" secondAttribute="centerY" id="nYu-ay-1TK"/>
+                                            <constraint firstItem="JGn-RD-GeP" firstAttribute="top" secondItem="oHM-PK-LZi" secondAttribute="top" id="nxr-Ay-mM4"/>
+                                            <constraint firstItem="pXc-15-A2d" firstAttribute="centerY" secondItem="oHM-PK-LZi" secondAttribute="centerY" id="uk2-Bq-Pzs"/>
                                             <constraint firstItem="iI7-qk-asE" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="urm-Rc-D26"/>
                                             <constraint firstItem="iI7-qk-asE" firstAttribute="top" secondItem="14O-GJ-UYh" secondAttribute="bottom" constant="10" id="zXY-ho-OaM"/>
                                             <constraint firstAttribute="height" constant="260" id="zzM-PW-dNr"/>
@@ -4513,25 +4545,45 @@ your money.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNv-S9-E06">
-                                        <rect key="frame" x="117" y="140" width="180" height="180"/>
+                                        <rect key="frame" x="108" y="110" width="198" height="198"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="R18-lK-IXf">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="9ds-TA-dKB">
+                                                <rect key="frame" x="15" y="15" width="168" height="168"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="168" id="VLj-iV-siS"/>
+                                                    <constraint firstAttribute="width" constant="168" id="xWd-oc-f3H"/>
+                                                </constraints>
+                                            </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="Jjo-8z-ecX">
-                                                <rect key="frame" x="14" y="14" width="152" height="152"/>
+                                                <rect key="frame" x="35" y="35" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="6xc-fK-hEF"/>
+                                                    <constraint firstAttribute="width" constant="128" id="Pvo-C8-tfg"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-06-4fC">
-                                                <rect key="frame" x="37" y="66" width="106.5" height="48"/>
+                                                <rect key="frame" x="46" y="75" width="106.5" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="R18-lK-IXf" secondAttribute="trailing" id="00e-eK-3Yb"/>
                                             <constraint firstItem="Jjo-8z-ecX" firstAttribute="centerX" secondItem="eNv-S9-E06" secondAttribute="centerX" id="1fI-co-t2v"/>
                                             <constraint firstItem="Adc-06-4fC" firstAttribute="centerX" secondItem="eNv-S9-E06" secondAttribute="centerX" id="2eh-Xk-XWf"/>
+                                            <constraint firstItem="R18-lK-IXf" firstAttribute="top" secondItem="eNv-S9-E06" secondAttribute="top" id="4R8-q9-LbK"/>
                                             <constraint firstItem="Adc-06-4fC" firstAttribute="centerY" secondItem="eNv-S9-E06" secondAttribute="centerY" id="5UL-He-6Uo"/>
-                                            <constraint firstAttribute="width" constant="180" id="XKR-4G-g0q"/>
+                                            <constraint firstItem="9ds-TA-dKB" firstAttribute="centerY" secondItem="eNv-S9-E06" secondAttribute="centerY" id="Ea4-No-ZpO"/>
+                                            <constraint firstAttribute="bottom" secondItem="R18-lK-IXf" secondAttribute="bottom" id="VCb-69-OWX"/>
+                                            <constraint firstAttribute="width" constant="198" id="XKR-4G-g0q"/>
                                             <constraint firstItem="Jjo-8z-ecX" firstAttribute="centerY" secondItem="eNv-S9-E06" secondAttribute="centerY" id="bUm-46-3cZ"/>
-                                            <constraint firstAttribute="height" constant="180" id="vYM-rS-0mx"/>
+                                            <constraint firstItem="R18-lK-IXf" firstAttribute="leading" secondItem="eNv-S9-E06" secondAttribute="leading" id="ed5-L8-MmH"/>
+                                            <constraint firstItem="9ds-TA-dKB" firstAttribute="centerX" secondItem="eNv-S9-E06" secondAttribute="centerX" id="iiP-pN-QRs"/>
+                                            <constraint firstAttribute="height" constant="198" id="vYM-rS-0mx"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBD-Hb-hTS">
@@ -4555,7 +4607,7 @@ your money.</string>
                                         <rect key="frame" x="65" y="70" width="284" height="96"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-JE-MdI">
-                                        <rect key="frame" x="102.5" y="320" width="209" height="72"/>
+                                        <rect key="frame" x="102.5" y="308" width="209" height="72"/>
                                         <string key="text">You have been 
 approved </string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -4563,13 +4615,13 @@ approved </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow_right" translatesAutoresizingMaskIntoConstraints="NO" id="68w-JJ-eog">
-                                        <rect key="frame" x="321.5" y="320" width="22" height="22"/>
+                                        <rect key="frame" x="321.5" y="308" width="22" height="22"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow_left" translatesAutoresizingMaskIntoConstraints="NO" id="nVE-Tp-jx9">
-                                        <rect key="frame" x="70.5" y="320" width="22" height="22"/>
+                                        <rect key="frame" x="70.5" y="308" width="22" height="22"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Accept it when you need it." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o95-0U-wmZ">
-                                        <rect key="frame" x="107" y="397" width="200.5" height="19.5"/>
+                                        <rect key="frame" x="107" y="385" width="200.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -4589,7 +4641,7 @@ approved </string>
                                     <constraint firstItem="RgR-JE-MdI" firstAttribute="centerX" secondItem="vww-8p-Jeo" secondAttribute="centerX" id="hZ6-MD-Wp6"/>
                                     <constraint firstItem="68w-JJ-eog" firstAttribute="top" secondItem="nVE-Tp-jx9" secondAttribute="top" id="khM-do-0cF"/>
                                     <constraint firstItem="eNv-S9-E06" firstAttribute="centerX" secondItem="vww-8p-Jeo" secondAttribute="centerX" id="kr8-DX-P8M"/>
-                                    <constraint firstItem="eNv-S9-E06" firstAttribute="top" secondItem="4PO-pn-PLM" secondAttribute="bottom" constant="70" id="lfe-Ls-4f3"/>
+                                    <constraint firstItem="eNv-S9-E06" firstAttribute="top" secondItem="4PO-pn-PLM" secondAttribute="bottom" constant="40" id="lfe-Ls-4f3"/>
                                     <constraint firstItem="RgR-JE-MdI" firstAttribute="top" secondItem="eNv-S9-E06" secondAttribute="bottom" id="nPj-rH-u6T"/>
                                     <constraint firstAttribute="bottom" secondItem="xBD-Hb-hTS" secondAttribute="bottom" constant="40" id="rLl-w5-tGO"/>
                                     <constraint firstItem="4PO-pn-PLM" firstAttribute="top" secondItem="vww-8p-Jeo" secondAttribute="top" constant="20" id="t3u-1V-bGn"/>
@@ -4931,6 +4983,9 @@ approved </string>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="pwb-V9-WZM">
                                                 <rect key="frame" x="14" y="14" width="152" height="152"/>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="1tN-hk-Xw4">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-He-gck">
                                                 <rect key="frame" x="27" y="69" width="126" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
@@ -4941,10 +4996,14 @@ approved </string>
                                         <constraints>
                                             <constraint firstItem="8ob-He-gck" firstAttribute="centerY" secondItem="icP-nN-F04" secondAttribute="centerY" id="8bA-Gg-peq"/>
                                             <constraint firstAttribute="height" constant="180" id="Eu8-51-Ncw"/>
+                                            <constraint firstAttribute="trailing" secondItem="1tN-hk-Xw4" secondAttribute="trailing" id="K88-ng-ufy"/>
+                                            <constraint firstItem="1tN-hk-Xw4" firstAttribute="leading" secondItem="icP-nN-F04" secondAttribute="leading" id="c9u-4l-saF"/>
                                             <constraint firstAttribute="width" constant="180" id="ky5-FL-Llg"/>
+                                            <constraint firstItem="1tN-hk-Xw4" firstAttribute="top" secondItem="icP-nN-F04" secondAttribute="top" id="oWs-PB-lzX"/>
                                             <constraint firstItem="pwb-V9-WZM" firstAttribute="centerX" secondItem="icP-nN-F04" secondAttribute="centerX" id="sKj-4B-jPN"/>
                                             <constraint firstItem="pwb-V9-WZM" firstAttribute="centerY" secondItem="icP-nN-F04" secondAttribute="centerY" id="uob-tG-uS5"/>
                                             <constraint firstItem="8ob-He-gck" firstAttribute="centerX" secondItem="icP-nN-F04" secondAttribute="centerX" id="wY5-04-NJG"/>
+                                            <constraint firstAttribute="bottom" secondItem="1tN-hk-Xw4" secondAttribute="bottom" id="wp7-S9-YBL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdG-zz-KSv">
@@ -5713,7 +5772,7 @@ for amount credited.</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-iL-vCh">
                                                         <rect key="frame" x="119" y="166" width="176" height="176"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_bg" translatesAutoresizingMaskIntoConstraints="NO" id="et4-Cm-JDa">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="et4-Cm-JDa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="176" height="176"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="176" id="DEv-8V-BHB"/>
@@ -5727,12 +5786,21 @@ for amount credited.</string>
                                                                     <constraint firstAttribute="width" constant="132" id="fIX-yp-Uxt"/>
                                                                 </constraints>
                                                             </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="iB9-4t-ie7">
+                                                                <rect key="frame" x="13" y="13" width="150" height="150"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="150" id="pHs-yT-3sO"/>
+                                                                    <constraint firstAttribute="width" constant="150" id="y1e-Gn-bIR"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_thmb_up" translatesAutoresizingMaskIntoConstraints="NO" id="MEm-0m-q7J">
                                                                 <rect key="frame" x="34" y="34" width="108" height="108"/>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstItem="iB9-4t-ie7" firstAttribute="centerY" secondItem="dPd-iL-vCh" secondAttribute="centerY" id="PcL-Dg-LB7"/>
                                                             <constraint firstItem="et4-Cm-JDa" firstAttribute="centerY" secondItem="dPd-iL-vCh" secondAttribute="centerY" id="QY5-Fi-2xD"/>
+                                                            <constraint firstItem="iB9-4t-ie7" firstAttribute="centerX" secondItem="dPd-iL-vCh" secondAttribute="centerX" id="TCH-GL-Hok"/>
                                                             <constraint firstItem="BE8-Sg-R5f" firstAttribute="centerX" secondItem="dPd-iL-vCh" secondAttribute="centerX" id="Txr-Jf-bQE"/>
                                                             <constraint firstAttribute="height" constant="176" id="Uz7-2i-V6C"/>
                                                             <constraint firstItem="et4-Cm-JDa" firstAttribute="centerX" secondItem="dPd-iL-vCh" secondAttribute="centerX" id="eFR-56-Fcp"/>
@@ -6194,37 +6262,53 @@ for amount credited.</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlC-tm-2CW" userLabel="chat view">
-                                        <rect key="frame" x="117" y="120" width="180" height="180"/>
+                                        <rect key="frame" x="109" y="120" width="196" height="196"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="QGw-8A-waS">
-                                                <rect key="frame" x="14" y="14" width="152" height="152"/>
+                                                <rect key="frame" x="22" y="22" width="152" height="152"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="R3o-0k-Lfd">
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="196"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="RJI-oX-sOj">
+                                                <rect key="frame" x="14.5" y="14.5" width="167" height="167"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="167" id="CKc-Gy-S7S"/>
+                                                    <constraint firstAttribute="width" constant="167" id="gU9-Dx-pW6"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMAINING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Js-Wg-CqV">
-                                                <rect key="frame" x="51.5" y="68" width="77" height="17"/>
+                                                <rect key="frame" x="59.5" y="76" width="77" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.65098039215686276" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 DAYS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKA-mT-p9w">
-                                                <rect key="frame" x="39.5" y="90" width="101" height="30"/>
+                                                <rect key="frame" x="47.5" y="98" width="101" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="180" id="5RS-TZ-vsh"/>
+                                            <constraint firstAttribute="height" constant="196" id="5RS-TZ-vsh"/>
                                             <constraint firstItem="QGw-8A-waS" firstAttribute="centerY" secondItem="UlC-tm-2CW" secondAttribute="centerY" id="64L-Eg-xXB"/>
                                             <constraint firstItem="dKA-mT-p9w" firstAttribute="top" secondItem="5Js-Wg-CqV" secondAttribute="bottom" constant="5" id="LLW-bB-EDs"/>
                                             <constraint firstItem="QGw-8A-waS" firstAttribute="centerX" secondItem="UlC-tm-2CW" secondAttribute="centerX" id="P6S-ag-wKR"/>
-                                            <constraint firstAttribute="width" constant="180" id="P7c-5h-SLk"/>
+                                            <constraint firstAttribute="width" constant="196" id="P7c-5h-SLk"/>
+                                            <constraint firstAttribute="trailing" secondItem="R3o-0k-Lfd" secondAttribute="trailing" id="PTK-ya-gu6"/>
                                             <constraint firstItem="dKA-mT-p9w" firstAttribute="centerX" secondItem="UlC-tm-2CW" secondAttribute="centerX" id="bGu-2r-iSZ"/>
+                                            <constraint firstItem="RJI-oX-sOj" firstAttribute="centerX" secondItem="UlC-tm-2CW" secondAttribute="centerX" id="bbX-eB-eG5"/>
+                                            <constraint firstItem="R3o-0k-Lfd" firstAttribute="top" secondItem="UlC-tm-2CW" secondAttribute="top" id="cqK-gT-mh6"/>
+                                            <constraint firstItem="RJI-oX-sOj" firstAttribute="centerY" secondItem="UlC-tm-2CW" secondAttribute="centerY" id="dX9-s8-5Xy"/>
                                             <constraint firstItem="5Js-Wg-CqV" firstAttribute="bottom" secondItem="UlC-tm-2CW" secondAttribute="centerY" constant="-5" id="hq0-IJ-v5x"/>
+                                            <constraint firstItem="R3o-0k-Lfd" firstAttribute="leading" secondItem="UlC-tm-2CW" secondAttribute="leading" id="l6Y-ha-IU7"/>
                                             <constraint firstItem="5Js-Wg-CqV" firstAttribute="centerX" secondItem="UlC-tm-2CW" secondAttribute="centerX" id="uwC-Pa-tgk"/>
+                                            <constraint firstAttribute="bottom" secondItem="R3o-0k-Lfd" secondAttribute="bottom" id="vfx-ca-eub"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFs-tD-f1o" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="350" width="414" height="512"/>
+                                        <rect key="frame" x="0.0" y="366" width="414" height="496"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-pq-qMk" userLabel="header" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="-40" width="374" height="80"/>
@@ -6329,10 +6413,10 @@ for amount credited.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZI-Vr-cXg">
-                                                <rect key="frame" x="0.0" y="60" width="414" height="452"/>
+                                                <rect key="frame" x="0.0" y="60" width="414" height="436"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOr-6D-B3x">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="436"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMv-3i-hN4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
@@ -7408,6 +7492,7 @@ if you want..</string>
         <image name="ic_wallet" width="22" height="22"/>
         <image name="ic_wallet_active" width="20" height="20"/>
         <image name="notification_logo" width="180" height="180"/>
+        <image name="outer_border" width="260" height="260"/>
         <image name="overdraft_logo" width="208" height="208"/>
         <image name="password_logo" width="141" height="185"/>
         <image name="pig_connect" width="229" height="184"/>
