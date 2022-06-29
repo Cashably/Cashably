@@ -50,8 +50,9 @@ class CashoutVC: UIViewController {
     }
     
     private func setupSliderView() {
+        
         let width = sliderView.frame.width + 100
-        let frame = CGRect(x: sliderView.center.x-width/2, y: sliderView.center.y - width/2, width: width, height: width)     // center in superview
+        let frame = CGRect(x: sliderView.center.x-width/2, y: sliderView.center.y - sliderView.bounds.height / 2, width: width, height: width)     // center in superview
         let slider = MSCircularSlider(frame: frame)
         slider.delegate = self
         

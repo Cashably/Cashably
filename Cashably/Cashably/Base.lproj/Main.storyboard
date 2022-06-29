@@ -4659,9 +4659,9 @@ approved </string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Kg-cFX">
-                                        <rect key="frame" x="0.0" y="552" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="223.5" width="414" height="414"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="BUQ-8s-4Tk"/>
+                                            <constraint firstAttribute="width" secondItem="x88-Kg-cFX" secondAttribute="height" multiplier="1:1" id="QVL-yA-ggh"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-jk-px1">
@@ -4820,6 +4820,7 @@ approved </string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="x88-Kg-cFX" firstAttribute="top" secondItem="K7D-Do-cXB" secondAttribute="bottom" constant="50" id="2et-W5-BLb"/>
                                     <constraint firstItem="cIs-Z7-tUM" firstAttribute="top" secondItem="FhF-G9-ulE" secondAttribute="bottom" constant="20" id="6sd-bt-86J"/>
                                     <constraint firstItem="U0F-b4-2HX" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="8Gp-wt-2Y1"/>
                                     <constraint firstItem="cIs-Z7-tUM" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="EjO-W5-9aN"/>
@@ -4831,7 +4832,6 @@ approved </string>
                                     <constraint firstItem="XuT-bT-nAM" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="Tsc-34-qaF"/>
                                     <constraint firstItem="Kkg-jk-px1" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="Urg-KJ-ens"/>
                                     <constraint firstItem="2I4-EN-Wv6" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="VlV-Z4-VXh"/>
-                                    <constraint firstAttribute="bottom" secondItem="x88-Kg-cFX" secondAttribute="bottom" constant="50" id="WWH-fo-06E"/>
                                     <constraint firstAttribute="trailing" secondItem="FhF-G9-ulE" secondAttribute="trailing" constant="20" id="YEZ-oQ-Ohp"/>
                                     <constraint firstItem="K7D-Do-cXB" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="YqK-vj-bgm"/>
                                     <constraint firstItem="FhF-G9-ulE" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="dFx-cQ-upn"/>
@@ -4948,12 +4948,12 @@ approved </string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdG-zz-KSv">
-                                        <rect key="frame" x="0.0" y="518" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="412.5" width="414" height="414"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdI-en-Cjq">
-                                                <rect key="frame" x="0.0" y="50" width="414" height="220"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="220" id="kL6-BU-cMs"/>
+                                                    <constraint firstAttribute="width" secondItem="UdI-en-Cjq" secondAttribute="height" multiplier="1:1" id="mIf-Qz-OYR"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="_minimumValue">
@@ -5007,10 +5007,10 @@ approved </string>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="UdI-en-Cjq" secondAttribute="trailing" id="4vA-RH-640"/>
                                             <constraint firstItem="UdI-en-Cjq" firstAttribute="leading" secondItem="NdG-zz-KSv" secondAttribute="leading" id="BQU-WA-JLA"/>
-                                            <constraint firstAttribute="height" constant="250" id="C28-NA-wqc"/>
                                             <constraint firstItem="xOx-Tg-fmp" firstAttribute="centerX" secondItem="NdG-zz-KSv" secondAttribute="centerX" id="L0F-Eh-RyM"/>
                                             <constraint firstItem="xOx-Tg-fmp" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="100" id="eu1-Le-A87"/>
-                                            <constraint firstItem="UdI-en-Cjq" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="50" id="ish-3K-3h4"/>
+                                            <constraint firstItem="UdI-en-Cjq" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" id="ish-3K-3h4"/>
+                                            <constraint firstAttribute="width" secondItem="NdG-zz-KSv" secondAttribute="height" multiplier="1:1" id="vbu-yq-3LV"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Xg-FqC">
@@ -5032,12 +5032,12 @@ approved </string>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="NdG-zz-KSv" secondAttribute="bottom" constant="50" id="6Me-bs-3OY"/>
                                     <constraint firstItem="Dfd-1l-t25" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" constant="20" id="Dbd-tV-YWn"/>
                                     <constraint firstAttribute="trailing" secondItem="NdG-zz-KSv" secondAttribute="trailing" id="Lq0-n1-tXX"/>
                                     <constraint firstItem="8Yo-dg-Y7U" firstAttribute="centerX" secondItem="rE2-uQ-AUc" secondAttribute="centerX" id="MAf-U0-4L5"/>
                                     <constraint firstItem="NdG-zz-KSv" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" id="NJy-7q-gtI"/>
                                     <constraint firstAttribute="trailing" secondItem="1Zm-rP-zgf" secondAttribute="trailing" constant="20" id="PJn-b1-7Ym"/>
+                                    <constraint firstItem="NdG-zz-KSv" firstAttribute="top" secondItem="icP-nN-F04" secondAttribute="bottom" constant="50" id="UqK-s2-lhH"/>
                                     <constraint firstItem="1Zm-rP-zgf" firstAttribute="top" secondItem="rE2-uQ-AUc" secondAttribute="top" constant="20" id="XGR-9k-mdU"/>
                                     <constraint firstItem="icP-nN-F04" firstAttribute="top" secondItem="B2L-BO-Hlz" secondAttribute="bottom" constant="22" id="Xld-6q-jFE"/>
                                     <constraint firstItem="Dfd-1l-t25" firstAttribute="top" secondItem="rE2-uQ-AUc" secondAttribute="top" constant="20" id="a3G-3g-GcA"/>
