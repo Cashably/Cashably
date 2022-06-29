@@ -21,16 +21,16 @@ class CashoutTipVC: UIViewController {
     
     @IBOutlet weak var sliderView: UIView!
     
-    @IBOutlet weak var emoSmile: UILabel! {
-        didSet {
-            emoSmile.text = "😟 🙂 😀 😍 🥰"
-//            emoSmile.textColor = .gray
-//            emoSmile.layer.compositingFilter = "luminosityBlendMode"
-        }
-    }
+    @IBOutlet weak var emoWorriedView: EmoView!
+    @IBOutlet weak var emoBlushView: EmoView!
+    @IBOutlet weak var emoSmileView: EmoView!
+    @IBOutlet weak var emoHeartView: EmoView!
+    @IBOutlet weak var emoLoveView: EmoView!
+    
+    
     var delegate: CashoutTipDelegate!
     
-    private var rates = ["$2", "$4", "$6", "$8", "$10", "$12", "$14"]
+    private var rates = ["$2\n  |", "$5\n   |", "$8\n   |", "$11\n   |", "$14\n   |"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,8 +61,8 @@ class CashoutTipVC: UIViewController {
 //        slider.maximumAngle = 100
 //        slider.minimumAngle = 0
 
-        slider.filledColor =  UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
-        slider.unfilledColor =  UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
+        slider.filledColor =  UIColor(red: 0.953, green: 0.953, blue: 0.953, alpha: 1)
+        slider.unfilledColor =  UIColor(red: 0.165, green: 0.29, blue: 0.22, alpha: 0.1)
 //        slider.backgroundColor = UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
 
         slider.handleImage = UIImage(named: "ic_pointer")
@@ -72,6 +72,7 @@ class CashoutTipVC: UIViewController {
         slider.labels = self.rates
         slider.labelColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
 //        slider.snapToLabels = true
+        slider.labelFont = .systemFont(ofSize: 25.0)
         slider.labelOffset = 100
         
         slider.sliderPadding = 80
@@ -82,7 +83,7 @@ class CashoutTipVC: UIViewController {
         slider.spaceUnFilledDegree = 110
         slider.clockwise = true
         
-        slider.currentValue = 10
+        slider.currentValue = 8
         
         slider.translatesAutoresizingMaskIntoConstraints = false
         
@@ -92,6 +93,7 @@ class CashoutTipVC: UIViewController {
         slider.centerYAnchor.constraint(equalTo: self.sliderView.centerYAnchor).isActive = true
 //        slider.widthAnchor.constraint(equalTo: self.sliderView.widthAnchor).isActive = true
 //        slider.heightAnchor.constraint(equalTo: self.sliderView.heightAnchor).isActive = true
+        
     }
     
    
@@ -112,5 +114,37 @@ class CashoutTipVC: UIViewController {
 extension CashoutTipVC: MSCircularSliderDelegate {
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
         self.lbAmount.text = "$\(ceil(value))"
+        
+        if value < 2 {
+            emoWorriedView.active()
+            emoSmileView.inactive()
+            emoLoveView.inactive()
+            emoBlushView.inactive()
+            emoHeartView.inactive()
+        } else if value >= 2 && value < 8 {
+            emoWorriedView.inactive()
+            emoSmileView.inactive()
+            emoLoveView.inactive()
+            emoBlushView.active()
+            emoHeartView.inactive()
+        } else if value >= 8 && value < 10 {
+            emoWorriedView.inactive()
+            emoSmileView.active()
+            emoLoveView.inactive()
+            emoBlushView.inactive()
+            emoHeartView.inactive()
+        } else if value >= 10 && value < 12 {
+            emoWorriedView.inactive()
+            emoSmileView.inactive()
+            emoLoveView.inactive()
+            emoBlushView.inactive()
+            emoHeartView.active()
+        } else if value >= 12 {
+            emoWorriedView.inactive()
+            emoSmileView.inactive()
+            emoLoveView.active()
+            emoBlushView.inactive()
+            emoHeartView.inactive()
+        }
     }
 }

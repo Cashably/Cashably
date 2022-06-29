@@ -4659,29 +4659,137 @@ approved </string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Kg-cFX">
-                                        <rect key="frame" x="0.0" y="203.5" width="414" height="414"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6V-6L-IFI">
-                                                <rect key="frame" x="207" y="140" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-jk-px1">
-                                                <rect key="frame" x="149" y="155" width="116.5" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                        <rect key="frame" x="0.0" y="552" width="414" height="250"/>
                                         <constraints>
-                                            <constraint firstItem="Kkg-jk-px1" firstAttribute="centerX" secondItem="x88-Kg-cFX" secondAttribute="centerX" id="7xZ-dn-k1A"/>
-                                            <constraint firstItem="Kkg-jk-px1" firstAttribute="top" secondItem="w6V-6L-IFI" secondAttribute="bottom" constant="15" id="E3h-3r-xlw"/>
-                                            <constraint firstItem="w6V-6L-IFI" firstAttribute="top" secondItem="x88-Kg-cFX" secondAttribute="top" constant="140" id="hZS-21-MID"/>
-                                            <constraint firstItem="w6V-6L-IFI" firstAttribute="centerX" secondItem="x88-Kg-cFX" secondAttribute="centerX" id="kgD-51-4La"/>
-                                            <constraint firstAttribute="width" secondItem="x88-Kg-cFX" secondAttribute="height" multiplier="1:1" id="vhV-A9-Mrv"/>
+                                            <constraint firstAttribute="height" constant="250" id="BUQ-8s-4Tk"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-jk-px1">
+                                        <rect key="frame" x="149" y="662.5" width="116.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAl-0e-4GM" userLabel="emo stack">
+                                        <rect key="frame" x="82" y="602.5" width="250" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcs-sQ-LDv" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_worried" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-kc-rqt">
+                                                        <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="WIX-aO-1xa"/>
+                                                            <constraint firstAttribute="height" constant="20" id="tEQ-xv-wR9"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="BBn-aJ-Aed"/>
+                                                    <constraint firstItem="6Xf-kc-rqt" firstAttribute="centerX" secondItem="Wcs-sQ-LDv" secondAttribute="centerX" id="Nlr-OR-TI8"/>
+                                                    <constraint firstAttribute="height" constant="50" id="UOb-Sb-slg"/>
+                                                    <constraint firstItem="6Xf-kc-rqt" firstAttribute="centerY" secondItem="Wcs-sQ-LDv" secondAttribute="centerY" id="ss3-wu-EEo"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-pz-KWK" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_smile" translatesAutoresizingMaskIntoConstraints="NO" id="Fw9-yB-lsi">
+                                                        <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="Ljm-Wa-V94"/>
+                                                            <constraint firstAttribute="width" constant="20" id="ner-pL-eQ6"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="N5u-l6-MmT"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Pfh-z8-7bh"/>
+                                                    <constraint firstItem="Fw9-yB-lsi" firstAttribute="centerX" secondItem="AsN-pz-KWK" secondAttribute="centerX" id="gG0-Qr-s5J"/>
+                                                    <constraint firstItem="Fw9-yB-lsi" firstAttribute="centerY" secondItem="AsN-pz-KWK" secondAttribute="centerY" id="rFo-Bb-Mut"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chW-v4-34D" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_blush" translatesAutoresizingMaskIntoConstraints="NO" id="FoF-fK-CqY">
+                                                        <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="A1l-AM-cW8"/>
+                                                            <constraint firstAttribute="height" constant="20" id="UKj-e1-dd2"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="2oh-89-k5G"/>
+                                                    <constraint firstItem="FoF-fK-CqY" firstAttribute="centerY" secondItem="chW-v4-34D" secondAttribute="centerY" id="2tn-s0-YbD"/>
+                                                    <constraint firstItem="FoF-fK-CqY" firstAttribute="centerX" secondItem="chW-v4-34D" secondAttribute="centerX" id="IX8-Ho-vLK"/>
+                                                    <constraint firstAttribute="height" constant="50" id="VS9-jW-noV"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeK-xJ-MT3" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_hert_eye" translatesAutoresizingMaskIntoConstraints="NO" id="uze-dI-Fwg">
+                                                        <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="5gD-F6-2bG"/>
+                                                            <constraint firstAttribute="height" constant="20" id="rAK-fE-1GK"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BT9-lJ-6n7"/>
+                                                    <constraint firstAttribute="width" constant="50" id="JJ1-k0-r6k"/>
+                                                    <constraint firstItem="uze-dI-Fwg" firstAttribute="centerX" secondItem="AeK-xJ-MT3" secondAttribute="centerX" id="MOr-jo-SbN"/>
+                                                    <constraint firstItem="uze-dI-Fwg" firstAttribute="centerY" secondItem="AeK-xJ-MT3" secondAttribute="centerY" id="wZ4-Si-lvk"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GvG-A3-ICp" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_love" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-kg-HR5">
+                                                        <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="4Fq-WA-Vxa"/>
+                                                            <constraint firstAttribute="height" constant="20" id="Bu0-Kf-X40"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="FKP-4Z-R0c"/>
+                                                    <constraint firstItem="K7U-kg-HR5" firstAttribute="centerY" secondItem="GvG-A3-ICp" secondAttribute="centerY" id="NNN-om-hRu"/>
+                                                    <constraint firstItem="K7U-kg-HR5" firstAttribute="centerX" secondItem="GvG-A3-ICp" secondAttribute="centerX" id="OnP-49-Zis"/>
+                                                    <constraint firstAttribute="width" constant="50" id="bkA-cJ-5gY"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIs-Z7-tUM">
                                         <rect key="frame" x="146" y="798.5" width="122" height="33.5"/>
                                         <state key="normal" title="Button"/>
@@ -4712,7 +4820,6 @@ approved </string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="x88-Kg-cFX" firstAttribute="top" secondItem="K7D-Do-cXB" secondAttribute="bottom" constant="30" id="6Gs-RZ-pmq"/>
                                     <constraint firstItem="cIs-Z7-tUM" firstAttribute="top" secondItem="FhF-G9-ulE" secondAttribute="bottom" constant="20" id="6sd-bt-86J"/>
                                     <constraint firstItem="U0F-b4-2HX" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="8Gp-wt-2Y1"/>
                                     <constraint firstItem="cIs-Z7-tUM" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="EjO-W5-9aN"/>
@@ -4722,13 +4829,18 @@ approved </string>
                                     <constraint firstAttribute="trailing" secondItem="K7D-Do-cXB" secondAttribute="trailing" constant="20" id="Psb-CK-De6"/>
                                     <constraint firstItem="K7D-Do-cXB" firstAttribute="top" secondItem="XuT-bT-nAM" secondAttribute="bottom" constant="20" id="Pv6-jD-PaH"/>
                                     <constraint firstItem="XuT-bT-nAM" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="Tsc-34-qaF"/>
+                                    <constraint firstItem="Kkg-jk-px1" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="Urg-KJ-ens"/>
                                     <constraint firstItem="2I4-EN-Wv6" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="VlV-Z4-VXh"/>
+                                    <constraint firstAttribute="bottom" secondItem="x88-Kg-cFX" secondAttribute="bottom" constant="50" id="WWH-fo-06E"/>
                                     <constraint firstAttribute="trailing" secondItem="FhF-G9-ulE" secondAttribute="trailing" constant="20" id="YEZ-oQ-Ohp"/>
                                     <constraint firstItem="K7D-Do-cXB" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="YqK-vj-bgm"/>
                                     <constraint firstItem="FhF-G9-ulE" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" constant="20" id="dFx-cQ-upn"/>
                                     <constraint firstItem="FhF-G9-ulE" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="eNi-g8-89u"/>
+                                    <constraint firstItem="hAl-0e-4GM" firstAttribute="centerX" secondItem="2j9-Cu-K4j" secondAttribute="centerX" id="fB9-Ih-qS4"/>
                                     <constraint firstAttribute="trailing" secondItem="x88-Kg-cFX" secondAttribute="trailing" id="isB-JR-B0s"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kkg-jk-px1" secondAttribute="bottom" constant="170" id="kLF-bq-iiC"/>
                                     <constraint firstItem="XuT-bT-nAM" firstAttribute="top" secondItem="2I4-EN-Wv6" secondAttribute="bottom" constant="10" id="mXx-nd-ahe"/>
+                                    <constraint firstItem="Kkg-jk-px1" firstAttribute="top" secondItem="hAl-0e-4GM" secondAttribute="bottom" constant="10" id="pX8-2a-UrT"/>
                                     <constraint firstItem="x88-Kg-cFX" firstAttribute="leading" secondItem="2j9-Cu-K4j" secondAttribute="leading" id="zUh-Hg-Xsr"/>
                                 </constraints>
                             </view>
@@ -4745,7 +4857,11 @@ approved </string>
                     <connections>
                         <outlet property="btnCashout" destination="cIs-Z7-tUM" id="hB4-IL-1SP"/>
                         <outlet property="btnCashoutWithTip" destination="FhF-G9-ulE" id="STs-fX-fU6"/>
-                        <outlet property="emoSmile" destination="w6V-6L-IFI" id="X09-XX-LE3"/>
+                        <outlet property="emoBlushView" destination="AsN-pz-KWK" id="aTx-ur-2yF"/>
+                        <outlet property="emoHeartView" destination="AeK-xJ-MT3" id="XqT-kz-vX6"/>
+                        <outlet property="emoLoveView" destination="GvG-A3-ICp" id="41f-Rr-V6k"/>
+                        <outlet property="emoSmileView" destination="chW-v4-34D" id="mhV-u6-TgT"/>
+                        <outlet property="emoWorriedView" destination="Wcs-sQ-LDv" id="cda-aN-OHx"/>
                         <outlet property="lbAmount" destination="XuT-bT-nAM" id="Efh-9n-irU"/>
                         <outlet property="sliderView" destination="x88-Kg-cFX" id="EiN-RG-CQh"/>
                     </connections>
@@ -4779,24 +4895,6 @@ approved </string>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="actionInfo:" destination="diB-Rd-FVK" eventType="primaryActionTriggered" id="8pQ-jl-pR5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Xg-FqC">
-                                        <rect key="frame" x="20" y="718" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="IBp-uA-2b9"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Qdx-Ed-Kk2"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Withdraw">
-                                            <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                            <color key="baseForegroundColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="actionWithdraw:" destination="diB-Rd-FVK" eventType="primaryActionTriggered" id="pJ5-Gg-tHa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfd-1l-t25" userLabel="btn_back">
@@ -4850,7 +4948,7 @@ approved </string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdG-zz-KSv">
-                                        <rect key="frame" x="0.0" y="402.5" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="518" width="414" height="250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdI-en-Cjq">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="220"/>
@@ -4915,8 +5013,26 @@ approved </string>
                                             <constraint firstItem="UdI-en-Cjq" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="50" id="ish-3K-3h4"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-Xg-FqC">
+                                        <rect key="frame" x="20" y="718" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="IBp-uA-2b9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Withdraw">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionWithdraw:" destination="diB-Rd-FVK" eventType="primaryActionTriggered" id="pJ5-Gg-tHa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NdG-zz-KSv" secondAttribute="bottom" constant="50" id="6Me-bs-3OY"/>
                                     <constraint firstItem="Dfd-1l-t25" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" constant="20" id="Dbd-tV-YWn"/>
                                     <constraint firstAttribute="trailing" secondItem="NdG-zz-KSv" secondAttribute="trailing" id="Lq0-n1-tXX"/>
                                     <constraint firstItem="8Yo-dg-Y7U" firstAttribute="centerX" secondItem="rE2-uQ-AUc" secondAttribute="centerX" id="MAf-U0-4L5"/>
@@ -4927,7 +5043,6 @@ approved </string>
                                     <constraint firstItem="Dfd-1l-t25" firstAttribute="top" secondItem="rE2-uQ-AUc" secondAttribute="top" constant="20" id="a3G-3g-GcA"/>
                                     <constraint firstAttribute="trailing" secondItem="fGn-Xg-FqC" secondAttribute="trailing" constant="20" id="czq-5C-d4E"/>
                                     <constraint firstItem="8Yo-dg-Y7U" firstAttribute="top" secondItem="rE2-uQ-AUc" secondAttribute="top" constant="106" id="kT6-S1-P2S"/>
-                                    <constraint firstItem="NdG-zz-KSv" firstAttribute="top" secondItem="icP-nN-F04" secondAttribute="bottom" constant="40" id="o6S-Gc-aSZ"/>
                                     <constraint firstItem="fGn-Xg-FqC" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" constant="20" id="smD-bX-fHv"/>
                                     <constraint firstAttribute="bottom" secondItem="fGn-Xg-FqC" secondAttribute="bottom" constant="40" id="uXC-Zj-MPx"/>
                                     <constraint firstItem="icP-nN-F04" firstAttribute="centerX" secondItem="rE2-uQ-AUc" secondAttribute="centerX" id="vX7-CI-En5"/>
@@ -4956,7 +5071,7 @@ approved </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgK-OP-MOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5580" y="1231"/>
+            <point key="canvasLocation" x="5579.7101449275369" y="1230.8035714285713"/>
         </scene>
         <!--DonationThanksVC-->
         <scene sceneID="NeR-5M-MtT">
@@ -7236,6 +7351,11 @@ if you want..</string>
         <image name="deposits_logo" width="218" height="156"/>
         <image name="eclipse_bg" width="260" height="260"/>
         <image name="eclipse_inner" width="152" height="152"/>
+        <image name="emo_blush" width="40" height="40"/>
+        <image name="emo_hert_eye" width="20" height="20"/>
+        <image name="emo_love" width="20" height="20"/>
+        <image name="emo_smile" width="20" height="20"/>
+        <image name="emo_worried" width="20" height="20"/>
         <image name="flow_left" width="22" height="22"/>
         <image name="flow_right" width="22" height="22"/>
         <image name="happy_animal" width="293" height="196"/>

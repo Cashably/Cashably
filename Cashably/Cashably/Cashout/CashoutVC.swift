@@ -19,7 +19,7 @@ class CashoutVC: UIViewController {
     @IBOutlet weak var selectView: UIView!
     @IBOutlet weak var sliderView: UIView!
     
-    private var rates = ["$0", "$10", "$20", "$30", "$40", "$50", "$60", "$70", "$80", "$90", "$100"]
+    private var rates = ["$0\n  |", "$25\n    |", "$50\n    |", "$75\n    |", "$100\n     |"]
     
     private var rateLabels: [UILabel] = []
     
@@ -50,7 +50,7 @@ class CashoutVC: UIViewController {
     
     private func setupSliderView() {
         let width = sliderView.frame.width + 100
-        let frame = CGRect(x: sliderView.center.x-width/2, y: sliderView.center.y + width/2, width: width, height: width)     // center in superview
+        let frame = CGRect(x: sliderView.center.x-width/2, y: sliderView.center.y - width/2, width: width, height: width)     // center in superview
         let slider = MSCircularSlider(frame: frame)
         slider.delegate = self
         
@@ -68,15 +68,18 @@ class CashoutVC: UIViewController {
         slider.handleImage = UIImage(named: "ic_pointer")
         slider.handleRotatable = true
         slider.handleEnlargementPoints = 30
+        slider.handleHighlightable = true
+        slider.handleType = .largeCircle
         
         slider.labels = self.rates
         slider.labelColor = .white
 //        slider.snapToLabels = true
+        slider.labelFont = .systemFont(ofSize: 25.0)
         slider.labelOffset = 100
         
         slider.sliderPadding = 80
         
-        slider.isSliding = false
+//        slider.isSliding = false
         
         slider.spaceDegree = 140
         slider.spaceUnFilledDegree = 110
@@ -123,7 +126,7 @@ class CashoutVC: UIViewController {
 //        tipVC.isModalInPresentation = true
         tipVC.delegate = self
         let nav = UINavigationController(rootViewController: tipVC)
-        nav.modalTransitionStyle = .coverVertical
+        nav.modalTransitionStyle = .crossDissolve
         if let sheet = nav.sheetPresentationController {
             sheet.detents = [.large()]
             sheet.preferredCornerRadius = 25

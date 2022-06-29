@@ -547,7 +547,6 @@ public class MSCircularSlider: UIControl {
     override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let newPoint = touch.location(in: self)
         var newAngle = floor(calculateAngle(from: centerPoint, to: newPoint))
-        
         // Sliding direction and revolutions' count detection
         func changeSlidingDirection(_ direction: MSCircularSliderDirection) {
             // Change direction (without multiplicity)
@@ -642,13 +641,39 @@ public class MSCircularSlider: UIControl {
         
         filledColor.set()
         // Draw filled circle
-//        drawArc(ctx: ctx, center: centerPoint, radius: calculatedRadius, lineWidth: CGFloat(lineWidth), fromAngle: CGFloat(minimumAngle), toAngle: CGFloat(angle), lineCap: filledLineCap)
+        drawArc(ctx: ctx, center: centerPoint, radius: calculatedRadius, lineWidth: CGFloat(lineWidth), fromAngle: CGFloat(minimumAngle), toAngle: CGFloat(angle), lineCap: filledLineCap)
+    }
+    
+    func chordToArc(_ chord: CGFloat, radius: CGFloat) -> CGFloat {
+        // *******************************************************
+        // Simple geometry
+        // *******************************************************
+        return 2 * asin(chord / (2 * radius))
     }
     
     /** Draws the slider's labels (if any exist) in the given context */
     private func drawLabels(ctx: CGContext) {
+        let size = self.bounds.size
+
+        ctx.translateBy (x: size.width / 2, y: size.height / 2)
+        ctx.scaleBy (x: 1, y: -1)
+        
         if labels.count > 0 {
             let attributes = [NSAttributedString.Key.font: labelFont, NSAttributedString.Key.foregroundColor: labelColor] as [NSAttributedString.Key : Any]
+            
+            var totalArc: CGFloat = 0
+            var arcs: [CGFloat] = []
+            
+            for i in 0 ..< labels.count {
+                arcs += [chordToArc(labels[i].size(withAttributes: attributes).width+50, radius: calculatedRadius)]
+                totalArc += arcs[i]
+            }
+            
+            
+            
+            let direction: CGFloat = clockwise ? -1 : 1
+            let slantCorrection: CGFloat = clockwise ? -.pi / 2 : .pi / 2
+            var thetaI = .pi/2 - direction * totalArc / 2
             
             for i in 0 ..< labels.count {
                 let label = labels[i] as NSString
@@ -657,17 +682,39 @@ public class MSCircularSlider: UIControl {
                 ctx.saveGState()
 //                ctx.beginPath()
                 
+                var percentageAlongCircle = fullCircle ? ((100.0 / CGFloat(labels.count)) * CGFloat(i)) / 100.0 : ((100.0 / CGFloat(labels.count - 1)) * CGFloat(i)) / 100.0
+                
+                let labelDegrees = startAngle + percentageAlongCircle * spaceAngle
+                
+
+//                print("to rad \(toCartesian(toRad(labelDegrees)))")
                 // Invert transform to cancel rotation on labels
 //                ctx.concatenate(CGAffineTransform(translationX: labelFrame.origin.x + (labelFrame.width / 2),
-//                                                  y: labelFrame.origin.y + (labelFrame.height / 2)))
+//                                                                  y: labelFrame.origin.y + (labelFrame.height / 2)))
+//                ctx.concatenate(CGAffineTransform(rotationAngle: toCartesian(toRad(labelDegrees))))
 //                ctx.concatenate(getRotationalTransform().inverted())
 //                ctx.concatenate(CGAffineTransform(translationX: -(labelFrame.origin.x + (labelFrame.width / 2)),
 //                                                  y: -(labelFrame.origin.y + (labelFrame.height / 2))))
                 
+                thetaI += direction * arcs[i] / 2
+                ctx.scaleBy(x: 1, y: -1)
+//                // Move the origin to the centre of the text (negating the y-axis manually)
+                ctx.translateBy(x: calculatedRadius * cos(thetaI), y: -(calculatedRadius * sin(thetaI)))
+//                ctx.concatenate(CGAffineTransform(rotationAngle: -0.1))
+//                // Rotate the coordinate system
+                ctx.rotate(by: -(thetaI + slantCorrection))
+//                // Calculate the width of the text
+                let offset = label.size(withAttributes: attributes)
+//                // Move the origin by half the size of the text
+                ctx.translateBy (x: -offset.width / 2, y: -offset.height / 2) // Move the origin to the centre of the text (negating the y-axis manually)
+                
                 // Draw label
-                label.draw(in: labelFrame, withAttributes: attributes)
+                label.draw(at: CGPoint(x: 0, y: 0), withAttributes: attributes)
+//                label.draw(in: labelFrame, withAttributes: attributes)
                 
                 ctx.restoreGState()
+                
+                thetaI += direction * arcs[i] / 2
             }
         }
     }

@@ -68,6 +68,7 @@
 		F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A86B2865A4F300DBBCE4 /* GradientCircularSlider.swift */; };
 		F062F23C286A8A28007DE996 /* DonationThanksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23B286A8A28007DE996 /* DonationThanksVC.swift */; };
 		F062F23E286A8A56007DE996 /* NoDonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23D286A8A56007DE996 /* NoDonationVC.swift */; };
+		F062F240286B00C6007DE996 /* EmoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23F286B00C6007DE996 /* EmoView.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -186,6 +187,7 @@
 		F062A86B2865A4F300DBBCE4 /* GradientCircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCircularSlider.swift; sourceTree = "<group>"; };
 		F062F23B286A8A28007DE996 /* DonationThanksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThanksVC.swift; sourceTree = "<group>"; };
 		F062F23D286A8A56007DE996 /* NoDonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDonationVC.swift; sourceTree = "<group>"; };
+		F062F23F286B00C6007DE996 /* EmoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoView.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 				F062A7812861C37C00DBBCE4 /* RoundView.swift */,
 				F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */,
 				F062A83F28642E3000DBBCE4 /* UIViewController+Keyboard.swift */,
+				F062F23F286B00C6007DE996 /* EmoView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -836,6 +839,7 @@
 				F0B8535A2860145B002F90DA /* RoundBorderView.swift in Sources */,
 				F05365CB285F770D00B771D9 /* RequestOverdraftEnableVC.swift in Sources */,
 				F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */,
+				F062F240286B00C6007DE996 /* EmoView.swift in Sources */,
 				F05365C5285F764D00B771D9 /* RequestFaceEnableVC.swift in Sources */,
 				F062A86A2865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift in Sources */,
 				F062F23C286A8A28007DE996 /* DonationThanksVC.swift in Sources */,
@@ -1071,7 +1075,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1085,7 +1089,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1104,7 +1108,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1118,7 +1122,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.2;
+				MARKETING_VERSION = 0.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
