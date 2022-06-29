@@ -74,7 +74,7 @@ class CashoutVC: UIViewController {
         slider.labels = self.rates
         slider.labelColor = .white
 //        slider.snapToLabels = true
-        slider.labelFont = .systemFont(ofSize: 25.0)
+        slider.labelFont = .systemFont(ofSize: 18.0)
         slider.labelOffset = 100
         
         slider.sliderPadding = 80

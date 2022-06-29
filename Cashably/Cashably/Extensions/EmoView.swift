@@ -27,7 +27,7 @@ open class EmoView: UIView {
         for subview in self.subviews {
             if let item = subview as? UIImageView {
                 emo = item
-                emo.tintColor = .gray
+                self.layer.compositingFilter = "luminosityBlendMode"
             }
         }
         
@@ -35,12 +35,11 @@ open class EmoView: UIView {
     
     func active() {
         backgroundColor = .white
-        emo.tintColor = .clear
         
     }
     
     func inactive() {
         backgroundColor = .clear
-        emo.tintColor = .gray
+        self.layer.compositingFilter = "luminosityBlendMode"
     }
 }

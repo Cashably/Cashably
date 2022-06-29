@@ -665,7 +665,8 @@ public class MSCircularSlider: UIControl {
             var arcs: [CGFloat] = []
             
             for i in 0 ..< labels.count {
-                arcs += [chordToArc(labels[i].size(withAttributes: attributes).width+50, radius: calculatedRadius)]
+//                arcs += [chordToArc(labels[i].size(withAttributes: attributes).width+50, radius: calculatedRadius)]
+                arcs += [chordToArc((size.width - 50) / CGFloat((labels.count - 1)), radius: calculatedRadius)]
                 totalArc += arcs[i]
             }
             

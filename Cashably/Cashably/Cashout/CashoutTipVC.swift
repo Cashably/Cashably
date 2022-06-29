@@ -30,7 +30,7 @@ class CashoutTipVC: UIViewController {
     
     var delegate: CashoutTipDelegate!
     
-    private var rates = ["$2\n  |", "$5\n   |", "$8\n   |", "$11\n   |", "$14\n   |"]
+    private var rates = ["$2\n  |", "$4\n   |", "$6\n   |", "$8\n   |", "$10\n   |", "$12\n   |", "$14\n   |"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class CashoutTipVC: UIViewController {
         
         slider.lineWidth = 15
         
-        slider.minimumValue = 0
+        slider.minimumValue = 2
         slider.maximumValue = 14
 //        slider.maximumAngle = 100
 //        slider.minimumAngle = 0
@@ -72,14 +72,14 @@ class CashoutTipVC: UIViewController {
         slider.labels = self.rates
         slider.labelColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
 //        slider.snapToLabels = true
-        slider.labelFont = .systemFont(ofSize: 25.0)
+        slider.labelFont = .systemFont(ofSize: 18.0)
         slider.labelOffset = 100
         
         slider.sliderPadding = 80
         
         slider.isSliding = false
         
-        slider.spaceDegree = 140
+        slider.spaceDegree = 120
         slider.spaceUnFilledDegree = 110
         slider.clockwise = true
         
