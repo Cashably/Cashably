@@ -62,7 +62,7 @@ class CashoutTipVC: UIViewController {
 //        slider.minimumAngle = 0
 
         slider.filledColor =  UIColor(red: 0.953, green: 0.953, blue: 0.953, alpha: 1)
-        slider.unfilledColor =  UIColor(red: 0.165, green: 0.29, blue: 0.22, alpha: 0.1)
+        slider.unfilledColor =  .white
 //        slider.backgroundColor = UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
 
         slider.handleImage = UIImage(named: "ic_pointer")
@@ -82,6 +82,8 @@ class CashoutTipVC: UIViewController {
         slider.spaceDegree = 140
         slider.spaceUnFilledDegree = 110
         slider.clockwise = true
+        
+        slider.enableOuterLine = true
         
         slider.currentValue = 8
         

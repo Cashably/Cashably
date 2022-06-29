@@ -236,6 +236,12 @@ public class MSCircularSlider: UIControl {
         }
     }
     
+    public var enableOuterLine: Bool = false {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     // HANDLE MEMBERS
     
     /** The slider's handle layer */
@@ -642,6 +648,11 @@ public class MSCircularSlider: UIControl {
         filledColor.set()
         // Draw filled circle
         drawArc(ctx: ctx, center: centerPoint, radius: calculatedRadius, lineWidth: CGFloat(lineWidth), fromAngle: CGFloat(minimumAngle), toAngle: CGFloat(angle), lineCap: filledLineCap)
+        
+        if enableOuterLine {
+            UIColor(red: 0.165, green: 0.29, blue: 0.22, alpha: 0.1).set()
+            drawOuterCircle(ctx: ctx, center: centerPoint, radius: calculatedRadius+CGFloat(lineWidth), lineWidth: CGFloat(1), minimumAngle: CGFloat(minimumAngle), maximumAngle: maximumAngle, lineCap: unfilledLineCap)
+        }
     }
     
     func chordToArc(_ chord: CGFloat, radius: CGFloat) -> CGFloat {
@@ -770,7 +781,18 @@ public class MSCircularSlider: UIControl {
         ctx.setLineCap(lineCap)
         ctx.drawPath(using: CGPathDrawingMode.stroke)
         
+    }
+    
+    internal func drawOuterCircle(ctx: CGContext, center: CGPoint, radius: CGFloat, lineWidth: CGFloat, minimumAngle: CGFloat, maximumAngle: CGFloat, lineCap: CGLineCap) {
         
+//        drawArc(ctx: ctx, center: center, radius: radius, lineWidth: lineWidth, fromAngle: minimumAngle, toAngle: maximumAngle, lineCap: lineCap)
+        let rect = rectForOuterShape()
+        
+        ctx.addPath(pathForUnFilledShape(rect: rect).cgPath)
+        
+        ctx.setLineWidth(lineWidth)
+        ctx.setLineCap(lineCap)
+        ctx.drawPath(using: CGPathDrawingMode.stroke)
         
     }
     
@@ -794,6 +816,10 @@ public class MSCircularSlider: UIControl {
     
     private func rectForShape() -> CGRect {
         return bounds.insetBy(dx: CGFloat(lineWidth) / 2.0, dy: CGFloat(lineWidth) / 2.0)
+    }
+    
+    private func rectForOuterShape() -> CGRect {
+        return bounds.insetBy(dx: CGFloat(lineWidth - 9 ) / 2.0, dy: CGFloat(lineWidth - 9 ) / 2.0)
     }
     
     private func pathForShape(rect: CGRect) -> UIBezierPath {
