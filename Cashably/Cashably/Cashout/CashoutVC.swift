@@ -137,7 +137,7 @@ class CashoutVC: UIViewController {
         
         let sheetController = SheetViewController(
             controller: tipVC,
-            sizes: [.fixed(650)])
+            sizes: [.fixed(700)])
         sheetController.cornerRadius = 25
         sheetController.shouldRecognizePanGestureWithUIControls = false
 //        sheetController.hasBlurBackground = true

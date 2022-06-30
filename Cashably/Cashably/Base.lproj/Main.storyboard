@@ -4762,7 +4762,7 @@ your Affirm account and loans.</string>
                                         <rect key="frame" x="77" y="10" width="260" height="260"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-RD-GeP">
-                                                <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="1040"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outer_border" translatesAutoresizingMaskIntoConstraints="NO" id="pXc-15-A2d">
                                                 <rect key="frame" x="50" y="50" width="160" height="160"/>
@@ -4782,7 +4782,7 @@ your Affirm account and loans.</string>
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selena Grander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-qk-asE">
-                                                <rect key="frame" x="130" y="191" width="0.0" height="59"/>
+                                                <rect key="frame" x="130" y="191" width="0.0" height="839"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="0.0"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4793,7 +4793,7 @@ your Affirm account and loans.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selena@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYb-qv-iMH">
-                                                <rect key="frame" x="62" y="260" width="136" height="19.5"/>
+                                                <rect key="frame" x="62" y="1040" width="136" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -5443,12 +5443,17 @@ approved </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcs-sQ-LDv" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_worried" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-kc-rqt">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_sad" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-kc-rqt">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="WIX-aO-1xa"/>
                                                             <constraint firstAttribute="height" constant="20" id="tEQ-xv-wR9"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5472,6 +5477,11 @@ approved </string>
                                                             <constraint firstAttribute="height" constant="20" id="Ljm-Wa-V94"/>
                                                             <constraint firstAttribute="width" constant="20" id="ner-pL-eQ6"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5495,6 +5505,11 @@ approved </string>
                                                             <constraint firstAttribute="width" constant="20" id="A1l-AM-cW8"/>
                                                             <constraint firstAttribute="height" constant="20" id="UKj-e1-dd2"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5512,12 +5527,17 @@ approved </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeK-xJ-MT3" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="150" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_hert_eye" translatesAutoresizingMaskIntoConstraints="NO" id="uze-dI-Fwg">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_happy" translatesAutoresizingMaskIntoConstraints="NO" id="uze-dI-Fwg">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="5gD-F6-2bG"/>
                                                             <constraint firstAttribute="height" constant="20" id="rAK-fE-1GK"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5541,6 +5561,11 @@ approved </string>
                                                             <constraint firstAttribute="width" constant="20" id="4Fq-WA-Vxa"/>
                                                             <constraint firstAttribute="height" constant="20" id="Bu0-Kf-X40"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5636,10 +5661,10 @@ approved </string>
                         <outlet property="btnCashout" destination="cIs-Z7-tUM" id="hB4-IL-1SP"/>
                         <outlet property="btnCashoutWithTip" destination="FhF-G9-ulE" id="STs-fX-fU6"/>
                         <outlet property="dropDown" destination="pNy-d4-oWe" id="BIb-Xj-P1N"/>
-                        <outlet property="emoBlushView" destination="AsN-pz-KWK" id="aTx-ur-2yF"/>
+                        <outlet property="emoBlushView" destination="chW-v4-34D" id="pjm-Jz-4Iy"/>
                         <outlet property="emoHeartView" destination="AeK-xJ-MT3" id="XqT-kz-vX6"/>
                         <outlet property="emoLoveView" destination="GvG-A3-ICp" id="41f-Rr-V6k"/>
-                        <outlet property="emoSmileView" destination="chW-v4-34D" id="mhV-u6-TgT"/>
+                        <outlet property="emoSmileView" destination="AsN-pz-KWK" id="5Z3-wp-QQI"/>
                         <outlet property="emoWorriedView" destination="Wcs-sQ-LDv" id="cda-aN-OHx"/>
                         <outlet property="lbAmount" destination="XuT-bT-nAM" id="Efh-9n-irU"/>
                         <outlet property="sliderView" destination="x88-Kg-cFX" id="EiN-RG-CQh"/>
@@ -8479,6 +8504,23 @@ if you want..</string>
             <point key="canvasLocation" x="3035" y="4736"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6Xf-kc-rqt">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="FoF-fK-CqY">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="Fw9-yB-lsi">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="K7U-kg-HR5">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+        <designable name="uze-dI-Fwg">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="allow_logo" width="180" height="180"/>
         <image name="avatar" width="102" height="102"/>
@@ -8492,10 +8534,10 @@ if you want..</string>
         <image name="eclipse_bg" width="260" height="260"/>
         <image name="eclipse_inner" width="152" height="152"/>
         <image name="emo_blush" width="20" height="20"/>
-        <image name="emo_hert_eye" width="20" height="20"/>
+        <image name="emo_happy" width="20" height="20"/>
         <image name="emo_love" width="20" height="20"/>
+        <image name="emo_sad" width="20" height="20"/>
         <image name="emo_smile" width="20" height="20"/>
-        <image name="emo_worried" width="20" height="20"/>
         <image name="flow_left" width="22" height="22"/>
         <image name="flow_right" width="22" height="22"/>
         <image name="happy_animal" width="293" height="196"/>
@@ -8548,7 +8590,7 @@ if you want..</string>
         <image name="ic_wallet" width="22" height="22"/>
         <image name="ic_wallet_active" width="20" height="20"/>
         <image name="notification_logo" width="180" height="180"/>
-        <image name="outer_border" width="260" height="260"/>
+        <image name="outer_border" width="1040" height="1040"/>
         <image name="overdraft_logo" width="208" height="208"/>
         <image name="password_logo" width="141" height="185"/>
         <image name="pig_connect" width="229" height="184"/>

@@ -24,22 +24,48 @@ open class EmoView: UIView {
     private func configure() {
         backgroundColor = .clear
         self.layer.cornerRadius = self.frame.width * 0.5
+        
         for subview in self.subviews {
             if let item = subview as? UIImageView {
                 emo = item
-                self.layer.compositingFilter = "luminosityBlendMode"
+//                emo.isHidden = true
+//                var view = UILabel()
+//                view.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+//                view.backgroundColor = .white
+//                view.layer.compositingFilter = "luminosityBlendMode"
+//                let layer0 = CALayer()
+//                layer0.contents = item.image?.cgImage
+//                layer0.bounds = view.bounds
+//                layer0.position = view.center
+//                view.layer.addSublayer(layer0)
+//
+//                var parent = self
+//
+//                parent.addSubview(view)
+//
+//                view.translatesAutoresizingMaskIntoConstraints = false
+//
+////                view.widthAnchor.constraint(equalToConstant: 20).isActive = true
+////
+////                view.heightAnchor.constraint(equalToConstant: 20).isActive = true
+//
+//                view.centerXAnchor.constraint(equalTo: parent.centerXAnchor, constant: 0).isActive = true
+//
+//                view.centerYAnchor.constraint(equalTo: parent.centerYAnchor, constant: 0).isActive = true
+
+
             }
         }
         
     }
     
-    func active() {
+    func active(_ name: String) {
         backgroundColor = .white
-        
+        emo.image = UIImage(named: "emo_\(name)")
     }
     
-    func inactive() {
+    func inactive(_ name: String) {
         backgroundColor = .clear
-        self.layer.compositingFilter = "luminosityBlendMode"
+        emo.image = UIImage(named: "emo_\(name)_inactive")
     }
 }
