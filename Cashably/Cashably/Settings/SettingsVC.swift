@@ -138,6 +138,7 @@ extension SettingsVC: UITableViewDataSource {
             break
         default:
             let footer: SettingsTableViewFooterCell = self.tableView.dequeueReusableCell(withIdentifier: "settingsFooter") as! SettingsTableViewFooterCell
+            footer.lbVersion.text = Bundle.main.fullVersion
             return footer
         }
         

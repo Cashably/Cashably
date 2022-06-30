@@ -69,6 +69,7 @@
 		F062F23C286A8A28007DE996 /* DonationThanksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23B286A8A28007DE996 /* DonationThanksVC.swift */; };
 		F062F23E286A8A56007DE996 /* NoDonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23D286A8A56007DE996 /* NoDonationVC.swift */; };
 		F062F240286B00C6007DE996 /* EmoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23F286B00C6007DE996 /* EmoView.swift */; };
+		F062F242286D2B9E007DE996 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F241286D2B9E007DE996 /* Bundle.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -188,6 +189,7 @@
 		F062F23B286A8A28007DE996 /* DonationThanksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThanksVC.swift; sourceTree = "<group>"; };
 		F062F23D286A8A56007DE996 /* NoDonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDonationVC.swift; sourceTree = "<group>"; };
 		F062F23F286B00C6007DE996 /* EmoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoView.swift; sourceTree = "<group>"; };
+		F062F241286D2B9E007DE996 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 				F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */,
 				F062A83F28642E3000DBBCE4 /* UIViewController+Keyboard.swift */,
 				F062F23F286B00C6007DE996 /* EmoView.swift */,
+				F062F241286D2B9E007DE996 /* Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -827,6 +830,7 @@
 				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,
 				F062A83A28629E2200DBBCE4 /* DayAxisValueFormatter.swift in Sources */,
 				F062A8662865A4A400DBBCE4 /* CircularSliderHandle.swift in Sources */,
+				F062F242286D2B9E007DE996 /* Bundle.swift in Sources */,
 				F062A83C2862EFBA00DBBCE4 /* IntAxisValueFormatter.swift in Sources */,
 				F062A86128654E7A00DBBCE4 /* MSGradientCircularSlider+IB.swift in Sources */,
 				F062A84D286545C600DBBCE4 /* MTCircularSlider.swift in Sources */,
