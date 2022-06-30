@@ -29,7 +29,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="570"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bg-sh-tIg" userLabel="signup label">
-                                                                <rect key="frame" x="92.5" y="467.5" width="229" height="20"/>
+                                                                <rect key="frame" x="92.5" y="483.5" width="229" height="20"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZK-1i-mko">
                                                                         <rect key="frame" x="0.0" y="0.0" width="165.5" height="20"/>
@@ -63,7 +63,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-We-Inw" userLabel="btn_login">
-                                                                <rect key="frame" x="20" y="387.5" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="403.5" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="1yC-nV-MFx"/>
                                                                 </constraints>
@@ -85,7 +85,7 @@
                                                                 </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbX-AI-Zf6" userLabel="or stack">
-                                                                <rect key="frame" x="196.5" y="339.5" width="21" height="18"/>
+                                                                <rect key="frame" x="196.5" y="355.5" width="21" height="18"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayU-ei-wt9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="18"/>
@@ -101,7 +101,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-HG-Rc5">
-                                                                <rect key="frame" x="20" y="249.5" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="265.5" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="vaI-Ea-b1l"/>
                                                                 </constraints>
@@ -122,8 +122,8 @@
                                                                     <action selector="actionSendOTP:" destination="wOh-0W-Ubi" eventType="primaryActionTriggered" id="BoI-15-DgX"/>
                                                                 </connections>
                                                             </button>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fp0-g0-3AD" userLabel="phone">
-                                                                <rect key="frame" x="20" y="83" width="374" height="146.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fp0-g0-3AD" userLabel="phone">
+                                                                <rect key="frame" x="20" y="89" width="374" height="156.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Mobile No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn5-dF-bxc">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -137,7 +137,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXp-eR-yPH" customClass="FPNTextField" customModule="FlagPhoneNumber">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                        <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="60" id="cav-mP-deN"/>
                                                                         </constraints>
@@ -145,7 +145,7 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ler-kv-2sd">
-                                                                        <rect key="frame" x="0.0" y="89.5" width="374" height="57"/>
+                                                                        <rect key="frame" x="0.0" y="99.5" width="374" height="57"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="By continuing, I agree to Terms of service and authorize Cashably to obtain, use and share consumer reports about me." imagePadding="5">
                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
@@ -159,8 +159,8 @@
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XKD-4f-Z5M" userLabel="header stack">
-                                                                <rect key="frame" x="20" y="0.0" width="374" height="53"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="XKD-4f-Z5M" userLabel="header stack">
+                                                                <rect key="frame" x="20" y="0.0" width="374" height="59"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get started" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATq-yP-3GP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -174,7 +174,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you don't have an account, please create one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRt-SU-x6n">
-                                                                        <rect key="frame" x="0.0" y="35" width="374" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="41" width="374" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -405,7 +405,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xw-vn-S2f" userLabel="signup label">
-                                                                <rect key="frame" x="94.5" y="405.5" width="225" height="20"/>
+                                                                <rect key="frame" x="94.5" y="416.5" width="225" height="20"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-gf-XnZ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="20"/>
@@ -440,7 +440,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P67-pj-xeZ" userLabel="btn_login">
-                                                                <rect key="frame" x="20" y="325.5" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="336.5" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="guf-ER-gM4"/>
                                                                 </constraints>
@@ -462,7 +462,7 @@
                                                                 </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="del-i5-51U" userLabel="or stack">
-                                                                <rect key="frame" x="196.5" y="277.5" width="21" height="18"/>
+                                                                <rect key="frame" x="196.5" y="288.5" width="21" height="18"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imB-KB-WzS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="18"/>
@@ -478,7 +478,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ax7-Q6-kl1">
-                                                                <rect key="frame" x="20" y="187.5" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="198.5" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="1CK-A2-JzB"/>
                                                                 </constraints>
@@ -499,8 +499,8 @@
                                                                     <action selector="actionSendOTP:" destination="dlx-XM-deo" eventType="primaryActionTriggered" id="OEf-tL-BUq"/>
                                                                 </connections>
                                                             </button>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-YX-eSK" userLabel="phone">
-                                                                <rect key="frame" x="20" y="83" width="374" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-YX-eSK" userLabel="phone">
+                                                                <rect key="frame" x="20" y="89" width="374" height="89.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Mobile No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zto-PX-JlY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -514,7 +514,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NiE-D1-yeR" customClass="FPNTextField" customModule="FlagPhoneNumber">
-                                                                        <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                        <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="60" id="PIC-dO-Lwr"/>
                                                                         </constraints>
@@ -526,8 +526,8 @@
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-TI-ni6" userLabel="header stack">
-                                                                <rect key="frame" x="20" y="0.0" width="374" height="53"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-TI-ni6" userLabel="header stack">
+                                                                <rect key="frame" x="20" y="0.0" width="374" height="59"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFT-Mo-1bu">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -541,7 +541,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSc-L7-jFy">
-                                                                        <rect key="frame" x="0.0" y="35" width="374" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="41" width="374" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -664,7 +664,7 @@
                                         <rect key="frame" x="0.0" y="282" width="414" height="570"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-P4-cxc" userLabel="signup label">
-                                                <rect key="frame" x="93" y="262" width="228" height="20"/>
+                                                <rect key="frame" x="93" y="298" width="228" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't receive a code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tu0-9d-5Qh">
                                                         <rect key="frame" x="0.0" y="0.0" width="143.5" height="20"/>
@@ -699,7 +699,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DL-gc-Mox">
-                                                <rect key="frame" x="20" y="182" width="374" height="60"/>
+                                                <rect key="frame" x="20" y="218" width="374" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Gk3-C9-Y6e"/>
                                                 </constraints>
@@ -720,8 +720,8 @@
                                                     <action selector="actionConfirm:" destination="Rhv-C9-7dt" eventType="primaryActionTriggered" id="rhn-3h-S00"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ric-cB-hT9" userLabel="welcome stack">
-                                                <rect key="frame" x="20" y="30" width="374" height="52"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ric-cB-hT9" userLabel="welcome stack">
+                                                <rect key="frame" x="20" y="30" width="374" height="58"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aox-70-R2x">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -735,7 +735,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UYn-eX-nok">
-                                                        <rect key="frame" x="0.0" y="35" width="374" height="17"/>
+                                                        <rect key="frame" x="0.0" y="41" width="374" height="17"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With the code sent to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTd-hF-7jV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="139" height="17"/>
@@ -764,7 +764,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnY-uV-KFW" userLabel="verify code view" customClass="DPOTPView" customModule="DPOTPView">
-                                                <rect key="frame" x="20" y="92" width="374" height="80"/>
+                                                <rect key="frame" x="20" y="118" width="374" height="80"/>
                                                 <color key="tintColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="gU0-3E-Zxt"/>
@@ -805,10 +805,10 @@
                                             <constraint firstAttribute="trailing" secondItem="KnY-uV-KFW" secondAttribute="trailing" constant="20" id="1nb-Mu-e9r"/>
                                             <constraint firstItem="KnY-uV-KFW" firstAttribute="leading" secondItem="udd-PG-C79" secondAttribute="leading" constant="20" id="BTn-Z7-sjD"/>
                                             <constraint firstAttribute="trailing" secondItem="ric-cB-hT9" secondAttribute="trailing" constant="20" id="K9U-Fv-Piq"/>
-                                            <constraint firstItem="8DL-gc-Mox" firstAttribute="top" secondItem="KnY-uV-KFW" secondAttribute="bottom" constant="10" id="ZNC-yM-ic3"/>
+                                            <constraint firstItem="8DL-gc-Mox" firstAttribute="top" secondItem="KnY-uV-KFW" secondAttribute="bottom" constant="20" id="ZNC-yM-ic3"/>
                                             <constraint firstItem="8DL-gc-Mox" firstAttribute="centerX" secondItem="udd-PG-C79" secondAttribute="centerX" id="anF-rb-HNx"/>
                                             <constraint firstItem="8DL-gc-Mox" firstAttribute="leading" secondItem="udd-PG-C79" secondAttribute="leading" constant="20" id="grs-gM-hxO"/>
-                                            <constraint firstItem="KnY-uV-KFW" firstAttribute="top" secondItem="ric-cB-hT9" secondAttribute="bottom" constant="10" id="h0w-c4-0Ks"/>
+                                            <constraint firstItem="KnY-uV-KFW" firstAttribute="top" secondItem="ric-cB-hT9" secondAttribute="bottom" constant="30" id="h0w-c4-0Ks"/>
                                             <constraint firstItem="xTz-P4-cxc" firstAttribute="top" secondItem="8DL-gc-Mox" secondAttribute="bottom" constant="20" id="k6Q-hJ-Zot"/>
                                             <constraint firstItem="ric-cB-hT9" firstAttribute="leading" secondItem="udd-PG-C79" secondAttribute="leading" constant="20" id="kQJ-ND-Rsu"/>
                                             <constraint firstItem="xTz-P4-cxc" firstAttribute="centerX" secondItem="udd-PG-C79" secondAttribute="centerX" id="rip-4F-bm2"/>
@@ -913,8 +913,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzH-kG-NqJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Crp-dA-3Vt" userLabel="header stack">
-                                                                <rect key="frame" x="20" y="0.0" width="374" height="53"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Crp-dA-3Vt" userLabel="header stack">
+                                                                <rect key="frame" x="20" y="0.0" width="374" height="59"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update your account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYL-F1-cq5">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -928,7 +928,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Details to continue with the App." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Faw-Ag-VNY">
-                                                                        <rect key="frame" x="0.0" y="35" width="374" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="41" width="374" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -941,10 +941,10 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="1yx-TB-cx4" userLabel="form stack">
-                                                                <rect key="frame" x="20" y="83" width="374" height="413"/>
+                                                                <rect key="frame" x="20" y="89" width="374" height="433"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xQS-19-17e" userLabel="name stack">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xQS-19-17e" userLabel="name stack">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgW-2P-TZr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -958,7 +958,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tr8-WU-Evo" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user" translatesAutoresizingMaskIntoConstraints="NO" id="HbP-sf-aU7">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -999,8 +999,8 @@
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KfY-uW-M4B" userLabel="email stack">
-                                                                        <rect key="frame" x="0.0" y="109.5" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KfY-uW-M4B" userLabel="email stack">
+                                                                        <rect key="frame" x="0.0" y="114.5" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnD-us-GUU">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -1014,7 +1014,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idv-4o-MFu" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_email" translatesAutoresizingMaskIntoConstraints="NO" id="lwU-C6-yuT">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -1055,8 +1055,8 @@
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-xB-VMR" userLabel="DOB stack">
-                                                                        <rect key="frame" x="0.0" y="219" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-xB-VMR" userLabel="DOB stack">
+                                                                        <rect key="frame" x="0.0" y="229" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apX-yx-4g1">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -1070,7 +1070,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDb-AU-FZB" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="f0N-fs-Hxk">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -1111,8 +1111,8 @@
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-kN-s2Y" userLabel="SSN stack">
-                                                                        <rect key="frame" x="0.0" y="328.5" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-kN-s2Y" userLabel="SSN stack">
+                                                                        <rect key="frame" x="0.0" y="343.5" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 4 of SSN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzn-Yj-WdB">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -1126,7 +1126,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFx-bI-NjS" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_doc" translatesAutoresizingMaskIntoConstraints="NO" id="sdX-sF-svp">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -1170,7 +1170,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-Ii-s73">
-                                                                <rect key="frame" x="20" y="518" width="374" height="57"/>
+                                                                <rect key="frame" x="20" y="544" width="374" height="57"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="By continuing, I agree to Terms of service and authorize Cashably to obtain, use and share consumer reports about me." imagePadding="5">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
@@ -1183,7 +1183,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvA-W9-yUE">
-                                                                <rect key="frame" x="20" y="595" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="621" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="eWu-qL-sz8"/>
                                                                 </constraints>
@@ -1300,8 +1300,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cz4-4V-YAA" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="362" width="414" height="500"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="12C-BT-LOO" userLabel="header stack">
-                                                <rect key="frame" x="20" y="30" width="374" height="53"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="12C-BT-LOO" userLabel="header stack">
+                                                <rect key="frame" x="20" y="30" width="374" height="59"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-jd-wDn">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -1315,7 +1315,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Strong password." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDp-8X-rz7">
-                                                        <rect key="frame" x="0.0" y="35" width="374" height="18"/>
+                                                        <rect key="frame" x="0.0" y="41" width="374" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1328,10 +1328,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="bi0-zm-1Ac" userLabel="form stack">
-                                                <rect key="frame" x="20" y="113" width="374" height="84.5"/>
+                                                <rect key="frame" x="20" y="119" width="374" height="89.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bzo-TM-ZBR" userLabel="name stack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="84.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bzo-TM-ZBR" userLabel="name stack">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-Vz-Gt7">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -1345,7 +1345,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u56-wc-son" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_password" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-m0-PA1">
                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -1394,7 +1394,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-TE-lu6">
-                                                <rect key="frame" x="20" y="219.5" width="374" height="31"/>
+                                                <rect key="frame" x="20" y="230.5" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="By continuing, I Confirm I’m 18+ years old." imagePadding="5">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
@@ -1511,8 +1511,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-dy-cCM">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TUj-s1-lI4" userLabel="header stack">
-                                                                <rect key="frame" x="20" y="0.0" width="374" height="53"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="TUj-s1-lI4" userLabel="header stack">
+                                                                <rect key="frame" x="20" y="0.0" width="374" height="59"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signup With Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qp-Gm-PxX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -1526,7 +1526,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Details to continue with the App." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Y7-dl-eah">
-                                                                        <rect key="frame" x="0.0" y="35" width="374" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="41" width="374" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -1539,10 +1539,10 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Zeo-gK-A5x" userLabel="form stack">
-                                                                <rect key="frame" x="20" y="83" width="374" height="194"/>
+                                                                <rect key="frame" x="20" y="89" width="374" height="204"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vb1-Mn-h5M" userLabel="email stack">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vb1-Mn-h5M" userLabel="email stack">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLZ-07-MMj">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -1556,7 +1556,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDT-57-HbW" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_email" translatesAutoresizingMaskIntoConstraints="NO" id="bbJ-Yo-mYj">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -1597,8 +1597,8 @@
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6sM-4P-pBB" userLabel="password stack">
-                                                                        <rect key="frame" x="0.0" y="109.5" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6sM-4P-pBB" userLabel="password stack">
+                                                                        <rect key="frame" x="0.0" y="114.5" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8X-sW-ite">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -1612,7 +1612,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mt0-WD-PY2" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_password" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-mZ-IKS">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -1661,7 +1661,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ3-dB-Ilr">
-                                                                <rect key="frame" x="20" y="299" width="374" height="57"/>
+                                                                <rect key="frame" x="20" y="315" width="374" height="57"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="By continuing, I agree to Terms of service and authorize  Cashably to obtain, use and share consumer reports about me." imagePadding="5">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
@@ -1674,7 +1674,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTN-v8-b67">
-                                                                <rect key="frame" x="20" y="371" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="387" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="d4H-Jl-6Ol"/>
                                                                 </constraints>
@@ -2240,7 +2240,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="570"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZm-13-LUg" userLabel="signup label">
-                                                                <rect key="frame" x="94.5" y="533" width="225" height="20"/>
+                                                                <rect key="frame" x="94.5" y="554" width="225" height="20"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDr-iX-YOe">
                                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="20"/>
@@ -2275,10 +2275,10 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8p-JCJ" userLabel="form stack">
-                                                                <rect key="frame" x="20" y="83" width="374" height="302"/>
+                                                                <rect key="frame" x="20" y="89" width="374" height="317"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JkG-Cc-wWC" userLabel="email stack">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JkG-Cc-wWC" userLabel="email stack">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cs-bg-R7o">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -2292,7 +2292,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jx9-NI-LRK" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_email" translatesAutoresizingMaskIntoConstraints="NO" id="yKO-oA-rQ1">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -2333,8 +2333,8 @@
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kuS-bO-NLR" userLabel="password stack">
-                                                                        <rect key="frame" x="0.0" y="109.5" width="374" height="107.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kuS-bO-NLR" userLabel="password stack">
+                                                                        <rect key="frame" x="0.0" y="114.5" width="374" height="117.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jii-wc-0Te">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -2348,7 +2348,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEx-x4-ysb" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_password" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-Ue-fRn">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -2393,7 +2393,7 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAQ-Mf-F3G">
-                                                                                <rect key="frame" x="0.0" y="89.5" width="374" height="18"/>
+                                                                                <rect key="frame" x="0.0" y="99.5" width="374" height="18"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxU-Zb-MX7">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="234.5" height="18"/>
@@ -2422,7 +2422,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-NJ-EFl">
-                                                                        <rect key="frame" x="0.0" y="242" width="374" height="60"/>
+                                                                        <rect key="frame" x="0.0" y="257" width="374" height="60"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="60" id="Zpb-jc-nsw"/>
                                                                         </constraints>
@@ -2446,7 +2446,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcy-Ur-dEn" userLabel="btn_login">
-                                                                <rect key="frame" x="20" y="453" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="474" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="rtv-cL-diC"/>
                                                                 </constraints>
@@ -2468,7 +2468,7 @@
                                                                 </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1a-YG-6uC" userLabel="or stack">
-                                                                <rect key="frame" x="196.5" y="405" width="21" height="18"/>
+                                                                <rect key="frame" x="196.5" y="426" width="21" height="18"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-kg-S5c">
                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="18"/>
@@ -2483,8 +2483,8 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fw6-PG-AXN" userLabel="header stack">
-                                                                <rect key="frame" x="20" y="0.0" width="374" height="53"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Fw6-PG-AXN" userLabel="header stack">
+                                                                <rect key="frame" x="20" y="0.0" width="374" height="59"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCM-gK-EQX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -2498,7 +2498,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsN-s0-KuV">
-                                                                        <rect key="frame" x="0.0" y="35" width="374" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="41" width="374" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -3953,10 +3953,10 @@ your Affirm account and loans.</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="jGP-xU-kOS" userLabel="form stack">
-                                                                <rect key="frame" x="20" y="0.0" width="374" height="413"/>
+                                                                <rect key="frame" x="20" y="0.0" width="374" height="433"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MHC-3t-TxF" userLabel="name stack">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MHC-3t-TxF" userLabel="name stack">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsB-2c-1Ns">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -3970,7 +3970,7 @@ your Affirm account and loans.</string>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-C2-rOj" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_building" translatesAutoresizingMaskIntoConstraints="NO" id="VZO-af-dzz">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -4010,8 +4010,8 @@ your Affirm account and loans.</string>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="63t-rE-GMW" userLabel="email stack">
-                                                                        <rect key="frame" x="0.0" y="109.5" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="63t-rE-GMW" userLabel="email stack">
+                                                                        <rect key="frame" x="0.0" y="114.5" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paycheck Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLB-4e-L21">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -4025,7 +4025,7 @@ your Affirm account and loans.</string>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQE-oA-Jbe" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_dollar_black" translatesAutoresizingMaskIntoConstraints="NO" id="UIX-9A-nGk">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -4066,8 +4066,8 @@ your Affirm account and loans.</string>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tbv-qu-wYj" userLabel="DOB stack">
-                                                                        <rect key="frame" x="0.0" y="219" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tbv-qu-wYj" userLabel="DOB stack">
+                                                                        <rect key="frame" x="0.0" y="229" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I get paid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-En-AyM">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -4081,7 +4081,7 @@ your Affirm account and loans.</string>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgE-Xq-XQn" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_terms" translatesAutoresizingMaskIntoConstraints="NO" id="AUF-9J-x0r">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -4122,8 +4122,8 @@ your Affirm account and loans.</string>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XC5-Kq-U7q" userLabel="SSN stack">
-                                                                        <rect key="frame" x="0.0" y="328.5" width="374" height="84.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XC5-Kq-U7q" userLabel="SSN stack">
+                                                                        <rect key="frame" x="0.0" y="343.5" width="374" height="89.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiM-xz-pvQ">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -4137,7 +4137,7 @@ your Affirm account and loans.</string>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUz-w7-0hl" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="24.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ZnE-3C-ci4">
                                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -4971,13 +4971,19 @@ your Affirm account and loans.</string>
                                             <action selector="actionBack:" destination="xs2-wr-qHz" eventType="primaryActionTriggered" id="Icv-91-T0I"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-39-vdZ">
-                                        <rect key="frame" x="20" y="315" width="374" height="90"/>
-                                        <string key="text">First,Let’s Connect your 
-Bank so we can deposit
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-39-vdZ">
+                                        <rect key="frame" x="20" y="315" width="374" height="115"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">First,Let’s Connect your Bank so we can deposit
 your money.</string>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -4985,10 +4991,17 @@ your money.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linking the checking account that  receives your paycheck." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-Mr-XfN">
-                                        <rect key="frame" x="30" y="415" width="354" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-Mr-XfN">
+                                        <rect key="frame" x="30" y="440" width="354" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Linking the checking account that  receives your paycheck.">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -5088,10 +5101,17 @@ your money.</string>
                                             <constraint firstItem="58T-3j-vjR" firstAttribute="centerY" secondItem="vut-Cg-wrJ" secondAttribute="centerY" id="l1u-xe-99o"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Processing Accounts..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lW-ZQ-45H">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lW-ZQ-45H">
                                         <rect key="frame" x="20" y="517" width="374" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Processing Accounts...">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -5262,13 +5282,27 @@ your money.</string>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="txt_approved" translatesAutoresizingMaskIntoConstraints="NO" id="tcI-vJ-tVY">
                                         <rect key="frame" x="65" y="70" width="284" height="96"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-JE-MdI">
-                                        <rect key="frame" x="102.5" y="308" width="209" height="72"/>
-                                        <string key="text">You have been 
-approved </string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-JE-MdI">
+                                        <rect key="frame" x="109.5" y="308" width="195" height="84.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">You have been 
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="30"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="approved ">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="30"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
                                                 <integer key="value" value="900"/>
@@ -5276,15 +5310,22 @@ approved </string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow_right" translatesAutoresizingMaskIntoConstraints="NO" id="68w-JJ-eog">
-                                        <rect key="frame" x="321.5" y="308" width="22" height="22"/>
+                                        <rect key="frame" x="314.5" y="308" width="22" height="22"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow_left" translatesAutoresizingMaskIntoConstraints="NO" id="nVE-Tp-jx9">
-                                        <rect key="frame" x="70.5" y="308" width="22" height="22"/>
+                                        <rect key="frame" x="77.5" y="308" width="22" height="22"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Accept it when you need it." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o95-0U-wmZ">
-                                        <rect key="frame" x="107" y="385" width="200.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o95-0U-wmZ">
+                                        <rect key="frame" x="107" y="397.5" width="200.5" height="29"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content=" Accept it when you need it.">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" metaFont="system" size="16"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -5381,7 +5422,7 @@ approved </string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Do-cXB">
-                                        <rect key="frame" x="20" y="132.5" width="374" height="106"/>
+                                        <rect key="frame" x="20" y="132.5" width="374" height="113"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select List" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNy-d4-oWe" customClass="DropDown" customModule="iOSDropDown">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
@@ -5407,10 +5448,17 @@ approved </string>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="checkMarkEnabled" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can choose from the list where the 20% of the tip will be donated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-g7-IVf">
-                                                <rect key="frame" x="0.0" y="65" width="374" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.63137254901960782" green="0.65098039215686276" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-g7-IVf">
+                                                <rect key="frame" x="0.0" y="65" width="374" height="48"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="You can choose from the list where the 20% of the tip will be donated.">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.63137254901960782" green="0.65098039215686276" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -5421,7 +5469,7 @@ approved </string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Kg-cFX">
-                                        <rect key="frame" x="0.0" y="288.5" width="414" height="414"/>
+                                        <rect key="frame" x="0.0" y="295.5" width="414" height="414"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="x88-Kg-cFX" secondAttribute="height" multiplier="1:1" id="QVL-yA-ggh"/>
                                         </constraints>
@@ -5684,7 +5732,7 @@ approved </string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-BO-Hlz">
-                                        <rect key="frame" x="144" y="141" width="126.5" height="19.5"/>
+                                        <rect key="frame" x="144" y="147" width="126.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -5695,7 +5743,7 @@ approved </string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icP-nN-F04">
-                                        <rect key="frame" x="117" y="182.5" width="180" height="180"/>
+                                        <rect key="frame" x="117" y="188.5" width="180" height="180"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_inner" translatesAutoresizingMaskIntoConstraints="NO" id="pwb-V9-WZM">
                                                 <rect key="frame" x="14" y="14" width="152" height="152"/>
@@ -5729,7 +5777,7 @@ approved </string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdG-zz-KSv">
-                                        <rect key="frame" x="0.0" y="412.5" width="414" height="414"/>
+                                        <rect key="frame" x="0.0" y="418.5" width="414" height="414"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdI-en-Cjq">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
@@ -5837,7 +5885,7 @@ approved </string>
                                     <constraint firstItem="fGn-Xg-FqC" firstAttribute="leading" secondItem="rE2-uQ-AUc" secondAttribute="leading" constant="20" id="smD-bX-fHv"/>
                                     <constraint firstAttribute="bottom" secondItem="fGn-Xg-FqC" secondAttribute="bottom" constant="40" id="uXC-Zj-MPx"/>
                                     <constraint firstItem="icP-nN-F04" firstAttribute="centerX" secondItem="rE2-uQ-AUc" secondAttribute="centerX" id="vX7-CI-En5"/>
-                                    <constraint firstItem="B2L-BO-Hlz" firstAttribute="top" secondItem="8Yo-dg-Y7U" secondAttribute="bottom" constant="5" id="xYV-xL-SkM"/>
+                                    <constraint firstItem="B2L-BO-Hlz" firstAttribute="top" secondItem="8Yo-dg-Y7U" secondAttribute="bottom" constant="11" id="xYV-xL-SkM"/>
                                     <constraint firstItem="B2L-BO-Hlz" firstAttribute="centerX" secondItem="rE2-uQ-AUc" secondAttribute="centerX" id="y62-Le-PEm"/>
                                 </constraints>
                             </view>
@@ -5915,12 +5963,26 @@ approved </string>
                                             <action selector="actionBack:" destination="2lR-Tp-c1z" eventType="primaryActionTriggered" id="LYS-qy-H42"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="120-A7-969">
-                                        <rect key="frame" x="20" y="335" width="374" height="60"/>
-                                        <string key="text">Thanks for your 
-generosity...</string>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="120-A7-969">
+                                        <rect key="frame" x="20" y="335" width="374" height="72.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Thanks for your 
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="generosity...">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -5928,12 +5990,19 @@ generosity...</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scy-rW-Dyz">
-                                        <rect key="frame" x="30" y="405" width="354" height="36"/>
-                                        <string key="text">Your Donation will surely impact to our
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scy-rW-Dyz">
+                                        <rect key="frame" x="30" y="417.5" width="354" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Your Donation will surely impact to our
 donation centers.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -6046,12 +6115,19 @@ donation centers.</string>
                                             <action selector="actionBack:" destination="Rwt-aw-vdh" eventType="primaryActionTriggered" id="ypn-l6-vZR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01z-cC-GxI">
-                                        <rect key="frame" x="20" y="335" width="374" height="60"/>
-                                        <string key="text">No Problem! you’re 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01z-cC-GxI">
+                                        <rect key="frame" x="20" y="335" width="374" height="72.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">No Problem! you’re 
 presence is important.</string>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -6059,12 +6135,19 @@ presence is important.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-jt-Oqb">
-                                        <rect key="frame" x="30" y="405" width="354" height="36"/>
-                                        <string key="text">Your Donation will surely impact to our
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-jt-Oqb">
+                                        <rect key="frame" x="30" y="417.5" width="354" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Your Donation will surely impact to our
 donation centers.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -6185,12 +6268,19 @@ donation centers.</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcj-bS-iYt">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As0-z4-eyS">
-                                                                <rect key="frame" x="30" y="0.0" width="354" height="60"/>
-                                                                <string key="text">Next, Add a Debit card to 
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As0-z4-eyS">
+                                                                <rect key="frame" x="30" y="0.0" width="354" height="72.5"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <string key="content">Next, Add a Debit card to 
 get money in minutes</string>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                                <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="25"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -6198,12 +6288,19 @@ get money in minutes</string>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqO-h7-7i0">
-                                                                <rect key="frame" x="55" y="70" width="304" height="36"/>
-                                                                <string key="text">Entering the debit card linked to the
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqO-h7-7i0">
+                                                                <rect key="frame" x="55" y="82.5" width="304" height="54"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <string key="content">Entering the debit card linked to the
 checking account you provided.</string>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" metaFont="system" size="15"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -6252,7 +6349,7 @@ checking account you provided.</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ir1-2C-v9N" userLabel="card number view" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                <rect key="frame" x="20" y="129" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="159.5" width="374" height="60"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-98-LJu">
                                                                         <rect key="frame" x="24" y="20" width="20" height="20"/>
@@ -6292,7 +6389,7 @@ checking account you provided.</string>
                                                                 </constraints>
                                                             </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-PI-xop">
-                                                                <rect key="frame" x="20" y="209" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="239.5" width="374" height="60"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xi-Sm-K9p">
                                                                         <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
@@ -7888,14 +7985,31 @@ for amount credited.</string>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                <integer key="value" value="600"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Ow-T5V">
-                                        <rect key="frame" x="30" y="375" width="354" height="36"/>
-                                        <string key="text">Got Questions? Our team will get back to
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Ow-T5V">
+                                        <rect key="frame" x="30" y="387" width="354" height="44"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Got Questions? Our team will get back to
 you within 1-2 Business Days.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                <integer key="value" value="400"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIA-nT-SsQ" customClass="InputView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="20" y="733" width="374" height="55"/>
@@ -7948,6 +8062,11 @@ you within 1-2 Business Days.</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                <integer key="value" value="600"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -7959,7 +8078,7 @@ you within 1-2 Business Days.</string>
                                     <constraint firstAttribute="trailing" secondItem="nIA-nT-SsQ" secondAttribute="trailing" constant="20" id="GYJ-6r-qdZ"/>
                                     <constraint firstItem="59M-Tq-TB2" firstAttribute="leading" secondItem="8G4-dr-OEX" secondAttribute="leading" constant="20" id="Ilf-Tz-sxf"/>
                                     <constraint firstItem="ivO-2Z-tgp" firstAttribute="centerX" secondItem="8G4-dr-OEX" secondAttribute="centerX" id="Jus-h2-T5s"/>
-                                    <constraint firstItem="6DC-Ow-T5V" firstAttribute="top" secondItem="59M-Tq-TB2" secondAttribute="bottom" constant="10" id="OPs-EF-ah1"/>
+                                    <constraint firstItem="6DC-Ow-T5V" firstAttribute="top" secondItem="59M-Tq-TB2" secondAttribute="bottom" constant="22" id="OPs-EF-ah1"/>
                                     <constraint firstItem="ivO-2Z-tgp" firstAttribute="top" secondItem="8G4-dr-OEX" secondAttribute="top" constant="75" id="THT-XT-6t1"/>
                                     <constraint firstItem="nIA-nT-SsQ" firstAttribute="leading" secondItem="8G4-dr-OEX" secondAttribute="leading" constant="20" id="WbT-et-Uvw"/>
                                     <constraint firstAttribute="bottom" secondItem="nIA-nT-SsQ" secondAttribute="bottom" constant="30" id="eqE-lJ-EVX"/>
@@ -8021,10 +8140,17 @@ you within 1-2 Business Days.</string>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_face_id" translatesAutoresizingMaskIntoConstraints="NO" id="GMt-BD-gON">
                                         <rect key="frame" x="187" y="30" width="40" height="41"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Face ID?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-50-FFt">
-                                        <rect key="frame" x="132.5" y="93" width="149.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235294117646" green="0.094117647058823528" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-50-FFt">
+                                        <rect key="frame" x="136.5" y="93" width="141" height="30"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Use Face ID?">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.070588235294117646" green="0.094117647058823528" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8032,12 +8158,19 @@ you within 1-2 Business Days.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmj-NM-KDe">
-                                        <rect key="frame" x="67.5" y="128" width="279.5" height="36"/>
-                                        <string key="text">Would you like to enable Face ID instead 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmj-NM-KDe">
+                                        <rect key="frame" x="67.5" y="140" width="279.5" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Would you like to enable Face ID instead 
 of using your passcode?</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8046,7 +8179,7 @@ of using your passcode?</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apu-5u-iKb">
-                                        <rect key="frame" x="20" y="194" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="224" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="4Jg-nc-Num"/>
                                         </constraints>
@@ -8068,7 +8201,7 @@ of using your passcode?</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiM-K6-UjO">
-                                        <rect key="frame" x="163.5" y="274" width="87" height="33.5"/>
+                                        <rect key="frame" x="163.5" y="304" width="87" height="33.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Not Now">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -8090,7 +8223,7 @@ of using your passcode?</string>
                                     <constraint firstItem="GMt-BD-gON" firstAttribute="centerX" secondItem="eMo-oI-wqC" secondAttribute="centerX" id="3fN-7f-SlA"/>
                                     <constraint firstItem="i3z-50-FFt" firstAttribute="top" secondItem="GMt-BD-gON" secondAttribute="bottom" constant="22" id="9CK-fe-lL1"/>
                                     <constraint firstItem="EiM-K6-UjO" firstAttribute="top" secondItem="apu-5u-iKb" secondAttribute="bottom" constant="20" id="HYm-Li-qUb"/>
-                                    <constraint firstItem="xmj-NM-KDe" firstAttribute="top" secondItem="i3z-50-FFt" secondAttribute="bottom" constant="5" id="OKg-Sx-nep"/>
+                                    <constraint firstItem="xmj-NM-KDe" firstAttribute="top" secondItem="i3z-50-FFt" secondAttribute="bottom" constant="17" id="OKg-Sx-nep"/>
                                     <constraint firstItem="apu-5u-iKb" firstAttribute="leading" secondItem="eMo-oI-wqC" secondAttribute="leading" constant="20" id="dfq-O8-ycS"/>
                                     <constraint firstAttribute="trailing" secondItem="apu-5u-iKb" secondAttribute="trailing" constant="20" id="gx0-eQ-Le0"/>
                                     <constraint firstItem="GMt-BD-gON" firstAttribute="top" secondItem="eMo-oI-wqC" secondAttribute="top" constant="30" id="iaG-HB-K7w"/>
@@ -8132,12 +8265,19 @@ of using your passcode?</string>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allow_logo" translatesAutoresizingMaskIntoConstraints="NO" id="G4Q-KC-nK9">
                                         <rect key="frame" x="117" y="30" width="180" height="180"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVa-G2-MVy">
-                                        <rect key="frame" x="45.5" y="232" width="323.5" height="60"/>
-                                        <string key="text">Allow Cashably to use your 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVa-G2-MVy">
+                                        <rect key="frame" x="58" y="232" width="298" height="72.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Allow Cashably to use your 
 App and website Activities?</string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8145,12 +8285,19 @@ App and website Activities?</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utk-Fw-vzN">
-                                        <rect key="frame" x="67" y="297" width="280.5" height="36"/>
-                                        <string key="text">Option in to  tracking helps keep the ads 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utk-Fw-vzN">
+                                        <rect key="frame" x="67" y="309.5" width="280.5" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Option in to  tracking helps keep the ads 
 and offers you see relevant to you.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8159,7 +8306,7 @@ and offers you see relevant to you.</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPf-ON-bPt">
-                                        <rect key="frame" x="20" y="363" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="393.5" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="L0v-LC-Ec1"/>
                                         </constraints>
@@ -8181,7 +8328,7 @@ and offers you see relevant to you.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ll-F7-OeT">
-                                        <rect key="frame" x="163.5" y="443" width="87" height="33.5"/>
+                                        <rect key="frame" x="163.5" y="473.5" width="87" height="33.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Not Now">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -8245,12 +8392,19 @@ and offers you see relevant to you.</string>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification_logo" translatesAutoresizingMaskIntoConstraints="NO" id="af0-wa-P24">
                                         <rect key="frame" x="117" y="30" width="180" height="180"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoT-ve-o9J">
-                                        <rect key="frame" x="77.5" y="232" width="259" height="60"/>
-                                        <string key="text">Get Notified with New 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoT-ve-o9J">
+                                        <rect key="frame" x="86.5" y="232" width="241" height="72.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Get Notified with New 
 Notifications</string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8258,12 +8412,19 @@ Notifications</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edo-B9-KdU">
-                                        <rect key="frame" x="61" y="297" width="292.5" height="36"/>
-                                        <string key="text">We’ll only send you important alerts about 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edo-B9-KdU">
+                                        <rect key="frame" x="61" y="309.5" width="292.5" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">We’ll only send you important alerts about 
 your Affirm account and loans.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8272,7 +8433,7 @@ your Affirm account and loans.</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52o-Aj-Gh9">
-                                        <rect key="frame" x="20" y="363" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="393.5" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="4Jw-ii-BC2"/>
                                         </constraints>
@@ -8294,7 +8455,7 @@ your Affirm account and loans.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKp-7z-w2O">
-                                        <rect key="frame" x="163.5" y="443" width="87" height="33.5"/>
+                                        <rect key="frame" x="163.5" y="473.5" width="87" height="33.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Not Now">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -8358,13 +8519,20 @@ your Affirm account and loans.</string>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overdraft_logo" translatesAutoresizingMaskIntoConstraints="NO" id="zTE-gC-aMa">
                                         <rect key="frame" x="103" y="30" width="208" height="208"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-4h-t4r">
-                                        <rect key="frame" x="52.5" y="260" width="309.5" height="90"/>
-                                        <string key="text">Would you like to be notify 
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-4h-t4r">
+                                        <rect key="frame" x="64" y="260" width="286.5" height="115"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Would you like to be notify 
 of overdraft and when 
 you can get paid?</string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="25"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8372,12 +8540,19 @@ you can get paid?</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-3S-dec">
-                                        <rect key="frame" x="78" y="355" width="258.5" height="36"/>
-                                        <string key="text">This Feature is pretty Awesome ! try it
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-3S-dec">
+                                        <rect key="frame" x="78" y="380" width="258.5" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">This Feature is pretty Awesome ! try it
 if you want..</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.38823529410000002" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
@@ -8386,7 +8561,7 @@ if you want..</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CB-Sj-ZrC">
-                                        <rect key="frame" x="20" y="421" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="464" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Apa-m0-ycM"/>
                                         </constraints>
@@ -8408,7 +8583,7 @@ if you want..</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GL-ur-KcJ">
-                                        <rect key="frame" x="163.5" y="501" width="87" height="33.5"/>
+                                        <rect key="frame" x="163.5" y="544" width="87" height="33.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Not Now">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>

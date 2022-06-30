@@ -554,26 +554,26 @@
 		F0A0434E285DBF6100E29CE0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F062A8622865A47100DBBCE4 /* CirclularSlider */,
-				F062A84F28654AA500DBBCE4 /* PolarKit */,
-				F062A84E286545EE00DBBCE4 /* MSCircularSlider */,
 				F0A0434F285DBF8D00E29CE0 /* Alert.swift */,
-				F0A04351285DC08000E29CE0 /* UIView.swift */,
-				F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */,
-				F0A04353285DC40100E29CE0 /* UIViewController.swift */,
-				F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */,
-				F0A04359285EA6E200E29CE0 /* InputView.swift */,
-				F0B853592860145B002F90DA /* RoundBorderView.swift */,
-				F0CE9F482860C09D004B1515 /* ToggleButton.swift */,
-				F062A7812861C37C00DBBCE4 /* RoundView.swift */,
-				F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */,
-				F062A83F28642E3000DBBCE4 /* UIViewController+Keyboard.swift */,
-				F062F23F286B00C6007DE996 /* EmoView.swift */,
-				F062F241286D2B9E007DE996 /* Bundle.swift */,
-				F062F257286D3F6F007DE996 /* UILabel.swift */,
-				F062F264286D8D3E007DE996 /* UIButton.swift */,
 				F062F268286DE338007DE996 /* BlendImageView.swift */,
+				F062F241286D2B9E007DE996 /* Bundle.swift */,
+				F062F23F286B00C6007DE996 /* EmoView.swift */,
+				F0A04359285EA6E200E29CE0 /* InputView.swift */,
+				F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */,
+				F0B853592860145B002F90DA /* RoundBorderView.swift */,
+				F062A7812861C37C00DBBCE4 /* RoundView.swift */,
+				F0CE9F482860C09D004B1515 /* ToggleButton.swift */,
+				F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */,
+				F062F264286D8D3E007DE996 /* UIButton.swift */,
 				F062F26A286E3473007DE996 /* UIImage.swift */,
+				F062F257286D3F6F007DE996 /* UILabel.swift */,
+				F062A83D2863AEFA00DBBCE4 /* UITextField+InputView.swift */,
+				F0A04351285DC08000E29CE0 /* UIView.swift */,
+				F0A04353285DC40100E29CE0 /* UIViewController.swift */,
+				F062A83F28642E3000DBBCE4 /* UIViewController+Keyboard.swift */,
+				F062A8622865A47100DBBCE4 /* CirclularSlider */,
+				F062A84E286545EE00DBBCE4 /* MSCircularSlider */,
+				F062A84F28654AA500DBBCE4 /* PolarKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1123,12 +1123,12 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1137,7 +1137,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1156,12 +1156,12 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1170,7 +1170,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";

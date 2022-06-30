@@ -19,7 +19,8 @@ extension UILabel {
             case 500:
                 self.font = UIFont(name: "BRFirma-Medium", size: self.font.pointSize)
                 break
-            case 600:self.font = UIFont(name: "BRFirma-SemiBold", size: self.font.pointSize)
+            case 600:
+                self.font = UIFont(name: "BRFirma-SemiBold", size: self.font.pointSize)
                 break
             case 700:
                 self.font = UIFont(name: "BRFirma-Bold", size: self.font.pointSize)
