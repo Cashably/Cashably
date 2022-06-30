@@ -5443,17 +5443,12 @@ approved </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcs-sQ-LDv" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_sad" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-kc-rqt">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_sad_inactive" highlightedImage="emo_sad" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-kc-rqt">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="WIX-aO-1xa"/>
                                                             <constraint firstAttribute="height" constant="20" id="tEQ-xv-wR9"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5471,17 +5466,12 @@ approved </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-pz-KWK" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_smile" translatesAutoresizingMaskIntoConstraints="NO" id="Fw9-yB-lsi">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_smile_inactive" highlightedImage="emo_smile" translatesAutoresizingMaskIntoConstraints="NO" id="Fw9-yB-lsi">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="Ljm-Wa-V94"/>
                                                             <constraint firstAttribute="width" constant="20" id="ner-pL-eQ6"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5499,17 +5489,12 @@ approved </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chW-v4-34D" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="100" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_blush" translatesAutoresizingMaskIntoConstraints="NO" id="FoF-fK-CqY">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_blush_inactive" highlightedImage="emo_blush" translatesAutoresizingMaskIntoConstraints="NO" id="FoF-fK-CqY">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="A1l-AM-cW8"/>
                                                             <constraint firstAttribute="height" constant="20" id="UKj-e1-dd2"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5527,17 +5512,12 @@ approved </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeK-xJ-MT3" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="150" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_happy" translatesAutoresizingMaskIntoConstraints="NO" id="uze-dI-Fwg">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_happy_inactive" highlightedImage="emo_happy" translatesAutoresizingMaskIntoConstraints="NO" id="uze-dI-Fwg">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="5gD-F6-2bG"/>
                                                             <constraint firstAttribute="height" constant="20" id="rAK-fE-1GK"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                                <color key="value" red="1" green="0.91372549020000005" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5555,17 +5535,12 @@ approved </string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GvG-A3-ICp" customClass="EmoView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="200" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_love" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-kg-HR5">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_love_inactive" highlightedImage="emo_love" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-kg-HR5">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="4Fq-WA-Vxa"/>
                                                             <constraint firstAttribute="height" constant="20" id="Bu0-Kf-X40"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -8504,23 +8479,6 @@ if you want..</string>
             <point key="canvasLocation" x="3035" y="4736"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="6Xf-kc-rqt">
-            <size key="intrinsicContentSize" width="20" height="20"/>
-        </designable>
-        <designable name="FoF-fK-CqY">
-            <size key="intrinsicContentSize" width="20" height="20"/>
-        </designable>
-        <designable name="Fw9-yB-lsi">
-            <size key="intrinsicContentSize" width="20" height="20"/>
-        </designable>
-        <designable name="K7U-kg-HR5">
-            <size key="intrinsicContentSize" width="20" height="20"/>
-        </designable>
-        <designable name="uze-dI-Fwg">
-            <size key="intrinsicContentSize" width="20" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <image name="allow_logo" width="180" height="180"/>
         <image name="avatar" width="102" height="102"/>
@@ -8534,10 +8492,15 @@ if you want..</string>
         <image name="eclipse_bg" width="260" height="260"/>
         <image name="eclipse_inner" width="152" height="152"/>
         <image name="emo_blush" width="20" height="20"/>
+        <image name="emo_blush_inactive" width="30" height="30"/>
         <image name="emo_happy" width="20" height="20"/>
+        <image name="emo_happy_inactive" width="80" height="80"/>
         <image name="emo_love" width="20" height="20"/>
+        <image name="emo_love_inactive" width="80" height="80"/>
         <image name="emo_sad" width="20" height="20"/>
+        <image name="emo_sad_inactive" width="80" height="80"/>
         <image name="emo_smile" width="20" height="20"/>
+        <image name="emo_smile_inactive" width="80" height="80"/>
         <image name="flow_left" width="22" height="22"/>
         <image name="flow_right" width="22" height="22"/>
         <image name="happy_animal" width="293" height="196"/>

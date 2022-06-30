@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		847FEAF9CB4DDFDC8BFB068F /* Pods_CashablyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8AD03F82CFBE611718D1CA /* Pods_CashablyTests.framework */; };
+		993CCD6C905C779E0FD02385 /* Pods_Cashably_CashablyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA296A69977031E2EE25FBED /* Pods_Cashably_CashablyUITests.framework */; };
+		A3921428149120F76897A6F9 /* Pods_Cashably.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B9A4043D7DD4DAE61FABD8 /* Pods_Cashably.framework */; };
 		F00E4DDF285CBE1E00CB8DD6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DDE285CBE1E00CB8DD6 /* SplashVC.swift */; };
 		F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DE2285CBEE400CB8DD6 /* UserModel.swift */; };
 		F00E4DE5285CC3FF00CB8DD6 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DE4285CC3FF00CB8DD6 /* UserAuthModel.swift */; };
@@ -126,11 +129,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A8AD03F82CFBE611718D1CA /* Pods_CashablyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashablyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFE8A3B49E059352A26184 /* Pods-Cashably-CashablyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably-CashablyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cashably-CashablyUITests/Pods-Cashably-CashablyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		708A33ABAF3115D4D49E9EB1 /* Pods-Cashably.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably.debug.xcconfig"; path = "Target Support Files/Pods-Cashably/Pods-Cashably.debug.xcconfig"; sourceTree = "<group>"; };
 		7ACD7F73CEB2893C1ADD86CE /* Pods-Cashably.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably.release.xcconfig"; path = "Target Support Files/Pods-Cashably/Pods-Cashably.release.xcconfig"; sourceTree = "<group>"; };
 		9326C21666F687307A3F7EB2 /* Pods-CashablyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.debug.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7CDE52D83510325DFE8B6CD /* Pods-Cashably-CashablyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably-CashablyUITests.release.xcconfig"; path = "Target Support Files/Pods-Cashably-CashablyUITests/Pods-Cashably-CashablyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DA296A69977031E2EE25FBED /* Pods_Cashably_CashablyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cashably_CashablyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00E4DDE285CBE1E00CB8DD6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F00E4DE2285CBEE400CB8DD6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F00E4DE4285CC3FF00CB8DD6 /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
@@ -235,6 +240,7 @@
 		F0CE9F502860CADE004B1515 /* RequestPayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestPayView.xib; sourceTree = "<group>"; };
 		F0CE9F5228612505004B1515 /* RepayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepayVC.swift; sourceTree = "<group>"; };
 		F0CE9F5428612546004B1515 /* PaySnoozeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaySnoozeVC.swift; sourceTree = "<group>"; };
+		F3B9A4043D7DD4DAE61FABD8 /* Pods_Cashably.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cashably.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA47C7B2F17468B86FA6D3D /* Pods-CashablyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.release.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -243,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3921428149120F76897A6F9 /* Pods_Cashably.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847FEAF9CB4DDFDC8BFB068F /* Pods_CashablyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993CCD6C905C779E0FD02385 /* Pods_Cashably_CashablyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +275,9 @@
 		110DC1E1252A2DE1E71C1A40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3B9A4043D7DD4DAE61FABD8 /* Pods_Cashably.framework */,
+				DA296A69977031E2EE25FBED /* Pods_Cashably_CashablyUITests.framework */,
+				0A8AD03F82CFBE611718D1CA /* Pods_CashablyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
