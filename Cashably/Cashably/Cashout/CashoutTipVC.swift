@@ -128,13 +128,13 @@ extension CashoutTipVC: MSCircularSliderDelegate {
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
         self.lbAmount.text = "$\(ceil(value))"
         
-        if value < 2 {
+        if value >= 2 && value < 4 {
             emoWorriedView.active()
             emoSmileView.inactive()
             emoLoveView.inactive()
             emoBlushView.inactive()
             emoHeartView.inactive()
-        } else if value >= 2 && value < 8 {
+        } else if value >= 4 && value < 8 {
             emoWorriedView.inactive()
             emoSmileView.inactive()
             emoLoveView.inactive()
