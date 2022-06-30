@@ -4699,11 +4699,35 @@ approved </string>
                                         <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Do-cXB">
-                                        <rect key="frame" x="20" y="132.5" width="374" height="41"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Do-cXB">
+                                        <rect key="frame" x="20" y="132.5" width="374" height="106"/>
                                         <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select List" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNy-d4-oWe" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="1uM-jx-JA6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                                        <real key="value" value="55"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="checkMarkEnabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can choose from the list where the 20% of the tip will be donated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-g7-IVf">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                                <rect key="frame" x="0.0" y="65" width="374" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.63137254901960782" green="0.65098039215686276" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -4711,7 +4735,7 @@ approved </string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x88-Kg-cFX">
-                                        <rect key="frame" x="0.0" y="223.5" width="414" height="414"/>
+                                        <rect key="frame" x="0.0" y="288.5" width="414" height="414"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="x88-Kg-cFX" secondAttribute="height" multiplier="1:1" id="QVL-yA-ggh"/>
                                         </constraints>
@@ -4909,6 +4933,7 @@ approved </string>
                     <connections>
                         <outlet property="btnCashout" destination="cIs-Z7-tUM" id="hB4-IL-1SP"/>
                         <outlet property="btnCashoutWithTip" destination="FhF-G9-ulE" id="STs-fX-fU6"/>
+                        <outlet property="dropDown" destination="pNy-d4-oWe" id="BIb-Xj-P1N"/>
                         <outlet property="emoBlushView" destination="AsN-pz-KWK" id="aTx-ur-2yF"/>
                         <outlet property="emoHeartView" destination="AeK-xJ-MT3" id="XqT-kz-vX6"/>
                         <outlet property="emoLoveView" destination="GvG-A3-ICp" id="41f-Rr-V6k"/>

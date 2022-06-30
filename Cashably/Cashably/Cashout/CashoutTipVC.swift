@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import iOSDropDown
 
 protocol CashoutTipDelegate {
     func cashout()
@@ -19,6 +20,13 @@ class CashoutTipVC: UIViewController {
     @IBOutlet weak var btnCashoutWithTip: UIButton!
     @IBOutlet weak var btnCashout: UIButton!
     
+    @IBOutlet weak var dropDown: DropDown! {
+        didSet {
+            dropDown.layer.borderColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1).cgColor
+            dropDown.rowHeight = 55
+            dropDown.arrowColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
+        }
+    }
     @IBOutlet weak var sliderView: UIView!
     
     @IBOutlet weak var emoWorriedView: EmoView!
@@ -36,6 +44,9 @@ class CashoutTipVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupSliderView()
+        
+        dropDown.optionArray = ["Option 1", "Option 2", "Option 3"]
+        dropDown.optionIds = [1,23,54,22]
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -11,6 +11,8 @@ target 'Cashably' do
     pod 'NVActivityIndicatorView/Extended'
 
     pod 'UITextField+Shake'
+    
+    pod 'iOSDropDown'
 
     pod 'FlagPhoneNumber'
 #    pod 'SVPinView', '~> 1.0'
