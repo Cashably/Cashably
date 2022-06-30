@@ -78,6 +78,7 @@
 		F062F263286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = F062F262286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF */; };
 		F062F265286D8D3E007DE996 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F264286D8D3E007DE996 /* UIButton.swift */; };
 		F062F269286DE338007DE996 /* BlendImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F268286DE338007DE996 /* BlendImageView.swift */; };
+		F062F26B286E3473007DE996 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F26A286E3473007DE996 /* UIImage.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -205,6 +206,7 @@
 		F062F262286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BR FIRMA SEMIBOLD.OTF"; sourceTree = "<group>"; };
 		F062F264286D8D3E007DE996 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		F062F268286DE338007DE996 /* BlendImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendImageView.swift; sourceTree = "<group>"; };
+		F062F26A286E3473007DE996 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 				F062F257286D3F6F007DE996 /* UILabel.swift */,
 				F062F264286D8D3E007DE996 /* UIButton.swift */,
 				F062F268286DE338007DE996 /* BlendImageView.swift */,
+				F062F26A286E3473007DE996 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				F05365DF285FF40300B771D9 /* ApprovedVC.swift in Sources */,
 				F0CE9F5328612505004B1515 /* RepayVC.swift in Sources */,
 				F05365E3285FF47C00B771D9 /* CashoutTipVC.swift in Sources */,
+				F062F26B286E3473007DE996 /* UIImage.swift in Sources */,
 				F05365BE285F665100B771D9 /* SettingsTableViewFooterCell.swift in Sources */,
 				F062A83528629D5400DBBCE4 /* BalloonMarker.swift in Sources */,
 				F062A85D28654E4000DBBCE4 /* MSDoubleHandleCircularSlider+IB.swift in Sources */,

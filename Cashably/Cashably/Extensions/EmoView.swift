@@ -10,6 +10,7 @@ import UIKit
 
 open class EmoView: UIView {
     private var emo: UIImageView!
+    private var image: UIImage!
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,7 +29,8 @@ open class EmoView: UIView {
         for subview in self.subviews {
             if let item = subview as? UIImageView {
                 emo = item
-                emo.image?.withRenderingMode(.alwaysTemplate)
+                image = emo.image
+//                emo.image?.withRenderingMode(.alwaysTemplate)
             }
         }
         
@@ -38,13 +40,17 @@ open class EmoView: UIView {
         backgroundColor = .white
 //        emo.image = UIImage(named: "emo_\(name)")
 //        emo.tintColor = .yellow
+//        emo.image = image?.resizeImage(1.5)
         emo.isHighlighted = true
+        
     }
     
     func inactive() {
         backgroundColor = .clear
 //        emo.image = UIImage(named: "emo_\(name)_inactive")
 //        emo.tintColor = .gray
+//        emo.image = image?.resizeImage(1)
         emo.isHighlighted = false
+        
     }
 }

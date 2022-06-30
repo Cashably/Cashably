@@ -5445,17 +5445,13 @@ approved </string>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_sad_inactive" highlightedImage="emo_sad" translatesAutoresizingMaskIntoConstraints="NO" id="6Xf-kc-rqt">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="WIX-aO-1xa"/>
-                                                            <constraint firstAttribute="height" constant="20" id="tEQ-xv-wR9"/>
-                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="BBn-aJ-Aed"/>
+                                                    <constraint firstItem="6Xf-kc-rqt" firstAttribute="centerY" secondItem="Wcs-sQ-LDv" secondAttribute="centerY" id="DJ3-sc-iOY"/>
                                                     <constraint firstItem="6Xf-kc-rqt" firstAttribute="centerX" secondItem="Wcs-sQ-LDv" secondAttribute="centerX" id="Nlr-OR-TI8"/>
                                                     <constraint firstAttribute="height" constant="50" id="UOb-Sb-slg"/>
-                                                    <constraint firstItem="6Xf-kc-rqt" firstAttribute="centerY" secondItem="Wcs-sQ-LDv" secondAttribute="centerY" id="ss3-wu-EEo"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="_radius">
@@ -5468,17 +5464,13 @@ approved </string>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_smile_inactive" highlightedImage="emo_smile" translatesAutoresizingMaskIntoConstraints="NO" id="Fw9-yB-lsi">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="Ljm-Wa-V94"/>
-                                                            <constraint firstAttribute="width" constant="20" id="ner-pL-eQ6"/>
-                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="N5u-l6-MmT"/>
                                                     <constraint firstAttribute="height" constant="50" id="Pfh-z8-7bh"/>
                                                     <constraint firstItem="Fw9-yB-lsi" firstAttribute="centerX" secondItem="AsN-pz-KWK" secondAttribute="centerX" id="gG0-Qr-s5J"/>
-                                                    <constraint firstItem="Fw9-yB-lsi" firstAttribute="centerY" secondItem="AsN-pz-KWK" secondAttribute="centerY" id="rFo-Bb-Mut"/>
+                                                    <constraint firstItem="Fw9-yB-lsi" firstAttribute="centerY" secondItem="AsN-pz-KWK" secondAttribute="centerY" id="rPp-T0-q2p"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="_radius">
@@ -5491,16 +5483,12 @@ approved </string>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_blush_inactive" highlightedImage="emo_blush" translatesAutoresizingMaskIntoConstraints="NO" id="FoF-fK-CqY">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="A1l-AM-cW8"/>
-                                                            <constraint firstAttribute="height" constant="20" id="UKj-e1-dd2"/>
-                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="FoF-fK-CqY" firstAttribute="centerX" secondItem="chW-v4-34D" secondAttribute="centerX" id="1SZ-LY-CJ6"/>
                                                     <constraint firstAttribute="width" constant="50" id="2oh-89-k5G"/>
                                                     <constraint firstItem="FoF-fK-CqY" firstAttribute="centerY" secondItem="chW-v4-34D" secondAttribute="centerY" id="2tn-s0-YbD"/>
-                                                    <constraint firstItem="FoF-fK-CqY" firstAttribute="centerX" secondItem="chW-v4-34D" secondAttribute="centerX" id="IX8-Ho-vLK"/>
                                                     <constraint firstAttribute="height" constant="50" id="VS9-jW-noV"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -5514,10 +5502,6 @@ approved </string>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_happy_inactive" highlightedImage="emo_happy" translatesAutoresizingMaskIntoConstraints="NO" id="uze-dI-Fwg">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="5gD-F6-2bG"/>
-                                                            <constraint firstAttribute="height" constant="20" id="rAK-fE-1GK"/>
-                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -5537,10 +5521,6 @@ approved </string>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo_love_inactive" highlightedImage="emo_love" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-kg-HR5">
                                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="4Fq-WA-Vxa"/>
-                                                            <constraint firstAttribute="height" constant="20" id="Bu0-Kf-X40"/>
-                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -8491,16 +8471,16 @@ if you want..</string>
         <image name="deposits_logo" width="218" height="156"/>
         <image name="eclipse_bg" width="260" height="260"/>
         <image name="eclipse_inner" width="152" height="152"/>
-        <image name="emo_blush" width="20" height="20"/>
-        <image name="emo_blush_inactive" width="30" height="30"/>
-        <image name="emo_happy" width="20" height="20"/>
-        <image name="emo_happy_inactive" width="80" height="80"/>
-        <image name="emo_love" width="20" height="20"/>
-        <image name="emo_love_inactive" width="80" height="80"/>
-        <image name="emo_sad" width="20" height="20"/>
-        <image name="emo_sad_inactive" width="80" height="80"/>
-        <image name="emo_smile" width="20" height="20"/>
-        <image name="emo_smile_inactive" width="80" height="80"/>
+        <image name="emo_blush" width="30" height="30"/>
+        <image name="emo_blush_inactive" width="20" height="20"/>
+        <image name="emo_happy" width="30" height="30"/>
+        <image name="emo_happy_inactive" width="20" height="20"/>
+        <image name="emo_love" width="30" height="30"/>
+        <image name="emo_love_inactive" width="20" height="20"/>
+        <image name="emo_sad" width="30" height="30"/>
+        <image name="emo_sad_inactive" width="20" height="20"/>
+        <image name="emo_smile" width="30" height="30"/>
+        <image name="emo_smile_inactive" width="20" height="20"/>
         <image name="flow_left" width="22" height="22"/>
         <image name="flow_right" width="22" height="22"/>
         <image name="happy_animal" width="293" height="196"/>
