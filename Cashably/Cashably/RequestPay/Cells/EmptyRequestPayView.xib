@@ -33,6 +33,11 @@ Cash Loan</string>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                             <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                    <integer key="value" value="700"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15p-78-39A">
                                             <rect key="frame" x="132" y="255" width="150" height="50"/>
@@ -45,8 +50,14 @@ Cash Loan</string>
                                                 <backgroundConfiguration key="background" cornerRadius="10">
                                                     <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </backgroundConfiguration>
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </buttonConfiguration>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                    <integer key="value" value="600"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="actionRequest:" destination="Zwv-3e-wQ3" eventType="primaryActionTriggered" id="aKR-Bv-rhq"/>
                                             </connections>

@@ -13,6 +13,14 @@
 			</array>
 		</dict>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BR FIRMA BLACK.OTF</string>
+		<string>BR FIRMA REGULAR.OTF</string>
+		<string>BR FIRMA BOLD.OTF</string>
+		<string>BR FIRMA MEDIUM.OTF</string>
+		<string>BR FIRMA SEMIBOLD.OTF</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57B33B470EFDDDA288323F6A /* Pods_Cashably.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29A88D0896FBE3B10B9BFE8 /* Pods_Cashably.framework */; };
-		6FCCE80C1E2E54D45C3FBCF3 /* Pods_CashablyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 101B925098125E45AE8261B5 /* Pods_CashablyTests.framework */; };
-		AF9C8FFBCB9F95215226EFD8 /* Pods_Cashably_CashablyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F37BFC4E3C68D7DC1E1862 /* Pods_Cashably_CashablyUITests.framework */; };
 		F00E4DDF285CBE1E00CB8DD6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DDE285CBE1E00CB8DD6 /* SplashVC.swift */; };
 		F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DE2285CBEE400CB8DD6 /* UserModel.swift */; };
 		F00E4DE5285CC3FF00CB8DD6 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E4DE4285CC3FF00CB8DD6 /* UserAuthModel.swift */; };
@@ -70,6 +67,13 @@
 		F062F23E286A8A56007DE996 /* NoDonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23D286A8A56007DE996 /* NoDonationVC.swift */; };
 		F062F240286B00C6007DE996 /* EmoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F23F286B00C6007DE996 /* EmoView.swift */; };
 		F062F242286D2B9E007DE996 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F241286D2B9E007DE996 /* Bundle.swift */; };
+		F062F258286D3F6F007DE996 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F257286D3F6F007DE996 /* UILabel.swift */; };
+		F062F25B286D85A9007DE996 /* BR FIRMA BLACK.OTF in Resources */ = {isa = PBXBuildFile; fileRef = F062F25A286D85A9007DE996 /* BR FIRMA BLACK.OTF */; };
+		F062F25D286D8767007DE996 /* BR FIRMA REGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = F062F25C286D8767007DE996 /* BR FIRMA REGULAR.OTF */; };
+		F062F25F286D882C007DE996 /* BR FIRMA BOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = F062F25E286D882C007DE996 /* BR FIRMA BOLD.OTF */; };
+		F062F261286D8898007DE996 /* BR FIRMA MEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = F062F260286D8898007DE996 /* BR FIRMA MEDIUM.OTF */; };
+		F062F263286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = F062F262286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF */; };
+		F062F265286D8D3E007DE996 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062F264286D8D3E007DE996 /* UIButton.swift */; };
 		F0643D022856C62600CAB86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D012856C62600CAB86F /* AppDelegate.swift */; };
 		F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D032856C62600CAB86F /* SceneDelegate.swift */; };
 		F0643D092856C62600CAB86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0643D072856C62600CAB86F /* Main.storyboard */; };
@@ -121,13 +125,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		101B925098125E45AE8261B5 /* Pods_CashablyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashablyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFE8A3B49E059352A26184 /* Pods-Cashably-CashablyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably-CashablyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cashably-CashablyUITests/Pods-Cashably-CashablyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		708A33ABAF3115D4D49E9EB1 /* Pods-Cashably.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably.debug.xcconfig"; path = "Target Support Files/Pods-Cashably/Pods-Cashably.debug.xcconfig"; sourceTree = "<group>"; };
 		7ACD7F73CEB2893C1ADD86CE /* Pods-Cashably.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably.release.xcconfig"; path = "Target Support Files/Pods-Cashably/Pods-Cashably.release.xcconfig"; sourceTree = "<group>"; };
 		9326C21666F687307A3F7EB2 /* Pods-CashablyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.debug.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B29A88D0896FBE3B10B9BFE8 /* Pods_Cashably.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cashably.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5F37BFC4E3C68D7DC1E1862 /* Pods_Cashably_CashablyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cashably_CashablyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CDE52D83510325DFE8B6CD /* Pods-Cashably-CashablyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cashably-CashablyUITests.release.xcconfig"; path = "Target Support Files/Pods-Cashably-CashablyUITests/Pods-Cashably-CashablyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F00E4DDE285CBE1E00CB8DD6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		F00E4DE2285CBEE400CB8DD6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -190,6 +191,13 @@
 		F062F23D286A8A56007DE996 /* NoDonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDonationVC.swift; sourceTree = "<group>"; };
 		F062F23F286B00C6007DE996 /* EmoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoView.swift; sourceTree = "<group>"; };
 		F062F241286D2B9E007DE996 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		F062F257286D3F6F007DE996 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		F062F25A286D85A9007DE996 /* BR FIRMA BLACK.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BR FIRMA BLACK.OTF"; sourceTree = "<group>"; };
+		F062F25C286D8767007DE996 /* BR FIRMA REGULAR.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BR FIRMA REGULAR.OTF"; sourceTree = "<group>"; };
+		F062F25E286D882C007DE996 /* BR FIRMA BOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BR FIRMA BOLD.OTF"; sourceTree = "<group>"; };
+		F062F260286D8898007DE996 /* BR FIRMA MEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BR FIRMA MEDIUM.OTF"; sourceTree = "<group>"; };
+		F062F262286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BR FIRMA SEMIBOLD.OTF"; sourceTree = "<group>"; };
+		F062F264286D8D3E007DE996 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		F0643CFE2856C62600CAB86F /* Cashably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cashably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D012856C62600CAB86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0643D032856C62600CAB86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,7 +241,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B33B470EFDDDA288323F6A /* Pods_Cashably.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +248,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FCCE80C1E2E54D45C3FBCF3 /* Pods_CashablyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +255,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9C8FFBCB9F95215226EFD8 /* Pods_Cashably_CashablyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +264,6 @@
 		110DC1E1252A2DE1E71C1A40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B29A88D0896FBE3B10B9BFE8 /* Pods_Cashably.framework */,
-				B5F37BFC4E3C68D7DC1E1862 /* Pods_Cashably_CashablyUITests.framework */,
-				101B925098125E45AE8261B5 /* Pods_CashablyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -455,6 +457,18 @@
 			path = CirclularSlider;
 			sourceTree = "<group>";
 		};
+		F062F259286D8575007DE996 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F062F25A286D85A9007DE996 /* BR FIRMA BLACK.OTF */,
+				F062F25C286D8767007DE996 /* BR FIRMA REGULAR.OTF */,
+				F062F260286D8898007DE996 /* BR FIRMA MEDIUM.OTF */,
+				F062F25E286D882C007DE996 /* BR FIRMA BOLD.OTF */,
+				F062F262286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F0643CF52856C62600CAB86F = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +494,7 @@
 		F0643D002856C62600CAB86F /* Cashably */ = {
 			isa = PBXGroup;
 			children = (
+				F062F259286D8575007DE996 /* Fonts */,
 				F00E4DED285D19F400CB8DD6 /* Cashably.entitlements */,
 				F0A0434C285D71CE00E29CE0 /* GoogleService-Info.plist */,
 				F0643D0F2856C62700CAB86F /* Info.plist */,
@@ -539,6 +554,8 @@
 				F062A83F28642E3000DBBCE4 /* UIViewController+Keyboard.swift */,
 				F062F23F286B00C6007DE996 /* EmoView.swift */,
 				F062F241286D2B9E007DE996 /* Bundle.swift */,
+				F062F257286D3F6F007DE996 /* UILabel.swift */,
+				F062F264286D8D3E007DE996 /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -684,8 +701,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F062F25F286D882C007DE996 /* BR FIRMA BOLD.OTF in Resources */,
 				F036EFD7286144F1005FAEDB /* LoanTableViewCell.xib in Resources */,
 				F0643D0E2856C62700CAB86F /* LaunchScreen.storyboard in Resources */,
+				F062F261286D8898007DE996 /* BR FIRMA MEDIUM.OTF in Resources */,
 				F0A0434D285D71CF00E29CE0 /* GoogleService-Info.plist in Resources */,
 				F0643D0B2856C62700CAB86F /* Assets.xcassets in Resources */,
 				F0CE9F512860CADE004B1515 /* RequestPayView.xib in Resources */,
@@ -693,7 +712,10 @@
 				F0CE9F4D2860C989004B1515 /* EmptyRequestPayView.xib in Resources */,
 				F05365BC285F650500B771D9 /* SettingsTableViewCell.xib in Resources */,
 				F0643D092856C62600CAB86F /* Main.storyboard in Resources */,
+				F062F25B286D85A9007DE996 /* BR FIRMA BLACK.OTF in Resources */,
+				F062F25D286D8767007DE996 /* BR FIRMA REGULAR.OTF in Resources */,
 				F05365C0285F667700B771D9 /* SettingsTableViewFooterCell.xib in Resources */,
+				F062F263286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF in Resources */,
 				F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -862,6 +884,7 @@
 				F05365D3285FEAB000B771D9 /* RequestPayVC.swift in Sources */,
 				F062A85728654DB400DBBCE4 /* MSCircularSlider+IB.swift in Sources */,
 				F0A04350285DBF8D00E29CE0 /* Alert.swift in Sources */,
+				F062F258286D3F6F007DE996 /* UILabel.swift in Sources */,
 				F062A85528654CE800DBBCE4 /* MSCircularSlider.swift in Sources */,
 				F062A85F28654E5400DBBCE4 /* MSGradientCircularSlider.swift in Sources */,
 				F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */,
@@ -894,6 +917,7 @@
 				F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */,
 				F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */,
 				F025F8DF2860738800BABB3D /* CreditVC.swift in Sources */,
+				F062F265286D8D3E007DE996 /* UIButton.swift in Sources */,
 				F062A85928654DCA00DBBCE4 /* MSCircularSliderHandle.swift in Sources */,
 				F062A83828629D9700DBBCE4 /* DateValueFormatter.swift in Sources */,
 				F062A7822861C37C00DBBCE4 /* RoundView.swift in Sources */,
