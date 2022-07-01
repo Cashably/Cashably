@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FittedSheets
 
 class HomeVC: UIViewController {
     
@@ -92,14 +93,21 @@ class HomeVC: UIViewController {
         if !face {
             let faceVC = storyboard?.instantiateViewController(withIdentifier: "RequestFaceEnableVC") as! RequestFaceEnableVC
             faceVC.delegate = self
-            faceVC.isModalInPresentation = true
-            let nav = UINavigationController(rootViewController: faceVC)
-            nav.modalTransitionStyle = .coverVertical
-            if let sheet = nav.sheetPresentationController {
-                sheet.detents = [.medium()]
-                sheet.preferredCornerRadius = 25
-            }
-            self.presentVC(nav)
+//            faceVC.isModalInPresentation = true
+//            let nav = UINavigationController(rootViewController: faceVC)
+//            nav.modalTransitionStyle = .coverVertical
+//            if let sheet = nav.sheetPresentationController {
+//                sheet.detents = [.medium()]
+//                sheet.preferredCornerRadius = 25
+//            }
+//            self.presentVC(nav)
+            let sheetController = SheetViewController(
+                controller: faceVC,
+                sizes: [.fixed(400)]
+                )
+            sheetController.cornerRadius = 25
+            sheetController.dismissOnOverlayTap = false
+            self.present(sheetController, animated: true, completion: nil)
             return
         }
     }
@@ -109,14 +117,20 @@ class HomeVC: UIViewController {
         if !activity {
             let activityVC = storyboard?.instantiateViewController(withIdentifier: "RequestActivitiesEnableVC") as! RequestActivitiesEnableVC
             activityVC.delegate = self
-            activityVC.isModalInPresentation = true
-            let nav = UINavigationController(rootViewController: activityVC)
-            nav.modalTransitionStyle = .coverVertical
-            if let sheet = nav.sheetPresentationController {
-                sheet.detents = [.medium(), .large()]
-                sheet.preferredCornerRadius = 25
-            }
-            self.presentVC(nav)
+//            activityVC.isModalInPresentation = true
+//            let nav = UINavigationController(rootViewController: activityVC)
+//            nav.modalTransitionStyle = .coverVertical
+//            if let sheet = nav.sheetPresentationController {
+//                sheet.detents = [.medium(), .large()]
+//                sheet.preferredCornerRadius = 25
+//            }
+//            self.presentVC(nav)
+            let sheetController = SheetViewController(
+                controller: activityVC,
+                sizes: [.fixed(600)])
+            sheetController.cornerRadius = 25
+            sheetController.dismissOnOverlayTap = false
+            self.present(sheetController, animated: true, completion: nil)
             return
         }
     }
@@ -126,14 +140,20 @@ class HomeVC: UIViewController {
         if !notification {
             let notificationVC = storyboard?.instantiateViewController(withIdentifier: "RequestNotificationEnableVC") as! RequestNotificationEnableVC
             notificationVC.delegate = self
-            notificationVC.isModalInPresentation = true
-            let nav = UINavigationController(rootViewController: notificationVC)
-            nav.modalTransitionStyle = .coverVertical
-            if let sheet = nav.sheetPresentationController {
-                sheet.detents = [.medium(), .large()]
-                sheet.preferredCornerRadius = 25
-            }
-            self.presentVC(nav)
+//            notificationVC.isModalInPresentation = true
+//            let nav = UINavigationController(rootViewController: notificationVC)
+//            nav.modalTransitionStyle = .coverVertical
+//            if let sheet = nav.sheetPresentationController {
+//                sheet.detents = [.medium(), .large()]
+//                sheet.preferredCornerRadius = 25
+//            }
+//            self.presentVC(nav)
+            let sheetController = SheetViewController(
+                controller: notificationVC,
+                sizes: [.fixed(600)])
+            sheetController.cornerRadius = 25
+            sheetController.dismissOnOverlayTap = false
+            self.present(sheetController, animated: true, completion: nil)
             return
         }
     }
@@ -143,14 +163,20 @@ class HomeVC: UIViewController {
         if !overdraft {
             let overdraftVC = storyboard?.instantiateViewController(withIdentifier: "RequestOverdraftEnableVC") as! RequestOverdraftEnableVC
             overdraftVC.delegate = self
-            overdraftVC.isModalInPresentation = true
-            let nav = UINavigationController(rootViewController: overdraftVC)
-            nav.modalTransitionStyle = .coverVertical
-            if let sheet = nav.sheetPresentationController {
-                sheet.detents = [.medium(), .large()]
-                sheet.preferredCornerRadius = 25
-            }
-            self.presentVC(nav)
+//            overdraftVC.isModalInPresentation = true
+//            let nav = UINavigationController(rootViewController: overdraftVC)
+//            nav.modalTransitionStyle = .coverVertical
+//            if let sheet = nav.sheetPresentationController {
+//                sheet.detents = [.medium(), .large()]
+//                sheet.preferredCornerRadius = 25
+//            }
+//            self.presentVC(nav)
+            let sheetController = SheetViewController(
+                controller: overdraftVC,
+                sizes: [.fixed(600)])
+            sheetController.cornerRadius = 25
+            sheetController.dismissOnOverlayTap = false
+            self.present(sheetController, animated: true, completion: nil)
             return
         }
     }

@@ -76,7 +76,7 @@ class CashoutVC: UIViewController {
         slider.labels = self.rates
         slider.labelColor = .white
 //        slider.snapToLabels = true
-        slider.labelFont = .systemFont(ofSize: 18.0)
+        slider.labelFont = .systemFont(ofSize: 20.0)
         slider.labelOffset = 100
         
         slider.sliderPadding = 80
@@ -140,10 +140,7 @@ class CashoutVC: UIViewController {
             sizes: [.fixed(700)])
         sheetController.cornerRadius = 25
         sheetController.shouldRecognizePanGestureWithUIControls = false
-//        sheetController.hasBlurBackground = true
-//        sheetController.dismissOnPull = false
-//        sheetController.allowGestureThroughOverlay = true
-        self.present(sheetController, animated: false, completion: nil)
+        self.present(sheetController, animated: true, completion: nil)
     }
     
     @IBAction func actionInfo(_ sender: UIButton) {

@@ -5827,7 +5827,7 @@ your money.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-Tg-fmp">
-                                                <rect key="frame" x="149" y="100" width="116.5" height="19.5"/>
+                                                <rect key="frame" x="149" y="130" width="116.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -5842,7 +5842,7 @@ your money.</string>
                                             <constraint firstAttribute="trailing" secondItem="UdI-en-Cjq" secondAttribute="trailing" id="4vA-RH-640"/>
                                             <constraint firstItem="UdI-en-Cjq" firstAttribute="leading" secondItem="NdG-zz-KSv" secondAttribute="leading" id="BQU-WA-JLA"/>
                                             <constraint firstItem="xOx-Tg-fmp" firstAttribute="centerX" secondItem="NdG-zz-KSv" secondAttribute="centerX" id="L0F-Eh-RyM"/>
-                                            <constraint firstItem="xOx-Tg-fmp" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="100" id="eu1-Le-A87"/>
+                                            <constraint firstItem="xOx-Tg-fmp" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" constant="130" id="eu1-Le-A87"/>
                                             <constraint firstItem="UdI-en-Cjq" firstAttribute="top" secondItem="NdG-zz-KSv" secondAttribute="top" id="ish-3K-3h4"/>
                                             <constraint firstAttribute="width" secondItem="NdG-zz-KSv" secondAttribute="height" multiplier="1:1" id="vbu-yq-3LV"/>
                                         </constraints>
@@ -8131,11 +8131,11 @@ you within 1-2 Business Days.</string>
             <objects>
                 <viewController storyboardIdentifier="RequestFaceEnableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4hv-td-Usb" customClass="RequestFaceEnableVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D51-5e-gHT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMo-oI-wqC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_face_id" translatesAutoresizingMaskIntoConstraints="NO" id="GMt-BD-gON">
                                         <rect key="frame" x="187" y="30" width="40" height="41"/>
@@ -8242,6 +8242,8 @@ of using your passcode?</string>
                             <constraint firstItem="ISC-XM-Kkz" firstAttribute="trailing" secondItem="eMo-oI-wqC" secondAttribute="trailing" id="okK-iL-FNS"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="400"/>
                     <connections>
                         <outlet property="btnEnable" destination="apu-5u-iKb" id="Hla-GP-G55"/>
                         <outlet property="btnNo" destination="EiM-K6-UjO" id="OwF-XR-84g"/>
