@@ -4782,8 +4782,8 @@ your Affirm account and loans.</string>
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selena Grander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-qk-asE">
-                                                <rect key="frame" x="130" y="191" width="0.0" height="839"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="0.0"/>
+                                                <rect key="frame" x="47" y="191" width="166.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -4793,7 +4793,7 @@ your Affirm account and loans.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selena@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYb-qv-iMH">
-                                                <rect key="frame" x="62" y="1040" width="136" height="19.5"/>
+                                                <rect key="frame" x="62" y="231" width="136" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4812,7 +4812,6 @@ your Affirm account and loans.</string>
                                             <constraint firstItem="JGn-RD-GeP" firstAttribute="leading" secondItem="oHM-PK-LZi" secondAttribute="leading" id="WKN-R5-wBO"/>
                                             <constraint firstItem="ds9-Xk-KDL" firstAttribute="centerY" secondItem="oHM-PK-LZi" secondAttribute="centerY" id="ccj-nY-Rp1"/>
                                             <constraint firstItem="iYb-qv-iMH" firstAttribute="top" secondItem="iI7-qk-asE" secondAttribute="bottom" constant="10" id="chG-NI-VrU"/>
-                                            <constraint firstItem="iYb-qv-iMH" firstAttribute="top" secondItem="JGn-RD-GeP" secondAttribute="bottom" id="ekW-9d-s1o"/>
                                             <constraint firstItem="ds9-Xk-KDL" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="mpj-tb-Hgv"/>
                                             <constraint firstItem="iYb-qv-iMH" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="mxb-9a-Kn3"/>
                                             <constraint firstItem="14O-GJ-UYh" firstAttribute="centerY" secondItem="oHM-PK-LZi" secondAttribute="centerY" id="nYu-ay-1TK"/>
