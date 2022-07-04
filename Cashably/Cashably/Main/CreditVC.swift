@@ -161,6 +161,7 @@ extension CreditVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MerchantTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "mercantCell") as! MerchantTableViewCell
+        cell.selectionStyle = .none
 //        cell.progress.progress = 0.9
         return cell
     }

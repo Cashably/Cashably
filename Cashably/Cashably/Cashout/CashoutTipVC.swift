@@ -22,6 +22,7 @@ class CashoutTipVC: UIViewController {
     
     @IBOutlet weak var dropDown: DropDown! {
         didSet {
+            dropDown.backgroundColor = .white
             dropDown.layer.borderColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1).cgColor
             dropDown.rowHeight = 55
             dropDown.arrowColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)

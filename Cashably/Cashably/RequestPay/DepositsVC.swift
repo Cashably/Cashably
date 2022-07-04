@@ -24,6 +24,7 @@ class DepositsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "DepositTableViewCell", bundle: nil), forCellReuseIdentifier: "depositCell")
+        tableView.backgroundColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +60,7 @@ extension DepositsVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DepositTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "depositCell") as! DepositTableViewCell
+        cell.selectionStyle = .none
         cell.lbTitle.text = "Airbnb 4977"
         cell.lbDueDate.text = "On Tuesday of every week"
         cell.lbAmount.text = "$ 299.54"

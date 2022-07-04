@@ -13,12 +13,13 @@ class HelpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var sendView: UIView!
     
+    @IBOutlet weak var msgView: InputView!
     @IBOutlet weak var tfMsg: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-           
+        msgView.didTap(target: tfMsg)
     }
     
     

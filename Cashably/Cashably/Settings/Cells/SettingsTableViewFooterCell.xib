@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,7 +41,6 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pVs-WN-DOQ" firstAttribute="top" secondItem="iL4-6o-nev" secondAttribute="bottom" constant="5" id="04E-xS-fC6"/>
                             <constraint firstItem="pVs-WN-DOQ" firstAttribute="centerX" secondItem="pe4-G6-7MN" secondAttribute="centerX" id="DFC-Ck-sba"/>
@@ -58,15 +56,11 @@
                     <constraint firstItem="pe4-G6-7MN" firstAttribute="leading" secondItem="rCg-EI-trf" secondAttribute="leading" id="g3s-B1-8Rp"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="lbVersion" destination="iL4-6o-nev" id="OG8-4m-BR8"/>
             </connections>
             <point key="canvasLocation" x="141.30434782608697" y="87.388392857142847"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

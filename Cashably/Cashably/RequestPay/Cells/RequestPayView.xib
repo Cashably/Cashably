@@ -78,7 +78,6 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="sRo-Rl-xzw" secondAttribute="trailing" constant="20" id="Age-EQ-ric"/>
                                 <constraint firstAttribute="height" constant="140" id="SZ6-Hq-JbJ"/>
@@ -274,7 +273,6 @@
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="9gq-zQ-mul" firstAttribute="top" secondItem="mYm-AU-vPI" secondAttribute="bottom" constant="20" id="668-75-sMa"/>
                                                 <constraint firstItem="mYm-AU-vPI" firstAttribute="leading" secondItem="pp0-VX-DJQ" secondAttribute="leading" constant="20" id="KHs-go-LA9"/>
@@ -297,7 +295,6 @@
                                     <viewLayoutGuide key="frameLayoutGuide" id="auF-D6-YXq"/>
                                 </scrollView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="ckE-A5-ePz" firstAttribute="leading" secondItem="qe0-1O-ekJ" secondAttribute="leading" id="I5A-vv-01w"/>
                                 <constraint firstAttribute="trailing" secondItem="ckE-A5-ePz" secondAttribute="trailing" id="PGd-GB-E7E"/>
@@ -307,13 +304,13 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfr-cC-Lw9">
                             <rect key="frame" x="0.0" y="871" width="414" height="25"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="8Vc-PU-i3V"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="kxy-fe-24p" firstAttribute="centerY" secondItem="3rt-Ny-DAi" secondAttribute="top" id="0F1-C7-yib"/>
                         <constraint firstItem="kxy-fe-24p" firstAttribute="leading" secondItem="3rt-Ny-DAi" secondAttribute="leading" constant="20" id="7TU-rY-Yf1"/>

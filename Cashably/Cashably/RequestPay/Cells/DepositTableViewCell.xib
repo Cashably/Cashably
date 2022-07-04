@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -103,7 +102,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FH8-u8-yfG" firstAttribute="leading" secondItem="ans-AF-l7e" secondAttribute="leading" constant="40" id="C3s-TA-o87"/>
                             <constraint firstItem="9Jh-7C-iFg" firstAttribute="leading" secondItem="ans-AF-l7e" secondAttribute="leading" id="H2T-f3-NpA"/>
@@ -120,6 +118,7 @@
                     <constraint firstItem="ans-AF-l7e" firstAttribute="top" secondItem="ATm-43-P4w" secondAttribute="top" id="uCW-PR-1th"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="btnPaycheck" destination="FH8-u8-yfG" id="Cpd-jm-7Pe"/>
                 <outlet property="icon" destination="9gj-G3-5mf" id="GUo-DS-ATZ"/>
@@ -132,8 +131,5 @@
     </objects>
     <resources>
         <image name="ic_airbnb" width="20" height="20"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

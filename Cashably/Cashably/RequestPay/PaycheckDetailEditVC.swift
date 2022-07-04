@@ -20,11 +20,19 @@ class PaycheckDetailEditVC: UIViewController, UITextFieldDelegate, NVActivityInd
     @IBOutlet weak var tfDueDate: UITextField!
     @IBOutlet weak var tfDate: UITextField!
     
+    @IBOutlet weak var amountView: InputView!
+    @IBOutlet weak var nameView: InputView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        amountView.didTap(target: tfAmount)
+        nameView.didTap(target: tfName)
         
+        tfDueDate.setInputViewDatePicker(target: self, selector: #selector(tapDuedateDone))
+        tfDate.setInputViewDatePicker(target: self, selector: #selector(tapDateDone))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +44,24 @@ class PaycheckDetailEditVC: UIViewController, UITextFieldDelegate, NVActivityInd
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+    @objc func tapDuedateDone() {
+        if let datePicker = self.tfDueDate.inputView as? UIDatePicker {
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "MM/YY"
+            self.tfDueDate.text = dateformatter.string(from: datePicker.date)
+        }
+        self.tfDueDate.resignFirstResponder()
+    }
+    
+    @objc func tapDateDone() {
+        if let datePicker = self.tfDate.inputView as? UIDatePicker {
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "MM/YY"
+            self.tfDate.text = dateformatter.string(from: datePicker.date)
+        }
+        self.tfDate.resignFirstResponder()
+    }
     
     @IBAction func actionConfirm(_ sender: UIButton) {
         let approvedVC = storyboard?.instantiateViewController(withIdentifier: "ApprovedVC") as! ApprovedVC

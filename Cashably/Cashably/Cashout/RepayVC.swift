@@ -68,7 +68,7 @@ extension RepayVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: LoanTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "loanCell") as! LoanTableViewCell
-        
+        cell.selectionStyle = .none
         return cell
     }
 }

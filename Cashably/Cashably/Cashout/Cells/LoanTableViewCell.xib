@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -64,7 +63,6 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ySg-PB-uXD" firstAttribute="leading" secondItem="0H4-wV-fIZ" secondAttribute="leading" constant="15" id="CkH-if-RFK"/>
                             <constraint firstItem="tgi-Xv-nYt" firstAttribute="top" secondItem="0H4-wV-fIZ" secondAttribute="top" constant="20" id="Fnw-FG-ycW"/>
@@ -84,6 +82,7 @@
                     <constraint firstAttribute="bottom" secondItem="0H4-wV-fIZ" secondAttribute="bottom" constant="5" id="phu-V7-R9D"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="lbBankName" destination="l1e-bb-fmP" id="vlf-z0-oh3"/>
                 <outlet property="lbLoanId" destination="tgi-Xv-nYt" id="bHW-wS-VyD"/>
@@ -91,9 +90,4 @@
             <point key="canvasLocation" x="126.81159420289856" y="85.044642857142847"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

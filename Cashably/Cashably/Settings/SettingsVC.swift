@@ -44,7 +44,7 @@ class SettingsVC: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "settingsCell")
         tableView.register(UINib(nibName: "SettingsTableViewFooterCell", bundle: nil), forCellReuseIdentifier: "settingsFooter")
-        
+        tableView.backgroundColor = .white
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -111,6 +111,7 @@ extension SettingsVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SettingsTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "settingsCell") as! SettingsTableViewCell
+        cell.selectionStyle = .none
         switch indexPath.row {
         case 0:
             cell.imgIcon.image = UIImage(named: "ic_circle_dollar")

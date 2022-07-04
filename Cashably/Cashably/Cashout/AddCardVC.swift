@@ -77,7 +77,6 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable {
     @objc func tapDone() {
         if let datePicker = self.tfCardDate.inputView as? UIDatePicker {
             let dateformatter = DateFormatter()
-//            dateformatter.dateStyle = .short
             dateformatter.dateFormat = "MM/YY"
             self.tfCardDate.text = dateformatter.string(from: datePicker.date)
         }

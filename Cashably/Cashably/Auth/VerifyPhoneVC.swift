@@ -24,37 +24,23 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var lbPhone: UILabel!
     
     @IBOutlet weak var optView: DPOTPView!
-    //    @IBOutlet weak var tfCode1: UITextField!
-//    @IBOutlet weak var tfCode2: UITextField!
-//    @IBOutlet weak var tfCode3: UITextField!
-//    @IBOutlet weak var tfCode4: UITextField!
-//    @IBOutlet weak var tfCode5: UITextField!
-//    @IBOutlet weak var tfCode6: UITextField!
     
     private var authError: NSError!
     private var otpCode = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        tfCode1.delegate = self
-//        tfCode2.delegate = self
-//        tfCode3.delegate = self
-//        tfCode4.delegate = self
-//        tfCode5.delegate = self
-//        tfCode6.delegate = self
-//        tfCode1.keyboardType = .numberPad
-//        tfCode1.textContentType = .oneTimeCode
+        
         self.lbPhone.text = phone
         self.btnConfirm.isEnabled = false
         
         self.optView.dpOTPViewDelegate = self
+        self.optView.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
-        
         
    }
 

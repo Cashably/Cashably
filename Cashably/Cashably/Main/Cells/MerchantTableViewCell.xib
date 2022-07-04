@@ -84,6 +84,7 @@
                     <constraint firstItem="zRf-tH-J4x" firstAttribute="top" secondItem="gUi-Dp-40j" secondAttribute="top" id="uVZ-uV-5TU"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="lbAmount" destination="av7-5w-Xzw" id="KMk-to-DDu"/>
                 <outlet property="lbName" destination="Wt2-k1-bmx" id="MqZ-ym-CUv"/>
