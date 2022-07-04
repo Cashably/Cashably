@@ -1883,7 +1883,6 @@
                                                                                         <textInputTraits key="textInputTraits"/>
                                                                                     </textField>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="60" id="4Qa-q5-zBf"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="XdR-2r-pWs" secondAttribute="trailing" constant="10" id="Lyy-Y2-5c5"/>
@@ -1939,7 +1938,6 @@
                                                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                                                     </textField>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="q2g-HK-6xf" firstAttribute="centerY" secondItem="UOY-cK-3qm" secondAttribute="centerY" id="796-9n-aLw"/>
                                                                                     <constraint firstItem="e4v-Gi-YMW" firstAttribute="leading" secondItem="UOY-cK-3qm" secondAttribute="leading" constant="24" id="8gk-6m-xKK"/>
@@ -1995,7 +1993,6 @@
                                                                                         <textInputTraits key="textInputTraits" textContentType="date-time"/>
                                                                                     </textField>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="60" id="2Uh-f0-uoN"/>
                                                                                     <constraint firstItem="Vho-Ol-AkR" firstAttribute="centerY" secondItem="hGA-Aq-CJC" secondAttribute="centerY" id="Gvf-oX-Aha"/>
@@ -2051,7 +2048,6 @@
                                                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                                                                     </textField>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="aNC-cj-iIT" firstAttribute="centerY" secondItem="8Ua-Ct-o2b" secondAttribute="centerY" id="Fs1-RB-wic"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="aAd-uY-35K" secondAttribute="trailing" constant="10" id="IwB-0d-Zjn"/>
@@ -2103,7 +2099,6 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="ywf-AP-gs7" firstAttribute="top" secondItem="gPA-87-SqW" secondAttribute="top" id="CN8-z8-3nm"/>
                                                             <constraint firstItem="Wyu-72-Zzq" firstAttribute="top" secondItem="nGD-QW-XgY" secondAttribute="bottom" constant="22" id="GD6-wR-N9t"/>
@@ -2132,7 +2127,7 @@
                                                 <viewLayoutGuide key="frameLayoutGuide" id="iwy-9S-jEe"/>
                                             </scrollView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="G2F-Kc-lXN" secondAttribute="bottom" id="Bnl-A5-pkx"/>
                                             <constraint firstAttribute="trailing" secondItem="G2F-Kc-lXN" secondAttribute="trailing" id="IfI-Vu-LoJ"/>
@@ -2141,7 +2136,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="2WJ-O4-MLq" firstAttribute="top" secondItem="Bqv-dC-6mU" secondAttribute="bottom" constant="17" id="A5v-by-gWn"/>
                                     <constraint firstAttribute="trailing" secondItem="2WJ-O4-MLq" secondAttribute="trailing" id="C8X-9T-phI"/>
