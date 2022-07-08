@@ -8,11 +8,12 @@
 import UIKit
 import FirebaseCore
 import IQKeyboardManagerSwift
+import LinkKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -39,6 +40,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func application(_ application: UIApplication,
+                         continue userActivity: NSUserActivity,
+                         restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
+    ) -> Bool {
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb, let webpageURL = userActivity.webpageURL else {
+            return false
+        }
+
+        // The Plaid Link SDK ignores unexpected URLs passed to `continue(from:)` as
+        // per Apple’s recommendations, so there is no need to filter out unrelated URLs.
+        // Doing so may prevent a valid URL from being passed to `continue(from:)` and
+        // OAuth may not continue as expected.
+        // For details see https://plaid.com/docs/link/ios/#set-up-universal-links
+        guard let linkOAuthHandler = window?.rootViewController as? LinkOAuthHandling, let handler = linkOAuthHandler.linkHandler
+        else {
+            return false
+        }
+
+        // Continue the Link flow
+        handler.continue(from: webpageURL)
+        return true
     }
 
 

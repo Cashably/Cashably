@@ -97,6 +97,7 @@
 		F0A04358285DD48E00E29CE0 /* TopCornerRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */; };
 		F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04359285EA6E200E29CE0 /* InputView.swift */; };
 		F0A0435C285EB28C00E29CE0 /* ProfileCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */; };
+		F0A1A98F2878B9C8008348D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1A98E2878B9C8008348D1 /* Constants.swift */; };
 		F0B853562860044C002F90DA /* DepositTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853552860044C002F90DA /* DepositTableViewCell.swift */; };
 		F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B8535728600462002F90DA /* DepositTableViewCell.xib */; };
 		F0B8535A2860145B002F90DA /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853592860145B002F90DA /* RoundBorderView.swift */; };
@@ -229,6 +230,7 @@
 		F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCornerRoundView.swift; sourceTree = "<group>"; };
 		F0A04359285EA6E200E29CE0 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCompleteVC.swift; sourceTree = "<group>"; };
+		F0A1A98E2878B9C8008348D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0B853552860044C002F90DA /* DepositTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositTableViewCell.swift; sourceTree = "<group>"; };
 		F0B8535728600462002F90DA /* DepositTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositTableViewCell.xib; sourceTree = "<group>"; };
 		F0B853592860145B002F90DA /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 				F05365CF285FEA3700B771D9 /* RequestPay */,
 				F0B87A01285F2C3500414FFD /* Settings */,
 				F00E4DE0285CBE6400CB8DD6 /* User */,
+				F0A1A98E2878B9C8008348D1 /* Constants.swift */,
 			);
 			path = Cashably;
 			sourceTree = "<group>";
@@ -628,6 +631,8 @@
 			dependencies = (
 			);
 			name = Cashably;
+			packageProductDependencies = (
+			);
 			productName = Cashably;
 			productReference = F0643CFE2856C62600CAB86F /* Cashably.app */;
 			productType = "com.apple.product-type.application";
@@ -703,6 +708,8 @@
 				Base,
 			);
 			mainGroup = F0643CF52856C62600CAB86F;
+			packageReferences = (
+			);
 			productRefGroup = F0643CFF2856C62600CAB86F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -931,6 +938,7 @@
 				F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */,
 				F062A84028642E3000DBBCE4 /* UIViewController+Keyboard.swift in Sources */,
 				F00E4DEC285CC5DB00CB8DD6 /* ProfileEditVC.swift in Sources */,
+				F0A1A98F2878B9C8008348D1 /* Constants.swift in Sources */,
 				F0A04352285DC08000E29CE0 /* UIView.swift in Sources */,
 				F062A8642865A48B00DBBCE4 /* CircularSlider.swift in Sources */,
 				F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */,
@@ -1123,7 +1131,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1137,7 +1145,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.3;
+				MARKETING_VERSION = 0.4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1156,7 +1164,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1170,7 +1178,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.3;
+				MARKETING_VERSION = 0.4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
