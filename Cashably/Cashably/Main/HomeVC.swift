@@ -190,16 +190,20 @@ class HomeVC: UIViewController {
     }
     
     func onRequest() {
-        guard let connectedBankId = UserDefaults.standard.string(forKey: "connectedBankId") else {
-            let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
-            connectBankVC.delegate = self
-            self.navigationController?.pushViewController(connectBankVC, animated: true)
-            return
-        }
+//        guard let connectedBankId = UserDefaults.standard.string(forKey: "connectedBankId") else {
+//            let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
+//            connectBankVC.delegate = self
+//            self.navigationController?.pushViewController(connectBankVC, animated: true)
+//            return
+//        }
+//
+//        let depositVC = self.storyboard?.instantiateViewController(withIdentifier: "DepositsVC") as! DepositsVC
+//        depositVC.connectedBankId = connectedBankId
+//        self.navigationController?.pushViewController(depositVC, animated: true)
         
-        let depositVC = self.storyboard?.instantiateViewController(withIdentifier: "DepositsVC") as! DepositsVC
-        depositVC.connectedBankId = connectedBankId
-        self.navigationController?.pushViewController(depositVC, animated: true)
+        let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
+        connectBankVC.delegate = self
+        self.navigationController?.pushViewController(connectBankVC, animated: true)
         
     }
     
