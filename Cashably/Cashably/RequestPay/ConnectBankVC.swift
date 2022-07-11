@@ -11,6 +11,7 @@ import Alamofire
 import LinkKit
 import FirebaseAuth
 import NVActivityIndicatorView
+import CoreData
 
 protocol ConnectBankDelegate {
     func connected()
@@ -28,6 +29,10 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
     var delegate: ConnectBankDelegate!
     
     var linkHandler: Handler?
+    struct DecodableType: Decodable {
+        let status: Bool
+        let data: String
+    }
     
     let oauthRedirectURI =  URL(string: "YOUR_OAUTH_REDIRECT_URI")
     
@@ -49,23 +54,21 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
    }
     
     func plaidLink(linkToken: String) {
-        self.startAnimating()
+        print(linkToken)
         let linkConfiguration = LinkTokenConfiguration(
             token: linkToken,
             onSuccess: { linkSuccess in
                 // Send the linkSuccess.publicToken to your app server.
-                self.stopAnimating()
                 print("linksuccess public token \(linkSuccess.publicToken)")
+                self.storePlaidPubToken(token: linkSuccess.publicToken)
             }
         )
         
         let result = Plaid.create(linkConfiguration)
         switch result {
           case .failure(let error):
-            self.stopAnimating()
               print("Plaid create error: \(error)")
           case .success(let handler):
-            self.stopAnimating()
             self.linkHandler = handler
             handler.open(presentUsing: .viewController(self))
         }
@@ -73,15 +76,51 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
     
     func createPlaidLinkToken() {
         self.startAnimating()
-        AF.request("\(Constants.API)/plaid/link-token",
-                   method: .post,
+        AF.request("\(Constants.API)/plaid/link_token",
+                   method: .get,
                    parameters: ["userId": Auth.auth().currentUser?.uid],
-                   encoder: URLEncodedFormParameterEncoder.default).responseString { response in
-            debugPrint(response)
-            self.stopAnimating()
-            self.plaidLink(linkToken: response.value!)
-        }
-        
+                   encoder: URLEncodedFormParameterEncoder.default)
+                .responseDecodable(of: DecodableType.self) { response in
+                    self.stopAnimating()
+                    
+                    if response.value?.status == true {
+                        guard let linktoken = response.value?.data else {
+                            return
+                        }
+                        self.plaidLink(linkToken: linktoken)
+                    } else {
+                        guard let error = response.value?.data else {
+                            return
+                        }
+                        let alert = Alert.showBasicAlert(message: error)
+                        self.presentVC(alert)
+                    }
+                    
+                }
+            
+    }
+    
+    func storePlaidPubToken(token: String) {
+        self.startAnimating()
+        AF.request("\(Constants.API)/plaid/exchange_public_token",
+                   method: .post,
+                   parameters: ["userId": Auth.auth().currentUser?.uid, "public_token": token],
+                   encoder: URLEncodedFormParameterEncoder.default)
+                .responseDecodable(of: DecodableType.self) { response in
+                    self.stopAnimating()
+                    print(response)
+                    if response.value?.status == true {
+                        self.showToast(message: "Sent successfully")
+                    } else {
+                        guard let error = response.value?.data else {
+                            return
+                        }
+                        let alert = Alert.showBasicAlert(message: error)
+                        self.presentVC(alert)
+                    }
+                    
+                }
+            
     }
     
     @IBAction func actionConnect(_ sender: UIButton) {

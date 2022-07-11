@@ -92,6 +92,7 @@ Cash Loan</string>
                         </scrollView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nb1-Aa-Cgt">
                             <rect key="frame" x="0.0" y="871" width="414" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="Jm4-4c-KDZ"/>
                             </constraints>
