@@ -110,6 +110,10 @@
 		F0B8535A2860145B002F90DA /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853592860145B002F90DA /* RoundBorderView.swift */; };
 		F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B87A02285F2C4E00414FFD /* SettingsVC.swift */; };
 		F0C69D48287D664600BF5C6C /* UIRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D47287D664600BF5C6C /* UIRadioButton.swift */; };
+		F0C69D4A287DA92600BF5C6C /* EmptyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D49287DA92600BF5C6C /* EmptyCardCell.swift */; };
+		F0C69D4C287DAA8900BF5C6C /* EmptyCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C69D4B287DAA8900BF5C6C /* EmptyCardCell.xib */; };
+		F0C69D4E287DB1E700BF5C6C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D4D287DB1E700BF5C6C /* CardCell.swift */; };
+		F0C69D50287DB20900BF5C6C /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C69D4F287DB20900BF5C6C /* CardCell.xib */; };
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
 		F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F482860C09D004B1515 /* ToggleButton.swift */; };
@@ -251,6 +255,10 @@
 		F0B853592860145B002F90DA /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
 		F0B87A02285F2C4E00414FFD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F0C69D47287D664600BF5C6C /* UIRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadioButton.swift; sourceTree = "<group>"; };
+		F0C69D49287DA92600BF5C6C /* EmptyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCardCell.swift; sourceTree = "<group>"; };
+		F0C69D4B287DAA8900BF5C6C /* EmptyCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCardCell.xib; sourceTree = "<group>"; };
+		F0C69D4D287DB1E700BF5C6C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		F0C69D4F287DB20900BF5C6C /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
 		F0CE9F482860C09D004B1515 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -365,6 +373,10 @@
 				F036EFD6286144F1005FAEDB /* LoanTableViewCell.xib */,
 				F0AB2565287C589100C6A593 /* TransactionTableViewCell.swift */,
 				F0AB2567287C58D600C6A593 /* TransactionTableViewCell.xib */,
+				F0C69D49287DA92600BF5C6C /* EmptyCardCell.swift */,
+				F0C69D4B287DAA8900BF5C6C /* EmptyCardCell.xib */,
+				F0C69D4D287DB1E700BF5C6C /* CardCell.swift */,
+				F0C69D4F287DB20900BF5C6C /* CardCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -755,6 +767,7 @@
 				F0643D0E2856C62700CAB86F /* LaunchScreen.storyboard in Resources */,
 				F062F261286D8898007DE996 /* BR FIRMA MEDIUM.OTF in Resources */,
 				F0A0434D285D71CF00E29CE0 /* GoogleService-Info.plist in Resources */,
+				F0C69D4C287DAA8900BF5C6C /* EmptyCardCell.xib in Resources */,
 				F0643D0B2856C62700CAB86F /* Assets.xcassets in Resources */,
 				F0CE9F512860CADE004B1515 /* RequestPayView.xib in Resources */,
 				F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */,
@@ -764,6 +777,7 @@
 				F0643D092856C62600CAB86F /* Main.storyboard in Resources */,
 				F062F25B286D85A9007DE996 /* BR FIRMA BLACK.OTF in Resources */,
 				F062F25D286D8767007DE996 /* BR FIRMA REGULAR.OTF in Resources */,
+				F0C69D50287DB20900BF5C6C /* CardCell.xib in Resources */,
 				F05365C0285F667700B771D9 /* SettingsTableViewFooterCell.xib in Resources */,
 				F062F263286D88DE007DE996 /* BR FIRMA SEMIBOLD.OTF in Resources */,
 				F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */,
@@ -955,7 +969,9 @@
 				F00E4DEA285CC58600CB8DD6 /* SignInVC.swift in Sources */,
 				F05365CE285FE98A00B771D9 /* HomeVC.swift in Sources */,
 				F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */,
+				F0C69D4A287DA92600BF5C6C /* EmptyCardCell.swift in Sources */,
 				F05365E1285FF43500B771D9 /* CashoutVC.swift in Sources */,
+				F0C69D4E287DB1E700BF5C6C /* CardCell.swift in Sources */,
 				F062A85B28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift in Sources */,
 				F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */,
 				F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */,
@@ -1163,7 +1179,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1177,7 +1193,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1196,7 +1212,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1210,7 +1226,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";

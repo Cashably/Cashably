@@ -39,7 +39,16 @@ class CardsVC: UIViewController {
     }
        
     
-    @IBOutlet weak var cardsCollectionView: UICollectionView!
+    @IBOutlet weak var cardsCollectionView: UICollectionView! {
+        didSet {
+            cardsCollectionView.delegate = self
+            cardsCollectionView.dataSource = self
+            cardsCollectionView.register(UINib(nibName: "CardCell", bundle: nil), forCellWithReuseIdentifier: "CardCell")
+            cardsCollectionView.register(UINib(nibName: "EmptyCardCell", bundle: nil), forCellWithReuseIdentifier: "EmptyCardCell")
+            cardsCollectionView.backgroundColor = .white
+            cardsCollectionView.showsHorizontalScrollIndicator = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +58,8 @@ class CardsVC: UIViewController {
         radio2.button.addTarget(self, action: #selector(selectRadio2(_:)), for: .touchUpInside)
         radio3.button.addTarget(self, action: #selector(selectRadio3(_:)), for: .touchUpInside)
         radio4.button.addTarget(self, action: #selector(selectRadio4(_:)), for: .touchUpInside)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,10 +108,91 @@ class CardsVC: UIViewController {
     
     @IBAction func actionPay(_ sender: UIButton) {
     }
+    
+    func showCardOption() {
+        let saveVC = self.storyboard?.instantiateViewController(withIdentifier: "CardActionVC") as! CardActionVC
+//                saveVC.delegate = self
+        let options = SheetOptions(
+            pullBarHeight: 0
+        )
+        let sheetController = SheetViewController(
+            controller: saveVC,
+            sizes: [.fixed(150)],
+        options: options)
+        sheetController.cornerRadius = 30
+        sheetController.dismissOnOverlayTap = true
+        
+        self.present(sheetController, animated: true, completion: nil)
+    }
+    
+    func showAddCard() {
+        let saveVC = self.storyboard?.instantiateViewController(withIdentifier: "SaveCardVC") as! SaveCardVC
+        saveVC.delegate = self
+        let options = SheetOptions(
+            pullBarHeight: 0
+        )
+        let sheetController = SheetViewController(
+            controller: saveVC,
+            sizes: [.fixed(450)],
+        options: options)
+        sheetController.cornerRadius = 30
+        sheetController.dismissOnOverlayTap = true
+        
+        self.present(sheetController, animated: true, completion: nil)
+    }
 }
 
 extension CardsVC: SaveCardDelegate{
     func addCard() {
         
     }
+}
+
+extension CardsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+            return 1
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if UserDefaults.standard.string(forKey: "cardid") != nil {
+            return 3
+        } else {
+            return 1
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if UserDefaults.standard.string(forKey: "cardid") != nil {
+            let cell: CardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCell
+                    
+            cell.btnFullAction = { () in
+                cell.fullView.layer.borderWidth = 2
+                cell.fullView.layer.borderColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1).cgColor
+            }
+            cell.btnOptionAction = { () in
+                self.showCardOption()
+            }
+            return cell
+        } else {
+            let cell: EmptyCardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmptyCardCell", for: indexPath) as! EmptyCardCell
+                    
+            cell.btnFullAction = { () in
+                self.showAddCard()
+            }
+            return cell
+        }
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.layer.bounds.width-40, height: 170)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if UserDefaults.standard.string(forKey: "cardid") != nil {
+            return UIEdgeInsets.zero
+        } else {
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        }
+    }
+    
 }

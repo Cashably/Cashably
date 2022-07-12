@@ -111,6 +111,7 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
                     print(response)
                     if response.value?.status == true {
                         self.showToast(message: "Sent successfully")
+                        self.delegate.connected()
                     } else {
                         guard let error = response.value?.data else {
                             return
