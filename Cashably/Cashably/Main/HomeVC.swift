@@ -101,9 +101,13 @@ class HomeVC: UIViewController {
 //                sheet.preferredCornerRadius = 25
 //            }
 //            self.presentVC(nav)
+            let options = SheetOptions(
+                pullBarHeight: 0
+            )
             let sheetController = SheetViewController(
                 controller: faceVC,
-                sizes: [.fixed(400)]
+                sizes: [.fixed(400)],
+                options: options
                 )
             sheetController.cornerRadius = 25
             sheetController.dismissOnOverlayTap = false
@@ -125,9 +129,13 @@ class HomeVC: UIViewController {
 //                sheet.preferredCornerRadius = 25
 //            }
 //            self.presentVC(nav)
+            let options = SheetOptions(
+                pullBarHeight: 0
+            )
             let sheetController = SheetViewController(
                 controller: activityVC,
-                sizes: [.fixed(600)])
+                sizes: [.fixed(600)],
+            options: options)
             sheetController.cornerRadius = 25
             sheetController.dismissOnOverlayTap = false
             self.present(sheetController, animated: true, completion: nil)
@@ -148,9 +156,13 @@ class HomeVC: UIViewController {
 //                sheet.preferredCornerRadius = 25
 //            }
 //            self.presentVC(nav)
+            let options = SheetOptions(
+                pullBarHeight: 0
+            )
             let sheetController = SheetViewController(
                 controller: notificationVC,
-                sizes: [.fixed(600)])
+                sizes: [.fixed(600)],
+            options: options)
             sheetController.cornerRadius = 25
             sheetController.dismissOnOverlayTap = false
             self.present(sheetController, animated: true, completion: nil)
@@ -171,9 +183,13 @@ class HomeVC: UIViewController {
 //                sheet.preferredCornerRadius = 25
 //            }
 //            self.presentVC(nav)
+            let options = SheetOptions(
+                pullBarHeight: 0
+            )
             let sheetController = SheetViewController(
                 controller: overdraftVC,
-                sizes: [.fixed(600)])
+                sizes: [.fixed(600)],
+            options: options)
             sheetController.cornerRadius = 25
             sheetController.dismissOnOverlayTap = false
             self.present(sheetController, animated: true, completion: nil)

@@ -84,7 +84,9 @@ class SaveCardVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func actionSaveCard(_ sender: UIButton) {
         UserDefaults.standard.set("123456789", forKey: "cardid")
-        self.delegate.addCard()
+        self.dismiss(animated: true) {
+            self.delegate.addCard()
+        }
     }
    
 }

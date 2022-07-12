@@ -11,13 +11,11 @@ target 'Cashably' do
     pod 'NVActivityIndicatorView/Extended'
 
     pod 'UITextField+Shake'
-    
     pod 'iOSDropDown'
-
     pod 'FlagPhoneNumber'
 #    pod 'SVPinView', '~> 1.0'
     pod 'DPOTPView'
-    
+    pod 'UIButtonExtension', '~> 0.3'
     pod 'FittedSheets'
     
     pod 'MKRingProgressView'

@@ -89,7 +89,19 @@ extension SettingsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch self.settings[indexPath.row] {
-        case .transactions, .notification, .cards, .about:
+        case .about:
+            break
+        case .cards:
+            let cardsVC = storyboard?.instantiateViewController(withIdentifier: "CardsVC") as! CardsVC
+            navigationController?.pushViewController(cardsVC, animated: true)
+            break
+        case .notification:
+            let notificationsVC = storyboard?.instantiateViewController(withIdentifier: "NotificationsVC") as! NotificationsVC
+            navigationController?.pushViewController(notificationsVC, animated: true)
+            break
+        case .transactions:
+            let txnVC = storyboard?.instantiateViewController(withIdentifier: "MyTransactionsVC") as! MyTransactionsVC
+            navigationController?.pushViewController(txnVC, animated: true)
             break
         case .chat:
             let helpVC = storyboard?.instantiateViewController(withIdentifier: "HelpVC") as! HelpVC

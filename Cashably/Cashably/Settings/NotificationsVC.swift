@@ -36,4 +36,7 @@ class NotificationsVC: UIViewController {
     @IBAction func actionSMSAlert(_ sender: UISwitch) {
     }
     
+    @IBAction func actionBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

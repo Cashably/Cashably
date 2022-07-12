@@ -109,6 +109,7 @@
 		F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B8535728600462002F90DA /* DepositTableViewCell.xib */; };
 		F0B8535A2860145B002F90DA /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853592860145B002F90DA /* RoundBorderView.swift */; };
 		F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B87A02285F2C4E00414FFD /* SettingsVC.swift */; };
+		F0C69D48287D664600BF5C6C /* UIRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D47287D664600BF5C6C /* UIRadioButton.swift */; };
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
 		F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F482860C09D004B1515 /* ToggleButton.swift */; };
@@ -249,6 +250,7 @@
 		F0B8535728600462002F90DA /* DepositTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositTableViewCell.xib; sourceTree = "<group>"; };
 		F0B853592860145B002F90DA /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
 		F0B87A02285F2C4E00414FFD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		F0C69D47287D664600BF5C6C /* UIRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadioButton.swift; sourceTree = "<group>"; };
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
 		F0CE9F482860C09D004B1515 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 				F062A8622865A47100DBBCE4 /* CirclularSlider */,
 				F062A84E286545EE00DBBCE4 /* MSCircularSlider */,
 				F062A84F28654AA500DBBCE4 /* PolarKit */,
+				F0C69D47287D664600BF5C6C /* UIRadioButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -968,6 +971,7 @@
 				F0A1A98F2878B9C8008348D1 /* Constants.swift in Sources */,
 				F0A04352285DC08000E29CE0 /* UIView.swift in Sources */,
 				F062A8642865A48B00DBBCE4 /* CircularSlider.swift in Sources */,
+				F0C69D48287D664600BF5C6C /* UIRadioButton.swift in Sources */,
 				F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */,
 				F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */,
 				F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */,

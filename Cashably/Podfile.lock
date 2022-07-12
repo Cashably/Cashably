@@ -103,6 +103,7 @@ PODS:
     - NVActivityIndicatorView/Base
   - Plaid (3.1.0)
   - PromisesObjC (2.1.0)
+  - UIButtonExtension (0.4.1)
   - "UITextField+Shake (1.2.1)"
 
 DEPENDENCIES:
@@ -119,6 +120,7 @@ DEPENDENCIES:
   - MKRingProgressView
   - NVActivityIndicatorView/Extended
   - Plaid
+  - UIButtonExtension (~> 0.3)
   - "UITextField+Shake"
 
 SPEC REPOS:
@@ -145,6 +147,7 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - Plaid
     - PromisesObjC
+    - UIButtonExtension
     - "UITextField+Shake"
 
 SPEC CHECKSUMS:
@@ -170,8 +173,9 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   Plaid: 024ce0c2b8d10dae27218331917ee5a824eda63b
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  UIButtonExtension: a5cac11ef6e4a1433c2f758776da484237e5741f
   "UITextField+Shake": 298ac5a0f239d731bdab999b19b628c956ca0ac3
 
-PODFILE CHECKSUM: d41cb5bb8807d2d047f475ab10b91103e2067207
+PODFILE CHECKSUM: 1ede8d76acd883c4afa1f1822b7b11cb75bdfa1e
 
 COCOAPODS: 1.11.2
