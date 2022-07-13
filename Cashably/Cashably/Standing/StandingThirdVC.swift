@@ -28,8 +28,10 @@ class StandingThirdVC: UIViewController {
    }
     
     func configureTitle() {
-        
-        let attributedQuote = NSMutableAttributedString(string: lbTitle.attributedText!.string)
+        let attributedString = lbTitle.attributedText!.string
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 20
+        let attributedQuote = NSMutableAttributedString(string: attributedString, attributes: [NSAttributedString.Key.font: UIFont(name: "BRFirma-Regular", size: 30)!, NSAttributedString.Key.paragraphStyle: paragraphStyle])
         let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont(name: "BRFirma-Bold", size: 30)!]
         attributedQuote.setAttributes(attributes, range: NSRange(location: 23, length: 10))
         lbTitle.attributedText = attributedQuote
