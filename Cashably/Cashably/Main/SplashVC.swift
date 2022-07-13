@@ -39,16 +39,20 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
     
     func checkLogin() {
         self.startAnimating()
-        
-        if let user = Auth.auth().currentUser {
-            if user.displayName == nil {
-                self.moveToCompleteProfile()
-            } else {
-                self.moveToMain()
-            }
+        if UserDefaults.standard.bool(forKey: "enabledStanding") == false {
+            self.moveToStanding()
         } else {
-            self.moveToLogin()
+            if let user = Auth.auth().currentUser {
+                if user.displayName == nil {
+                    self.moveToCompleteProfile()
+                } else {
+                    self.moveToMain()
+                }
+            } else {
+                self.moveToLogin()
+            }
         }
+        
     }
     
     func moveToMain() {
@@ -56,6 +60,12 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
         let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
 //        self.window?.rootViewController = mainVC
         navigationController?.pushViewController(mainVC, animated: true)
+    }
+    
+    func moveToStanding() {
+        self.stopAnimating()
+        let standingVC = storyboard?.instantiateViewController(withIdentifier: "StandingStartVC") as! StandingStartVC
+        navigationController?.pushViewController(standingVC, animated: true)
     }
     
     func moveToLogin() {
