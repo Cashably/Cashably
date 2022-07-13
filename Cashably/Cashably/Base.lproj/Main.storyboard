@@ -4488,7 +4488,7 @@
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selena Grander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-qk-asE">
-                                                <rect key="frame" x="47" y="191" width="166.5" height="30"/>
+                                                <rect key="frame" x="46.5" y="191" width="167" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4546,7 +4546,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inl-lb-zHd">
-                                        <rect key="frame" x="148" y="285" width="118.5" height="40"/>
+                                        <rect key="frame" x="147.5" y="285" width="119" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0dC-iy-rFG"/>
                                         </constraints>
@@ -4623,7 +4623,7 @@
                                                 <rect key="frame" x="93" y="0.0" width="100" height="100"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cashably" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpE-wA-5C3">
-                                                <rect key="frame" x="86.5" y="115" width="113.5" height="33.5"/>
+                                                <rect key="frame" x="86.5" y="115" width="113" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -4666,7 +4666,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDl-pU-qOA">
-                                                <rect key="frame" x="58" y="238.5" width="170.5" height="38"/>
+                                                <rect key="frame" x="57.5" y="238.5" width="171" height="38"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="ic_tick" title="No Credit Check" imagePadding="3">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -4758,7 +4758,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfI-63-6fB">
-                                                        <rect key="frame" x="179.5" y="744.5" width="55.5" height="33.5"/>
+                                                        <rect key="frame" x="179.5" y="744.5" width="55" height="33.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Skip">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -4791,23 +4791,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pob-rs-EMo">
-                                                        <rect key="frame" x="20" y="484" width="374" height="92"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Instant Cash Loan for Everyone! ">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="30"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="20" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant Cash Loan for Everyone! " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pob-rs-EMo">
+                                                        <rect key="frame" x="20" y="516" width="374" height="72"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
-                                                                <integer key="value" value="600"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-ll-OyW">
                                                         <rect key="frame" x="20" y="664.5" width="374" height="60"/>
@@ -4843,7 +4831,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="Jgz-hW-QNQ" secondAttribute="trailing" id="Qs0-ys-snC"/>
                                                     <constraint firstItem="hY4-ll-OyW" firstAttribute="leading" secondItem="fwS-IA-qAm" secondAttribute="leading" constant="20" id="S2S-ay-lQb"/>
                                                     <constraint firstItem="4Aj-co-Z3a" firstAttribute="leading" secondItem="fwS-IA-qAm" secondAttribute="leading" constant="20" id="Swa-Lm-lsx"/>
-                                                    <constraint firstItem="4Aj-co-Z3a" firstAttribute="top" secondItem="Pob-rs-EMo" secondAttribute="bottom" constant="18" id="gZi-I7-X8i"/>
+                                                    <constraint firstItem="4Aj-co-Z3a" firstAttribute="top" secondItem="Pob-rs-EMo" secondAttribute="bottom" constant="6" id="gZi-I7-X8i"/>
                                                     <constraint firstItem="AfI-63-6fB" firstAttribute="top" secondItem="hY4-ll-OyW" secondAttribute="bottom" constant="20" id="k5Z-5d-RpU"/>
                                                     <constraint firstAttribute="bottom" secondItem="AfI-63-6fB" secondAttribute="bottom" constant="34" id="kRJ-Jz-Mw9"/>
                                                     <constraint firstAttribute="bottom" secondItem="Jgz-hW-QNQ" secondAttribute="bottom" id="m0K-CX-zqb"/>
@@ -4882,6 +4870,9 @@
                             <constraint firstAttribute="bottom" secondItem="FeN-tU-DO0" secondAttribute="bottom" id="hqC-os-Pma"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbTitle" destination="Pob-rs-EMo" id="V4t-w0-fC6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqN-uZ-Ydc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4908,7 +4899,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nl-51-IvJ">
-                                                        <rect key="frame" x="179.5" y="744.5" width="55.5" height="33.5"/>
+                                                        <rect key="frame" x="179.5" y="744.5" width="55" height="33.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Skip">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -4944,9 +4935,9 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvm-jp-VO3">
                                                         <rect key="frame" x="20" y="484" width="374" height="92"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="Cash out upto 100/day When you need it.">
+                                                            <fragment content="Cash out upto $100/day When you need it.">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <font key="NSFont" metaFont="system" size="30"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="20" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -4955,7 +4946,7 @@
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
-                                                                <integer key="value" value="600"/>
+                                                                <integer key="value" value="400"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
@@ -5032,6 +5023,9 @@
                             <constraint firstItem="MuS-6A-rK7" firstAttribute="leading" secondItem="SvZ-MR-1Cp" secondAttribute="leading" id="py5-vN-CkT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbTitle" destination="wvm-jp-VO3" id="se7-En-hIC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zny-xD-E9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5091,7 +5085,7 @@ Payment &amp; Pay later.</string>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
-                                                                <integer key="value" value="600"/>
+                                                                <integer key="value" value="400"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
@@ -5194,7 +5188,7 @@ Payment &amp; Pay later.</string>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EdY-l8-bQI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RCz-4k-LIw" firstAttribute="leading" secondItem="EdY-l8-bQI" secondAttribute="leading" id="IXW-Y8-zsh"/>
                             <constraint firstItem="RCz-4k-LIw" firstAttribute="top" secondItem="l87-l7-ZIu" secondAttribute="top" id="TjK-dl-L8Z"/>
@@ -5202,6 +5196,9 @@ Payment &amp; Pay later.</string>
                             <constraint firstAttribute="bottom" secondItem="RCz-4k-LIw" secondAttribute="bottom" id="pxE-O7-zha"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbTitle" destination="8ED-Mi-Qso" id="Uii-xJ-wmp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWC-9Y-Lu4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5536,7 +5533,7 @@ your money.</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-06-4fC">
-                                                <rect key="frame" x="46" y="75" width="106.5" height="48"/>
+                                                <rect key="frame" x="45.5" y="75" width="107" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -5621,7 +5618,7 @@ your money.</string>
                                         <rect key="frame" x="77.5" y="308" width="22" height="22"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o95-0U-wmZ">
-                                        <rect key="frame" x="107" y="397.5" width="200.5" height="29"/>
+                                        <rect key="frame" x="106.5" y="397.5" width="201" height="29"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" Accept it when you need it.">
                                                 <attributes>
@@ -6038,7 +6035,7 @@ your money.</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-BO-Hlz">
-                                        <rect key="frame" x="144" y="147" width="126.5" height="19.5"/>
+                                        <rect key="frame" x="143.5" y="147" width="127" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -6058,7 +6055,7 @@ your money.</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-He-gck">
-                                                <rect key="frame" x="17.5" y="57" width="145.5" height="66"/>
+                                                <rect key="frame" x="17.5" y="57" width="145" height="66"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="55"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -6133,7 +6130,7 @@ your money.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOx-Tg-fmp">
-                                                <rect key="frame" x="149" y="130" width="116.5" height="19.5"/>
+                                                <rect key="frame" x="148.5" y="130" width="117" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -7990,7 +7987,7 @@ you within 1-2 Business Days.</string>
                                                 <rect key="frame" x="17" y="15" width="25" height="25"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-Ud-f6Q">
-                                                <rect key="frame" x="54" y="18.5" width="253" height="18.5"/>
+                                                <rect key="frame" x="54" y="18.5" width="253" height="18"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -8888,7 +8885,7 @@ if you want..</string>
                                                 <rect key="frame" x="17" y="15" width="20" height="20"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for transactions" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-3m-mll">
-                                                <rect key="frame" x="49" y="16" width="258" height="18.5"/>
+                                                <rect key="frame" x="49" y="15.5" width="258" height="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>

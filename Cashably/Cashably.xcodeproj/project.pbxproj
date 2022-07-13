@@ -118,6 +118,7 @@
 		F0C69D55287E50C300BF5C6C /* StandingFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D54287E50C300BF5C6C /* StandingFirstVC.swift */; };
 		F0C69D57287E510500BF5C6C /* StandingSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D56287E510500BF5C6C /* StandingSecondVC.swift */; };
 		F0C69D59287E511A00BF5C6C /* StandingThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D58287E511A00BF5C6C /* StandingThirdVC.swift */; };
+		F0C69D5C287EC3C100BF5C6C /* StandingFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */; };
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
 		F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F482860C09D004B1515 /* ToggleButton.swift */; };
@@ -267,6 +268,7 @@
 		F0C69D54287E50C300BF5C6C /* StandingFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingFirstVC.swift; sourceTree = "<group>"; };
 		F0C69D56287E510500BF5C6C /* StandingSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingSecondVC.swift; sourceTree = "<group>"; };
 		F0C69D58287E511A00BF5C6C /* StandingThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingThirdVC.swift; sourceTree = "<group>"; };
+		F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingFirstCell.swift; sourceTree = "<group>"; };
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
 		F0CE9F482860C09D004B1515 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -652,12 +654,21 @@
 		F0C69D51287E4FF100BF5C6C /* Standing */ = {
 			isa = PBXGroup;
 			children = (
+				F0C69D5A287EC3A700BF5C6C /* Cells */,
 				F0C69D52287E504300BF5C6C /* StandingStartVC.swift */,
 				F0C69D54287E50C300BF5C6C /* StandingFirstVC.swift */,
 				F0C69D56287E510500BF5C6C /* StandingSecondVC.swift */,
 				F0C69D58287E511A00BF5C6C /* StandingThirdVC.swift */,
 			);
 			path = Standing;
+			sourceTree = "<group>";
+		};
+		F0C69D5A287EC3A700BF5C6C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F0CE9F4328608990004B1515 /* Cells */ = {
@@ -978,6 +989,7 @@
 				F062A85728654DB400DBBCE4 /* MSCircularSlider+IB.swift in Sources */,
 				F0A04350285DBF8D00E29CE0 /* Alert.swift in Sources */,
 				F062F258286D3F6F007DE996 /* UILabel.swift in Sources */,
+				F0C69D5C287EC3C100BF5C6C /* StandingFirstCell.swift in Sources */,
 				F062A85528654CE800DBBCE4 /* MSCircularSlider.swift in Sources */,
 				F062A85F28654E5400DBBCE4 /* MSGradientCircularSlider.swift in Sources */,
 				F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */,
@@ -1203,7 +1215,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1217,7 +1229,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5.1;
+				MARKETING_VERSION = 0.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1236,7 +1248,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1250,7 +1262,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5.1;
+				MARKETING_VERSION = 0.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";

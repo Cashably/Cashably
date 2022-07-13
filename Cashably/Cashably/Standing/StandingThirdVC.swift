@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 
 class StandingThirdVC: UIViewController {
+    @IBOutlet weak var lbTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        configureTitle()
     }
     
     
@@ -26,6 +27,13 @@ class StandingThirdVC: UIViewController {
        self.navigationController?.isNavigationBarHidden = false
    }
     
+    func configureTitle() {
+        
+        let attributedQuote = NSMutableAttributedString(string: lbTitle.attributedText!.string)
+        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont(name: "BRFirma-Bold", size: 30)!]
+        attributedQuote.setAttributes(attributes, range: NSRange(location: 23, length: 10))
+        lbTitle.attributedText = attributedQuote
+    }
     
     @IBAction func actionCreateAccount(_ sender: UIButton) {
         UserDefaults.standard.set(true, forKey: "enabledStanding")
