@@ -119,6 +119,8 @@
 		F0C69D57287E510500BF5C6C /* StandingSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D56287E510500BF5C6C /* StandingSecondVC.swift */; };
 		F0C69D59287E511A00BF5C6C /* StandingThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D58287E511A00BF5C6C /* StandingThirdVC.swift */; };
 		F0C69D5C287EC3C100BF5C6C /* StandingFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */; };
+		F0C69D5E2880485C00BF5C6C /* ResetPasswordEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5D2880485C00BF5C6C /* ResetPasswordEmailVC.swift */; };
+		F0C69D60288048B800BF5C6C /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */; };
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
 		F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F482860C09D004B1515 /* ToggleButton.swift */; };
@@ -269,6 +271,8 @@
 		F0C69D56287E510500BF5C6C /* StandingSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingSecondVC.swift; sourceTree = "<group>"; };
 		F0C69D58287E511A00BF5C6C /* StandingThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingThirdVC.swift; sourceTree = "<group>"; };
 		F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingFirstCell.swift; sourceTree = "<group>"; };
+		F0C69D5D2880485C00BF5C6C /* ResetPasswordEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordEmailVC.swift; sourceTree = "<group>"; };
+		F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
 		F0CE9F482860C09D004B1515 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 				F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */,
 				F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */,
 				F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */,
+				F0C69D5D2880485C00BF5C6C /* ResetPasswordEmailVC.swift */,
+				F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -992,8 +998,10 @@
 				F0C69D5C287EC3C100BF5C6C /* StandingFirstCell.swift in Sources */,
 				F062A85528654CE800DBBCE4 /* MSCircularSlider.swift in Sources */,
 				F062A85F28654E5400DBBCE4 /* MSGradientCircularSlider.swift in Sources */,
+				F0C69D60288048B800BF5C6C /* ResetPasswordVC.swift in Sources */,
 				F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */,
 				F025F8DD2860730800BABB3D /* BankVC.swift in Sources */,
+				F0C69D5E2880485C00BF5C6C /* ResetPasswordEmailVC.swift in Sources */,
 				F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */,
 				F062A83E2863AEFA00DBBCE4 /* UITextField+InputView.swift in Sources */,
 				F062A85328654AD500DBBCE4 /* PolarCoordinatedView.swift in Sources */,

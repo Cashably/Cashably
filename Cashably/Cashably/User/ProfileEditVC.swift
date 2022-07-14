@@ -140,12 +140,15 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
                         UserDefaults.standard.set(self.tfDOB.text, forKey: "userDOB")
                         UserDefaults.standard.set(self.tfSSN.text, forKey: "userSSN")
                         self.showToast(message: "Updated successfully")
-                        if response.value?.enableLogout == true {
-                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
-                                self.logout()
-                            }
-                            self.presentVC(alert)
-                        }
+//                        if response.value?.enableLogout == true {
+//                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
+//                                self.logout()
+//                            }
+//                            self.presentVC(alert)
+//                        }
+                        Auth.auth().currentUser?.reload(completion: { _ in
+                            
+                        })
                         
                     } else {
                         guard let error = response.value?.message else {

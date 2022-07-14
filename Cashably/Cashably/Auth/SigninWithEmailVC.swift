@@ -83,6 +83,8 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     @IBAction func actionPassword(_ sender: Any) {
+        let resetVC = storyboard?.instantiateViewController(withIdentifier: "ResetPasswordEmailVC") as! ResetPasswordEmailVC
+        navigationController?.pushViewController(resetVC, animated: true)
     }
     
     @IBAction func actionToSignUP(_ sender: UIButton) {

@@ -133,12 +133,18 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
                         self.showToast(message: "Updated successfully")
                         UserDefaults.standard.set(self.tfDOB.text, forKey: "userDOB")
                         UserDefaults.standard.set(self.tfSSN.text, forKey: "userSSN")
-                        if response.value?.enableLogout == true {
-                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
-                                self.logout()
-                            }
-                            self.presentVC(alert)
-                        }
+//                        if response.value?.enableLogout == true {
+//                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
+//                                self.logout()
+//                            }
+//                            self.presentVC(alert)
+//                        }
+                        Auth.auth().currentUser?.reload(completion: { _ in
+                            
+                        })
+                        
+                        let splashVC = self.storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+                        self.navigationController?.pushViewController(splashVC, animated: true)
                         
                     } else {
                         guard let error = response.value?.message else {
