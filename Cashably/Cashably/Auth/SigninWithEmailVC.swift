@@ -78,6 +78,9 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
             self?.moveToMain()
         }
     }
+    @IBAction func actionShowPassword(_ sender: UIButton) {
+        tfPassword.isSecureTextEntry = !self.tfPassword.isSecureTextEntry
+    }
     
     @IBAction func actionPassword(_ sender: Any) {
     }

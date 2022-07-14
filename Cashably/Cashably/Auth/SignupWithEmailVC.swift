@@ -31,8 +31,8 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         tfEmail.delegate = self
         tfPassword.delegate = self
         
-        emailView.didTap(target: tfEmail)
-        passwordView.didTap(target: tfPassword)
+        emailView.didTap(target: tfEmail!)
+        passwordView.didTap(target: tfPassword!)
         
         tfEmail.tag = 1
         tfPassword.tag = 2
@@ -76,6 +76,9 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    @IBAction func actionShowPassword(_ sender: UIButton) {
+        self.tfPassword.isSecureTextEntry = !self.tfPassword.isSecureTextEntry
+    }
     
     @IBAction func actionBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
