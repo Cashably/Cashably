@@ -66,12 +66,6 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
         let loginVC = storyboard?.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
         navigationController?.pushViewController(loginVC, animated: true)
     }
-
-    func moveToCompleteProfile() {
-        self.stopAnimating()
-        let profileCompleteVC = storyboard?.instantiateViewController(withIdentifier: "ProfileCompleteVC") as! ProfileCompleteVC
-        navigationController?.pushViewController(profileCompleteVC, animated: true)
-    }
     
     @IBAction func actionConfirm(_ sender: UIButton) {
         guard let verificationID = UserDefaults.standard.string(forKey: "authVerificationID") else {

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import NVActivityIndicatorView
+import Alamofire
 
 class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
    
@@ -27,25 +28,16 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
     
     var window: UIWindow?
     
+    struct DecodableType: Decodable {
+        let status: Bool
+        let enableLogout: Bool
+        let message: String
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tfName.delegate = self
-        tfEmail.delegate = self
-        tfDOB.delegate = self
-        tfSSN.delegate = self
-        
-        tfName.tag = 1
-        tfEmail.tag = 2
-        tfDOB.tag = 3
-        tfSSN.tag = 4
-        
-        tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
-        
-        nameView.didTap(target: tfName)
-        emailView.didTap(target: tfEmail)
-        ssnView.didTap(target: tfSSN)
-        dobView.didTap(target: tfDOB)
+        configureForm()
         
         self.addKeyboardWillShowNotification()
         self.hideKeyboardWhenTappedAround()
@@ -60,6 +52,32 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+    func configureForm() {
+        tfName.delegate = self
+        tfEmail.delegate = self
+        tfDOB.delegate = self
+        tfSSN.delegate = self
+        
+        tfName.tag = 1
+        tfEmail.tag = 2
+        tfDOB.tag = 3
+        tfSSN.tag = 4
+        
+        tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        
+        nameView.didTap(target: tfName!)
+        emailView.didTap(target: tfEmail!)
+        ssnView.didTap(target: tfSSN!)
+        dobView.didTap(target: tfDOB!)
+        
+        if let user = Auth.auth().currentUser {
+            if user.email != nil {
+                tfEmail.text = user.email
+            }
+        }
+    }
+    
     @objc func tapDone() {
         if let datePicker = self.tfDOB.inputView as? UIDatePicker {
             let dateformatter = DateFormatter()
@@ -96,32 +114,41 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
         
         self.startAnimating()
         
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = self.tfName.text!
+        let params = [
+            "userId": Auth.auth().currentUser?.uid,
+            "name": tfName.text,
+            "email": tfEmail.text,
+            "dob": tfDOB.text,
+            "ssn": tfSSN.text
+        ]
         
-//        changeRequest?.
-        changeRequest?.commitChanges { error in
-            self.stopAnimating()
-            if let error = error {
-                let alert = Alert.showBasicAlert(message: error.localizedDescription)
-                self.presentVC(alert)
-                return
-            }
-            
-            Auth.auth().currentUser?.updateEmail(to: self.tfEmail.text!) { error in
-                self.stopAnimating()
-                if let error = error {
-                    let alert = Alert.showBasicAlert(message: error.localizedDescription)
-                    self.presentVC(alert)
-                    return
+        AF.request("\(Constants.API)/profile/update",
+                   method: .post,
+                   parameters: params,
+                   encoder: URLEncodedFormParameterEncoder.default)
+                .responseDecodable(of: DecodableType.self) { response in
+                    self.stopAnimating()
+                    print(response)
+                    if response.value?.status == true {
+                        self.showToast(message: "Updated successfully")
+                        UserDefaults.standard.set(self.tfDOB.text, forKey: "userDOB")
+                        UserDefaults.standard.set(self.tfSSN.text, forKey: "userSSN")
+                        if response.value?.enableLogout == true {
+                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
+                                self.logout()
+                            }
+                            self.presentVC(alert)
+                        }
+                        
+                    } else {
+                        guard let error = response.value?.message else {
+                            return
+                        }
+                        let alert = Alert.showBasicAlert(message: error)
+                        self.presentVC(alert)
+                    }
+                    
                 }
-                
-                self.showToast(message: "Updated successfully")
-                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-                self.window?.rootViewController = mainVC
-                self.navigationController?.pushViewController(mainVC, animated: true)
-            }
-        }
     }
     
     @IBAction func actionBakc(_ sender: UIButton) {

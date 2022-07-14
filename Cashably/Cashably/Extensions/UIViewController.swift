@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 extension UIViewController {
     ///EZSE: Presents a view controller modally.
@@ -21,6 +22,12 @@ extension UIViewController {
     ///EZSE: Dismisses the view controller that was presented modally by the view controller.
     open func dismissVC(completion: (() -> Void)? ) {
         dismiss(animated: true, completion: completion)
+    }
+    
+    func logout() {
+        try! Auth.auth().signOut()
+        let splashVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+        navigationController?.pushViewController(splashVC, animated: true)
     }
 }
 

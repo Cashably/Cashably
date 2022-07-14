@@ -63,12 +63,6 @@ class SettingsVC: UIViewController {
        self.navigationController?.isNavigationBarHidden = false
    }
     
-    func logout() {
-        try! Auth.auth().signOut()
-        let splashVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-        navigationController?.pushViewController(splashVC, animated: true)
-    }
-    
     func showLogoutAlert() {
         let alert = Alert.showConfirmAlert(message: "Are you sure logout?") { _ in
             self.logout()

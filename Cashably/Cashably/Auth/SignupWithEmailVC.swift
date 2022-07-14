@@ -51,9 +51,9 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
        self.navigationController?.isNavigationBarHidden = false
    }
     
-    func moveToProfile() {
-        let profileEditVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-        navigationController?.pushViewController(profileEditVC, animated: true)
+    func moveToMain() {
+        let splashVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+        navigationController?.pushViewController(splashVC, animated: true)
     }
     
     @IBAction func actionSignup(_ sender: UIButton) {
@@ -72,7 +72,7 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
             self?.stopAnimating()
             guard let strongSelf = self else { return }
           // ...
-            self?.moveToProfile()
+            self?.moveToMain()
         }
     }
     

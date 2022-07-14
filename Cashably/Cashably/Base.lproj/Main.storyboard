@@ -1206,7 +1206,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="1yx-TB-cx4" firstAttribute="top" secondItem="Crp-dA-3Vt" secondAttribute="bottom" constant="30" id="8sf-B7-esz"/>
                                                             <constraint firstAttribute="trailing" secondItem="WvA-W9-yUE" secondAttribute="trailing" constant="20" id="ATo-vT-B6f"/>
@@ -1269,6 +1269,10 @@
                     <connections>
                         <outlet property="btnBack" destination="5NS-MG-fOz" id="CaB-Xz-u4p"/>
                         <outlet property="btnUpdate" destination="WvA-W9-yUE" id="aRO-pK-fOE"/>
+                        <outlet property="dobView" destination="oDb-AU-FZB" id="fVa-nt-pNL"/>
+                        <outlet property="emailView" destination="idv-4o-MFu" id="vTr-wr-doJ"/>
+                        <outlet property="nameView" destination="tr8-WU-Evo" id="FxE-Ju-fwq"/>
+                        <outlet property="ssnView" destination="TFx-bI-NjS" id="4IU-tq-aJ9"/>
                         <outlet property="tfDOB" destination="vxQ-A1-9gK" id="6R6-Yh-R55"/>
                         <outlet property="tfEmail" destination="ZuY-5t-PmH" id="rQi-zX-gwX"/>
                         <outlet property="tfName" destination="VJH-vN-KJ8" id="Lyn-6o-QQE"/>

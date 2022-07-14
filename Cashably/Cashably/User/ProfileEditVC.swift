@@ -9,24 +9,33 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import NVActivityIndicatorView
+import Alamofire
 
-class ProfileEditVC: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
+class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
    
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfDOB: UITextField!
     @IBOutlet weak var tfSSN: UITextField!
     
+    @IBOutlet weak var nameView: InputView!
+    @IBOutlet weak var emailView: InputView!
+    @IBOutlet weak var ssnView: InputView!
+    @IBOutlet weak var dobView: InputView!
+    
     @IBOutlet weak var btnUpdate: UIButton!
     @IBOutlet weak var btnBack: UIButton!
+    
+    struct DecodableType: Decodable {
+        let status: Bool
+        let enableLogout: Bool
+        let message: String
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tfName.delegate = self
-        tfEmail.delegate = self
-        tfDOB.delegate = self
-        tfSSN.delegate = self
+        configureForm()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,42 +48,131 @@ class ProfileEditVC: UIViewController, UITextFieldDelegate, NVActivityIndicatorV
        self.navigationController?.isNavigationBarHidden = false
    }
     
+    func configureForm() {
+        tfName.delegate = self
+        tfEmail.delegate = self
+        tfDOB.delegate = self
+        tfSSN.delegate = self
+        
+        tfName.tag = 1
+        tfEmail.tag = 2
+        tfDOB.tag = 3
+        tfSSN.tag = 4
+        
+        tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        
+        nameView.didTap(target: tfName!)
+        emailView.didTap(target: tfEmail!)
+        ssnView.didTap(target: tfSSN!)
+        dobView.didTap(target: tfDOB!)
+        
+        if let user = Auth.auth().currentUser {
+            if user.displayName != nil {
+                tfName.text = user.displayName
+            }
+            if user.email != nil {
+                tfEmail.text = user.email
+            }
+        }
+        
+        if let dob = UserDefaults.standard.string(forKey: "userDOB") {
+            tfDOB.text = dob
+        }
+        if let ssn = UserDefaults.standard.string(forKey: "userSSN") {
+            tfSSN.text = ssn
+        }
+    }
+    
+    @objc func tapDone() {
+        if let datePicker = self.tfDOB.inputView as? UIDatePicker {
+            let dateformatter = DateFormatter()
+//            dateformatter.dateStyle = .long
+            dateformatter.dateFormat = "dd/MM/YYYY"
+            self.tfDOB.text = dateformatter.string(from: datePicker.date)
+        }
+        self.tfDOB.resignFirstResponder()
+    }
+    
     
     @IBAction func actionUpdate(_ sender: UIButton) {
         
-        if self.tfName.text!.isEmpty || self.tfEmail.text!.isEmpty || self.tfDOB.text!.isEmpty || self.tfSSN.text!.isEmpty {
+        if tfName.text?.isEmpty == true {
+            self.tfName.shake(6, withDelta: 10, speed: 0.06)
+            tfName.becomeFirstResponder()
+            return
+        }
+        if tfEmail.text?.isEmpty == true {
+            self.tfEmail.shake(6, withDelta: 10, speed: 0.06)
+            tfEmail.becomeFirstResponder()
+            return
+        }
+        
+        if tfDOB.text?.isEmpty == true {
+            self.tfDOB.shake(6, withDelta: 10, speed: 0.06)
+            tfDOB.becomeFirstResponder()
+            return
+        }
+        if tfSSN.text?.isEmpty == true {
+            self.tfSSN.shake(6, withDelta: 10, speed: 0.06)
+            tfSSN.becomeFirstResponder()
             return
         }
         
         self.startAnimating()
         
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = self.tfName.text!
+        let params = [
+            "userId": Auth.auth().currentUser?.uid,
+            "name": tfName.text,
+            "email": tfEmail.text,
+            "dob": tfDOB.text,
+            "ssn": tfSSN.text
+        ]
         
-//        changeRequest?.
-        changeRequest?.commitChanges { error in
-            self.stopAnimating()
-            if let error = error {
-                let alert = Alert.showBasicAlert(message: error.localizedDescription)
-                self.presentVC(alert)
-                return
-            }
-            
-            Auth.auth().currentUser?.updateEmail(to: self.tfEmail.text!) { error in
-                self.stopAnimating()
-                if let error = error {
-                    let alert = Alert.showBasicAlert(message: error.localizedDescription)
-                    self.presentVC(alert)
-                    return
+        AF.request("\(Constants.API)/profile/update",
+                   method: .post,
+                   parameters: params,
+                   encoder: URLEncodedFormParameterEncoder.default)
+                .responseDecodable(of: DecodableType.self) { response in
+                    self.stopAnimating()
+                    print(response)
+                    
+                    if response.value?.status == true {
+                        UserDefaults.standard.set(self.tfDOB.text, forKey: "userDOB")
+                        UserDefaults.standard.set(self.tfSSN.text, forKey: "userSSN")
+                        self.showToast(message: "Updated successfully")
+                        if response.value?.enableLogout == true {
+                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
+                                self.logout()
+                            }
+                            self.presentVC(alert)
+                        }
+                        
+                    } else {
+                        guard let error = response.value?.message else {
+                            return
+                        }
+                        let alert = Alert.showBasicAlert(message: error)
+                        self.presentVC(alert)
+                    }
+                    
                 }
-                
-                self.showToast(message: "Updated successfully")
-            }
-        }
     }
     
     @IBAction func btnBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+extension ProfileEditVC: UITextFieldDelegate {
+ 
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Check if there is any other text-field in the view whose tag is +1 greater than the current text-field on which the return key was pressed. If yes → then move the cursor to that next text-field. If No → Dismiss the keyboard
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+ }
 
