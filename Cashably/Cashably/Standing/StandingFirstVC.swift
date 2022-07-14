@@ -19,6 +19,9 @@ class StandingFirstVC: UIViewController {
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
@@ -36,7 +39,7 @@ class StandingFirstVC: UIViewController {
         paragraphStyle.lineSpacing = 20
         let attributedQuote = NSMutableAttributedString(string: attributedString, attributes: [NSAttributedString.Key.font: UIFont(name: "BRFirma-Regular", size: 30)!, NSAttributedString.Key.paragraphStyle: paragraphStyle])
 
-        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont(name: "BRFirma-Bold", size: 30)!]
+        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: UIFont(name: "BRFirma-Bold", size: 30)!, NSAttributedString.Key.paragraphStyle: paragraphStyle]
         attributedQuote.setAttributes(attributes, range: NSRange(location: 8, length: 9))
         attributedQuote.setAttributes(attributes, range: NSRange(location: 21, length: 9))
         lbTitle.attributedText = attributedQuote
