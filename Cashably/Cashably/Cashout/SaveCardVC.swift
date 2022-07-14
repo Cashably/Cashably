@@ -50,9 +50,9 @@ class SaveCardVC: UIViewController, NVActivityIndicatorViewable {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        tfCardDate.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+//        tfCardDate.setInputViewDatePicker(target: self, selector: #selector(tapDone))
         
-        cardNoView.didTap(target: tfCardNo)
+        cardNoView.didTap(target: tfCardNo!)
         
         tfCardNo.tag = 1
         tfCardDate.tag = 2
@@ -98,10 +98,44 @@ extension SaveCardVC: UITextFieldDelegate {
         if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
         } else {
-//            textField.resignFirstResponder()
             self.dismissKeyboard()
         }
         return false
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        var text = "\(textField.text!)"
+        
+        if textField.tag == 2 { // date
+            if text.count == 2 {
+                let i = text.index(text.startIndex, offsetBy: 2)
+                text.insert("/", at: i)
+                textField.text = text
+            }
+            if text.count >= 5 {
+                if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+                    nextField.becomeFirstResponder()
+                    nextField.text = string
+                }
+            }
+        } else if textField.tag == 3{ // cvv
+            if text.count == 2 {
+                textField.text = text + string
+            }
+            if text.count >= 2 {
+                self.dismissKeyboard()
+            }
+        } else if textField.tag == 1 { //card number
+            if text.count >= 16 {
+                if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+                    nextField.becomeFirstResponder()
+                    nextField.text = string
+                }
+            }
+        }
+        return true
+        
     }
  }
 
