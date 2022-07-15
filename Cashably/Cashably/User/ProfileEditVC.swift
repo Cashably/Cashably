@@ -177,5 +177,21 @@ extension ProfileEditVC: UITextFieldDelegate {
         }
         return false
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let text = "\(textField.text!)"
+        
+        if textField.tag == 4 { // ssn
+            if text.count == 3 {
+                textField.text = text + string
+            }
+            if string != "" && text.count >= 3 {
+                self.dismissKeyboard()
+            }
+        }
+        return true
+        
+    }
  }
 
