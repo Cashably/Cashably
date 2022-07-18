@@ -108,7 +108,7 @@ class CreditVC: UIViewController, ChartViewDelegate {
         breakdownChatView.legend.enabled = false
         breakdownChatView.drawEntryLabelsEnabled = false
 //        breakdownChatView.
-        self.setDataCount(3, range: 100)
+        self.setDataCount(3, range: 500)
     }
     
     
@@ -140,8 +140,25 @@ class CreditVC: UIViewController, ChartViewDelegate {
     
         data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 11)!)
         data.setValueTextColor(.white)
+        data.setDrawValues(false)
         
         breakdownChatView.data = data
+        breakdownChatView.drawEntryLabelsEnabled = false
+        
+        
+        breakdownChatView.highlightValues([Highlight(x: 1, y: 0, dataSetIndex: 0), Highlight(x: 0, y: 0, dataSetIndex: 0), Highlight(x: 2, y: 0, dataSetIndex: 0)])
+//        breakdownChatView.highlightValues([Highlight(x: 0, y: 0, dataSetIndex: 1)])
+        
+        let marker = BalloonMarker1(color: .white,
+                                           font: .systemFont(ofSize: 10),
+                                           textColor: .black,
+                                           insets: UIEdgeInsets(top: 2, left: 3, bottom: 12, right: 3))
+        marker.chartView = breakdownChatView
+        marker.minimumSize = CGSize(width: 50, height: 30)
+        breakdownChatView.marker = marker
+        
+        marker.arrowSize = CGSize(width: 7, height: 8)
+        
         
         breakdownChatView.setNeedsDisplay()
     }

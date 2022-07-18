@@ -130,6 +130,7 @@
 		F0CE9F512860CADE004B1515 /* RequestPayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F502860CADE004B1515 /* RequestPayView.xib */; };
 		F0CE9F5328612505004B1515 /* RepayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F5228612505004B1515 /* RepayVC.swift */; };
 		F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F5428612546004B1515 /* PaySnoozeVC.swift */; };
+		F0D3093E2885D9880083C89B /* BalloonMarker1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3093D2885D9880083C89B /* BalloonMarker1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,6 +283,7 @@
 		F0CE9F502860CADE004B1515 /* RequestPayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestPayView.xib; sourceTree = "<group>"; };
 		F0CE9F5228612505004B1515 /* RepayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepayVC.swift; sourceTree = "<group>"; };
 		F0CE9F5428612546004B1515 /* PaySnoozeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaySnoozeVC.swift; sourceTree = "<group>"; };
+		F0D3093D2885D9880083C89B /* BalloonMarker1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker1.swift; sourceTree = "<group>"; };
 		F3B9A4043D7DD4DAE61FABD8 /* Pods_Cashably.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cashably.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA47C7B2F17468B86FA6D3D /* Pods-CashablyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashablyTests.release.xcconfig"; path = "Target Support Files/Pods-CashablyTests/Pods-CashablyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -476,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				F062A83428629D5400DBBCE4 /* BalloonMarker.swift */,
+				F0D3093D2885D9880083C89B /* BalloonMarker1.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1016,6 +1019,7 @@
 				F05365E1285FF43500B771D9 /* CashoutVC.swift in Sources */,
 				F0C69D4E287DB1E700BF5C6C /* CardCell.swift in Sources */,
 				F062A85B28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift in Sources */,
+				F0D3093E2885D9880083C89B /* BalloonMarker1.swift in Sources */,
 				F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */,
 				F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */,
 				F05365C9285F76D700B771D9 /* RequestNotificationEnableVC.swift in Sources */,
