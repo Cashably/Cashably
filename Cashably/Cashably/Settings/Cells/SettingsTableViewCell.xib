@@ -70,6 +70,7 @@
             <connections>
                 <outlet property="imgIcon" destination="PZK-yn-ahn" id="Pe1-G3-dap"/>
                 <outlet property="lbTitle" destination="gt8-xF-AUn" id="PVb-Hg-X1F"/>
+                <outlet property="logoView" destination="Msy-9E-hgT" id="ymm-Ns-2iz"/>
             </connections>
             <point key="canvasLocation" x="144.20289855072465" y="89.732142857142847"/>
         </tableViewCell>

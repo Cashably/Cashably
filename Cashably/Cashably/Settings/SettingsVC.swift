@@ -121,23 +121,28 @@ extension SettingsVC: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             cell.imgIcon.image = UIImage(named: "ic_circle_dollar")
-            cell.lbTitle.text = "Your Transaction"
+            cell.lbTitle.text = "My Transactions"
+            cell.logoView.backgroundColor = UIColor(red: 0.133, green: 0.736, blue: 0.816, alpha: 0.1)
             break
         case 1:
             cell.imgIcon.image = UIImage(named: "ic_color_notification")
             cell.lbTitle.text = "Manage Notification"
+            cell.logoView.backgroundColor = UIColor(red: 0.067, green: 0.733, blue: 0.412, alpha: 0.1)
             break
         case 2:
-            cell.imgIcon.image = UIImage(named: "ic_color_card")
-            cell.lbTitle.text = "My Cards"
+            cell.imgIcon.image = UIImage(named: "ic_bank")
+            cell.lbTitle.text = "Connected Accounts"
+            cell.logoView.backgroundColor = UIColor(red: 0.969, green: 0.576, blue: 0.102, alpha: 0.1)
             break
         case 3:
             cell.imgIcon.image = UIImage(named: "ic_color_info")
             cell.lbTitle.text = "About Us"
+            cell.logoView.backgroundColor = UIColor(red: 0.933, green: 0.292, blue: 0.74, alpha: 0.1)
             break
         case 4:
             cell.imgIcon.image = UIImage(named: "ic_color_msg")
             cell.lbTitle.text = "Chat With Us"
+            cell.logoView.backgroundColor = UIColor(red: 0.314, green: 0.227, blue: 0.749, alpha: 0.1)
             break
         case 5:
             cell.imgIcon.image = UIImage(named: "ic_color_msg")
