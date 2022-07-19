@@ -7802,10 +7802,10 @@ for amount credited.</string>
                                                 <rect key="frame" x="0.0" y="50" width="414" height="627"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNI-qT-9QR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="605"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="565"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuk-x6-q62">
-                                                                <rect key="frame" x="20" y="505" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="465" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="Vft-mm-ONG"/>
                                                                 </constraints>
@@ -7981,7 +7981,7 @@ you can Snooze as many times as you like.</string>
                                                             <constraint firstItem="Pnr-Yx-Xo8" firstAttribute="top" secondItem="m6e-NQ-tc5" secondAttribute="top" id="Cbm-B1-FfR"/>
                                                             <constraint firstItem="oeS-h3-MfJ" firstAttribute="leading" secondItem="lNI-qT-9QR" secondAttribute="leading" constant="20" id="J25-iP-QAG"/>
                                                             <constraint firstItem="oeS-h3-MfJ" firstAttribute="top" secondItem="zGN-r1-3Cv" secondAttribute="bottom" id="K6i-5u-aa5"/>
-                                                            <constraint firstAttribute="height" constant="605" id="P5j-eo-BFs"/>
+                                                            <constraint firstAttribute="height" constant="565" id="P5j-eo-BFs"/>
                                                             <constraint firstItem="YhB-81-Cej" firstAttribute="leading" secondItem="lNI-qT-9QR" secondAttribute="leading" constant="20" id="PGd-zm-gAe"/>
                                                             <constraint firstItem="m6e-NQ-tc5" firstAttribute="bottom" secondItem="iuk-x6-q62" secondAttribute="bottom" constant="40" id="T9g-0x-Dgx"/>
                                                             <constraint firstItem="m6e-NQ-tc5" firstAttribute="trailing" secondItem="e7f-fC-QpW" secondAttribute="trailing" constant="20" id="boF-QS-Scg"/>
