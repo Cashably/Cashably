@@ -87,6 +87,7 @@
 		F0643D192856C62700CAB86F /* CashablyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D182856C62700CAB86F /* CashablyTests.swift */; };
 		F0643D232856C62700CAB86F /* CashablyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D222856C62700CAB86F /* CashablyUITests.swift */; };
 		F0643D252856C62700CAB86F /* CashablyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */; };
+		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04346285D62D900E29CE0 /* SignupVC.swift */; };
 		F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */; };
 		F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */; };
@@ -240,6 +241,7 @@
 		F0643D1E2856C62700CAB86F /* CashablyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashablyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D222856C62700CAB86F /* CashablyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITests.swift; sourceTree = "<group>"; };
 		F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
 		F0A04346285D62D900E29CE0 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithEmailVC.swift; sourceTree = "<group>"; };
 		F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWithEmailVC.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				F00E4DE6285CC4DE00CB8DD6 /* MainVC.swift */,
 				F025F8DC2860730800BABB3D /* BankVC.swift */,
 				F025F8DE2860738800BABB3D /* CreditVC.swift */,
+				F0834BC728893EE600624189 /* HomeVC+Extension.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1027,6 +1030,7 @@
 				F0CE9F4B2860C963004B1515 /* EmptyRequestPayView.swift in Sources */,
 				F062A8682865A4C200DBBCE4 /* CircularTrig.swift in Sources */,
 				F0B853562860044C002F90DA /* DepositTableViewCell.swift in Sources */,
+				F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */,
 				F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */,
 				F0AB2560287C565800C6A593 /* CardsVC.swift in Sources */,
 				F062A84028642E3000DBBCE4 /* UIViewController+Keyboard.swift in Sources */,
@@ -1227,7 +1231,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 28;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1241,7 +1245,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5.6.1;
+				MARKETING_VERSION = 0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1260,7 +1264,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 28;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1274,7 +1278,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5.6.1;
+				MARKETING_VERSION = 0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
