@@ -24,6 +24,8 @@ class CashoutVC: UIViewController {
     
     private var rateLabels: [UILabel] = []
     
+    private var amount: Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -60,12 +62,9 @@ class CashoutVC: UIViewController {
         
         slider.minimumValue = 0
         slider.maximumValue = 100
-//        slider.maximumAngle = 100
-//        slider.minimumAngle = 0
 
         slider.filledColor =  UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
         slider.unfilledColor =  UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
-//        slider.backgroundColor = UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
 
         slider.handleImage = UIImage(named: "ic_pointer")
         slider.handleRotatable = true
@@ -81,8 +80,6 @@ class CashoutVC: UIViewController {
         
         slider.sliderPadding = 80
         
-//        slider.isSliding = false
-        
         slider.spaceDegree = 140
         slider.spaceUnFilledDegree = 110
         slider.clockwise = true
@@ -95,8 +92,6 @@ class CashoutVC: UIViewController {
         
         slider.centerXAnchor.constraint(equalTo: self.sliderView.centerXAnchor).isActive = true
         slider.centerYAnchor.constraint(equalTo: self.sliderView.centerYAnchor).isActive = true
-//        slider.widthAnchor.constraint(equalTo: self.sliderView.widthAnchor).isActive = true
-//        slider.heightAnchor.constraint(equalTo: self.sliderView.heightAnchor).isActive = true
     }
     
     private func setupRateLabels() {
@@ -120,20 +115,16 @@ class CashoutVC: UIViewController {
         self.selectView.addSubview(view)
     }
     
-    
-    
-    
     @IBAction func actionWithdraw(_ sender: UIButton) {
+        if amount == 0 {
+            let alert = Alert.showBasicAlert(message: "Please select amount")
+            self.presentVC(alert)
+            return
+        }
+        
         let tipVC = storyboard?.instantiateViewController(withIdentifier: "CashoutTipVC") as! CashoutTipVC
-//        tipVC.isModalInPresentation = true
+        tipVC.amount = self.amount
         tipVC.delegate = self
-//        let nav = UINavigationController(rootViewController: tipVC)
-//        nav.modalTransitionStyle = .crossDissolve
-//        if let sheet = nav.sheetPresentationController {
-//            sheet.detents = [.large()]
-//            sheet.preferredCornerRadius = 25
-//        }
-//        self.presentVC(nav)
         
         let sheetController = SheetViewController(
             controller: tipVC,
@@ -153,13 +144,16 @@ class CashoutVC: UIViewController {
 }
 
 extension CashoutVC: CashoutTipDelegate {
-    func cashout() {
+    
+    func cashout(amount: Double) {
         let nodonationvc = storyboard?.instantiateViewController(withIdentifier: "NoDonationVC") as! NoDonationVC
+        nodonationvc.cashoutAmount = amount
         self.navigationController?.pushViewController(nodonationvc, animated: true)
     }
     
-    func cashoutWithTip() {
+    func cashoutWithTip(amount: Double) {
         let donationvc = storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
+        donationvc.cashoutAmount = amount
         self.navigationController?.pushViewController(donationvc, animated: true)
     }
 }
@@ -167,5 +161,6 @@ extension CashoutVC: CashoutTipDelegate {
 extension CashoutVC: MSCircularSliderDelegate {
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
         self.lbAmount.text = "$\((Int)(ceil(value)))"
+        self.amount = ceil(value)
     }
 }

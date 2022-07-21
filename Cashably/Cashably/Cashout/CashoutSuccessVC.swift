@@ -17,10 +17,12 @@ class CashoutSuccessVC: UIViewController {
     
     @IBOutlet weak var btnDone: UIButton!
     
+    var cashoutAmount: Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        lbAmount.text = "$\(self.cashoutAmount)"
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

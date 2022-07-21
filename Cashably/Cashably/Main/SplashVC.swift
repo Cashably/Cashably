@@ -38,7 +38,7 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     func checkLogin() {
-        self.startAnimating()
+        
         if UserDefaults.standard.bool(forKey: "enabledStanding") == false {
             self.moveToStanding()
         } else {
@@ -56,26 +56,24 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     func moveToMain() {
-        self.stopAnimating()
         let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-//        self.window?.rootViewController = mainVC
         navigationController?.pushViewController(mainVC, animated: true)
     }
     
     func moveToStanding() {
-        self.stopAnimating()
+        
         let standingVC = storyboard?.instantiateViewController(withIdentifier: "StandingStartVC") as! StandingStartVC
         navigationController?.pushViewController(standingVC, animated: true)
     }
     
     func moveToLogin() {
-        self.stopAnimating()
+        
         let loginVC = storyboard?.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
         navigationController?.pushViewController(loginVC, animated: true)
     }
 
     func moveToCompleteProfile() {
-        self.stopAnimating()
+        
         let profileCompleteVC = storyboard?.instantiateViewController(withIdentifier: "ProfileCompleteVC") as! ProfileCompleteVC
         navigationController?.pushViewController(profileCompleteVC, animated: true)
     }

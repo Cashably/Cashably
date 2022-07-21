@@ -76,9 +76,13 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
     
     func createPlaidLinkToken() {
         self.startAnimating()
+        guard let user = Auth.auth().currentUser else {
+            self.logout()
+            return
+        }
         AF.request("\(Constants.API)/plaid/link_token",
                    method: .get,
-                   parameters: ["userId": Auth.auth().currentUser?.uid],
+                   parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
                 .responseDecodable(of: DecodableType.self) { response in
                     self.stopAnimating()
@@ -102,9 +106,13 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
     
     func storePlaidPubToken(token: String) {
         self.startAnimating()
+        guard let user = Auth.auth().currentUser else {
+            self.logout()
+            return
+        }
         AF.request("\(Constants.API)/plaid/exchange_public_token",
                    method: .post,
-                   parameters: ["userId": Auth.auth().currentUser?.uid, "public_token": token],
+                   parameters: ["userId": user.uid, "public_token": token],
                    encoder: URLEncodedFormParameterEncoder.default)
                 .responseDecodable(of: DecodableType.self) { response in
                     self.stopAnimating()
@@ -125,9 +133,6 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
     }
     
     @IBAction func actionConnect(_ sender: UIButton) {
-//        let processingVC = storyboard?.instantiateViewController(withIdentifier: "ConnectProcessingVC") as! ConnectProcessingVC
-//        processingVC.delegate = self
-//        self.navigationController?.pushViewController(processingVC, animated: true)
         createPlaidLinkToken()
     }
     

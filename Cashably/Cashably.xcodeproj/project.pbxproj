@@ -88,6 +88,7 @@
 		F0643D232856C62700CAB86F /* CashablyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D222856C62700CAB86F /* CashablyUITests.swift */; };
 		F0643D252856C62700CAB86F /* CashablyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */; };
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
+		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
 		F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04346285D62D900E29CE0 /* SignupVC.swift */; };
 		F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */; };
 		F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */; };
@@ -242,6 +243,7 @@
 		F0643D222856C62700CAB86F /* CashablyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITests.swift; sourceTree = "<group>"; };
 		F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
+		F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CashoutTipVC+extension.swift"; sourceTree = "<group>"; };
 		F0A04346285D62D900E29CE0 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithEmailVC.swift; sourceTree = "<group>"; };
 		F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWithEmailVC.swift; sourceTree = "<group>"; };
@@ -344,13 +346,13 @@
 		F00E4DDD285CBE0300CB8DD6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F0CE9F4328608990004B1515 /* Cells */,
-				F05365C1285F706F00B771D9 /* HomeVC.swift */,
-				F00E4DDE285CBE1E00CB8DD6 /* SplashVC.swift */,
-				F00E4DE6285CC4DE00CB8DD6 /* MainVC.swift */,
 				F025F8DC2860730800BABB3D /* BankVC.swift */,
 				F025F8DE2860738800BABB3D /* CreditVC.swift */,
+				F05365C1285F706F00B771D9 /* HomeVC.swift */,
 				F0834BC728893EE600624189 /* HomeVC+Extension.swift */,
+				F00E4DE6285CC4DE00CB8DD6 /* MainVC.swift */,
+				F00E4DDE285CBE1E00CB8DD6 /* SplashVC.swift */,
+				F0CE9F4328608990004B1515 /* Cells */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -451,19 +453,20 @@
 		F05365E6285FF55100B771D9 /* Cashout */ = {
 			isa = PBXGroup;
 			children = (
-				F036EFD3286144CA005FAEDB /* Cells */,
-				F05365E0285FF43500B771D9 /* CashoutVC.swift */,
-				F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */,
 				F05365E7285FF59600B771D9 /* AddCardVC.swift */,
-				F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */,
-				F0CE9F5228612505004B1515 /* RepayVC.swift */,
-				F0CE9F5428612546004B1515 /* PaySnoozeVC.swift */,
-				F062F23B286A8A28007DE996 /* DonationThanksVC.swift */,
-				F062F23D286A8A56007DE996 /* NoDonationVC.swift */,
-				F0AB255D287C55B900C6A593 /* MyTransactionsVC.swift */,
-				F0AB255F287C565800C6A593 /* CardsVC.swift */,
-				F0AB2561287C577500C6A593 /* SaveCardVC.swift */,
 				F0AB2563287C582D00C6A593 /* CardActionVC.swift */,
+				F0AB255F287C565800C6A593 /* CardsVC.swift */,
+				F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */,
+				F05365E2285FF47C00B771D9 /* CashoutTipVC.swift */,
+				F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */,
+				F05365E0285FF43500B771D9 /* CashoutVC.swift */,
+				F062F23B286A8A28007DE996 /* DonationThanksVC.swift */,
+				F0AB255D287C55B900C6A593 /* MyTransactionsVC.swift */,
+				F062F23D286A8A56007DE996 /* NoDonationVC.swift */,
+				F0CE9F5428612546004B1515 /* PaySnoozeVC.swift */,
+				F0CE9F5228612505004B1515 /* RepayVC.swift */,
+				F0AB2561287C577500C6A593 /* SaveCardVC.swift */,
+				F036EFD3286144CA005FAEDB /* Cells */,
 			);
 			path = Cashout;
 			sourceTree = "<group>";
@@ -980,6 +983,7 @@
 				F062A86A2865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift in Sources */,
 				F0AB255C287C1B7D00C6A593 /* NotificationsVC.swift in Sources */,
 				F0AB2564287C582D00C6A593 /* CardActionVC.swift in Sources */,
+				F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */,
 				F062F23C286A8A28007DE996 /* DonationThanksVC.swift in Sources */,
 				F00E4DEF285D1C1000CB8DD6 /* VerifyPhoneVC.swift in Sources */,
 				F05365D1285FEA5900B771D9 /* EmptyRequestPay.swift in Sources */,

@@ -17,7 +17,7 @@ extension HomeVC {
         lbEmail.text = Auth.auth().currentUser?.email
         lbName.text = Auth.auth().currentUser?.displayName
         
-        if UserDefaults.standard.float(forKey: "received") == 0 {
+        if self.loanAmount == 0 {
             let subview: EmptyRequestPayView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as! EmptyRequestPayView
             subview.onRequest = {() in self.onRequest()}
             self.bottomView.addSubview(subview)
@@ -28,6 +28,7 @@ extension HomeVC {
             subview.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
         } else {
             let subview = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as! RequestPayView
+            subview.lbAmount.text = "$\(self.loanAmount)"
             subview.onRequest = {() in self.onRequest()}
             subview.onPay = {() in self.onPay()}
             subview.onSnooze = {() in self.onSnooze()}
@@ -50,14 +51,7 @@ extension HomeVC {
         if !face {
             let faceVC = storyboard?.instantiateViewController(withIdentifier: "RequestFaceEnableVC") as! RequestFaceEnableVC
             faceVC.delegate = self
-//            faceVC.isModalInPresentation = true
-//            let nav = UINavigationController(rootViewController: faceVC)
-//            nav.modalTransitionStyle = .coverVertical
-//            if let sheet = nav.sheetPresentationController {
-//                sheet.detents = [.medium()]
-//                sheet.preferredCornerRadius = 25
-//            }
-//            self.presentVC(nav)
+
             let options = SheetOptions(
                 pullBarHeight: 0
             )
@@ -78,14 +72,7 @@ extension HomeVC {
         if !activity {
             let activityVC = storyboard?.instantiateViewController(withIdentifier: "RequestActivitiesEnableVC") as! RequestActivitiesEnableVC
             activityVC.delegate = self
-//            activityVC.isModalInPresentation = true
-//            let nav = UINavigationController(rootViewController: activityVC)
-//            nav.modalTransitionStyle = .coverVertical
-//            if let sheet = nav.sheetPresentationController {
-//                sheet.detents = [.medium(), .large()]
-//                sheet.preferredCornerRadius = 25
-//            }
-//            self.presentVC(nav)
+
             let options = SheetOptions(
                 pullBarHeight: 0
             )
@@ -105,14 +92,7 @@ extension HomeVC {
         if !notification {
             let notificationVC = storyboard?.instantiateViewController(withIdentifier: "RequestNotificationEnableVC") as! RequestNotificationEnableVC
             notificationVC.delegate = self
-//            notificationVC.isModalInPresentation = true
-//            let nav = UINavigationController(rootViewController: notificationVC)
-//            nav.modalTransitionStyle = .coverVertical
-//            if let sheet = nav.sheetPresentationController {
-//                sheet.detents = [.medium(), .large()]
-//                sheet.preferredCornerRadius = 25
-//            }
-//            self.presentVC(nav)
+
             let options = SheetOptions(
                 pullBarHeight: 0
             )
@@ -132,14 +112,7 @@ extension HomeVC {
         if !overdraft {
             let overdraftVC = storyboard?.instantiateViewController(withIdentifier: "RequestOverdraftEnableVC") as! RequestOverdraftEnableVC
             overdraftVC.delegate = self
-//            overdraftVC.isModalInPresentation = true
-//            let nav = UINavigationController(rootViewController: overdraftVC)
-//            nav.modalTransitionStyle = .coverVertical
-//            if let sheet = nav.sheetPresentationController {
-//                sheet.detents = [.medium(), .large()]
-//                sheet.preferredCornerRadius = 25
-//            }
-//            self.presentVC(nav)
+
             let options = SheetOptions(
                 pullBarHeight: 0
             )
@@ -154,11 +127,44 @@ extension HomeVC {
         }
     }
     
-    func checkBankConnect() {
+    func checkLoan() {
         self.startAnimating()
-        AF.request("\(Constants.API)/user/check_connect_bank",
+        guard let user = Auth.auth().currentUser else {
+            self.logout()
+            return
+        }
+        AF.request("\(Constants.API)/profile",
                    method: .get,
-                   parameters: ["userId": Auth.auth().currentUser?.uid],
+                   parameters: ["userId": user.uid],
+                   encoder: URLEncodedFormParameterEncoder.default)
+                .responseDecodable(of: UserType.self) { response in
+                    self.stopAnimating()
+                    switch response.result {
+                        case .success:
+                            guard let amount = response.value?.loanAmount else {
+                                return
+                            }
+                            self.loanAmount = amount
+                            self.configure()
+                            break
+                        case let .failure(error):
+                            print(error)
+                            self.configure()
+                            break
+                    }
+                }
+                
+    }
+    
+    func requestLoan() {
+        self.startAnimating()
+        guard let user = Auth.auth().currentUser else {
+            self.logout()
+            return
+        }
+        AF.request("\(Constants.API)/user/request_loan",
+                   method: .get,
+                   parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
                 .responseDecodable(of: DecodableType.self) { response in
                     self.stopAnimating()

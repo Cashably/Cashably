@@ -18,6 +18,8 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var bottomView: UIView!
     
+    var loanAmount: Double = 0
+    
     
     private enum Permissions: Int {
         case faceid
@@ -32,12 +34,13 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
         let status: Bool
     }
     
+    struct UserType: Decodable {
+        let loanAmount: Double
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        self.configure()
         
         self.checkPermissions()
         
@@ -52,6 +55,7 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
         setNeedsStatusBarAppearanceUpdate()
+        self.checkLoan()
    }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,11 +72,12 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     func onRequest() {
-        self.checkBankConnect()
+        self.requestLoan()
     }
     
     func onPay() {
         let repayVC = self.storyboard?.instantiateViewController(withIdentifier: "RepayVC") as! RepayVC
+        repayVC.loanAmount = self.loanAmount
         self.navigationController?.pushViewController(repayVC, animated: true)
     }
     

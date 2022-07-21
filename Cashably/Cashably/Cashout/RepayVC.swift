@@ -19,10 +19,14 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var loanAmount: Double = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        lbLoanAmount.text = "$\(loanAmount)"
         
         tableView.delegate = self
         tableView.dataSource = self

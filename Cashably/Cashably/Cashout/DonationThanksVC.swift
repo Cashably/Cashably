@@ -10,6 +10,8 @@ import UIKit
 
 class DonationThanksVC: UIViewController {
     
+    var cashoutAmount: Double = 0
+    
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
@@ -22,6 +24,7 @@ class DonationThanksVC: UIViewController {
     
     private func withdraw() {
         let successVC = storyboard?.instantiateViewController(withIdentifier: "CashoutSuccessVC") as! CashoutSuccessVC
+        successVC.cashoutAmount = self.cashoutAmount
         self.navigationController?.pushViewController(successVC, animated: true)
     }
     
