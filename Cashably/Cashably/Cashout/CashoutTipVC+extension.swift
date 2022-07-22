@@ -55,13 +55,13 @@ extension CashoutTipVC {
         
     }
     
-    func cashout(uid: String, amount: Double, donate: Double) {
+    func cashout(uid: String, amount: Double, donate: Double, company: String = "") {
         self.startAnimating()
-        AF.request("\(Constants.API)/user/withdraw",
+        AF.request("\(Constants.API)/withdraw",
                    method: .post,
-                   parameters: ["userId": uid, "amount": "\(amount)", "donate": "\(donate)"],
+                   parameters: ["userId": uid, "amount": "\(amount)", "donate": "\(donate)", "company": company],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: DecodableType.self) { response in
+                .responseDecodable(of: StatusResponse.self) { response in
                     self.stopAnimating()
                     
                     if response.value?.status == true {

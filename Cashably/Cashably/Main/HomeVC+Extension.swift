@@ -133,15 +133,15 @@ extension HomeVC {
             self.logout()
             return
         }
-        AF.request("\(Constants.API)/profile",
+        AF.request("\(Constants.API)/loan/check",
                    method: .get,
                    parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: UserType.self) { response in
+                .responseDecodable(of: AmountResponse.self) { response in
                     self.stopAnimating()
                     switch response.result {
                         case .success:
-                            guard let amount = response.value?.loanAmount else {
+                            guard let amount = response.value?.amount else {
                                 return
                             }
                             self.loanAmount = amount
@@ -162,11 +162,11 @@ extension HomeVC {
             self.logout()
             return
         }
-        AF.request("\(Constants.API)/user/request_loan",
+        AF.request("\(Constants.API)/loan/request",
                    method: .get,
                    parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: DecodableType.self) { response in
+                .responseDecodable(of: StatusResponse.self) { response in
                     self.stopAnimating()
                     
                     if response.value?.status == true {

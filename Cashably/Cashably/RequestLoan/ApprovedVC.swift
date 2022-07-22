@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import NVActivityIndicatorView
+import Alamofire
+import FirebaseAuth
 
 class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -38,9 +40,31 @@ class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
    }
     
     @IBAction func actionAccept(_ sender: UIButton) {
-        UserDefaults.standard.set(50, forKey: "received")
-        let cashoutVC = storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
-        self.navigationController?.pushViewController(cashoutVC, animated: true)
+        
+        self.startAnimating()
+        guard let user = Auth.auth().currentUser else {
+            self.logout()
+            return
+        }
+        AF.request("\(Constants.API)/loan/accept",
+                   method: .post,
+                   parameters: ["userId": user.uid],
+                   encoder: URLEncodedFormParameterEncoder.default)
+                .responseDecodable(of: StatusResponse.self) { response in
+                    self.stopAnimating()
+                    
+                    if response.value?.status == true {
+                        let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
+                        self.navigationController?.pushViewController(cashoutVC, animated: true)
+                        
+                    } else {
+                        
+                        let alert = Alert.showBasicAlert(message: "Network error")
+                        self.presentVC(alert)
+                    }
+                    
+                }
+        
     }
     
     @IBAction func actionBack(_ sender: UIButton) {

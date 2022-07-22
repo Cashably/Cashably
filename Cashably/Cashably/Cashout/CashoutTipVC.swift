@@ -47,10 +47,6 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
     var donate: Double = 0
     var amount: Double = 0
     
-    struct DecodableType: Decodable {
-        let status: Bool
-    }
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -89,6 +89,7 @@
 		F0643D252856C62700CAB86F /* CashablyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */; };
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
+		F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCB288A2DCB00624189 /* ResponseType.swift */; };
 		F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04346285D62D900E29CE0 /* SignupVC.swift */; };
 		F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */; };
 		F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */; };
@@ -244,6 +245,7 @@
 		F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
 		F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CashoutTipVC+extension.swift"; sourceTree = "<group>"; };
+		F0834BCB288A2DCB00624189 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		F0A04346285D62D900E29CE0 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithEmailVC.swift; sourceTree = "<group>"; };
 		F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWithEmailVC.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				F00E4DE2285CBEE400CB8DD6 /* UserModel.swift */,
 				F00E4DE4285CC3FF00CB8DD6 /* UserAuthModel.swift */,
+				F0834BCB288A2DCB00624189 /* ResponseType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -433,7 +436,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		F05365CF285FEA3700B771D9 /* RequestPay */ = {
+		F05365CF285FEA3700B771D9 /* RequestLoan */ = {
 			isa = PBXGroup;
 			children = (
 				F0B853542860041B002F90DA /* Cells */,
@@ -447,7 +450,7 @@
 				F05365DE285FF40300B771D9 /* ApprovedVC.swift */,
 				F05365E4285FF4D200B771D9 /* DonationVC.swift */,
 			);
-			path = RequestPay;
+			path = RequestLoan;
 			sourceTree = "<group>";
 		};
 		F05365E6285FF55100B771D9 /* Cashout */ = {
@@ -589,7 +592,7 @@
 				F0643D072856C62600CAB86F /* Main.storyboard */,
 				F00E4DE1285CBED500CB8DD6 /* Models */,
 				F05365C3285F75FF00B771D9 /* PermissionViews */,
-				F05365CF285FEA3700B771D9 /* RequestPay */,
+				F05365CF285FEA3700B771D9 /* RequestLoan */,
 				F0B87A01285F2C3500414FFD /* Settings */,
 				F0C69D51287E4FF100BF5C6C /* Standing */,
 				F00E4DE0285CBE6400CB8DD6 /* User */,
@@ -957,6 +960,7 @@
 				F05365C7285F76A200B771D9 /* RequestActivitiesEnableVC.swift in Sources */,
 				F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */,
 				F0A04354285DC40100E29CE0 /* UIViewController.swift in Sources */,
+				F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */,
 				F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */,
 				F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */,
 				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,

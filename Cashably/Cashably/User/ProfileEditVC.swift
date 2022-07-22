@@ -26,12 +26,6 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var btnUpdate: UIButton!
     @IBOutlet weak var btnBack: UIButton!
     
-    struct DecodableType: Decodable {
-        let status: Bool
-        let enableLogout: Bool
-        let message: String
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -132,7 +126,7 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
                    method: .post,
                    parameters: params,
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: DecodableType.self) { response in
+                .responseDecodable(of: ProfileResponse.self) { response in
                     self.stopAnimating()
                     print(response)
                     

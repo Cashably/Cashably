@@ -30,14 +30,6 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     
     private var permissions: [Permissions] = [.faceid, .activity, .notification, .overdraft]
     
-    struct DecodableType: Decodable {
-        let status: Bool
-    }
-    
-    struct UserType: Decodable {
-        let loanAmount: Double
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

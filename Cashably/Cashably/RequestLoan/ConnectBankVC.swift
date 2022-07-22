@@ -29,10 +29,7 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
     var delegate: ConnectBankDelegate!
     
     var linkHandler: Handler?
-    struct DecodableType: Decodable {
-        let status: Bool
-        let data: String
-    }
+    
     
     let oauthRedirectURI =  URL(string: "YOUR_OAUTH_REDIRECT_URI")
     
@@ -84,7 +81,7 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
                    method: .get,
                    parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: DecodableType.self) { response in
+                .responseDecodable(of: StringDataResponse.self) { response in
                     self.stopAnimating()
                     
                     if response.value?.status == true {
@@ -114,7 +111,7 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
                    method: .post,
                    parameters: ["userId": user.uid, "public_token": token],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: DecodableType.self) { response in
+                .responseDecodable(of: StringDataResponse.self) { response in
                     self.stopAnimating()
                     print(response)
                     if response.value?.status == true {
