@@ -7683,8 +7683,8 @@ for amount credited.</string>
                     <connections>
                         <outlet property="btnDone" destination="J4c-xc-Wr0" id="K5v-nv-29E"/>
                         <outlet property="lbAmount" destination="qDo-nD-WGQ" id="Ark-NR-geM"/>
-                        <outlet property="lbDueDate" destination="U2u-Xf-ydr" id="ooU-vh-9db"/>
                         <outlet property="lbRepayDueDate" destination="qnh-wh-DtC" id="0FT-qg-V8K"/>
+                        <outlet property="lbTo" destination="U2u-Xf-ydr" id="usd-iB-EB5"/>
                         <outlet property="lbTotalRepaymentAmount" destination="fqk-sF-zVg" id="1Ya-yf-RNJ"/>
                     </connections>
                 </viewController>

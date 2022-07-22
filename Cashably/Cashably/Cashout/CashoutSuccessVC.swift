@@ -11,7 +11,7 @@ import UIKit
 class CashoutSuccessVC: UIViewController {
     
     @IBOutlet weak var lbAmount: UILabel!
-    @IBOutlet weak var lbDueDate: UILabel!
+    @IBOutlet weak var lbTo: UILabel!
     @IBOutlet weak var lbTotalRepaymentAmount: UILabel!
     @IBOutlet weak var lbRepayDueDate: UILabel!
     
@@ -22,7 +22,15 @@ class CashoutSuccessVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let decoded  = UserDefaults.standard.object(forKey: "acceptedLoan") as! Data
+        let decoder = JSONDecoder()
+        let loan = try! decoder.decode(LoanResponse.self, from: decoded)
+        
         lbAmount.text = "$\(self.cashoutAmount)"
+        lbTo.text = loan.to
+        lbRepayDueDate.text = loan.dueDate
+        lbTotalRepaymentAmount.text = "$\(loan.amount)"
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
