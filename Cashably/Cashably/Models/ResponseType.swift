@@ -30,4 +30,5 @@ struct LoanResponse: Decodable {
     let amount: Double
     let dueDate: String
     let to: String
+    let dueDateTimestamp: Int64
 }

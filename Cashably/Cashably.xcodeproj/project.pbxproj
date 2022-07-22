@@ -90,6 +90,7 @@
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
 		F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCB288A2DCB00624189 /* ResponseType.swift */; };
+		F0834BD0288A9F7F00624189 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCF288A9F7F00624189 /* Date.swift */; };
 		F0A04347285D62D900E29CE0 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04346285D62D900E29CE0 /* SignupVC.swift */; };
 		F0A04349285D63C700E29CE0 /* SigninWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */; };
 		F0A0434B285D65D500E29CE0 /* SignupWithEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */; };
@@ -246,6 +247,7 @@
 		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
 		F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CashoutTipVC+extension.swift"; sourceTree = "<group>"; };
 		F0834BCB288A2DCB00624189 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		F0834BCF288A9F7F00624189 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F0A04346285D62D900E29CE0 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithEmailVC.swift; sourceTree = "<group>"; };
 		F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWithEmailVC.swift; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 				F062A84E286545EE00DBBCE4 /* MSCircularSlider */,
 				F062A84F28654AA500DBBCE4 /* PolarKit */,
 				F0C69D47287D664600BF5C6C /* UIRadioButton.swift */,
+				F0834BCF288A9F7F00624189 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -986,6 +989,7 @@
 				F05365C5285F764D00B771D9 /* RequestFaceEnableVC.swift in Sources */,
 				F062A86A2865A4DF00DBBCE4 /* DoubleHandleCircularSlider.swift in Sources */,
 				F0AB255C287C1B7D00C6A593 /* NotificationsVC.swift in Sources */,
+				F0834BD0288A9F7F00624189 /* Date.swift in Sources */,
 				F0AB2564287C582D00C6A593 /* CardActionVC.swift in Sources */,
 				F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */,
 				F062F23C286A8A28007DE996 /* DonationThanksVC.swift in Sources */,
