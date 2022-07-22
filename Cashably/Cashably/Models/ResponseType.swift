@@ -25,3 +25,8 @@ struct StringDataResponse: Decodable {
     let status: Bool
     let data: String
 }
+
+struct LoanResponse: Decodable {
+    let amount: Double
+    let dueDate: String
+}

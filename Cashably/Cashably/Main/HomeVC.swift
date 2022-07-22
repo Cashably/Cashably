@@ -19,7 +19,7 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var bottomView: UIView!
     
     var loanAmount: Double = 0
-    
+    var dueDate: String = ""
     
     private enum Permissions: Int {
         case faceid

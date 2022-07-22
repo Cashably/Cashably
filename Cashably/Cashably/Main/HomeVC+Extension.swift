@@ -29,6 +29,7 @@ extension HomeVC {
         } else {
             let subview = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as! RequestPayView
             subview.lbAmount.text = "$\(self.loanAmount)"
+            subview.lbDueDate.text = self.dueDate
             subview.onRequest = {() in self.onRequest()}
             subview.onPay = {() in self.onPay()}
             subview.onSnooze = {() in self.onSnooze()}
@@ -137,20 +138,21 @@ extension HomeVC {
                    method: .get,
                    parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: AmountResponse.self) { response in
+                .responseDecodable(of: LoanResponse.self) { response in
                     self.stopAnimating()
                     switch response.result {
                         case .success:
-                            guard let amount = response.value?.amount else {
-                                return
-                            }
-                            self.loanAmount = amount
-                            self.configure()
-                            break
+                        guard let amount = response.value?.amount, let dueDate = response.value?.dueDate else {
+                            return
+                        }
+                        self.loanAmount = amount
+                        self.dueDate = dueDate
+                        self.configure()
+                        break
                         case let .failure(error):
-                            print(error)
-                            self.configure()
-                            break
+                        print(error)
+                        self.configure()
+                        break
                     }
                 }
                 
