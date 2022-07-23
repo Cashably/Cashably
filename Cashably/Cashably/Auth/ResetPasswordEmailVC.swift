@@ -50,7 +50,18 @@ class ResetPasswordEmailVC: UIViewController, NVActivityIndicatorViewable {
         
         self.startAnimating()
         
-        Auth.auth().sendPasswordReset(withEmail: self.tfEmail.text!) { error in
+        var actionCodeSettings =  ActionCodeSettings.init()
+        actionCodeSettings.handleCodeInApp = true
+        
+        actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+        actionCodeSettings.setAndroidPackageName("com.cashably.android", installIfNotAvailable: true, minimumVersion: "12")
+        
+        actionCodeSettings.url = URL(string: String(format: "https://app.cashably.com/?email=%@", self.tfEmail.text!))
+         
+        // When multiple custom dynamic link domains are defined, specify which one to use.
+        actionCodeSettings.dynamicLinkDomain = "cashably.page.link"
+        
+        Auth.auth().sendPasswordReset(withEmail: self.tfEmail.text!, actionCodeSettings: actionCodeSettings) { error in
             print("password reset with email: \(String(describing: error))")
             self.stopAnimating()
             if error != nil {
@@ -61,8 +72,21 @@ class ResetPasswordEmailVC: UIViewController, NVActivityIndicatorViewable {
             
             let resetVC = self.storyboard?.instantiateViewController(withIdentifier: "ResetPasswordVC") as! ResetPasswordVC
             self.navigationController?.pushViewController(resetVC, animated: true)
-            
         }
+        
+//        Auth.auth().sendPasswordReset(withEmail: self.tfEmail.text!) { error in
+//            print("password reset with email: \(String(describing: error))")
+//            self.stopAnimating()
+//            if error != nil {
+//                let alert = Alert.showBasicAlert(message: "There is no user.")
+//                self.presentVC(alert)
+//                return
+//            }
+//
+//            let resetVC = self.storyboard?.instantiateViewController(withIdentifier: "ResetPasswordVC") as! ResetPasswordVC
+//            self.navigationController?.pushViewController(resetVC, animated: true)
+//
+//        }
         
         
     }
