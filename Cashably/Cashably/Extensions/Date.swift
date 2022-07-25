@@ -19,4 +19,14 @@ extension Date {
     init(milliseconds: Int64) {
         self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
     }
+    
+    func dateFormat(format: String) -> String {
+        let dateFormatter = DateFormatter()
+//        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = format //Specify your format that you want
+        let strDate = dateFormatter.string(from: self)
+        
+        return strDate
+    }
 }

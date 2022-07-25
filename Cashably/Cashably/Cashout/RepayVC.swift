@@ -30,9 +30,7 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
         
         lbLoanAmount.text = "$\(loanAmount)"
         
-        let decoded  = UserDefaults.standard.object(forKey: "acceptedLoan") as! Data
-        let decoder = JSONDecoder()
-        let loan = try! decoder.decode(LoanResponse.self, from: decoded)
+        let loan: LoanResponse = Shared.getAcceptedLoan()
         
         lbLoanAmount.text = "$\(loan.amount)"
 //        lbDueDate.text = loan.dueDate
@@ -70,11 +68,7 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
        self.navigationController?.isNavigationBarHidden = false
    }
     
-    @IBAction func actionBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func actionRepay(_ sender: UIButton) {
+    func rePay() {
         self.startAnimating()
         guard let user = Auth.auth().currentUser else {
             self.logout()
@@ -98,6 +92,17 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
                 }
     }
     
+    @IBAction func actionBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func actionRepay(_ sender: UIButton) {
+        let alert = Alert.showConfirmAlert(message: "Are you sure paying for your loan") { _ in
+            self.rePay()
+        }
+        self.presentVC(alert)
+    }
+    
 }
 
 extension RepayVC: UITableViewDelegate {
@@ -115,9 +120,7 @@ extension RepayVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: LoanTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "loanCell") as! LoanTableViewCell
         cell.selectionStyle = .none
-        let decoded  = UserDefaults.standard.object(forKey: "acceptedLoan") as! Data
-        let decoder = JSONDecoder()
-        let loan = try! decoder.decode(LoanResponse.self, from: decoded)
+        let loan: LoanResponse = Shared.getAcceptedLoan()
         cell.lbBankName.text = loan.to
 //        cell.lbLoanId.text = Auth.auth().currentUser?.uid
         return cell

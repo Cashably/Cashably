@@ -87,6 +87,7 @@
 		F0643D192856C62700CAB86F /* CashablyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D182856C62700CAB86F /* CashablyTests.swift */; };
 		F0643D232856C62700CAB86F /* CashablyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D222856C62700CAB86F /* CashablyUITests.swift */; };
 		F0643D252856C62700CAB86F /* CashablyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */; };
+		F064BB5F288E87B600C0FF41 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB5E288E87B600C0FF41 /* Shared.swift */; };
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
 		F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCB288A2DCB00624189 /* ResponseType.swift */; };
@@ -244,6 +245,7 @@
 		F0643D1E2856C62700CAB86F /* CashablyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashablyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0643D222856C62700CAB86F /* CashablyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITests.swift; sourceTree = "<group>"; };
 		F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F064BB5E288E87B600C0FF41 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
 		F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CashoutTipVC+extension.swift"; sourceTree = "<group>"; };
 		F0834BCB288A2DCB00624189 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 				F062A84F28654AA500DBBCE4 /* PolarKit */,
 				F0C69D47287D664600BF5C6C /* UIRadioButton.swift */,
 				F0834BCF288A9F7F00624189 /* Date.swift */,
+				F064BB5E288E87B600C0FF41 /* Shared.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -964,6 +967,7 @@
 				F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */,
 				F0A04354285DC40100E29CE0 /* UIViewController.swift in Sources */,
 				F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */,
+				F064BB5F288E87B600C0FF41 /* Shared.swift in Sources */,
 				F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */,
 				F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */,
 				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,

@@ -7822,6 +7822,9 @@ for amount credited.</string>
                                                                         <integer key="value" value="600"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="actionSnoozePay:" destination="5TN-Cf-LqQ" eventType="primaryActionTriggered" id="ohD-Pb-I2s"/>
+                                                                </connections>
                                                             </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-Yx-Xo8">
                                                                 <rect key="frame" x="20" y="0.0" width="374" height="76"/>
@@ -7848,7 +7851,7 @@ for amount credited.</string>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i7G-gz-fys">
+                                                                    <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i7G-gz-fys">
                                                                         <rect key="frame" x="325" y="22.5" width="51" height="31"/>
                                                                         <color key="onTintColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </switch>
@@ -8052,6 +8055,12 @@ you can Snooze as many times as you like.</string>
                     </view>
                     <connections>
                         <outlet property="btnBack" destination="jn8-qU-1HR" id="26m-ko-Nnt"/>
+                        <outlet property="lbAmount" destination="oTb-Fn-93k" id="jpL-XD-JZr"/>
+                        <outlet property="lbNextDueDate" destination="hkY-gl-i6c" id="uWi-8c-ecS"/>
+                        <outlet property="lbRemainSnooze" destination="LLm-BV-xIS" id="MnO-qn-Ab5"/>
+                        <outlet property="lbSnoozeFee" destination="RUV-LR-HsV" id="Xft-wh-0Z4"/>
+                        <outlet property="lbTerms" destination="izb-xX-k6l" id="qsY-IH-vlY"/>
+                        <outlet property="lbTotalAmount" destination="RQc-z9-ckZ" id="W4m-a0-nla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dC-nH-KYy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

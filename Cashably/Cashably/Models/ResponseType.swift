@@ -28,7 +28,17 @@ struct StringDataResponse: Decodable {
 
 struct LoanResponse: Decodable {
     let amount: Double
+    let total: Double
+    let snoozeFee: Double
+    let snooze: Int
     let dueDate: String
     let to: String
+    let createdAtTimestamp: Int64
     let dueDateTimestamp: Int64
+    let nextDueDate: String
+}
+
+struct MessageResponse: Decodable {
+    let status: Bool
+    let message: String
 }

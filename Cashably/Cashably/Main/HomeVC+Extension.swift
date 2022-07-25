@@ -138,15 +138,19 @@ extension HomeVC {
                    method: .get,
                    parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: LoanResponse.self) { response in
+            .responseData(completionHandler: { response in
                     self.stopAnimating()
                     switch response.result {
                         case .success:
-                        guard let amount = response.value?.amount, let dueDate = response.value?.dueDate else {
+                        guard let loan = response.value else {
+                            let alert = Alert.showBasicAlert(message: "Network error")
+                            self.presentVC(alert)
                             return
                         }
-                        self.loanAmount = amount
-                        self.dueDate = dueDate
+                        Shared.storeAcceptedLoan(loan: loan)
+                        let storedLoan: LoanResponse = Shared.getAcceptedLoan()
+                        self.loanAmount = storedLoan.amount
+                        self.dueDate = storedLoan.dueDate
                         self.configure()
                         break
                         case let .failure(error):
@@ -154,7 +158,7 @@ extension HomeVC {
                         self.configure()
                         break
                     }
-                }
+                })
                 
     }
     

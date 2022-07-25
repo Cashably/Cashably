@@ -59,8 +59,9 @@ class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
                         self.presentVC(alert)
                         return
                     }
-//                    let encodedData = try! NSKeyedArchiver.archivedData(withRootObject: loan, requiringSecureCoding: false)
-                    UserDefaults.standard.set(loan, forKey: "acceptedLoan")
+
+                    Shared.storeAcceptedLoan(loan: loan)
+                    
                     let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
                     self.navigationController?.pushViewController(cashoutVC, animated: true)
                     break

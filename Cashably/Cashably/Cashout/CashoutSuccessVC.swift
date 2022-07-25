@@ -22,9 +22,7 @@ class CashoutSuccessVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let decoded  = UserDefaults.standard.object(forKey: "acceptedLoan") as! Data
-        let decoder = JSONDecoder()
-        let loan = try! decoder.decode(LoanResponse.self, from: decoded)
+        let loan: LoanResponse = Shared.getAcceptedLoan()
         
         lbAmount.text = "$\(self.cashoutAmount)"
         lbTo.text = loan.to
