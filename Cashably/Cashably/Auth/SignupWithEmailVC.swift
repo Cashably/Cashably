@@ -71,6 +71,11 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         Auth.auth().createUser(withEmail: tfEmail.text!, password: tfPassword.text!) { [weak self] authResult, error in
             self?.stopAnimating()
             guard let strongSelf = self else { return }
+            if error != nil {
+                let alert = Alert.showBasicAlert(message: "Network error")
+                self?.presentVC(alert)
+                return
+            }
           // ...
             self?.moveToMain()
         }

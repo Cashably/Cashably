@@ -74,6 +74,11 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) { [weak self] authResult, error in
             self?.stopAnimating()
             guard let strongSelf = self else { return }
+            if error != nil {
+                let alert = Alert.showBasicAlert(message: "Invalide email or password")
+                self?.presentVC(alert)
+                return
+            }
           // ...
             self?.moveToMain()
         }
