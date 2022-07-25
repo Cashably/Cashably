@@ -147,10 +147,17 @@ extension HomeVC {
                             self.presentVC(alert)
                             return
                         }
-                        Shared.storeAcceptedLoan(loan: loan)
-                        let storedLoan: LoanResponse = Shared.getAcceptedLoan()
-                        self.loanAmount = storedLoan.amount
-                        self.dueDate = storedLoan.dueDate
+
+                        let decoder = JSONDecoder()
+                        do {
+                            let storedLoan = try decoder.decode(LoanResponse.self, from: response.value!)
+                            self.loanAmount = storedLoan.amount
+                            self.dueDate = storedLoan.dueDate
+                            Shared.storeAcceptedLoan(loan: loan)
+                        } catch {
+                            
+                        }
+                        
                         self.configure()
                         break
                         case let .failure(error):
