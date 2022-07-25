@@ -42,3 +42,17 @@ struct MessageResponse: Decodable {
     let status: Bool
     let message: String
 }
+
+struct DataResponse: Decodable {
+    let data: [TransactionResponse]
+    let status: Bool
+    let message: String
+}
+
+struct TransactionResponse: Decodable {
+    let amount: String
+    let type: String
+    let company: String
+    let createdAtTimestamp: Int64
+    let createdAt: String
+}
