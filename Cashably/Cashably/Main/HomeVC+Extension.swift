@@ -147,15 +147,16 @@ extension HomeVC {
                             self.presentVC(alert)
                             return
                         }
-
+                        
                         let decoder = JSONDecoder()
                         do {
-                            let storedLoan = try decoder.decode(LoanResponse.self, from: response.value!)
+                            let storedLoan = try decoder.decode(LoanResponse.self, from: loan)
+                            
                             self.loanAmount = storedLoan.amount
                             self.dueDate = storedLoan.dueDate
                             Shared.storeAcceptedLoan(loan: loan)
                         } catch {
-                            
+                            print(error)
                         }
                         
                         self.configure()
