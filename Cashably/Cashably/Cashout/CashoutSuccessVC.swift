@@ -17,17 +17,16 @@ class CashoutSuccessVC: UIViewController {
     
     @IBOutlet weak var btnDone: UIButton!
     
-    var cashoutAmount: Double = 0
+    public var withdrawData: WithdraW?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let loan: LoanResponse = Shared.getAcceptedLoan()
-        
-        lbAmount.text = "$\(self.cashoutAmount)"
-        lbTo.text = loan.to
-        lbRepayDueDate.text = loan.dueDate
-        lbTotalRepaymentAmount.text = "$\(loan.amount)"
+                
+        lbAmount.text = "$\(withdrawData!.depositAmount)"
+        lbTo.text = withdrawData!.to
+        lbRepayDueDate.text = withdrawData!.dueDate
+        lbTotalRepaymentAmount.text = "$\(withdrawData!.totalAmount)"
         
     }
     

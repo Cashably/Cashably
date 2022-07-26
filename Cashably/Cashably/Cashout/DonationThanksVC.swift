@@ -10,7 +10,7 @@ import UIKit
 
 class DonationThanksVC: UIViewController {
     
-    var cashoutAmount: Double = 0
+    public var withdrawData: WithdraW?
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
@@ -24,7 +24,7 @@ class DonationThanksVC: UIViewController {
     
     private func withdraw() {
         let successVC = storyboard?.instantiateViewController(withIdentifier: "CashoutSuccessVC") as! CashoutSuccessVC
-        successVC.cashoutAmount = self.cashoutAmount
+        successVC.withdrawData = self.withdrawData!
         self.navigationController?.pushViewController(successVC, animated: true)
     }
     

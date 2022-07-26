@@ -50,28 +50,17 @@ class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
                    method: .post,
                    parameters: ["userId": user.uid],
                    encoder: URLEncodedFormParameterEncoder.default)
-            .responseData(completionHandler: { response in
+            .responseDecodable(of: StatusResponse.self) { response in
                 self.stopAnimating()
-                switch response.result {
-                    case .success:
-                    guard let loan = response.value else {
-                        let alert = Alert.showBasicAlert(message: "Network error")
-                        self.presentVC(alert)
-                        return
-                    }
-
-                    Shared.storeAcceptedLoan(loan: loan)
-                    
+                
+                if response.value?.status == true {
                     let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
                     self.navigationController?.pushViewController(cashoutVC, animated: true)
-                    break
-                    case let .failure(error):
-                    print(error)
+                } else {
                     let alert = Alert.showBasicAlert(message: "Network error")
                     self.presentVC(alert)
-                    break
                 }
-            })
+            }
     }
     
     @IBAction func actionBack(_ sender: UIButton) {

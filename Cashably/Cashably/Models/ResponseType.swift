@@ -56,3 +56,16 @@ struct TransactionResponse: Decodable {
     let createdAtTimestamp: Int64
     let createdAt: String
 }
+
+struct WithdrawResponse: Decodable {
+    let data: WithdraW
+    let status: Bool
+    let message: String
+}
+
+struct WithdraW: Decodable {
+    let depositAmount: Double
+    let totalAmount: Double
+    let dueDate: String
+    let to: String
+}

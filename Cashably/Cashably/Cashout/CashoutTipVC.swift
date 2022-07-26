@@ -13,8 +13,7 @@ import Alamofire
 import FirebaseAuth
 
 protocol CashoutTipDelegate {
-    func cashout(amount: Double)
-    func cashoutWithTip(amount: Double)
+    func cashout(data: WithdraW, donate: Bool)
 }
 
 class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {

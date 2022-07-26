@@ -57,30 +57,40 @@ extension CashoutTipVC {
     
     func cashout(uid: String, amount: Double, donate: Double, company: String = "") {
         self.startAnimating()
+        if donate > amount {
+            let alert = Alert.showBasicAlert(message: "Can't cashout becuase donate is greater than cashout amount.")
+            self.presentVC(alert)
+            return
+        }
         AF.request("\(Constants.API)/withdraw",
                    method: .post,
                    parameters: ["userId": uid, "amount": "\(amount)", "donate": "\(donate)", "company": company],
                    encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: StatusResponse.self) { response in
+                
+            .responseDecodable(of: WithdrawResponse.self) { response in
                     self.stopAnimating()
-                    
+                switch response.result {
+                case .success:
                     if response.value?.status == true {
                         self.dismiss(animated: true) {
                             if donate == 0 {
-                                self.delegate?.cashout(amount: (amount + donate))
+                                self.delegate?.cashout(data: response.value!.data, donate: false)
                             } else {
-                                self.delegate?.cashoutWithTip(amount: (amount + donate))
+                                self.delegate?.cashout(data: response.value!.data, donate: true)
                             }
-                            
                         }
-                        
                     } else {
-                        
-                        let alert = Alert.showBasicAlert(message: "Network error")
+                        let alert = Alert.showBasicAlert(message: response.value!.message)
                         self.presentVC(alert)
                     }
-                    
+                    break
+                case let .failure(error):
+                    print(error)
+                    let alert = Alert.showBasicAlert(message: "Network error!")
+                    self.presentVC(alert)
+                    break
                 }
+            }
     }
 }
 

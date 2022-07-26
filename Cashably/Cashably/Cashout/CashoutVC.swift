@@ -144,18 +144,18 @@ class CashoutVC: UIViewController {
 }
 
 extension CashoutVC: CashoutTipDelegate {
-    
-    func cashout(amount: Double) {
-        let nodonationvc = storyboard?.instantiateViewController(withIdentifier: "NoDonationVC") as! NoDonationVC
-        nodonationvc.cashoutAmount = amount
-        self.navigationController?.pushViewController(nodonationvc, animated: true)
+    func cashout(data: WithdraW, donate: Bool) {
+        if donate == true {
+            let donationvc = storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
+            donationvc.withdrawData = data
+            self.navigationController?.pushViewController(donationvc, animated: true)
+        } else {
+            let nodonationvc = storyboard?.instantiateViewController(withIdentifier: "NoDonationVC") as! NoDonationVC
+            nodonationvc.withdrawData = data
+            self.navigationController?.pushViewController(nodonationvc, animated: true)
+        }
     }
     
-    func cashoutWithTip(amount: Double) {
-        let donationvc = storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
-        donationvc.cashoutAmount = amount
-        self.navigationController?.pushViewController(donationvc, animated: true)
-    }
 }
 
 extension CashoutVC: MSCircularSliderDelegate {
