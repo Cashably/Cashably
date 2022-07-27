@@ -14,7 +14,13 @@ class ResetPasswordVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var tfPasswordConfirm: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
-    @IBOutlet weak var tfPasscode: UITextField!
+    @IBOutlet weak var tfPasscode: UITextField! {
+        didSet {
+            tfPasscode.layer.borderWidth = 1
+            tfPasscode.layer.borderColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1).cgColor
+            tfPasscode.layer.cornerRadius = 10
+        }
+    }
     
     @IBOutlet weak var passwordConfirmView: InputView!
     @IBOutlet weak var passwordView: InputView!
