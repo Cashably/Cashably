@@ -54,25 +54,15 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
     
     func snoozePay() {
         self.startAnimating()
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
+        RequestHandler.getRequest(url:Constants.URL.SNOOZE_PAY, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            self.showToast(message: "Paid snooze fee successfully")
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
         }
-        AF.request("\(Constants.API)/snooze_pay",
-                   method: .post,
-                   parameters: ["userId": user.uid],
-                   encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: MessageResponse.self) { response in
-                    self.stopAnimating()
-                    
-                    if response.value?.status == true {
-                        self.showToast(message: "Paid snooze fee successfully")
-                    } else {
-                        let alert = Alert.showBasicAlert(message: response.value!.message)
-                        self.presentVC(alert)
-                    }
-                    
-                }
     }
        
     

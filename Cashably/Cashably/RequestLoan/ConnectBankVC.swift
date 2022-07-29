@@ -7,9 +7,7 @@
 
 import Foundation
 import UIKit
-import Alamofire
 import LinkKit
-import FirebaseAuth
 import NVActivityIndicatorView
 import CoreData
 
@@ -73,60 +71,32 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
     
     func createPlaidLinkToken() {
         self.startAnimating()
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
+        RequestHandler.getRequest(url:Constants.URL.GET_PLAID_LINK_TOKEN, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            let dictionary = successResponse as! [String: Any]
+            let linktoken = dictionary["data"] as! String
+            self.plaidLink(linkToken: linktoken)
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
         }
-        AF.request("\(Constants.API)/plaid/link_token",
-                   method: .get,
-                   parameters: ["userId": user.uid],
-                   encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: StringDataResponse.self) { response in
-                    self.stopAnimating()
-                    
-                    if response.value?.status == true {
-                        guard let linktoken = response.value?.data else {
-                            return
-                        }
-                        self.plaidLink(linkToken: linktoken)
-                    } else {
-                        guard let error = response.value?.data else {
-                            return
-                        }
-                        let alert = Alert.showBasicAlert(message: error)
-                        self.presentVC(alert)
-                    }
-                    
-                }
             
     }
     
     func storePlaidPubToken(token: String) {
         self.startAnimating()
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
+        RequestHandler.postRequest(url:Constants.URL.PLAID_EXCHANGE_PUB_TOKEN, parameter: ["public_token": token], success: { (successResponse) in
+            self.stopAnimating()
+            self.showToast(message: "Sent successfully")
+            self.delegate.connected()
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
         }
-        AF.request("\(Constants.API)/plaid/exchange_public_token",
-                   method: .post,
-                   parameters: ["userId": user.uid, "public_token": token],
-                   encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: StringDataResponse.self) { response in
-                    self.stopAnimating()
-                    print(response)
-                    if response.value?.status == true {
-                        self.showToast(message: "Sent successfully")
-                        self.delegate.connected()
-                    } else {
-                        guard let error = response.value?.data else {
-                            return
-                        }
-                        let alert = Alert.showBasicAlert(message: error)
-                        self.presentVC(alert)
-                    }
-                    
-                }
-            
     }
     
     @IBAction func actionConnect(_ sender: UIButton) {

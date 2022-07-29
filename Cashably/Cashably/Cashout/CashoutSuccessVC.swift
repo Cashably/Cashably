@@ -17,7 +17,7 @@ class CashoutSuccessVC: UIViewController {
     
     @IBOutlet weak var btnDone: UIButton!
     
-    public var withdrawData: WithdraW?
+    public var withdrawData: WithdrawModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,9 +7,7 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
 import NVActivityIndicatorView
-import Alamofire
 
 class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
    
@@ -60,15 +58,9 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
         ssnView.didTap(target: tfSSN!)
         dobView.didTap(target: tfDOB!)
         
-        if let user = Auth.auth().currentUser {
-            if user.displayName != nil {
-                tfName.text = user.displayName
-            }
-            if user.email != nil {
-                tfEmail.text = user.email
-            }
-        }
-        
+        tfEmail.text = Shared.getUser().email
+        tfName.text = Shared.getUser().fullName
+               
         if let dob = UserDefaults.standard.string(forKey: "userDOB") {
             tfDOB.text = dob
         }
@@ -115,44 +107,21 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
         self.startAnimating()
         
         let params = [
-            "userId": Auth.auth().currentUser?.uid,
             "name": tfName.text,
             "email": tfEmail.text,
             "dob": tfDOB.text,
             "ssn": tfSSN.text
         ]
         
-        AF.request("\(Constants.API)/profile/update",
-                   method: .post,
-                   parameters: params,
-                   encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: ProfileResponse.self) { response in
-                    self.stopAnimating()
-                    print(response)
-                    
-                    if response.value?.status == true {
-                        UserDefaults.standard.set(self.tfDOB.text, forKey: "userDOB")
-                        UserDefaults.standard.set(self.tfSSN.text, forKey: "userSSN")
-                        self.showToast(message: "Updated successfully")
-//                        if response.value?.enableLogout == true {
-//                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
-//                                self.logout()
-//                            }
-//                            self.presentVC(alert)
-//                        }
-                        Auth.auth().currentUser?.reload(completion: { _ in
-                            
-                        })
-                        
-                    } else {
-                        guard let error = response.value?.message else {
-                            return
-                        }
-                        let alert = Alert.showBasicAlert(message: error)
-                        self.presentVC(alert)
-                    }
-                    
-                }
+        RequestHandler.profileUpdate(parameter: params as! NSDictionary, success: { (successResponse) in
+            self.stopAnimating()
+            self.showToast(message: "Updated successfully")
+            
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+        }
     }
     
     @IBAction func btnBack(_ sender: UIButton) {

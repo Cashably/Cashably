@@ -10,7 +10,7 @@ import UIKit
 
 class DonationThanksVC: UIViewController {
     
-    public var withdrawData: WithdraW?
+    public var withdrawData: WithdrawModel?
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Alamofire
 
 extension CashoutTipVC {
     func setupSliderView() {
@@ -55,42 +54,35 @@ extension CashoutTipVC {
         
     }
     
-    func cashout(uid: String, amount: Double, donate: Double, company: String = "") {
+    func cashout(amount: Double, donate: Double, company: String = "") {
         self.startAnimating()
         if donate > amount {
             let alert = Alert.showBasicAlert(message: "Can't cashout becuase donate is greater than cashout amount.")
             self.presentVC(alert)
             return
         }
-        AF.request("\(Constants.API)/withdraw",
-                   method: .post,
-                   parameters: ["userId": uid, "amount": "\(amount)", "donate": "\(donate)", "company": company],
-                   encoder: URLEncodedFormParameterEncoder.default)
-                
-            .responseDecodable(of: WithdrawResponse.self) { response in
-                    self.stopAnimating()
-                switch response.result {
-                case .success:
-                    if response.value?.status == true {
-                        self.dismiss(animated: true) {
-                            if donate == 0 {
-                                self.delegate?.cashout(data: response.value!.data, donate: false)
-                            } else {
-                                self.delegate?.cashout(data: response.value!.data, donate: true)
-                            }
-                        }
+        let params = ["amount": "\(amount)", "donate": "\(donate)", "company": company]
+        RequestHandler.postRequest(url:Constants.URL.WITHDRAW, parameter: params as! NSDictionary, success: { (successResponse) in
+            self.stopAnimating()
+            let dictionary = successResponse as! [String: Any]
+            if let data = dictionary["data"] as? [String:Any] {
+                let loan = WithdrawModel(fromDictionary: data)
+                self.dismiss(animated: true) {
+                    if donate == 0 {
+                        self.delegate?.cashout(data: loan, donate: false)
                     } else {
-                        let alert = Alert.showBasicAlert(message: response.value!.message)
-                        self.presentVC(alert)
+                        self.delegate?.cashout(data: loan, donate: true)
                     }
-                    break
-                case let .failure(error):
-                    print(error)
-                    let alert = Alert.showBasicAlert(message: "Network error!")
-                    self.presentVC(alert)
-                    break
                 }
             }
+            
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+            
+        }
+        
     }
 }
 

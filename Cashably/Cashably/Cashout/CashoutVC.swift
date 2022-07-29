@@ -144,7 +144,7 @@ class CashoutVC: UIViewController {
 }
 
 extension CashoutVC: CashoutTipDelegate {
-    func cashout(data: WithdraW, donate: Bool) {
+    func cashout(data: WithdrawModel, donate: Bool) {
         if donate == true {
             let donationvc = storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
             donationvc.withdrawData = data

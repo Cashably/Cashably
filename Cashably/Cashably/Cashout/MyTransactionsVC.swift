@@ -7,15 +7,13 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
-import Alamofire
 import NVActivityIndicatorView
 
 class MyTransactionsVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var transactions: [TransactionResponse] = []
+    var transactions: [TransactionModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,23 +39,23 @@ class MyTransactionsVC: UIViewController, NVActivityIndicatorViewable {
     
     func getTransactions() {
         self.startAnimating()
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
-        }
-        AF.request("\(Constants.API)/transactions",
-                   method: .get,
-                   parameters: ["userId": user.uid],
-                   encoder: URLEncodedFormParameterEncoder.default)
-            .responseDecodable(of: DataResponse.self) { response in
-                self.stopAnimating()
-                print(response)
-                if response.value?.status == true {
-                    self.transactions = response.value!.data
-                    self.tableView.reloadData()
+        RequestHandler.getRequest(url:Constants.URL.GET_TRANSACTIONS, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            let dictionary = successResponse as! [String: Any]
+            if let data = dictionary["data"] as? [[String: Any]] {
+                for obj in data {
+                    self.transactions.append(TransactionModel(fromDictionary: obj))
                 }
-                
+                self.tableView.reloadData()
             }
+            
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+        }
+        
     }
     
     @IBAction func actionBack(_ sender: UIButton) {
@@ -81,7 +79,7 @@ extension MyTransactionsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TransactionTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "transactionCell") as! TransactionTableViewCell
         cell.selectionStyle = .none
-        let transaction: TransactionResponse = self.transactions[indexPath.row]
+        let transaction: TransactionModel = self.transactions[indexPath.row]
         
         cell.lbDate.text = transaction.createdAt
         switch transaction.type {

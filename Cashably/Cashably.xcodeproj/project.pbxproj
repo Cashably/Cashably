@@ -92,6 +92,8 @@
 		F064BB642892764700C0FF41 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB632892764700C0FF41 /* NetworkHandler.swift */; };
 		F064BB662892785F00C0FF41 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB652892785F00C0FF41 /* RequestHandler.swift */; };
 		F064BB6828938E4300C0FF41 /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB6728938E4300C0FF41 /* LoanModel.swift */; };
+		F064BB6A289391FA00C0FF41 /* WithdrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB69289391FA00C0FF41 /* WithdrawModel.swift */; };
+		F064BB6C2893C3BA00C0FF41 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */; };
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
 		F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCB288A2DCB00624189 /* ResponseType.swift */; };
@@ -254,6 +256,8 @@
 		F064BB632892764700C0FF41 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		F064BB652892785F00C0FF41 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		F064BB6728938E4300C0FF41 /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
+		F064BB69289391FA00C0FF41 /* WithdrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawModel.swift; sourceTree = "<group>"; };
+		F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
 		F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CashoutTipVC+extension.swift"; sourceTree = "<group>"; };
 		F0834BCB288A2DCB00624189 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
@@ -386,6 +390,8 @@
 				F0834BCB288A2DCB00624189 /* ResponseType.swift */,
 				F00E4DE4285CC3FF00CB8DD6 /* UserAuthModel.swift */,
 				F00E4DE2285CBEE400CB8DD6 /* UserModel.swift */,
+				F064BB69289391FA00C0FF41 /* WithdrawModel.swift */,
+				F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1045,6 +1051,7 @@
 				F0C69D60288048B800BF5C6C /* ResetPasswordVC.swift in Sources */,
 				F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */,
 				F025F8DD2860730800BABB3D /* BankVC.swift in Sources */,
+				F064BB6A289391FA00C0FF41 /* WithdrawModel.swift in Sources */,
 				F0C69D5E2880485C00BF5C6C /* ForgotPasswordVC.swift in Sources */,
 				F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */,
 				F062A83E2863AEFA00DBBCE4 /* UITextField+InputView.swift in Sources */,
@@ -1082,6 +1089,7 @@
 				F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */,
 				F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */,
 				F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */,
+				F064BB6C2893C3BA00C0FF41 /* TransactionModel.swift in Sources */,
 				F025F8DF2860738800BABB3D /* CreditVC.swift in Sources */,
 				F064BB662892785F00C0FF41 /* RequestHandler.swift in Sources */,
 				F062F265286D8D3E007DE996 /* UIButton.swift in Sources */,

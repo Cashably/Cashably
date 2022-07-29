@@ -35,7 +35,7 @@ class Shared{
     }
     
     static func getUserToken() -> String {
-        return UserDefaults.standard.string(forKey: "token")!
+        return UserDefaults.standard.string(forKey: "token") ?? ""
     }
     
     static func storeUser(user: [String: Any]) {

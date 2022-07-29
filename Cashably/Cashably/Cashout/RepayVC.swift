@@ -70,26 +70,16 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
     
     func rePay() {
         self.startAnimating()
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
+        RequestHandler.getRequest(url:Constants.URL.REPAY, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            self.showToast(message: "Repaid successfully.")
+            self.btnRepay.isEnabled = false
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
         }
-        AF.request("\(Constants.API)/repay",
-                   method: .post,
-                   parameters: ["userId": user.uid],
-                   encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: StatusResponse.self) { response in
-                    self.stopAnimating()
-                    
-                    if response.value?.status == true {
-                        self.showToast(message: "Repaid successfully.")
-                        self.btnRepay.isEnabled = false
-                    } else {
-                        let alert = Alert.showBasicAlert(message: "Network error")
-                        self.presentVC(alert)
-                    }
-                    
-                }
     }
     
     @IBAction func actionBack(_ sender: UIButton) {

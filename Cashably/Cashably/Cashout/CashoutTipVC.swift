@@ -9,11 +9,9 @@ import Foundation
 import UIKit
 import iOSDropDown
 import NVActivityIndicatorView
-import Alamofire
-import FirebaseAuth
 
 protocol CashoutTipDelegate {
-    func cashout(data: WithdraW, donate: Bool)
+    func cashout(data: WithdrawModel, donate: Bool)
 }
 
 class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
@@ -67,19 +65,12 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
    
     @IBAction func actionCashout(_ sender: UIButton) {
         
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
-        }
-        self.cashout(uid: user.uid, amount: self.amount, donate: 0)
+        self.cashout(amount: self.amount, donate: 0)
     }
     
     @IBAction func actionCashoutWithTip(_ sender: UIButton) {
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
-        }
-        self.cashout(uid: user.uid, amount: self.amount, donate: self.donate)
+        
+        self.cashout(amount: self.amount, donate: self.donate)
     }
 }
 
