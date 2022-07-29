@@ -106,11 +106,16 @@ class RequestHandler {
             "email": email
         ]
         NetworkHandler.postRequest(url: url, parameters: param, isAuth:false, success: { (successResponse) in
-            
-            success(successResponse)
+            let dictionary = successResponse as! [String: Any]
+            let status = dictionary["status"] as! Bool
+            if status {
+                success(successResponse)
+            } else {
+                failure(NetworkError(status: Constants.NetworkError.generic, message: dictionary["message"] as! String))
+            }
         }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+            print(error.message)
+            failure(NetworkError(status: Constants.NetworkError.serverErrorCode, message: error.message))
         }
     }
 
@@ -122,11 +127,16 @@ class RequestHandler {
             "otp": otp
         ]
         NetworkHandler.postRequest(url: url, parameters: param, isAuth:false, success: { (successResponse) in
-            
-            success(successResponse)
+            let dictionary = successResponse as! [String: Any]
+            let status = dictionary["status"] as! Bool
+            if status {
+                success(successResponse)
+            } else {
+                failure(NetworkError(status: Constants.NetworkError.generic, message: dictionary["message"] as! String))
+            }
         }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+            print(error.message)
+            failure(NetworkError(status: Constants.NetworkError.serverErrorCode, message: error.message))
         }
     }
 
@@ -135,35 +145,52 @@ class RequestHandler {
         print(url)
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
             let dictionary = successResponse as! [String: Any]
-            if let userData = dictionary["data"] as? [String:Any] {
-                Shared.storeUser(user: userData)
+            let status = dictionary["status"] as! Bool
+            if status {
+                if let userData = dictionary["data"] as? [String:Any] {
+                    Shared.storeUser(user: userData)
+                }
+                
+                success(successResponse)
+            } else {
+                failure(NetworkError(status: Constants.NetworkError.generic, message: dictionary["message"] as! String))
             }
             
-            success(successResponse)
         }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+            print(error.message)
+            failure(NetworkError(status: Constants.NetworkError.serverErrorCode, message: error.message))
         }
     }
 
     class func getRequest(url: String, parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         print(url)
         NetworkHandler.getRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            success(successResponse)
+            let dictionary = successResponse as! [String: Any]
+            let status = dictionary["status"] as! Bool
+            if status {
+                success(successResponse)
+            } else {
+                failure(NetworkError(status: Constants.NetworkError.generic, message: dictionary["message"] as! String))
+            }
         }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+            print(error.message)
+            failure(NetworkError(status: Constants.NetworkError.serverErrorCode, message: error.message))
         }
     }
     
     class func postRequest(url: String, parameter: NSDictionary, success: @escaping(Any?)-> Void, failure: @escaping(NetworkError)-> Void) {
         print(url)
         NetworkHandler.postRequest(url: url, parameters: parameter as? Parameters, isAuth:true, success: { (successResponse) in
-            
-            success(successResponse)
+            let dictionary = successResponse as! [String: Any]
+            let status = dictionary["status"] as! Bool
+            if status {
+                success(successResponse)
+            } else {
+                failure(NetworkError(status: Constants.NetworkError.generic, message: dictionary["message"] as! String))
+            }
         }) { (error) in
-                        
-            failure(NetworkError(status: Constants.NetworkError.generic, message: error.message))
+            print(error.message)
+            failure(NetworkError(status: Constants.NetworkError.serverErrorCode, message: error.message))
         }
     }
 }

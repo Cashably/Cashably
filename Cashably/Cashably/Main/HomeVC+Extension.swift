@@ -7,15 +7,13 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
 import FittedSheets
-import Alamofire
 
 extension HomeVC {
     
     func configure() {
-        lbEmail.text = Auth.auth().currentUser?.email
-        lbName.text = Auth.auth().currentUser?.displayName
+        lbEmail.text = Shared.getUser().email
+        lbName.text = Shared.getUser().fullName
         
         if self.loanAmount == 0 {
             let subview: EmptyRequestPayView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as! EmptyRequestPayView
@@ -130,69 +128,38 @@ extension HomeVC {
     
     func checkLoan() {
         self.startAnimating()
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
-        }
-        AF.request("\(Constants.API)/loan/check",
-                   method: .get,
-                   parameters: ["userId": user.uid],
-                   encoder: URLEncodedFormParameterEncoder.default)
-            .responseData(completionHandler: { response in
-                    self.stopAnimating()
-                    switch response.result {
-                        case .success:
-                        guard let loan = response.value else {
-                            let alert = Alert.showBasicAlert(message: "Network error")
-                            self.presentVC(alert)
-                            return
-                        }
-                        
-                        let decoder = JSONDecoder()
-                        do {
-                            let storedLoan = try decoder.decode(LoanResponse.self, from: loan)
-                            
-                            self.loanAmount = storedLoan.amount
-                            self.dueDate = storedLoan.dueDate
-                            Shared.storeAcceptedLoan(loan: loan)
-                        } catch {
-                            print(error)
-                        }
-                        
-                        self.configure()
-                        break
-                        case let .failure(error):
-                        print(error)
-                        self.configure()
-                        break
-                    }
-                })
+        RequestHandler.getRequest(url:Constants.URL.LOAN_CHECK, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            let dictionary = successResponse as! [String: Any]
+            if let loan = dictionary["data"] as? [String:Any] {
+                Shared.storeLoan(loan: loan)
+                let storedLoan = Shared.getLoan()
+                self.loanAmount = storedLoan.amount
+                self.dueDate = storedLoan.dueDate
+            }
                 
+            self.configure()
+        }) { (error) in
+            self.stopAnimating()
+                        
+            self.configure()
+        }
+               
     }
     
     func requestLoan() {
         self.startAnimating()
-        guard let user = Auth.auth().currentUser else {
-            self.logout()
-            return
+                
+        RequestHandler.getRequest(url:Constants.URL.LOAN_REQUEST, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            let approvedVC = self.storyboard?.instantiateViewController(withIdentifier: "ApprovedVC") as! ApprovedVC
+            self.navigationController?.pushViewController(approvedVC, animated: true)
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
+            connectBankVC.delegate = self
+            self.navigationController?.pushViewController(connectBankVC, animated: true)
         }
-        AF.request("\(Constants.API)/loan/request",
-                   method: .get,
-                   parameters: ["userId": user.uid],
-                   encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: StatusResponse.self) { response in
-                    self.stopAnimating()
-                    
-                    if response.value?.status == true {
-                        let approvedVC = self.storyboard?.instantiateViewController(withIdentifier: "ApprovedVC") as! ApprovedVC
-                        self.navigationController?.pushViewController(approvedVC, animated: true)
-                    } else {
-                        let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
-                        connectBankVC.delegate = self
-                        self.navigationController?.pushViewController(connectBankVC, animated: true)
-                    }
-                    
-                }
-            
     }
 }

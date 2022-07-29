@@ -8,6 +8,17 @@
 import Foundation
 
 class Shared{
+    static func storeLoan(loan: [String: Any]) {
+        UserDefaults.standard.set(loan, forKey: "acceptedLoan")
+    }
+    
+    static func getLoan() -> LoanModel {
+        let data = UserDefaults.standard.object(forKey: "acceptedLoan")
+        let objLoan = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as! [String: Any]
+        let loan = LoanModel(fromDictionary: objLoan)
+        return loan
+    }
+    
     static func storeAcceptedLoan(loan: Data) {
         UserDefaults.standard.set(loan, forKey: "acceptedLoan")
     }

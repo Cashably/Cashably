@@ -63,7 +63,7 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
         ssnView.didTap(target: tfSSN!)
         dobView.didTap(target: tfDOB!)
         
-        if let user = Auth.auth().currentUser {
+        if let user = Shared.getUser() as? UserModel {
             if user.email != nil {
                 tfEmail.text = user.email
             }
@@ -131,7 +131,6 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     @IBAction func actionBakc(_ sender: UIButton) {
-        try! Auth.auth().signOut()
         self.navigationController?.popViewController(animated: true)
     }
     
