@@ -7,9 +7,7 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
 import NVActivityIndicatorView
-import Alamofire
 
 class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
    
@@ -72,6 +70,12 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    func moveToSplash() {
+        let mainVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+        self.window?.rootViewController = mainVC
+        navigationController?.pushViewController(mainVC, animated: true)
+    }
+    
     @objc func tapDone() {
         if let datePicker = self.tfDOB.inputView as? UIDatePicker {
             let dateformatter = DateFormatter()
@@ -109,46 +113,21 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
         self.startAnimating()
         
         let params = [
-            "userId": Auth.auth().currentUser?.uid,
             "name": tfName.text,
             "email": tfEmail.text,
             "dob": tfDOB.text,
             "ssn": tfSSN.text
         ]
         
-        AF.request("\(Constants.API)/profile/update",
-                   method: .post,
-                   parameters: params,
-                   encoder: URLEncodedFormParameterEncoder.default)
-                .responseDecodable(of: ProfileResponse.self) { response in
-                    self.stopAnimating()
-                    print(response)
-                    if response.value?.status == true {
-                        self.showToast(message: "Updated successfully")
-                        UserDefaults.standard.set(self.tfDOB.text, forKey: "userDOB")
-                        UserDefaults.standard.set(self.tfSSN.text, forKey: "userSSN")
-//                        if response.value?.enableLogout == true {
-//                            let alert = Alert.showConfirmAlert(message: "You need to resign in to see updated email or name.\nWould you like to logout now? ") { _ in
-//                                self.logout()
-//                            }
-//                            self.presentVC(alert)
-//                        }
-                        Auth.auth().currentUser?.reload(completion: { _ in
-                            
-                        })
-                        
-                        let splashVC = self.storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-                        self.navigationController?.pushViewController(splashVC, animated: true)
-                        
-                    } else {
-                        guard let error = response.value?.message else {
-                            return
-                        }
-                        let alert = Alert.showBasicAlert(message: error)
-                        self.presentVC(alert)
-                    }
-                    
-                }
+        RequestHandler.profileUpdate(parameter: params as! NSDictionary, success: { (successResponse) in
+            self.stopAnimating()
+            self.moveToSplash()
+            
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+        }
     }
     
     @IBAction func actionBakc(_ sender: UIButton) {

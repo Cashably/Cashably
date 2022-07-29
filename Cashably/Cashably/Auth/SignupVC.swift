@@ -59,26 +59,36 @@ class SignupVC: UIViewController, NVActivityIndicatorViewable {
             self?.tfPhone.setFlag(countryCode: country.code)
         }
     }
-    
-    @IBAction func actionSendOTP(_ sender: UIButton) {
-        self.startAnimating()
+    func sendOtpCode() {
         PhoneAuthProvider.provider()
-            .verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationID, error in
+            .verifyPhoneNumber(self.phoneNumber, uiDelegate: nil) { verificationID, error in
                 self.stopAnimating()
-              if let error = error {
-                  let alert = Alert.showBasicAlert(message: error.localizedDescription)
-                  self.presentVC(alert)
-                  return
-              }
+                  if let error = error {
+                      let alert = Alert.showBasicAlert(message: error.localizedDescription)
+                      self.presentVC(alert)
+                      return
+                  }
               // Sign in using the verificationID and the code sent to the user
               // ...
                 UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
-            
+
                 let verifyPhoneVC = self.storyboard?.instantiateViewController(withIdentifier: "VerifyPhoneVC") as! VerifyPhoneVC
                 verifyPhoneVC.type = "signup"
                 verifyPhoneVC.phone = self.phoneNumber
                 self.navigationController?.pushViewController(verifyPhoneVC, animated: true)
           }
+    }
+    
+    @IBAction func actionSendOTP(_ sender: UIButton) {
+        self.startAnimating()
+        RequestHandler.checkPhone(phone: phoneNumber, success: { (successResponse) in
+            self.sendOtpCode()
+            
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+        }
     }
     
     @IBAction func actionLogin(_ sender: UIButton) {

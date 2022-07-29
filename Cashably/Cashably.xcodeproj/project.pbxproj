@@ -88,6 +88,9 @@
 		F0643D232856C62700CAB86F /* CashablyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D222856C62700CAB86F /* CashablyUITests.swift */; };
 		F0643D252856C62700CAB86F /* CashablyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */; };
 		F064BB5F288E87B600C0FF41 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB5E288E87B600C0FF41 /* Shared.swift */; };
+		F064BB62289275C400C0FF41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB61289275C400C0FF41 /* Network.swift */; };
+		F064BB642892764700C0FF41 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB632892764700C0FF41 /* NetworkHandler.swift */; };
+		F064BB662892785F00C0FF41 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB652892785F00C0FF41 /* RequestHandler.swift */; };
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
 		F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCB288A2DCB00624189 /* ResponseType.swift */; };
@@ -124,7 +127,7 @@
 		F0C69D57287E510500BF5C6C /* StandingSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D56287E510500BF5C6C /* StandingSecondVC.swift */; };
 		F0C69D59287E511A00BF5C6C /* StandingThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D58287E511A00BF5C6C /* StandingThirdVC.swift */; };
 		F0C69D5C287EC3C100BF5C6C /* StandingFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */; };
-		F0C69D5E2880485C00BF5C6C /* ResetPasswordEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5D2880485C00BF5C6C /* ResetPasswordEmailVC.swift */; };
+		F0C69D5E2880485C00BF5C6C /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5D2880485C00BF5C6C /* ForgotPasswordVC.swift */; };
 		F0C69D60288048B800BF5C6C /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */; };
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
@@ -246,6 +249,9 @@
 		F0643D222856C62700CAB86F /* CashablyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITests.swift; sourceTree = "<group>"; };
 		F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashablyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F064BB5E288E87B600C0FF41 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		F064BB61289275C400C0FF41 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F064BB632892764700C0FF41 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		F064BB652892785F00C0FF41 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
 		F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CashoutTipVC+extension.swift"; sourceTree = "<group>"; };
 		F0834BCB288A2DCB00624189 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
@@ -282,7 +288,7 @@
 		F0C69D56287E510500BF5C6C /* StandingSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingSecondVC.swift; sourceTree = "<group>"; };
 		F0C69D58287E511A00BF5C6C /* StandingThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingThirdVC.swift; sourceTree = "<group>"; };
 		F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingFirstCell.swift; sourceTree = "<group>"; };
-		F0C69D5D2880485C00BF5C6C /* ResetPasswordEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordEmailVC.swift; sourceTree = "<group>"; };
+		F0C69D5D2880485C00BF5C6C /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
@@ -390,7 +396,7 @@
 				F0A04348285D63C700E29CE0 /* SigninWithEmailVC.swift */,
 				F0A0434A285D65D500E29CE0 /* SignupWithEmailVC.swift */,
 				F0A0435B285EB28C00E29CE0 /* ProfileCompleteVC.swift */,
-				F0C69D5D2880485C00BF5C6C /* ResetPasswordEmailVC.swift */,
+				F0C69D5D2880485C00BF5C6C /* ForgotPasswordVC.swift */,
 				F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */,
 			);
 			path = Auth;
@@ -578,6 +584,7 @@
 		F0643D002856C62600CAB86F /* Cashably */ = {
 			isa = PBXGroup;
 			children = (
+				F064BB60289275B000C0FF41 /* Network */,
 				F00E4DED285D19F400CB8DD6 /* Cashably.entitlements */,
 				F0A0434C285D71CE00E29CE0 /* GoogleService-Info.plist */,
 				F0643D0F2856C62700CAB86F /* Info.plist */,
@@ -619,6 +626,16 @@
 				F0643D242856C62700CAB86F /* CashablyUITestsLaunchTests.swift */,
 			);
 			path = CashablyUITests;
+			sourceTree = "<group>";
+		};
+		F064BB60289275B000C0FF41 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F064BB61289275C400C0FF41 /* Network.swift */,
+				F064BB632892764700C0FF41 /* NetworkHandler.swift */,
+				F064BB652892785F00C0FF41 /* RequestHandler.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F0A0434E285DBF6100E29CE0 /* Extensions */ = {
@@ -968,6 +985,7 @@
 				F0A04354285DC40100E29CE0 /* UIViewController.swift in Sources */,
 				F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */,
 				F064BB5F288E87B600C0FF41 /* Shared.swift in Sources */,
+				F064BB62289275C400C0FF41 /* Network.swift in Sources */,
 				F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */,
 				F00E4DE3285CBEE400CB8DD6 /* UserModel.swift in Sources */,
 				F05365D9285FF32F00B771D9 /* DepositsVC.swift in Sources */,
@@ -1023,7 +1041,7 @@
 				F0C69D60288048B800BF5C6C /* ResetPasswordVC.swift in Sources */,
 				F062A86C2865A4F300DBBCE4 /* GradientCircularSlider.swift in Sources */,
 				F025F8DD2860730800BABB3D /* BankVC.swift in Sources */,
-				F0C69D5E2880485C00BF5C6C /* ResetPasswordEmailVC.swift in Sources */,
+				F0C69D5E2880485C00BF5C6C /* ForgotPasswordVC.swift in Sources */,
 				F0A0435A285EA6E200E29CE0 /* InputView.swift in Sources */,
 				F062A83E2863AEFA00DBBCE4 /* UITextField+InputView.swift in Sources */,
 				F062A85328654AD500DBBCE4 /* PolarCoordinatedView.swift in Sources */,
@@ -1039,6 +1057,7 @@
 				F0C69D4E287DB1E700BF5C6C /* CardCell.swift in Sources */,
 				F062A85B28654DE900DBBCE4 /* MSDoubleHandleCircularSlider.swift in Sources */,
 				F0D3093E2885D9880083C89B /* BalloonMarker1.swift in Sources */,
+				F064BB642892764700C0FF41 /* NetworkHandler.swift in Sources */,
 				F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */,
 				F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */,
 				F05365C9285F76D700B771D9 /* RequestNotificationEnableVC.swift in Sources */,
@@ -1060,6 +1079,7 @@
 				F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */,
 				F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */,
 				F025F8DF2860738800BABB3D /* CreditVC.swift in Sources */,
+				F064BB662892785F00C0FF41 /* RequestHandler.swift in Sources */,
 				F062F265286D8D3E007DE996 /* UIButton.swift in Sources */,
 				F062A85928654DCA00DBBCE4 /* MSCircularSliderHandle.swift in Sources */,
 				F062A83828629D9700DBBCE4 /* DateValueFormatter.swift in Sources */,
@@ -1247,7 +1267,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1261,7 +1281,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.1;
+				MARKETING_VERSION = 0.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1280,7 +1300,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1294,7 +1314,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.1;
+				MARKETING_VERSION = 0.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";

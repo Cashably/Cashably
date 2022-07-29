@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
 import NVActivityIndicatorView
 
 class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
@@ -67,17 +66,15 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
             tfPassword.becomeFirstResponder()
             return
         }
+        
         self.startAnimating()
-        Auth.auth().createUser(withEmail: tfEmail.text!, password: tfPassword.text!) { [weak self] authResult, error in
-            self?.stopAnimating()
-            guard let strongSelf = self else { return }
-            if error != nil {
-                let alert = Alert.showBasicAlert(message: "Network error")
-                self?.presentVC(alert)
-                return
-            }
-          // ...
-            self?.moveToMain()
+        RequestHandler.registerUser(email: (tfEmail.text)!, password: (tfPassword.text)!, success: { (successResponse) in
+            self.stopAnimating()
+            self.moveToMain()
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
         }
     }
     

@@ -63,14 +63,9 @@ class SignInVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-//    override func keyboardWillShowWithFrame(_ frame: CGRect) {
-//        print("keyboardwillshowwithfram")
-//    }
-    
-    @IBAction func actionSendOTP(_ sender: UIButton) {
-        self.startAnimating()
+    func sendOtpCode() {
         PhoneAuthProvider.provider()
-            .verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationID, error in
+            .verifyPhoneNumber(self.phoneNumber, uiDelegate: nil) { verificationID, error in
                 self.stopAnimating()
                   if let error = error {
                       let alert = Alert.showBasicAlert(message: error.localizedDescription)
@@ -86,7 +81,19 @@ class SignInVC: UIViewController, NVActivityIndicatorViewable {
                 verifyPhoneVC.phone = self.phoneNumber
                 self.navigationController?.pushViewController(verifyPhoneVC, animated: true)
           }
-        
+    }
+    
+    @IBAction func actionSendOTP(_ sender: UIButton) {
+        self.startAnimating()
+        RequestHandler.checkPhone(phone: phoneNumber, success: { (successResponse) in
+            self.sendOtpCode()
+            
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+        }
+         
     }
     
     @IBAction func actionLogin(_ sender: UIButton) {

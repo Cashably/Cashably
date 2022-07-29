@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import NVActivityIndicatorView
-import FirebaseAuth
 
 class SplashVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -42,8 +41,8 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
         if UserDefaults.standard.bool(forKey: "enabledStanding") == false {
             self.moveToStanding()
         } else {
-            if let user = Auth.auth().currentUser {
-                if user.displayName == nil {
+            if Shared.getUserToken() != "" {
+                if Shared.isCompletedUserProfile() {
                     self.moveToCompleteProfile()
                 } else {
                     self.moveToMain()

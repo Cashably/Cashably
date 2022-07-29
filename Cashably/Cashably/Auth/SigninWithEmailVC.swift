@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
 import NVActivityIndicatorView
 import UITextField_Shake
 
@@ -70,19 +69,18 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
             tfPassword.becomeFirstResponder()
             return
         }
+
         self.startAnimating()
-        Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) { [weak self] authResult, error in
-            self?.stopAnimating()
-            guard let strongSelf = self else { return }
-            if error != nil {
-                let alert = Alert.showBasicAlert(message: "Invalide email or password")
-                self?.presentVC(alert)
-                return
-            }
-          // ...
-            self?.moveToMain()
+        RequestHandler.loginUser(email: (tfEmail.text)!, password: (tfPassword.text)!, success: { (successResponse) in
+            self.stopAnimating()
+            self.moveToMain()
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
         }
     }
+    
     @IBAction func actionShowPassword(_ sender: UIButton) {
         tfPassword.isSecureTextEntry = !self.tfPassword.isSecureTextEntry
     }

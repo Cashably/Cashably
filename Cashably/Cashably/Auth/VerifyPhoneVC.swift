@@ -50,7 +50,7 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
        
    }
     
-    func moveToMain() {
+    func moveToSplash() {
         let mainVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
         self.window?.rootViewController = mainVC
         navigationController?.pushViewController(mainVC, animated: true)
@@ -81,35 +81,35 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
               verificationCode: code
         )
         
-        if self.type == "signin" {
-            Auth.auth().signIn(with: credential) { authResult, error in
-                self.stopAnimating()
-                if let error = error {
-                    self.authError = error as NSError
-                    let alert = Alert.showBasicAlert(message: error.localizedDescription)
-                    self.presentVC(alert)
-                    return
-                }
-               
-                // User is signed in
-                // ...
-                if let user = Auth.auth().currentUser {
-                    
-                        self.moveToMain()
-                    
-                } else {
-                    self.moveToLogin()
-                }
-            }
-        } else {
-            Auth.auth().checkActionCode(code) { codeInfo, error in
-                self.stopAnimating()
-                self.moveToSignupWithEmail()
-            }
+        Auth.auth().signIn(with: credential) { authResult, error in
             
+            if let error = error {
+                self.stopAnimating()
+                self.authError = error as NSError
+                let alert = Alert.showBasicAlert(message: error.localizedDescription)
+                self.presentVC(alert)
+                return
+            }
+            if self.type == "signin" {
+                RequestHandler.loginUser(phone: self.phone, success: { (successResponse) in
+                    self.stopAnimating()
+                    self.moveToSplash()
+                }) { (error) in
+                    self.stopAnimating()
+                    let alert = Alert.showBasicAlert(message: error.message)
+                    self.presentVC(alert)
+                }
+            } else {
+                RequestHandler.registerUser(phone: self.phone, success: { (successResponse) in
+                    self.stopAnimating()
+                    self.moveToSplash()
+                }) { (error) in
+                    self.stopAnimating()
+                    let alert = Alert.showBasicAlert(message: error.message)
+                    self.presentVC(alert)
+                }
+            }
         }
-        
-        
     }
     
     @IBAction func actionTryAgain(_ sender: UIButton) {

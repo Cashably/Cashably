@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import NVActivityIndicatorView
-import FirebaseAuth
 
 class ResetPasswordVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -79,20 +78,15 @@ class ResetPasswordVC: UIViewController, NVActivityIndicatorViewable {
             return
         }
         self.startAnimating()
-        
-        Auth.auth().confirmPasswordReset(withCode: tfPasscode.text!, newPassword: self.tfPassword.text!) { error in
-            print("reset password error: \(String(describing: error))")
+        RequestHandler.resetPassword(otp: (tfPasscode.text)!, password: (tfPassword.text)!, success: { (successResponse) in
             self.stopAnimating()
-            if error != nil {
-                let alert = Alert.showBasicAlert(message: "Password reset error.")
-                self.presentVC(alert)
-                return
-            }
             let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
             self.navigationController?.pushViewController(signinVC, animated: true)
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
         }
-        
-        
     }
     
     @IBAction func actionShowPassword(_ sender: UIButton) {
