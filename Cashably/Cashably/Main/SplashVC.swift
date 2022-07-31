@@ -42,7 +42,7 @@ class SplashVC: UIViewController, NVActivityIndicatorViewable {
             self.moveToStanding()
         } else {
             if Shared.getUserToken() != "" {
-                if Shared.isCompletedUserProfile() {
+                if !Shared.isCompletedUserProfile() {
                     self.moveToCompleteProfile()
                 } else {
                     self.moveToMain()

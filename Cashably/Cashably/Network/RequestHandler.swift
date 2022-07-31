@@ -55,8 +55,10 @@ class RequestHandler {
             let dictionary = successResponse as! [String: Any]
             let status = dictionary["status"] as! Bool
             if status {
-                let accessToken = dictionary["token"] as! String
+                let user = dictionary["user"] as! [String: Any]
+                let accessToken = user["token"] as! String
                 Shared.storeUserToken(token: accessToken)
+                Shared.storeUser(user: user)
                 Shared.completeUserProfile(status: false)
                 
                 success(successResponse)

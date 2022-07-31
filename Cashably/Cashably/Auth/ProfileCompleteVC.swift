@@ -24,6 +24,8 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var btnComplete: UIButton!
     
+    var email: String?
+    
     var window: UIWindow?
     
     override func viewDidLoad() {
@@ -121,6 +123,7 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
         
         RequestHandler.profileUpdate(parameter: params as! NSDictionary, success: { (successResponse) in
             self.stopAnimating()
+            Shared.completeUserProfile(status: true)
             self.moveToSplash()
             
         }) { (error) in
