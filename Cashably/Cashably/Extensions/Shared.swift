@@ -9,7 +9,9 @@ import Foundation
 
 class Shared{
     static func storeLoan(loan: [String: Any]) {
-        UserDefaults.standard.set(loan, forKey: "acceptedLoan")
+        let data = NSKeyedArchiver.archivedData(withRootObject: loan)
+        UserDefaults.standard.set(data, forKey: "acceptedLoan")
+        UserDefaults.standard.synchronize()
     }
     
     static func getLoan() -> LoanModel {

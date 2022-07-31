@@ -30,17 +30,17 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
         
         lbLoanAmount.text = "$\(loanAmount)"
         
-        let loan: LoanResponse = Shared.getAcceptedLoan()
+        let loan: LoanModel = Shared.getLoan()
         
-        lbLoanAmount.text = "$\(loan.amount)"
+        lbLoanAmount.text = "$\((loan.amount)!)"
 //        lbDueDate.text = loan.dueDate
         
         let dueTimestamp = loan.dueDateTimestamp
         let timestamp = Date().secondsSince1970
-        let days: Int64 = (dueTimestamp - timestamp) / 3600 / 24
+        let days: Int64 = (dueTimestamp! - timestamp) / 3600 / 24
         lbRemainDays.text = "\(days) DAYS"
         
-        let epochTime = TimeInterval(dueTimestamp)
+        let epochTime = TimeInterval(dueTimestamp!)
         let date = Date(timeIntervalSince1970: epochTime)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM"
@@ -110,7 +110,7 @@ extension RepayVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: LoanTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "loanCell") as! LoanTableViewCell
         cell.selectionStyle = .none
-        let loan: LoanResponse = Shared.getAcceptedLoan()
+        let loan: LoanModel = Shared.getLoan()
         cell.lbBankName.text = loan.to
 //        cell.lbLoanId.text = Auth.auth().currentUser?.uid
         return cell

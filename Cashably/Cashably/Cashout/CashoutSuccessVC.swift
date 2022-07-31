@@ -23,10 +23,10 @@ class CashoutSuccessVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
                 
-        lbAmount.text = "$\(withdrawData!.depositAmount)"
+        lbAmount.text = "$\((withdrawData?.depositAmount)!)"
         lbTo.text = withdrawData!.to
         lbRepayDueDate.text = withdrawData!.dueDate
-        lbTotalRepaymentAmount.text = "$\(withdrawData!.totalAmount)"
+        lbTotalRepaymentAmount.text = "$\((withdrawData?.totalAmount)!)"
         
     }
     

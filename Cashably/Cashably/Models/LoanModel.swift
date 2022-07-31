@@ -24,6 +24,7 @@ struct LoanModel {
         total = dictionary["total"] as? Double
         snoozeFee = dictionary["snoozeFee"] as? Double
         dueDate = dictionary["dueDate"] as? String
+        snooze = dictionary["snooze"] as? Int
         to = dictionary["to"] as? String
         createdAtTimestamp = dictionary["createdAtTimestamp"] as? Int64
         dueDateTimestamp = dictionary["dueDateTimestamp"] as? Int64

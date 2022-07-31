@@ -26,13 +26,13 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let loan: LoanResponse = Shared.getAcceptedLoan()
+        let loan: LoanModel = Shared.getLoan()
         let createdAt = Date(milliseconds: loan.createdAtTimestamp * 1000).dateFormat(format: "dd/MM")
         let dueAt = Date(milliseconds: loan.dueDateTimestamp * 1000).dateFormat(format: "dd/MM")
         lbTerms.text = "\(createdAt) - \(dueAt)"
-        lbAmount.text = "$\(loan.amount)"
-        lbSnoozeFee.text = "$\(loan.snoozeFee)"
-        lbRemainSnooze.text = "Left \(loan.snooze) snooze"
+        lbAmount.text = "$\((loan.amount)!)"
+        lbSnoozeFee.text = "$\((loan.snoozeFee)!)"
+        lbRemainSnooze.text = "Left \((loan.snooze)!) snooze"
         lbTotalAmount.text = "$\(loan.total + loan.snoozeFee)"
         lbNextDueDate.text = loan.nextDueDate
     }
@@ -54,7 +54,7 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
     
     func snoozePay() {
         self.startAnimating()
-        RequestHandler.getRequest(url:Constants.URL.SNOOZE_PAY, parameter: [:], success: { (successResponse) in
+        RequestHandler.postRequest(url:Constants.URL.SNOOZE_PAY, parameter: [:], success: { (successResponse) in
             self.stopAnimating()
             self.showToast(message: "Paid snooze fee successfully")
         }) { (error) in
