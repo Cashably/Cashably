@@ -111,6 +111,7 @@ class RequestHandler {
             let dictionary = successResponse as! [String: Any]
             let status = dictionary["status"] as! Bool
             if status {
+                Shared.storeForgotToken(token: dictionary["token"] as! String)
                 success(successResponse)
             } else {
                 failure(NetworkError(status: Constants.NetworkError.generic, message: dictionary["message"] as! String))
@@ -125,8 +126,9 @@ class RequestHandler {
         let url = Constants.URL.RESET_PASSWORD
         print(url)
         let param : [String: Any] = [
-            "password": password,
-            "otp": otp
+            "pwd": password,
+            "otp": otp,
+            "token": Shared.getForgotToken()
         ]
         NetworkHandler.postRequest(url: url, parameters: param, isAuth:false, success: { (successResponse) in
             let dictionary = successResponse as! [String: Any]

@@ -40,6 +40,14 @@ class Shared{
         return UserDefaults.standard.string(forKey: "token") ?? ""
     }
     
+    static func storeForgotToken(token: String) {
+        UserDefaults.standard.set(token, forKey: "forgot_token")
+    }
+    
+    static func getForgotToken() -> String {
+        return UserDefaults.standard.string(forKey: "forgot_token") ?? ""
+    }
+    
     static func storeUser(user: [String: Any]) {
         let data = NSKeyedArchiver.archivedData(withRootObject: user)
         UserDefaults.standard.set(data, forKey: "user")
