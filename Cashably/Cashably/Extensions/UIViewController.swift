@@ -26,6 +26,7 @@ extension UIViewController {
     
     func logout() {
         try! Auth.auth().signOut()
+        Shared.storeUserToken(token: "")
         let splashVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
         navigationController?.pushViewController(splashVC, animated: true)
     }

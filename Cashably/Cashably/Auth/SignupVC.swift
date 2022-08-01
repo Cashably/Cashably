@@ -81,7 +81,7 @@ class SignupVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func actionSendOTP(_ sender: UIButton) {
         self.startAnimating()
-        RequestHandler.checkPhone(phone: phoneNumber, success: { (successResponse) in
+        RequestHandler.checkPhone(phone: phoneNumber, type: "signup", success: { (successResponse) in
             self.sendOtpCode()
             
         }) { (error) in
