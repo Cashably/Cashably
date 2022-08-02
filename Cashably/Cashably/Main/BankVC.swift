@@ -42,8 +42,6 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
         
         self.drawChart()
         
-        self.loadBank()
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -55,6 +53,7 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
         setNeedsStatusBarAppearanceUpdate()
+        self.loadBank()
    }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -71,11 +70,10 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
             self.stopAnimating()
             let dictionary = successResponse as! [String: Any]
             if let data = dictionary["data"] as? [String:Any] {
-                let balance = data["balance"] as! Double
-                self.lbBalance.text = "$\(balance)"
+                if let balance = data["balance"] as? Double {
+                    self.lbBalance.text = "$\(balance)"
+                }
             }
-                
-            
         }) { (error) in
             self.stopAnimating()
             if error.status == Constants.NetworkError.generic {

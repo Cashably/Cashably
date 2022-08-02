@@ -86,22 +86,22 @@ extension MyTransactionsVC: UITableViewDataSource {
         case "loan":
             cell.lbTitle.text = "From Cashably"
             cell.lbAmount.textColor = UIColor(red: 0, green: 0.775, blue: 0.171, alpha: 1)
-            cell.lbAmount.text = "+$\(transaction.amount)"
+            cell.lbAmount.text = "+$\((transaction.amount)!)"
             break
         case "repay":
             cell.lbTitle.text = "Sent to Cashably"
             cell.lbAmount.textColor = UIColor(red: 0.922, green: 0.341, blue: 0.341, alpha: 1)
-            cell.lbAmount.text = "-$\(transaction.amount)"
+            cell.lbAmount.text = "-$\((transaction.amount)!)"
             break
         case "donate":
-            cell.lbTitle.text = "Sent to \(transaction.company)"
+            cell.lbTitle.text = "Sent to \((transaction.company)!)"
             cell.lbAmount.textColor = UIColor(red: 0.922, green: 0.341, blue: 0.341, alpha: 1)
-            cell.lbAmount.text = "-$\(transaction.amount)"
+            cell.lbAmount.text = "-$\((transaction.amount)!)"
             break
         case "snooze":
             cell.lbTitle.text = "Sent Snooze payment"
             cell.lbAmount.textColor = UIColor(red: 0.922, green: 0.341, blue: 0.341, alpha: 1)
-            cell.lbAmount.text = "-$\(transaction.amount)"
+            cell.lbAmount.text = "-$\((transaction.amount)!)"
             break
         default:
             break
