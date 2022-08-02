@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 import Charts
+import NVActivityIndicatorView
 
-class BankVC: UIViewController {
+class BankVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var viewBalance: RoundView! {
         didSet {
@@ -41,6 +42,8 @@ class BankVC: UIViewController {
         
         self.drawChart()
         
+        self.loadBank()
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -60,6 +63,27 @@ class BankVC: UIViewController {
    }
     
     @IBAction func actionFilter(_ sender: UIButton) {
+    }
+    
+    func loadBank() {
+        self.startAnimating()
+        RequestHandler.getRequest(url:Constants.URL.GET_BANK, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            let dictionary = successResponse as! [String: Any]
+            if let data = dictionary["data"] as? [String:Any] {
+                let balance = data["balance"] as! Double
+                self.lbBalance.text = "$\(balance)"
+            }
+                
+            
+        }) { (error) in
+            self.stopAnimating()
+            if error.status == Constants.NetworkError.generic {
+                let alert = Alert.showBasicAlert(message: error.message)
+                self.presentVC(alert)
+            }
+            
+        }
     }
     
     func drawChart() {

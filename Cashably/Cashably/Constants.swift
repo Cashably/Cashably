@@ -30,6 +30,7 @@ class Constants {
         static let REPAY = USER_API + "/repay"
         static let SNOOZE_PAY = USER_API + "/snooze_pay"
         static let GET_TRANSACTIONS = USER_API + "/transactions"
+        static let GET_BANK = USER_API + "/bank"
     }
     
     struct NetworkError {

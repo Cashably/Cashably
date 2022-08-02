@@ -55,7 +55,17 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
             onSuccess: { linkSuccess in
                 // Send the linkSuccess.publicToken to your app server.
                 print("linksuccess public token \(linkSuccess.publicToken)")
-                self.storePlaidPubToken(token: linkSuccess.publicToken)
+                let accountsData = linkSuccess.metadata.accounts
+                let institutionId = linkSuccess.metadata.institution.id
+                var accounts: [[String: Any]] = []
+                for account in accountsData {
+                    accounts.append([
+                        "id": account.id,
+                        "subtype": "\(account.subtype)",
+                        "name": account.name
+                    ])
+                }
+                self.storePlaidPubToken(token: linkSuccess.publicToken, institutionId: institutionId, accounts: accounts)
             }
         )
         
@@ -85,9 +95,14 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
             
     }
     
-    func storePlaidPubToken(token: String) {
+    func storePlaidPubToken(token: String, institutionId: String, accounts: [[String: Any]]) {
         self.startAnimating()
-        RequestHandler.postRequest(url:Constants.URL.PLAID_EXCHANGE_PUB_TOKEN, parameter: ["public_token": token], success: { (successResponse) in
+        let params = [
+            "public_token": token,
+            "institutionId": institutionId,
+            "accounts": accounts
+        ] as [String : Any]
+        RequestHandler.postRequest(url:Constants.URL.PLAID_EXCHANGE_PUB_TOKEN, parameter: params as! NSDictionary, success: { (successResponse) in
             self.stopAnimating()
             self.showToast(message: "Sent successfully")
             self.delegate.connected()
