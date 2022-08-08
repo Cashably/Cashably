@@ -26,6 +26,8 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var btnMonth: UIButton!
     
     @IBOutlet weak var chartView: LineChartView!
+    private var chartData: [ChartDataEntry]?
+    private var maxValue = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,14 +66,27 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
     @IBAction func actionFilter(_ sender: UIButton) {
     }
     
-    func loadBank() {
+    func loadBank(duration: String = "week") {
         self.startAnimating()
-        RequestHandler.getRequest(url:Constants.URL.GET_BANK, parameter: [:], success: { (successResponse) in
+        let params = ["duration": duration] as! NSDictionary
+        RequestHandler.getRequest(url:Constants.URL.GET_BANK, parameter: params, success: { (successResponse) in
             self.stopAnimating()
             let dictionary = successResponse as! [String: Any]
             if let data = dictionary["data"] as? [String:Any] {
                 if let balance = data["balance"] as? Double {
                     self.lbBalance.text = "$\(balance)"
+                }
+                if let transactions = data["transactions"] as? [[String: Any]] {
+                    self.chartData = []
+                    for item in transactions {
+                        let value = item["value"] as! Double
+                        if value > self.maxValue {
+                            self.maxValue = value
+                        }
+                        self.chartData?.append(ChartDataEntry(x: item["timestamp"] as! Double, y: value))
+                    }
+                    
+                    self.drawChart()
                 }
             }
         }) { (error) in
@@ -102,7 +117,7 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
         xAxis.valueFormatter = DateValueFormatter()
 
         let leftAxis = chartView.leftAxis
-        leftAxis.axisMaximum = 170
+        leftAxis.axisMaximum = self.maxValue
         leftAxis.axisMinimum = 0
         leftAxis.yOffset = -9
         leftAxis.granularityEnabled = true
@@ -125,36 +140,25 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
 
         chartView.legend.form = .line
         
-        setDataCount(100, range: 170)
+        setDataCount()
        
     }
     
-    func setDataCount(_ count: Int, range: UInt32) {
-        let now = Date().timeIntervalSinceNow
-        let hourSeconds: TimeInterval = 3600
-        
-        let from = now - (Double(count) / 2) * hourSeconds
-        let to = now
-        
-        let values = stride(from: from, to: to, by: hourSeconds).map { (x) -> ChartDataEntry in
-            let y = arc4random_uniform(range)
-            return ChartDataEntry(x: x, y: Double(y))
-        }
+    func setDataCount() {
+//        let now = Date().timeIntervalSinceNow
+//        let hourSeconds: TimeInterval = 3600
+//
+//        let from = now - (Double(count) / 2) * hourSeconds
+//        let to = now
+//
+//        let values = stride(from: from, to: to, by: hourSeconds).map { (x) -> ChartDataEntry in
+//            let y = arc4random_uniform(range)
+//            return ChartDataEntry(x: x, y: Double(y))
+//        }
+        let values = self.chartData
 
         let set1 = LineChartDataSet(entries: values, label: "DataSet 1")
         setup(set1)
-
-        let value = ChartDataEntry(x: Double(3), y: 3)
-        set1.addEntryOrdered(value)
-        let gradientColors = [UIColor(red: 0.169, green: 0.706, blue: 0.396, alpha: 0).cgColor,
-                              UIColor(red: 0.169, green: 0.706, blue: 0.396, alpha: 0.13).cgColor]
-        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
-
-        set1.fillAlpha = 1
-        set1.fill = .fillWithLinearGradient(gradient, angle: 90)
-        set1.drawFilledEnabled = true
-        set1.drawCirclesEnabled = false
-    
 
         let data = LineChartData(dataSet: set1)
 
@@ -177,6 +181,15 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
         dataSet.formLineWidth = 0
         dataSet.formSize = 15
         
+        let gradientColors = [UIColor(red: 0.169, green: 0.706, blue: 0.396, alpha: 0).cgColor,
+                              UIColor(red: 0.169, green: 0.706, blue: 0.396, alpha: 0.13).cgColor]
+        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: nil)!
+
+        dataSet.fillAlpha = 1
+        dataSet.fill = .fillWithLinearGradient(gradient, angle: 90)
+        dataSet.drawFilledEnabled = true
+        dataSet.drawCirclesEnabled = false
+        
     }
     
     @IBAction func actionWeek(_ sender: UIButton) {
@@ -193,6 +206,8 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
             container.foregroundColor = UIColor(red: 0.388, green: 0.384, blue: 0.384, alpha: 1)
             return container
         }
+        
+        self.loadBank()
     }
     
     @IBAction func actionMonth(_ sender: UIButton) {
@@ -209,6 +224,8 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
             container.foregroundColor = UIColor(red: 0.388, green: 0.384, blue: 0.384, alpha: 1)
             return container
         }
+        
+        self.loadBank(duration: "month")
     }
     
     
