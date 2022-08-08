@@ -141,7 +141,7 @@ extension HomeVC {
             self.configure()
         }) { (error) in
             self.stopAnimating()
-                        
+            self.loanAmount = 0
             self.configure()
         }
                
