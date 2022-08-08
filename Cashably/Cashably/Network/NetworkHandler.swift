@@ -65,7 +65,7 @@ class NetworkHandler {
                         }
                         
                         let dictionary = response as! [String: AnyObject]
-                        guard let message = dictionary["error"] as! String? else {
+                        guard let message = dictionary["error"] as? String else {
                             networkError.status = statusCode
                             networkError.message = "Validation Error"
                             
@@ -119,6 +119,7 @@ class NetworkHandler {
        var headers: HTTPHeaders
         if isAuth {
             let userAuthToken = Shared.getUserToken()
+            print(userAuthToken)
             headers = [
                 "Accept": "application/json",
                 "Authorization": "\(userAuthToken)",
@@ -248,7 +249,7 @@ class NetworkHandler {
                 }
                 
                 let dictionary = response as! [String: AnyObject]
-                guard let message = dictionary["error"] as! String? else {
+                guard let message = dictionary["error"] as? String else {
                     networkError.status = statusCode
                     networkError.message = "Validation Error"
                     

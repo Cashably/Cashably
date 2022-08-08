@@ -70,7 +70,7 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
     
     func rePay() {
         self.startAnimating()
-        RequestHandler.getRequest(url:Constants.URL.REPAY, parameter: [:], success: { (successResponse) in
+        RequestHandler.postRequest(url:Constants.URL.REPAY, parameter: [:], success: { (successResponse) in
             self.stopAnimating()
             self.showToast(message: "Repaid successfully.")
             self.btnRepay.isEnabled = false
