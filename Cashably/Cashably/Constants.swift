@@ -31,6 +31,7 @@ class Constants {
         static let SNOOZE_PAY = USER_API + "/snooze_pay"
         static let GET_TRANSACTIONS = USER_API + "/transactions"
         static let GET_BANK = USER_API + "/bank"
+        static let SEND_MESSAGE = USER_API + "/message"
     }
     
     struct NetworkError {
