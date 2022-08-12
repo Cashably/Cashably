@@ -67,6 +67,10 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
         self.requestLoan()
     }
     
+    func onWithdrawMore() {
+        self.withdrawMore()
+    }
+    
     func onPay() {
         let repayVC = self.storyboard?.instantiateViewController(withIdentifier: "RepayVC") as! RepayVC
         repayVC.loanAmount = self.loanAmount

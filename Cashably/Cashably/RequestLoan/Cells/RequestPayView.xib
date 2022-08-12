@@ -17,44 +17,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rt-Ny-DAi" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-fe-24p" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-fe-24p" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                             <rect key="frame" x="20" y="-70" width="374" height="140"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI1-sf-crY" userLabel="Request Instant  Cash Loan">
-                                    <rect key="frame" x="20" y="20" width="123.5" height="53.5"/>
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">Request Instant 
-</string>
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" metaFont="system" size="17"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Cash Loan">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" metaFont="system" size="17"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12.5" lineHeightMultiple="2" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="_isCustomFont" value="YES"/>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
-                                            <integer key="value" value="600"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-1X-mOu">
-                                    <rect key="frame" x="20" y="88.5" width="109.5" height="40"/>
+                                    <rect key="frame" x="20" y="87" width="114" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="rbG-hr-oti"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Request Now">
+                                    <buttonConfiguration key="configuration" style="plain" title="Request More">
                                         <backgroundConfiguration key="background" cornerRadius="5">
                                             <color key="backgroundColor" red="0.023529411764705882" green="0.792156862745098" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                         </backgroundConfiguration>
@@ -70,23 +42,71 @@
                                         <action selector="actionRequest:" destination="XDi-Uk-6kp" eventType="primaryActionTriggered" id="wpA-8C-5QL"/>
                                     </connections>
                                 </button>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="request_loan_logo" translatesAutoresizingMaskIntoConstraints="NO" id="sRo-Rl-xzw">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar_coin" translatesAutoresizingMaskIntoConstraints="NO" id="sRo-Rl-xzw">
                                     <rect key="frame" x="254" y="20" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="WLq-dw-gK2"/>
                                         <constraint firstAttribute="width" constant="100" id="z7E-dI-D61"/>
                                     </constraints>
                                 </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mnC-l6-TGH">
+                                    <rect key="frame" x="20" y="18" width="229" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cof-Do-qpf">
+                                            <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                    <integer key="value" value="600"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="_lineHeight">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of $100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCu-hs-rjG">
+                                            <rect key="frame" x="35" y="0.0" width="194" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.63137254901960782" green="0.65098039215686276" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                    <integer key="value" value="500"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Nal-Pm-g2M"/>
+                                    </constraints>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Loan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yd-v9-2Lu">
+                                    <rect key="frame" x="20" y="52" width="103.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                            <integer key="value" value="500"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="sRo-Rl-xzw" secondAttribute="trailing" constant="20" id="Age-EQ-ric"/>
+                                <constraint firstItem="3yd-v9-2Lu" firstAttribute="leading" secondItem="kxy-fe-24p" secondAttribute="leading" constant="20" id="BPW-cp-ABH"/>
+                                <constraint firstAttribute="bottom" secondItem="QQK-1X-mOu" secondAttribute="bottom" constant="13" id="HDg-bc-K5z"/>
+                                <constraint firstItem="mnC-l6-TGH" firstAttribute="top" secondItem="kxy-fe-24p" secondAttribute="top" constant="18" id="Jbq-wp-w2C"/>
                                 <constraint firstAttribute="height" constant="140" id="SZ6-Hq-JbJ"/>
+                                <constraint firstItem="sRo-Rl-xzw" firstAttribute="leading" secondItem="mnC-l6-TGH" secondAttribute="trailing" constant="5" id="eqR-6Q-vez"/>
+                                <constraint firstItem="mnC-l6-TGH" firstAttribute="leading" secondItem="kxy-fe-24p" secondAttribute="leading" constant="20" id="gwq-AX-fHv"/>
                                 <constraint firstItem="QQK-1X-mOu" firstAttribute="leading" secondItem="kxy-fe-24p" secondAttribute="leading" constant="20" id="k4G-jQ-H0n"/>
                                 <constraint firstItem="sRo-Rl-xzw" firstAttribute="top" secondItem="kxy-fe-24p" secondAttribute="top" constant="20" id="lmx-s7-Z4R"/>
-                                <constraint firstItem="QQK-1X-mOu" firstAttribute="top" secondItem="SI1-sf-crY" secondAttribute="bottom" constant="15" id="mDS-aZ-FWw"/>
-                                <constraint firstItem="SI1-sf-crY" firstAttribute="leading" secondItem="kxy-fe-24p" secondAttribute="leading" constant="20" id="oFq-rn-eam"/>
-                                <constraint firstItem="SI1-sf-crY" firstAttribute="top" secondItem="kxy-fe-24p" secondAttribute="top" constant="20" id="vOZ-cv-0yz"/>
+                                <constraint firstItem="3yd-v9-2Lu" firstAttribute="top" secondItem="mnC-l6-TGH" secondAttribute="bottom" constant="4" id="t5h-Yn-WKh"/>
                             </constraints>
+                            <edgeInsets key="layoutMargins" top="13" left="20" bottom="13" right="20"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-1O-ekJ">
                             <rect key="frame" x="0.0" y="90" width="414" height="806"/>
@@ -339,7 +359,10 @@
                 <outlet property="btnRequest" destination="QQK-1X-mOu" id="qpu-pz-obc"/>
                 <outlet property="btnSnooze" destination="3ky-aX-fbd" id="BBX-az-2eq"/>
                 <outlet property="lbAmount" destination="NGr-nh-Sjt" id="fly-DF-pil"/>
+                <outlet property="lbApprovedAmount" destination="JCu-hs-rjG" id="9mm-hZ-jad"/>
+                <outlet property="lbAvailableAmount" destination="cof-Do-qpf" id="4yJ-Ro-M1k"/>
                 <outlet property="lbDueDate" destination="CZ6-Iy-zbp" id="IVS-Zb-fVM"/>
+                <outlet property="moreView" destination="kxy-fe-24p" id="Twp-Vs-g3O"/>
                 <outlet property="payView" destination="O2Z-W7-nZQ" id="qC8-sM-UP0"/>
                 <outlet property="snoozeView" destination="7Ga-vg-4Kn" id="DFF-5f-EXz"/>
             </connections>
@@ -348,10 +371,10 @@
     </objects>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="dollar_coin" width="81" height="81"/>
         <image name="ic_arrow_right_black" width="7" height="12"/>
         <image name="ic_calendar" width="20" height="22"/>
         <image name="ic_dollar" width="20" height="20"/>
-        <image name="request_loan_logo" width="180" height="180"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

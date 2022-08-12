@@ -26,9 +26,16 @@ extension HomeVC {
             subview.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
         } else {
             let subview = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as! RequestPayView
+            let storedLoan = Shared.getLoan()
             subview.lbAmount.text = "$\(self.loanAmount)"
             subview.lbDueDate.text = self.dueDate
-            subview.onRequest = {() in self.onRequest()}
+            subview.lbApprovedAmount.text = "of $\(storedLoan.approved!)"
+            let availabeAmount = storedLoan.approved - storedLoan.amount
+            if availabeAmount == 0 {
+                subview.moreView.isHidden = true
+            }
+            subview.lbAvailableAmount.text = "$\(availabeAmount)"
+            subview.onWithdrawMore = {() in self.onWithdrawMore()}
             subview.onPay = {() in self.onPay()}
             subview.onSnooze = {() in self.onSnooze()}
             let payGesture = UITapGestureRecognizer(target: self, action: #selector(self.payAction(_:)))
@@ -161,5 +168,10 @@ extension HomeVC {
             connectBankVC.delegate = self
             self.navigationController?.pushViewController(connectBankVC, animated: true)
         }
+    }
+    
+    func withdrawMore() {
+        let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
+        self.navigationController?.pushViewController(cashoutVC, animated: true)
     }
 }

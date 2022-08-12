@@ -10,6 +10,7 @@ import Foundation
 struct LoanModel {
     var amount: Double!
     var total: Double!
+    var approved: Double!
     var snoozeFee: Double!
     var snooze: Int!
     var dueDate: String!
@@ -22,6 +23,7 @@ struct LoanModel {
         
         amount = dictionary["amount"] as? Double
         total = dictionary["total"] as? Double
+        approved = dictionary["approved"] as? Double
         snoozeFee = dictionary["snoozeFee"] as? Double
         dueDate = dictionary["dueDate"] as? String
         snooze = dictionary["snooze"] as? Int

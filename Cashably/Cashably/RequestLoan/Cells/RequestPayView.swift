@@ -16,13 +16,16 @@ class RequestPayView: UIView {
     
     @IBOutlet weak var lbAmount: UILabel!
     @IBOutlet weak var lbDueDate: UILabel!
+    @IBOutlet weak var lbAvailableAmount: UILabel!
+    @IBOutlet weak var lbApprovedAmount: UILabel!
     
     @IBOutlet weak var payView: RoundView!
     @IBOutlet weak var snoozeView: RoundView!
+    @IBOutlet weak var moreView: RoundBorderView!
     
     
     @IBAction func actionRequest(_ sender: UIButton) {
-        self.onRequest?()
+        self.onWithdrawMore?()
     }
     
     @IBAction func actionSnooze(_ sender: UIButton) {
@@ -33,7 +36,7 @@ class RequestPayView: UIView {
         self.onPay?()
     }
     
-    var onRequest: (() -> ())?
+    var onWithdrawMore: (() -> ())?
     var onSnooze: (() -> ())?
     var onPay: (() -> ())?
 }
