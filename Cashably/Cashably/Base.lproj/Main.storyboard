@@ -8791,7 +8791,7 @@ you within 1-2 Business Days.</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dII-oU-pBR">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dII-oU-pBR">
                                                         <rect key="frame" x="345" y="13" width="51" height="31"/>
                                                         <color key="onTintColor" red="0.0" green="0.61960784310000006" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
@@ -8841,6 +8841,12 @@ you within 1-2 Business Days.</string>
                             <constraint firstItem="M3v-k4-tkX" firstAttribute="bottom" secondItem="1C2-oT-eN3" secondAttribute="bottom" id="vLK-tt-LQq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailToggle" destination="N7G-xJ-gbv" id="d1B-pJ-y2L"/>
+                        <outlet property="latestToggle" destination="JPr-CT-lxo" id="NI3-U9-eph"/>
+                        <outlet property="smsToggle" destination="dII-oU-pBR" id="WCH-7A-Ew2"/>
+                        <outlet property="transactionsToggle" destination="w26-MA-25R" id="44G-0y-NHa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqI-PR-ijM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

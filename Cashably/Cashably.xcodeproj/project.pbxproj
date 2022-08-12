@@ -94,6 +94,7 @@
 		F064BB6828938E4300C0FF41 /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB6728938E4300C0FF41 /* LoanModel.swift */; };
 		F064BB6A289391FA00C0FF41 /* WithdrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB69289391FA00C0FF41 /* WithdrawModel.swift */; };
 		F064BB6C2893C3BA00C0FF41 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */; };
+		F07C150428A6034800A30143 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C150328A6034800A30143 /* AlertModel.swift */; };
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
 		F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCB288A2DCB00624189 /* ResponseType.swift */; };
@@ -258,6 +259,7 @@
 		F064BB6728938E4300C0FF41 /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
 		F064BB69289391FA00C0FF41 /* WithdrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawModel.swift; sourceTree = "<group>"; };
 		F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		F07C150328A6034800A30143 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 		F0834BC728893EE600624189 /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
 		F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CashoutTipVC+extension.swift"; sourceTree = "<group>"; };
 		F0834BCB288A2DCB00624189 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				F00E4DE2285CBEE400CB8DD6 /* UserModel.swift */,
 				F064BB69289391FA00C0FF41 /* WithdrawModel.swift */,
 				F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */,
+				F07C150328A6034800A30143 /* AlertModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1029,6 +1032,7 @@
 				F05365D1285FEA5900B771D9 /* EmptyRequestPay.swift in Sources */,
 				F0C69D59287E511A00BF5C6C /* StandingThirdVC.swift in Sources */,
 				F00E4DE7285CC4DE00CB8DD6 /* MainVC.swift in Sources */,
+				F07C150428A6034800A30143 /* AlertModel.swift in Sources */,
 				F025F8DB28606F4B00BABB3D /* HelpVC.swift in Sources */,
 				F05365DF285FF40300B771D9 /* ApprovedVC.swift in Sources */,
 				F0AB2566287C589100C6A593 /* TransactionTableViewCell.swift in Sources */,
