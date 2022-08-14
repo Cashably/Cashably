@@ -9,6 +9,7 @@ target 'Cashably' do
     pod 'Alamofire'
     # loading animation
     pod 'NVActivityIndicatorView/Extended'
+    pod 'JGProgressHUD'
 
     pod 'UITextField+Shake'
     pod 'iOSDropDown'
@@ -26,8 +27,10 @@ target 'Cashably' do
 
     pod 'Plaid'
 
-    pod 'FirebaseAuth'
-    pod 'FirebaseAnalytics'
+    pod 'FirebaseAuth', '~>9.0'
+    pod 'FirebaseAnalytics', '~>9.0'
+    pod 'FirebaseFirestore', '~>9.0'
+    pod 'FirebaseStorage'
 
   target 'CashablyTests' do
     inherit! :search_paths

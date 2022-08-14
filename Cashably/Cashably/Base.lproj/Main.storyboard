@@ -3209,11 +3209,15 @@
                                                     <constraint firstAttribute="height" constant="102" id="kgU-Kn-iTT"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-g0-duE">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-g0-duE">
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="102" id="NSY-PY-j3x"/>
+                                                    <constraint firstAttribute="width" constant="102" id="jfw-hQ-v3o"/>
+                                                </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selena Grander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzg-sE-xav">
-                                                <rect key="frame" x="40" y="191" width="180" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzg-sE-xav">
+                                                <rect key="frame" x="130" y="191" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -3223,8 +3227,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selena@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwW-vs-zoh">
-                                                <rect key="frame" x="62" y="231" width="136" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwW-vs-zoh">
+                                                <rect key="frame" x="130" y="201" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -3285,6 +3289,7 @@
                         <outlet property="bottomView" destination="n2R-48-vhz" id="8b2-r1-zpY"/>
                         <outlet property="lbEmail" destination="ZwW-vs-zoh" id="ZDJ-pt-AF9"/>
                         <outlet property="lbName" destination="jzg-sE-xav" id="dn3-d6-VCS"/>
+                        <outlet property="userPhoto" destination="nW3-g0-duE" id="eKY-y8-Du0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fpv-9j-zzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5074,11 +5079,15 @@
                                                     <constraint firstAttribute="width" constant="102" id="Jw8-Sf-2OW"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="14O-GJ-UYh">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="14O-GJ-UYh">
                                                 <rect key="frame" x="79" y="79" width="102" height="102"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="102" id="7My-vg-ZUz"/>
+                                                    <constraint firstAttribute="width" constant="102" id="vec-rM-Dno"/>
+                                                </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selena Grander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-qk-asE">
-                                                <rect key="frame" x="46.5" y="191" width="167" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-qk-asE">
+                                                <rect key="frame" x="130" y="191" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -5088,8 +5097,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selena@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYb-qv-iMH">
-                                                <rect key="frame" x="62" y="231" width="136" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYb-qv-iMH">
+                                                <rect key="frame" x="130" y="201" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -5099,6 +5108,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit_profile" translatesAutoresizingMaskIntoConstraints="NO" id="7aQ-6c-b82">
+                                                <rect key="frame" x="161" y="156" width="10" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="SLP-5g-ttO"/>
+                                                    <constraint firstAttribute="width" constant="10" id="edz-y0-Ci2"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="CqC-aI-xMl"/>
@@ -5106,8 +5122,10 @@
                                             <constraint firstItem="14O-GJ-UYh" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="Lis-6z-eu7"/>
                                             <constraint firstAttribute="trailing" secondItem="JGn-RD-GeP" secondAttribute="trailing" id="V1K-jQ-uEB"/>
                                             <constraint firstItem="JGn-RD-GeP" firstAttribute="leading" secondItem="oHM-PK-LZi" secondAttribute="leading" id="WKN-R5-wBO"/>
+                                            <constraint firstItem="14O-GJ-UYh" firstAttribute="trailing" secondItem="7aQ-6c-b82" secondAttribute="trailing" constant="10" id="ahY-1c-DYj"/>
                                             <constraint firstItem="ds9-Xk-KDL" firstAttribute="centerY" secondItem="oHM-PK-LZi" secondAttribute="centerY" id="ccj-nY-Rp1"/>
                                             <constraint firstItem="iYb-qv-iMH" firstAttribute="top" secondItem="iI7-qk-asE" secondAttribute="bottom" constant="10" id="chG-NI-VrU"/>
+                                            <constraint firstItem="14O-GJ-UYh" firstAttribute="bottom" secondItem="7aQ-6c-b82" secondAttribute="bottom" constant="10" id="deS-tM-Z5Z"/>
                                             <constraint firstItem="ds9-Xk-KDL" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="mpj-tb-Hgv"/>
                                             <constraint firstItem="iYb-qv-iMH" firstAttribute="centerX" secondItem="oHM-PK-LZi" secondAttribute="centerX" id="mxb-9a-Kn3"/>
                                             <constraint firstItem="14O-GJ-UYh" firstAttribute="centerY" secondItem="oHM-PK-LZi" secondAttribute="centerY" id="nYu-ay-1TK"/>
@@ -5189,6 +5207,7 @@
                         <outlet property="lbEmail" destination="iYb-qv-iMH" id="rgQ-R4-zxs"/>
                         <outlet property="lbName" destination="iI7-qk-asE" id="5eT-1Q-hMk"/>
                         <outlet property="tableView" destination="keC-4j-Ldi" id="rCW-Uo-i99"/>
+                        <outlet property="userPhoto" destination="14O-GJ-UYh" id="GSe-jg-Bij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5S-kB-E7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

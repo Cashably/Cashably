@@ -20,6 +20,7 @@ class Constants {
         
         static let GET_USER_PROFILE = USER_API + "/profile"
         static let UPDATE_USER_PROFILE = USER_API + "/profile/update"
+        static let UPLOAD_USER_PHOTO = USER_API + "/photo"
         static let GET_PLAID_USER_TOKEN = USER_API + "/plaid/user_token"
         static let GET_PLAID_LINK_TOKEN = USER_API + "/plaid/link_token"
         static let PLAID_EXCHANGE_PUB_TOKEN = USER_API + "/plaid/exchange_public_token"

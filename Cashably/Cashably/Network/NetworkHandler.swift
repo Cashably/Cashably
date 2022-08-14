@@ -289,6 +289,50 @@ class NetworkHandler {
             }
         }
     }
+    
+    class func upload(url: String, fileData: Data, fileName: String, params: Parameters?, uploadProgress: @escaping (Int) -> Void, success: @escaping (Any?) -> Void, failure: @escaping (NetworkError) -> Void) {
+        var headers: HTTPHeaders
+        let userAuthToken = Shared.getUserToken()
+        
+        headers = [
+        "Accept": "application/json",
+        "Authorization": "\(userAuthToken)"
+        ]
+        
+        AF.upload(multipartFormData:{ multipartFormData in
+            multipartFormData.append(fileData, withName: "file", fileName: fileName, mimeType: "image/jpeg")
+            if let parameters = params {
+                for (key, value) in parameters {
+                    multipartFormData.append((value as! String).data(using: String.Encoding.utf8)!, withName: key)
+                }
+            }
+        }, to: url, usingThreshold: UInt64.init(), method: .post, headers: headers)
+            .uploadProgress { progress in
+                    
+                let progress = Int(progress.fractionCompleted * 100)
+                uploadProgress(progress)
+            }
+            .responseJSON { res in
+                switch res.result {
+                case .success(let upload):
+                    
+                    break
+                case .failure(let error):
+                    print("upload error: " + error.localizedDescription)
+                    var networkError = NetworkError()
+                    if error._code == NSURLErrorTimedOut {
+                        networkError.status = Constants.NetworkError.timout
+                        networkError.message = Constants.NetworkError.timoutError
+                        failure(networkError)
+                    } else {
+                        networkError.status = Constants.NetworkError.generic
+                        networkError.message = Constants.NetworkError.genericError
+                        failure(networkError)
+                    }
+                }
+            }
+        
+    }
 }
 
 
