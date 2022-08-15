@@ -72,6 +72,8 @@ public class MSCircularSlider: UIControl {
         }
     }
     
+    public var limitValue: Double = 1000000000
+    
     /** The handle's current value - *default: minimumValue* */
     public var currentValue: Double {
         set {
@@ -551,6 +553,7 @@ public class MSCircularSlider: UIControl {
     }
     
     override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        
         let newPoint = touch.location(in: self)
         var newAngle = floor(calculateAngle(from: centerPoint, to: newPoint))
         // Sliding direction and revolutions' count detection
@@ -563,6 +566,10 @@ public class MSCircularSlider: UIControl {
         }
         
         if newAngle > angle {
+            if currentValue > limitValue {
+                currentValue = limitValue
+                return false
+            }
             // Check if crossing the critical point (north/angle=0.0)
             if fullCircle && isSliding && maximumRevolutions != -1 && (newAngle - angle > REVOLUTIONS_DETECTION_THRESHOLD) {
                 // Check if should be bound (maximumRevolutions reached or less than 0)
@@ -584,6 +591,7 @@ public class MSCircularSlider: UIControl {
             
         }
         else if newAngle < angle {
+            
             // Check if crossing the critical point (north/angle=0.0)
             if fullCircle && isSliding && maximumRevolutions != -1 && (angle - newAngle > REVOLUTIONS_DETECTION_THRESHOLD) {
                 // Check if should be bound (maximumRevolutions reached or less than 0)

@@ -29,6 +29,7 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     
     var loanAmount: Double = 0
     var dueDate: String = ""
+    var availabeAmount: Double = 0
     
     var emptyView: EmptyRequestPayView?
     var payView: RequestPayView?

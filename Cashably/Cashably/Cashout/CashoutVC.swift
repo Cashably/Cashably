@@ -26,6 +26,8 @@ class CashoutVC: UIViewController {
     
     private var amount: Double = 0
     
+    public var limitValue: Double = 100
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -62,6 +64,7 @@ class CashoutVC: UIViewController {
         
         slider.minimumValue = 0
         slider.maximumValue = 100
+        slider.limitValue = self.limitValue
 
         slider.filledColor =  UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
         slider.unfilledColor =  UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)

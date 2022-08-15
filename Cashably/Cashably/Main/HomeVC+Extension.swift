@@ -34,7 +34,7 @@ extension HomeVC {
             payView!.lbAmount.text = "$\(self.loanAmount)"
             payView!.lbDueDate.text = self.dueDate
             payView!.lbApprovedAmount.text = "of $\(storedLoan.approved!)"
-            let availabeAmount = storedLoan.approved - storedLoan.amount
+            availabeAmount = storedLoan.approved - storedLoan.amount
             if availabeAmount == 0 {
                 payView!.moreView.isHidden = true
             }
@@ -157,6 +157,7 @@ extension HomeVC {
         }) { (error) in
             self.stopAnimating()
             self.loanAmount = 0
+            self.availabeAmount = 0
             self.configure()
         }
                
@@ -180,6 +181,10 @@ extension HomeVC {
     
     func withdrawMore() {
         let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
+        if availabeAmount > 0 {
+            cashoutVC.limitValue = availabeAmount
+        }
+        
         self.navigationController?.pushViewController(cashoutVC, animated: true)
     }
 }
