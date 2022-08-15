@@ -16,38 +16,46 @@ extension HomeVC {
         lbName.text = Shared.getUser().fullName
         
         if self.loanAmount == 0 {
-            let subview: EmptyRequestPayView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as! EmptyRequestPayView
-            subview.onRequest = {() in self.onRequest()}
-            self.bottomView.addSubview(subview)
-            subview.translatesAutoresizingMaskIntoConstraints = false
-            subview.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
-            subview.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
-            subview.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
-            subview.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
+            emptyView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as? EmptyRequestPayView
+            self.emptyView!.onRequest = {() in self.onRequest()}
+            self.bottomView.addSubview(self.emptyView!)
+            self.emptyView!.translatesAutoresizingMaskIntoConstraints = false
+            self.emptyView!.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
+            self.emptyView!.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
+            self.emptyView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
+            self.emptyView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
+            
+            if payView != nil {
+                payView?.removeFromSuperview()
+            }
         } else {
-            let subview = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as! RequestPayView
+            payView = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as? RequestPayView
             let storedLoan = Shared.getLoan()
-            subview.lbAmount.text = "$\(self.loanAmount)"
-            subview.lbDueDate.text = self.dueDate
-            subview.lbApprovedAmount.text = "of $\(storedLoan.approved!)"
+            payView!.lbAmount.text = "$\(self.loanAmount)"
+            payView!.lbDueDate.text = self.dueDate
+            payView!.lbApprovedAmount.text = "of $\(storedLoan.approved!)"
             let availabeAmount = storedLoan.approved - storedLoan.amount
             if availabeAmount == 0 {
-                subview.moreView.isHidden = true
+                payView!.moreView.isHidden = true
             }
-            subview.lbAvailableAmount.text = "$\(availabeAmount)"
-            subview.onWithdrawMore = {() in self.onWithdrawMore()}
-            subview.onPay = {() in self.onPay()}
-            subview.onSnooze = {() in self.onSnooze()}
+            payView!.lbAvailableAmount.text = "$\(availabeAmount)"
+            payView!.onWithdrawMore = {() in self.onWithdrawMore()}
+            payView!.onPay = {() in self.onPay()}
+            payView!.onSnooze = {() in self.onSnooze()}
             let payGesture = UITapGestureRecognizer(target: self, action: #selector(self.payAction(_:)))
             let snoozeGesture = UITapGestureRecognizer(target: self, action: #selector(self.snoozeAction(_:)))
-            subview.payView.addGestureRecognizer(payGesture)
-            subview.snoozeView.addGestureRecognizer(snoozeGesture)
-            self.bottomView.addSubview(subview)
-            subview.translatesAutoresizingMaskIntoConstraints = false
-            subview.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
-            subview.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
-            subview.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
-            subview.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
+            payView!.payView.addGestureRecognizer(payGesture)
+            payView!.snoozeView.addGestureRecognizer(snoozeGesture)
+            self.bottomView.addSubview(payView!)
+            payView!.translatesAutoresizingMaskIntoConstraints = false
+            payView!.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
+            payView!.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
+            payView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
+            payView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
+            
+            if emptyView != nil {
+                emptyView?.removeFromSuperview()
+            }
         }
         
     }

@@ -30,6 +30,9 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     var loanAmount: Double = 0
     var dueDate: String = ""
     
+    var emptyView: EmptyRequestPayView?
+    var payView: RequestPayView?
+    
     private enum Permissions: Int {
         case faceid
         case activity
