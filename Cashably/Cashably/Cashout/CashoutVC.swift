@@ -63,8 +63,29 @@ class CashoutVC: UIViewController {
         slider.lineWidth = 15
         
         slider.minimumValue = 0
-        slider.maximumValue = 100
-        slider.limitValue = self.limitValue
+        slider.maximumValue = self.limitValue
+        
+        if self.limitValue > 10 {
+            self.rates = [String]()
+            let n = 5
+            for i in 0..<n {
+                let term = Int(self.limitValue) / 4 * i
+                if term < 10 {
+                    self.rates.append("$\(term)\n  |")
+                }
+                else { self.rates.append("$\(term)\n    |") }
+            }
+            self.rates[4] = "$\(Int(self.limitValue))\n    |"
+        } else if self.limitValue <= 10 {
+            slider.minimumValue = 1
+            self.rates = [String]()
+            let n = Int(self.limitValue)+1
+            for i in 1..<n {
+                self.rates.append("$\(i)\n  |")
+            }
+        }
+        
+//        slider.limitValue = self.limitValue
 
         slider.filledColor =  UIColor(red: 0.107, green: 0.696, blue: 0.51, alpha: 1)
         slider.unfilledColor =  UIColor(red: 0.214, green: 0.767, blue: 0.592, alpha: 1)
@@ -87,7 +108,7 @@ class CashoutVC: UIViewController {
         slider.spaceUnFilledDegree = 110
         slider.clockwise = true
         
-        slider.currentValue = 10
+        slider.currentValue = self.limitValue >= 10 ? 10 : 1
         
         slider.translatesAutoresizingMaskIntoConstraints = false
         
@@ -163,7 +184,7 @@ extension CashoutVC: CashoutTipDelegate {
 
 extension CashoutVC: MSCircularSliderDelegate {
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
-        self.lbAmount.text = "$\((Int)(ceil(value)))"
+        self.lbAmount.text = "$\(Int(value))"
         self.amount = ceil(value)
     }
 }
