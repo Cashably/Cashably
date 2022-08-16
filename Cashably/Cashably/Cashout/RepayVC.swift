@@ -32,7 +32,7 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
         
         let loan: LoanModel = Shared.getLoan()
         
-        lbLoanAmount.text = "$\((loan.amount)!)"
+        lbLoanAmount.text = "$\((loan.total)!)"
 //        lbDueDate.text = loan.dueDate
         
         let dueTimestamp = loan.dueDateTimestamp
