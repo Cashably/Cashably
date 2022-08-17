@@ -95,6 +95,7 @@
 		F064BB6A289391FA00C0FF41 /* WithdrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB69289391FA00C0FF41 /* WithdrawModel.swift */; };
 		F064BB6C2893C3BA00C0FF41 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */; };
 		F07C150428A6034800A30143 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C150328A6034800A30143 /* AlertModel.swift */; };
+		F07C150728AD50E000A30143 /* Intercom in Frameworks */ = {isa = PBXBuildFile; productRef = F07C150628AD50E000A30143 /* Intercom */; };
 		F0834BC828893EE600624189 /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC728893EE600624189 /* HomeVC+Extension.swift */; };
 		F0834BCA28895E3500624189 /* CashoutTipVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BC928895E3500624189 /* CashoutTipVC+extension.swift */; };
 		F0834BCC288A2DCB00624189 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0834BCB288A2DCB00624189 /* ResponseType.swift */; };
@@ -318,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51969243B76980B7B725BA7C /* Pods_Cashably.framework in Frameworks */,
+				F07C150728AD50E000A30143 /* Intercom in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +753,9 @@
 			dependencies = (
 			);
 			name = Cashably;
+			packageProductDependencies = (
+				F07C150628AD50E000A30143 /* Intercom */,
+			);
 			productName = Cashably;
 			productReference = F0643CFE2856C62600CAB86F /* Cashably.app */;
 			productType = "com.apple.product-type.application";
@@ -826,6 +831,9 @@
 				Base,
 			);
 			mainGroup = F0643CF52856C62600CAB86F;
+			packageReferences = (
+				F07C150528AD50E000A30143 /* XCRemoteSwiftPackageReference "intercom-ios" */,
+			);
 			productRefGroup = F0643CFF2856C62600CAB86F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1279,7 +1287,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1295,7 +1303,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.12;
+				MARKETING_VERSION = 0.6.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1314,7 +1322,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 42;
+				CURRENT_PROJECT_VERSION = 44;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1330,7 +1338,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.12;
+				MARKETING_VERSION = 0.6.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1456,6 +1464,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F07C150528AD50E000A30143 /* XCRemoteSwiftPackageReference "intercom-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/intercom/intercom-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F07C150628AD50E000A30143 /* Intercom */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F07C150528AD50E000A30143 /* XCRemoteSwiftPackageReference "intercom-ios" */;
+			productName = Intercom;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F0643CF62856C62600CAB86F /* Project object */;
 }
