@@ -61,7 +61,7 @@ class HelpVC: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable
 //                    // Handle error
 //                }
 //            }
-//        Intercom.setLauncherVisible(true)
+        Intercom.setLauncherVisible(true)
         Intercom.registerUser(withEmail: Shared.getUser().email)
         
     }
