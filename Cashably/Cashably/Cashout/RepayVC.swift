@@ -112,6 +112,12 @@ extension RepayVC: UITableViewDataSource {
         cell.selectionStyle = .none
         let loan: LoanModel = Shared.getLoan()
         cell.lbBankName.text = loan.to
+        cell.lbLoanAmount.text = "$ \(loan.amount!)"
+        cell.lbTotal.text = "$ \(loan.total!)"
+        let snoozepay = loan.snoozeFee * Double((3-loan.snooze))
+        let tip = loan.total - loan.amount - snoozepay
+        cell.lbSnoozePay.text = "$ \(snoozepay)"
+        cell.lbTips.text = "$ \(tip)"
 //        cell.lbLoanId.text = Auth.auth().currentUser?.uid
         return cell
     }

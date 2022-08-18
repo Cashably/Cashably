@@ -10,6 +10,10 @@ import UIKit
 
 class LoanTableViewCell: UITableViewCell {
     @IBOutlet weak var lbBankName: UILabel!
+    @IBOutlet weak var lbLoanAmount: UILabel!
+    @IBOutlet weak var lbTips: UILabel!
+    @IBOutlet weak var lbSnoozePay: UILabel!
+    @IBOutlet weak var lbTotal: UILabel!
     
     @IBOutlet weak var lbLoanId: UILabel!
 }

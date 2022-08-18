@@ -55,12 +55,13 @@ extension CashoutTipVC {
     }
     
     func cashout(amount: Double, donate: Double, company: String = "") {
+        
+//        if donate > amount {
+//            let alert = Alert.showBasicAlert(message: "Can't cashout becuase donate is greater than cashout amount.")
+//            self.presentVC(alert)
+//            return
+//        }
         self.startAnimating()
-        if donate > amount {
-            let alert = Alert.showBasicAlert(message: "Can't cashout becuase donate is greater than cashout amount.")
-            self.presentVC(alert)
-            return
-        }
         let params = ["amount": "\(amount)", "donate": "\(donate)", "company": company]
         RequestHandler.postRequest(url:Constants.URL.WITHDRAW, parameter: params as! NSDictionary, success: { (successResponse) in
             self.stopAnimating()
