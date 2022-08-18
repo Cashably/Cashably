@@ -25,6 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Intercom.enableLogging()
         #endif
         
+        let center = UNUserNotificationCenter.current()
+                // Request permission to display alerts and play sounds.
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            // Enable or disable features based on authorization.
+        }
+        UIApplication.shared.registerForRemoteNotifications()
+        
         UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().tintColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1)
         let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "BRFirma-SemiBold", size: 11)]
