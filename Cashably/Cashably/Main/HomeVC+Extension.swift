@@ -16,6 +16,9 @@ extension HomeVC {
         lbName.text = Shared.getUser().fullName
         
         if self.loanAmount == 0 {
+            if payView != nil {
+                payView?.removeFromSuperview()
+            }
             emptyView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as? EmptyRequestPayView
             self.emptyView!.onRequest = {() in self.onRequest()}
             self.bottomView.addSubview(self.emptyView!)
@@ -25,9 +28,6 @@ extension HomeVC {
             self.emptyView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
             self.emptyView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
             
-            if payView != nil {
-                payView?.removeFromSuperview()
-            }
         } else {
             payView = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as? RequestPayView
             let storedLoan = Shared.getLoan()
