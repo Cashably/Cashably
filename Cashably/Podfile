@@ -14,6 +14,7 @@ target 'Cashably' do
     pod 'UITextField+Shake'
     pod 'iOSDropDown'
     pod 'FlagPhoneNumber'
+    pod 'MBCheckboxButton'
 #    pod 'SVPinView', '~> 1.0'
     pod 'DPOTPView'
     pod 'UIButtonExtension', '~> 0.3'

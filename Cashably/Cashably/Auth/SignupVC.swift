@@ -10,12 +10,15 @@ import UIKit
 import FirebaseAuth
 import FlagPhoneNumber
 import NVActivityIndicatorView
+import MBCheckboxButton
 
 class SignupVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var btnSignupWithEmail: UIButton!
     @IBOutlet weak var btnSendOTP: UIButton!
     @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnTerms: CheckboxButton!
+    @IBOutlet weak var termsText: UILabel!
     @IBOutlet weak var tfPhone: FPNTextField! {
         didSet {
             tfPhone.delegate = self
@@ -29,10 +32,17 @@ class SignupVC: UIViewController, NVActivityIndicatorViewable {
     
     private var phoneNumber: String!
     
+    private var isTerms = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.btnSendOTP.isEnabled = false
+        
+        termsText.isUserInteractionEnabled = true
+        termsText.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleCheckbox)))
+        termsText.attributedText = "terms".termsToAttributedString
+        termsText.numberOfLines = 0
         
         self.flagPhoneNumber()
         
@@ -47,6 +57,21 @@ class SignupVC: UIViewController, NVActivityIndicatorViewable {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+    @objc
+    func toggleCheckbox(_ gesture: UITapGestureRecognizer) {
+        
+        guard let text = self.termsText.text else { return }
+        if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Terms and Condition") {
+            UIApplication.shared.open(URL(string: "https://cashably.com/terms-conditions/")!)
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Privacy Policy") {
+            UIApplication.shared.open(URL(string: "https://cashably.com/privacy-policy/")!)
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Terms of service") {
+            UIApplication.shared.open(URL(string: "https://www.dwolla.com/legal/tos/")!)
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Dwolla Privacy Policy") {
+            UIApplication.shared.open(URL(string: "https://www.dwolla.com/legal/privacy/")!)
+        } 
+    }
     
     func flagPhoneNumber() {
         tfPhone.layer.borderColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1).cgColor
@@ -79,7 +104,13 @@ class SignupVC: UIViewController, NVActivityIndicatorViewable {
           }
     }
     
+    
     @IBAction func actionSendOTP(_ sender: UIButton) {
+        if !btnTerms.isOn {
+            let alert = Alert.showBasicAlert(message: "Please check our terms and policy")
+            self.presentVC(alert)
+            return
+        }
         self.startAnimating()
         RequestHandler.checkPhone(phone: phoneNumber, type: "signup", success: { (successResponse) in
             self.sendOtpCode()

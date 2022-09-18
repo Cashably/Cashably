@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import NVActivityIndicatorView
+import MBCheckboxButton
 
 class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -17,11 +18,15 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var btnTerms: CheckboxButton!
+    @IBOutlet weak var termsText: UILabel!
     
     @IBOutlet weak var emailView: InputView!
     @IBOutlet weak var passwordView: InputView!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    private var isTerms = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +43,11 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         
         self.addKeyboardWillShowNotification()
         self.hideKeyboardWhenTappedAround()
+        
+        termsText.isUserInteractionEnabled = true
+        termsText.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleCheckbox)))
+        termsText.attributedText = "terms".termsToAttributedString
+        termsText.numberOfLines = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +65,27 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         navigationController?.pushViewController(splashVC, animated: true)
     }
     
+    @objc
+    func toggleCheckbox(_ gesture: UITapGestureRecognizer) {
+        
+        guard let text = self.termsText.text else { return }
+        if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Terms and Condition") {
+            UIApplication.shared.open(URL(string: "https://cashably.com/terms-conditions/")!)
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Privacy Policy") {
+            UIApplication.shared.open(URL(string: "https://cashably.com/privacy-policy/")!)
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Terms of service") {
+            UIApplication.shared.open(URL(string: "https://www.dwolla.com/legal/tos/")!)
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Dwolla Privacy Policy") {
+            UIApplication.shared.open(URL(string: "https://www.dwolla.com/legal/privacy/")!)
+        }
+    }
+    
     @IBAction func actionSignup(_ sender: UIButton) {
+        if !btnTerms.isOn {
+            let alert = Alert.showBasicAlert(message: "Please check our terms and policy")
+            self.presentVC(alert)
+            return
+        }
         if tfEmail.text?.isEmpty == true {
             self.tfEmail.shake(6, withDelta: 10, speed: 0.06)
             tfEmail.becomeFirstResponder()

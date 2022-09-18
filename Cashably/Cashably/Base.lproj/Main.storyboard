@@ -29,7 +29,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="570"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bg-sh-tIg" userLabel="signup label">
-                                                                <rect key="frame" x="92.5" y="483.5" width="229" height="20"/>
+                                                                <rect key="frame" x="92.5" y="476.5" width="229" height="20"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZK-1i-mko">
                                                                         <rect key="frame" x="0.0" y="0.0" width="165.5" height="20"/>
@@ -63,7 +63,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-We-Inw" userLabel="btn_login">
-                                                                <rect key="frame" x="20" y="403.5" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="396.5" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="1yC-nV-MFx"/>
                                                                 </constraints>
@@ -85,7 +85,7 @@
                                                                 </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbX-AI-Zf6" userLabel="or stack">
-                                                                <rect key="frame" x="196.5" y="355.5" width="21" height="18"/>
+                                                                <rect key="frame" x="196.5" y="348.5" width="21" height="18"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayU-ei-wt9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="18"/>
@@ -101,7 +101,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-HG-Rc5">
-                                                                <rect key="frame" x="20" y="265.5" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="258.5" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="vaI-Ea-b1l"/>
                                                                 </constraints>
@@ -123,7 +123,7 @@
                                                                 </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fp0-g0-3AD" userLabel="phone">
-                                                                <rect key="frame" x="20" y="89" width="374" height="156.5"/>
+                                                                <rect key="frame" x="20" y="89" width="374" height="149.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Mobile No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn5-dF-bxc">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -146,19 +146,40 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ler-kv-2sd">
-                                                                        <rect key="frame" x="0.0" y="99.5" width="374" height="57"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="By continuing, I agree to Terms of service and authorize Cashably to obtain, use and share consumer reports about me." imagePadding="5">
-                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
-                                                                            <color key="baseForegroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        </buttonConfiguration>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
-                                                                                <integer key="value" value="400"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </button>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJM-2l-SnW">
+                                                                        <rect key="frame" x="0.0" y="99.5" width="374" height="50"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP2-2h-58s" customClass="CheckboxButton" customModule="MBCheckboxButton">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="30" id="fkR-MT-HLw"/>
+                                                                                </constraints>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="30" bottom="0.0" trailing="0.0"/>
+                                                                                </buttonConfiguration>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                                        <integer key="value" value="400"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </button>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIQ-d3-Ooy">
+                                                                                <rect key="frame" x="30" y="0.0" width="344" height="50"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                                        <integer key="value" value="400"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_lineHeight">
+                                                                                        <real key="value" value="1.5"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="XKD-4f-Z5M" userLabel="header stack">
@@ -307,7 +328,9 @@
                         <outlet property="btnLogin" destination="q0g-6k-bOC" id="iWH-hn-DbN"/>
                         <outlet property="btnSendOTP" destination="0Gk-HG-Rc5" id="TE6-aG-zKP"/>
                         <outlet property="btnSignupWithEmail" destination="RvK-We-Inw" id="hLI-7U-kaS"/>
+                        <outlet property="btnTerms" destination="vP2-2h-58s" id="Kcs-U0-fg1"/>
                         <outlet property="scrollView" destination="81V-wx-QaO" id="amq-BK-Epk"/>
+                        <outlet property="termsText" destination="NIQ-d3-Ooy" id="CxD-rd-Ej6"/>
                         <outlet property="tfPhone" destination="RXp-eR-yPH" id="haP-A7-8yO"/>
                     </connections>
                 </viewController>
@@ -1382,19 +1405,6 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-TE-lu6">
-                                                <rect key="frame" x="20" y="230.5" width="374" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="By continuing, I Confirm I’m 18+ years old." imagePadding="5">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
-                                                    <color key="baseForegroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
-                                                        <integer key="value" value="400"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pM5-Pm-7um">
                                                 <rect key="frame" x="20" y="400" width="374" height="60"/>
                                                 <constraints>
@@ -1418,9 +1428,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="bi0-zm-1Ac" secondAttribute="trailing" constant="20" id="1K3-2z-m4N"/>
-                                            <constraint firstAttribute="trailing" secondItem="ayz-TE-lu6" secondAttribute="trailing" constant="20" id="3JR-Zb-1u1"/>
                                             <constraint firstItem="12C-BT-LOO" firstAttribute="top" secondItem="cz4-4V-YAA" secondAttribute="top" constant="30" id="3QP-nZ-iKY"/>
-                                            <constraint firstItem="ayz-TE-lu6" firstAttribute="top" secondItem="bi0-zm-1Ac" secondAttribute="bottom" constant="22" id="GgC-FY-u1C"/>
                                             <constraint firstAttribute="bottom" secondItem="pM5-Pm-7um" secondAttribute="bottom" constant="40" id="Jam-ti-gkz"/>
                                             <constraint firstAttribute="height" constant="500" id="PEq-02-JPH"/>
                                             <constraint firstAttribute="trailing" secondItem="12C-BT-LOO" secondAttribute="trailing" constant="20" id="SNW-Pg-Ogn"/>
@@ -1429,7 +1437,6 @@
                                             <constraint firstItem="bi0-zm-1Ac" firstAttribute="leading" secondItem="cz4-4V-YAA" secondAttribute="leading" constant="20" id="gjM-mu-Sls"/>
                                             <constraint firstItem="bi0-zm-1Ac" firstAttribute="top" secondItem="12C-BT-LOO" secondAttribute="bottom" constant="30" id="rh9-iK-sXl"/>
                                             <constraint firstAttribute="trailing" secondItem="pM5-Pm-7um" secondAttribute="trailing" constant="20" id="sr9-ys-Sfs"/>
-                                            <constraint firstItem="ayz-TE-lu6" firstAttribute="leading" secondItem="cz4-4V-YAA" secondAttribute="leading" constant="20" id="xFE-eK-21e"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t90-cZ-ezf" userLabel="btn_back">
@@ -1527,7 +1534,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Zeo-gK-A5x" userLabel="form stack">
-                                                                <rect key="frame" x="20" y="89" width="374" height="204"/>
+                                                                <rect key="frame" x="20" y="89" width="374" height="279"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vb1-Mn-h5M" userLabel="email stack">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
@@ -1649,23 +1656,41 @@
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-Kr-NOR">
+                                                                        <rect key="frame" x="0.0" y="229" width="374" height="50"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ3-dB-Ilr" customClass="CheckboxButton" customModule="MBCheckboxButton">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="30" id="3su-VP-XEV"/>
+                                                                                </constraints>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="30" bottom="0.0" trailing="0.0"/>
+                                                                                </buttonConfiguration>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                                        <integer key="value" value="400"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </button>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2E-Rf-z54">
+                                                                                <rect key="frame" x="30" y="0.0" width="344" height="50"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                                        <integer key="value" value="400"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ3-dB-Ilr">
-                                                                <rect key="frame" x="20" y="315" width="374" height="57"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="By continuing, I agree to Terms of service and authorize  Cashably to obtain, use and share consumer reports about me." imagePadding="5">
-                                                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
-                                                                    <color key="baseForegroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </buttonConfiguration>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
-                                                                        <integer key="value" value="400"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTN-v8-b67">
-                                                                <rect key="frame" x="20" y="387" width="374" height="60"/>
+                                                                <rect key="frame" x="20" y="388" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="d4H-Jl-6Ol"/>
                                                                 </constraints>
@@ -1688,18 +1713,15 @@
                                                             </button>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="tTN-v8-b67" firstAttribute="top" secondItem="eQ3-dB-Ilr" secondAttribute="bottom" constant="15" id="4E0-Ye-YM6"/>
                                                             <constraint firstAttribute="trailing" secondItem="TUj-s1-lI4" secondAttribute="trailing" constant="20" id="5Vi-qI-Vx8"/>
-                                                            <constraint firstItem="eQ3-dB-Ilr" firstAttribute="leading" secondItem="tcK-dy-cCM" secondAttribute="leading" constant="20" id="8ua-fC-rUH"/>
                                                             <constraint firstAttribute="trailing" secondItem="Zeo-gK-A5x" secondAttribute="trailing" constant="20" id="GcA-WP-irD"/>
-                                                            <constraint firstAttribute="trailing" secondItem="eQ3-dB-Ilr" secondAttribute="trailing" constant="20" id="LqF-5g-vbe"/>
                                                             <constraint firstItem="Zeo-gK-A5x" firstAttribute="top" secondItem="TUj-s1-lI4" secondAttribute="bottom" constant="30" id="MQX-5k-Veu"/>
                                                             <constraint firstItem="TUj-s1-lI4" firstAttribute="top" secondItem="tcK-dy-cCM" secondAttribute="top" id="OAA-dD-p5f"/>
                                                             <constraint firstItem="Zeo-gK-A5x" firstAttribute="leading" secondItem="tcK-dy-cCM" secondAttribute="leading" constant="20" id="UqD-JT-cQi"/>
-                                                            <constraint firstItem="eQ3-dB-Ilr" firstAttribute="top" secondItem="Zeo-gK-A5x" secondAttribute="bottom" constant="22" id="VQR-fU-CKO"/>
                                                             <constraint firstItem="tTN-v8-b67" firstAttribute="leading" secondItem="tcK-dy-cCM" secondAttribute="leading" constant="20" id="ZwF-ec-wKm"/>
                                                             <constraint firstItem="TUj-s1-lI4" firstAttribute="leading" secondItem="tcK-dy-cCM" secondAttribute="leading" constant="20" id="cc1-sn-KIC"/>
                                                             <constraint firstAttribute="height" constant="500" id="lS8-MM-7Jx"/>
+                                                            <constraint firstItem="tTN-v8-b67" firstAttribute="top" secondItem="Zeo-gK-A5x" secondAttribute="bottom" constant="20" id="rZU-Yq-h5o"/>
                                                             <constraint firstAttribute="trailing" secondItem="tTN-v8-b67" secondAttribute="trailing" constant="20" id="tdA-js-TNx"/>
                                                         </constraints>
                                                     </view>
@@ -1765,9 +1787,11 @@
                     <connections>
                         <outlet property="btnBack" destination="ZfM-x5-drI" id="FcD-xE-tg8"/>
                         <outlet property="btnSIgnup" destination="tTN-v8-b67" id="tc2-xI-imN"/>
+                        <outlet property="btnTerms" destination="eQ3-dB-Ilr" id="tHq-hk-pBa"/>
                         <outlet property="emailView" destination="SDT-57-HbW" id="zJy-9H-1sG"/>
                         <outlet property="passwordView" destination="mt0-WD-PY2" id="jaN-kD-lS6"/>
                         <outlet property="scrollView" destination="X2B-r0-v8V" id="6zA-hx-64u"/>
+                        <outlet property="termsText" destination="X2E-Rf-z54" id="SoB-oU-Y5F"/>
                         <outlet property="tfEmail" destination="eZp-Zp-HgQ" id="Xc1-DB-Mqi"/>
                         <outlet property="tfPassword" destination="bCZ-TQ-V17" id="73J-qf-S9k"/>
                     </connections>
@@ -10013,6 +10037,14 @@ if you want..</string>
             <point key="canvasLocation" x="5361" y="3248"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="eQ3-dB-Ilr">
+            <size key="intrinsicContentSize" width="30" height="0.0"/>
+        </designable>
+        <designable name="vP2-2h-58s">
+            <size key="intrinsicContentSize" width="30" height="0.0"/>
+        </designable>
+    </designables>
     <resources>
         <image name="allow_logo" width="180" height="180"/>
         <image name="avatar" width="102" height="102"/>

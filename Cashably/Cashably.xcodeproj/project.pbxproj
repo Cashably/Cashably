@@ -122,6 +122,8 @@
 		F0B8535828600462002F90DA /* DepositTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B8535728600462002F90DA /* DepositTableViewCell.xib */; };
 		F0B8535A2860145B002F90DA /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B853592860145B002F90DA /* RoundBorderView.swift */; };
 		F0B87A03285F2C4E00414FFD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B87A02285F2C4E00414FFD /* SettingsVC.swift */; };
+		F0B9293828D6490B00A7AA77 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9293728D6490B00A7AA77 /* String.swift */; };
+		F0B9293A28D742A200A7AA77 /* MultipleTapLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9293928D742A200A7AA77 /* MultipleTapLabel.swift */; };
 		F0C69D48287D664600BF5C6C /* UIRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D47287D664600BF5C6C /* UIRadioButton.swift */; };
 		F0C69D4A287DA92600BF5C6C /* EmptyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D49287DA92600BF5C6C /* EmptyCardCell.swift */; };
 		F0C69D4C287DAA8900BF5C6C /* EmptyCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C69D4B287DAA8900BF5C6C /* EmptyCardCell.xib */; };
@@ -289,6 +291,8 @@
 		F0B8535728600462002F90DA /* DepositTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositTableViewCell.xib; sourceTree = "<group>"; };
 		F0B853592860145B002F90DA /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
 		F0B87A02285F2C4E00414FFD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		F0B9293728D6490B00A7AA77 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F0B9293928D742A200A7AA77 /* MultipleTapLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleTapLabel.swift; sourceTree = "<group>"; };
 		F0C69D47287D664600BF5C6C /* UIRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRadioButton.swift; sourceTree = "<group>"; };
 		F0C69D49287DA92600BF5C6C /* EmptyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCardCell.swift; sourceTree = "<group>"; };
 		F0C69D4B287DAA8900BF5C6C /* EmptyCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCardCell.xib; sourceTree = "<group>"; };
@@ -678,6 +682,8 @@
 				F0C69D47287D664600BF5C6C /* UIRadioButton.swift */,
 				F0834BCF288A9F7F00624189 /* Date.swift */,
 				F064BB5E288E87B600C0FF41 /* Shared.swift */,
+				F0B9293728D6490B00A7AA77 /* String.swift */,
+				F0B9293928D742A200A7AA77 /* MultipleTapLabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1042,6 +1048,7 @@
 				F0AB2566287C589100C6A593 /* TransactionTableViewCell.swift in Sources */,
 				F0CE9F5328612505004B1515 /* RepayVC.swift in Sources */,
 				F0C69D55287E50C300BF5C6C /* StandingFirstVC.swift in Sources */,
+				F0B9293828D6490B00A7AA77 /* String.swift in Sources */,
 				F05365E3285FF47C00B771D9 /* CashoutTipVC.swift in Sources */,
 				F062F26B286E3473007DE996 /* UIImage.swift in Sources */,
 				F05365BE285F665100B771D9 /* SettingsTableViewFooterCell.swift in Sources */,
@@ -1099,6 +1106,7 @@
 				F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */,
 				F064BB6C2893C3BA00C0FF41 /* TransactionModel.swift in Sources */,
 				F025F8DF2860738800BABB3D /* CreditVC.swift in Sources */,
+				F0B9293A28D742A200A7AA77 /* MultipleTapLabel.swift in Sources */,
 				F064BB662892785F00C0FF41 /* RequestHandler.swift in Sources */,
 				F062F265286D8D3E007DE996 /* UIButton.swift in Sources */,
 				F062A85928654DCA00DBBCE4 /* MSCircularSliderHandle.swift in Sources */,
