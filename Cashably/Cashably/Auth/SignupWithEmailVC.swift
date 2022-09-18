@@ -61,8 +61,8 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
    }
     
     func moveToMain() {
-        let splashVC = storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-        navigationController?.pushViewController(splashVC, animated: true)
+        let profileCompleteVC = storyboard?.instantiateViewController(withIdentifier: "ProfileCompleteVC") as! ProfileCompleteVC
+        navigationController?.pushViewController(profileCompleteVC, animated: true)
     }
     
     @objc

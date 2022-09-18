@@ -67,6 +67,12 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
         navigationController?.pushViewController(loginVC, animated: true)
     }
     
+    func moveToCompleteProfile() {
+        
+        let profileCompleteVC = storyboard?.instantiateViewController(withIdentifier: "ProfileCompleteVC") as! ProfileCompleteVC
+        navigationController?.pushViewController(profileCompleteVC, animated: true)
+    }
+    
     @IBAction func actionConfirm(_ sender: UIButton) {
         guard let verificationID = UserDefaults.standard.string(forKey: "authVerificationID") else {
             return
@@ -93,6 +99,7 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
             if self.type == "signin" {
                 RequestHandler.loginUser(phone: self.phone, success: { (successResponse) in
                     self.stopAnimating()
+                    
                     self.moveToSplash()
                 }) { (error) in
                     self.stopAnimating()
@@ -102,7 +109,7 @@ class VerifyPhoneVC: UIViewController, NVActivityIndicatorViewable {
             } else {
                 RequestHandler.registerUser(phone: self.phone, success: { (successResponse) in
                     self.stopAnimating()
-                    self.moveToSplash()
+                    self.moveToCompleteProfile()
                 }) { (error) in
                     self.stopAnimating()
                     let alert = Alert.showBasicAlert(message: error.message)
