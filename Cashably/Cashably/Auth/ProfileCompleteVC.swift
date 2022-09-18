@@ -134,7 +134,8 @@ class ProfileCompleteVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     @IBAction func actionBakc(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        self.logout()
+//        self.navigationController?.popViewController(animated: true)
     }
     
 }
