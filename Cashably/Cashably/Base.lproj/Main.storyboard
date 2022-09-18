@@ -4533,7 +4533,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3a-eA-a8D">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfI-6A-w5A">
                                         <rect key="frame" x="136.5" y="70" width="141" height="30"/>
@@ -4635,7 +4635,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vd6-sD-sKp" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="350" width="414" height="463"/>
+                                        <rect key="frame" x="0.0" y="350" width="414" height="512"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9D-ee-yAR" userLabel="header" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="-40" width="374" height="80"/>
@@ -4758,10 +4758,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU4-qN-EPw">
-                                                <rect key="frame" x="0.0" y="60" width="414" height="403"/>
+                                                <rect key="frame" x="0.0" y="60" width="414" height="452"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwa-ij-KGI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="403"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGM-pb-N9Q">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
@@ -4943,7 +4943,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfy-uI-IJ8">
-                                                <rect key="frame" x="0.0" y="443" width="414" height="20"/>
+                                                <rect key="frame" x="0.0" y="492" width="414" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="zvc-nZ-nu1"/>
@@ -5787,7 +5787,6 @@ Payment &amp; Pay later.</string>
                     <connections>
                         <segue destination="IgX-CQ-l0W" kind="relationship" relationship="viewControllers" id="2Zg-C1-ja3"/>
                         <segue destination="AkM-s0-8Mx" kind="relationship" relationship="viewControllers" id="e5I-yx-eXX"/>
-                        <segue destination="ju4-Uu-GcH" kind="relationship" relationship="viewControllers" id="cem-h9-APh"/>
                         <segue destination="w3c-jk-JHg" kind="relationship" relationship="viewControllers" id="3p6-ML-dLV"/>
                     </connections>
                 </tabBarController>
