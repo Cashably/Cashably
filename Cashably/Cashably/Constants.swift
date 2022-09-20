@@ -34,6 +34,7 @@ class Constants {
         static let GET_BANK = USER_API + "/bank"
         static let SEND_MESSAGE = USER_API + "/message"
         static let ALERTS = USER_API + "/alerts"
+        static let GET_CHARITIES = USER_API + "/charities"
     }
     
     struct NetworkError {

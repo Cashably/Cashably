@@ -23,6 +23,7 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var dropDown: DropDown! {
         didSet {
             dropDown.backgroundColor = .white
+            dropDown.textColor = .black
             dropDown.layer.borderColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1).cgColor
             dropDown.rowHeight = 55
             dropDown.arrowColor = UIColor(red: 0.631, green: 0.651, blue: 0.643, alpha: 1)
@@ -43,25 +44,53 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
     
     var donate: Double = 0
     var amount: Double = 0
+    var company = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setupSliderView()
         
-        dropDown.optionArray = ["Option 1", "Option 2", "Option 3"]
-        dropDown.optionIds = [1,23,54,22]
+        dropDown.didSelect{(selectedText , index ,id) in
+            self.company = selectedText
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
+        
+        getCharities()
    }
 
     override func viewWillDisappear(_ animated: Bool) {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+    func getCharities() {
+        self.startAnimating()
+        RequestHandler.getRequest(url:Constants.URL.GET_CHARITIES, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            let dictionary = successResponse as! [String: Any]
+            if let data = dictionary["data"] as? [[String: Any]] {
+                for obj in data {
+                    let charity = CharityModel(fromDictionary: obj)
+                    self.dropDown.optionArray.append(charity.name)
+                    self.dropDown.optionIds?.append(charity.id)
+                    self.dropDown.optionImageArray.append(charity.logo)
+                }
+            }
+            
+        }) { (error) in
+            self.stopAnimating()
+                        
+//            let alert = Alert.showBasicAlert(message: error.message)
+//            self.presentVC(alert)
+        }
+        
+    }
    
     @IBAction func actionCashout(_ sender: UIButton) {
         
@@ -70,7 +99,7 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func actionCashoutWithTip(_ sender: UIButton) {
         
-        self.cashout(amount: self.amount, donate: self.donate)
+        self.cashout(amount: self.amount, donate: self.donate, company: company)
     }
 }
 

@@ -136,6 +136,7 @@
 		F0C69D5C287EC3C100BF5C6C /* StandingFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */; };
 		F0C69D5E2880485C00BF5C6C /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5D2880485C00BF5C6C /* ForgotPasswordVC.swift */; };
 		F0C69D60288048B800BF5C6C /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */; };
+		F0CC6FA828D963ED0051DA4D /* CharityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6FA728D963ED0051DA4D /* CharityModel.swift */; };
 		F0CE9F45286089A7004B1515 /* MerchantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */; };
 		F0CE9F47286089CF004B1515 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */; };
 		F0CE9F492860C09D004B1515 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F482860C09D004B1515 /* ToggleButton.swift */; };
@@ -305,6 +306,7 @@
 		F0C69D5B287EC3C000BF5C6C /* StandingFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingFirstCell.swift; sourceTree = "<group>"; };
 		F0C69D5D2880485C00BF5C6C /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		F0C69D5F288048B800BF5C6C /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		F0CC6FA728D963ED0051DA4D /* CharityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityModel.swift; sourceTree = "<group>"; };
 		F0CE9F44286089A7004B1515 /* MerchantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTableViewCell.swift; sourceTree = "<group>"; };
 		F0CE9F46286089CF004B1515 /* MerchantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerchantTableViewCell.xib; sourceTree = "<group>"; };
 		F0CE9F482860C09D004B1515 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 				F064BB69289391FA00C0FF41 /* WithdrawModel.swift */,
 				F064BB6B2893C3BA00C0FF41 /* TransactionModel.swift */,
 				F07C150328A6034800A30143 /* AlertModel.swift */,
+				F0CC6FA728D963ED0051DA4D /* CharityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1100,6 +1103,7 @@
 				F0A04352285DC08000E29CE0 /* UIView.swift in Sources */,
 				F062A8642865A48B00DBBCE4 /* CircularSlider.swift in Sources */,
 				F0C69D53287E504300BF5C6C /* StandingStartVC.swift in Sources */,
+				F0CC6FA828D963ED0051DA4D /* CharityModel.swift in Sources */,
 				F0C69D48287D664600BF5C6C /* UIRadioButton.swift in Sources */,
 				F05365BA285F64E200B771D9 /* SettingsTableViewCell.swift in Sources */,
 				F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */,
@@ -1295,7 +1299,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1311,7 +1315,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.18;
+				MARKETING_VERSION = 0.6.19;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
@@ -1330,7 +1334,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cashably/Cashably.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 48;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = R9353UJG8M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cashably/Info.plist;
@@ -1346,7 +1350,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6.18;
+				MARKETING_VERSION = 0.6.19;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashably;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Cashably-distribution";
