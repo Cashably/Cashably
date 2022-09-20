@@ -6324,9 +6324,9 @@ your money.</string>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-g7-IVf">
                                                 <rect key="frame" x="0.0" y="65" width="374" height="48"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="You can choose from the list where the 20% of the tip will be donated.">
+                                                    <fragment content="You can choose from the list where will be donated.">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.63137254901960782" green="0.65098039215686276" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <font key="NSFont" metaFont="system" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
