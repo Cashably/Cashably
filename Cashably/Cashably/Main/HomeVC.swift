@@ -67,10 +67,18 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     override func viewWillDisappear(_ animated: Bool) {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
+        
+        if emptyView != nil {
+            emptyView?.removeFromSuperview()
+        }
+        
+        if payView != nil {
+            payView?.removeFromSuperview()
+        }
    }
     
     private func loadPhoto() {
-        let storage = Storage.storage(url:"gs://cashably.appspot.com")
+        let storage = Storage.storage(url: Constants.URL.PHOTO_STORAGE)
         let storageRef = storage.reference()
         
         // Create a reference to the file you want to upload

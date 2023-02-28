@@ -35,6 +35,8 @@ class Constants {
         static let SEND_MESSAGE = USER_API + "/message"
         static let ALERTS = USER_API + "/alerts"
         static let GET_CHARITIES = USER_API + "/charities"
+        
+        static let PHOTO_STORAGE = "gs://cashably.appspot.com"
     }
     
     struct NetworkError {

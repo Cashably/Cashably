@@ -16,9 +16,7 @@ extension HomeVC {
         lbName.text = Shared.getUser().fullName
         
         if self.loanAmount == 0 {
-            if payView != nil {
-                payView?.removeFromSuperview()
-            }
+            
             emptyView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as? EmptyRequestPayView
             self.emptyView!.onRequest = {() in self.onRequest()}
             self.bottomView.addSubview(self.emptyView!)
@@ -53,9 +51,6 @@ extension HomeVC {
             payView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
             payView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
             
-            if emptyView != nil {
-                emptyView?.removeFromSuperview()
-            }
         }
         
     }
@@ -156,9 +151,9 @@ extension HomeVC {
             self.configure()
         }) { (error) in
             self.stopAnimating()
-            self.loanAmount = 0
-            self.availabeAmount = 0
-            self.configure()
+            
+            let alert = Alert.showBasicAlert(message: "Happened network error. Please try later.")
+            self.presentVC(alert)
         }
                
     }
