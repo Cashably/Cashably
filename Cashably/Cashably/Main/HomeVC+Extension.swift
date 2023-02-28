@@ -151,9 +151,12 @@ extension HomeVC {
             self.configure()
         }) { (error) in
             self.stopAnimating()
+            self.configure()
+            if error.status == Constants.NetworkError.serverErrorCode {
+                let alert = Alert.showBasicAlert(message: "Happened network error. Please try later.")
+                self.presentVC(alert)
+            }
             
-            let alert = Alert.showBasicAlert(message: "Happened network error. Please try later.")
-            self.presentVC(alert)
         }
                
     }
