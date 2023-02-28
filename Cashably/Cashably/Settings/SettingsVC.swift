@@ -92,7 +92,7 @@ class SettingsVC: UIViewController, NVActivityIndicatorViewable {
    }
     
     private func loadPhoto() {
-        let storage = Storage.storage(url:"gs://cashably.appspot.com")
+        let storage = Storage.storage(url: Constants.URL.PHOTO_STORAGE)
         let storageRef = storage.reference()
         
         // Create a reference to the file you want to upload
@@ -162,7 +162,7 @@ class SettingsVC: UIViewController, NVActivityIndicatorViewable {
         uploadingProgressBar.detailTextLabel.text = "0%"
         uploadingProgressBar.show(in: self.view)
         
-        let storage = Storage.storage(url:"gs://cashably.appspot.com")
+        let storage = Storage.storage(url: Constants.URL.PHOTO_STORAGE)
         let storageRef = storage.reference()
         
         // Create a reference to the file you want to upload
