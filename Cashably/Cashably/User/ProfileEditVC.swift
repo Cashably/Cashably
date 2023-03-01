@@ -73,7 +73,7 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
         if let datePicker = self.tfDOB.inputView as? UIDatePicker {
             let dateformatter = DateFormatter()
 //            dateformatter.dateStyle = .long
-            dateformatter.dateFormat = "dd/MM/YYYY"
+            dateformatter.dateFormat = "MM/dd/YYYY"
             self.tfDOB.text = dateformatter.string(from: datePicker.date)
         }
         self.tfDOB.resignFirstResponder()
