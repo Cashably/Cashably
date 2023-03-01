@@ -51,7 +51,7 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
         tfDOB.tag = 3
         tfSSN.tag = 4
         
-        tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        tfDOB.setInputViewDatePicker(target: self, selector: #selector(tapDone), date: Shared.getUser().dob)
         
         nameView.didTap(target: tfName!)
         emailView.didTap(target: tfEmail!)
@@ -60,13 +60,9 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
         
         tfEmail.text = Shared.getUser().email
         tfName.text = Shared.getUser().fullName
+        tfDOB.text = Shared.getUser().dob
+        tfSSN.text = Shared.getUser().SSN4
                
-        if let dob = UserDefaults.standard.string(forKey: "userDOB") {
-            tfDOB.text = dob
-        }
-        if let ssn = UserDefaults.standard.string(forKey: "userSSN") {
-            tfSSN.text = ssn
-        }
     }
     
     @objc func tapDone() {

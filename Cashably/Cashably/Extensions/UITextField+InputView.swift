@@ -9,13 +9,19 @@ import Foundation
 import UIKit
 extension UITextField {
     
-    func setInputViewDatePicker(target: Any, selector: Selector) {
+    func setInputViewDatePicker(target: Any, selector: Selector, date: String? = nil) {
         // Create a UIDatePicker object and assign to inputView
         let screenWidth = UIScreen.main.bounds.width
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 276))//1
         datePicker.datePickerMode = .date
         datePicker.maximumDate = Date()
         
+        if date != nil {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM/dd/yyyy"
+            let someDateTime = formatter.date(from: date!)
+            datePicker.setDate(someDateTime!, animated: false)
+        }
         
         // iOS 14 and above
         if #available(iOS 14, *) {
