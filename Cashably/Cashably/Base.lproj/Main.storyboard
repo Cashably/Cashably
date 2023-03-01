@@ -9511,7 +9511,7 @@ if you want..</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JNb-CW-sZZ" userLabel="radio stack">
-                                        <rect key="frame" x="20" y="90" width="374" height="93"/>
+                                        <rect key="frame" x="20" y="90" width="374" height="87"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select payment Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-Rj-C9h">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
@@ -9525,54 +9525,66 @@ if you want..</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TLd-eb-hBz">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="60"/>
+                                                <rect key="frame" x="0.0" y="33" width="374" height="54"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-hu-Vjx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pn0-YP-e3Q" customClass="UIRadioButton" customModule="UIButtonExtension">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="u8m-Fx-7pL"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ta-Ds-FQq" customClass="UIRadioButton" customModule="UIButtonExtension">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="JCm-dA-gL6"/>
-                                                                </constraints>
-                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAe-iS-UNt" customClass="RadioButton" customModule="MBRadioButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
+                                                                <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Net Banking">
+                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="30" bottom="0.0" trailing="0.0"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                        <integer key="value" value="400"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99H-2h-R2k" customClass="RadioButton" customModule="MBRadioButton">
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
+                                                                <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Credit Card">
+                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="30" bottom="0.0" trailing="0.0"/>
+                                                                </buttonConfiguration>
+                                                            </button>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="6ta-Ds-FQq" firstAttribute="width" secondItem="Pn0-YP-e3Q" secondAttribute="width" id="4zi-rK-l9q"/>
-                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NSC-of-Nbf">
-                                                        <rect key="frame" x="0.0" y="40" width="374" height="20"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-DM-Eim">
+                                                        <rect key="frame" x="0.0" y="37" width="374" height="17"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-hP-rZs" customClass="UIRadioButton" customModule="UIButtonExtension">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="HLd-sa-yJk"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-9F-dsS" customClass="UIRadioButton" customModule="UIButtonExtension">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="Izy-Ys-eiT"/>
-                                                                </constraints>
-                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGy-02-DUB" customClass="RadioButton" customModule="MBRadioButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
+                                                                <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Debit Card">
+                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="30" bottom="0.0" trailing="0.0"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                        <integer key="value" value="400"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJi-fc-DTC" customClass="RadioButton" customModule="MBRadioButton">
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
+                                                                <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="UPI">
+                                                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="30" bottom="0.0" trailing="0.0"/>
+                                                                </buttonConfiguration>
+                                                            </button>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="2bG-9F-dsS" firstAttribute="width" secondItem="ak3-hP-rZs" secondAttribute="width" id="eva-KD-ArX"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6It-aw-t58">
-                                        <rect key="frame" x="0.0" y="203" width="414" height="210"/>
+                                        <rect key="frame" x="0.0" y="197" width="414" height="210"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5z-ek-e4s">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
@@ -9626,7 +9638,7 @@ if you want..</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nw-xj-2Tq">
-                                        <rect key="frame" x="20" y="433" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="427" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="T0h-Wd-Zdd"/>
                                         </constraints>
@@ -9676,10 +9688,10 @@ if you want..</string>
                     </view>
                     <connections>
                         <outlet property="cardsCollectionView" destination="D7a-pi-mey" id="4h3-Pq-Xlp"/>
-                        <outlet property="radio1" destination="Pn0-YP-e3Q" id="hbI-Af-vC0"/>
-                        <outlet property="radio2" destination="6ta-Ds-FQq" id="EGu-PH-q6t"/>
-                        <outlet property="radio3" destination="ak3-hP-rZs" id="LLw-TO-CbO"/>
-                        <outlet property="radio4" destination="2bG-9F-dsS" id="BQK-Vx-bSc"/>
+                        <outlet property="radio1" destination="LAe-iS-UNt" id="3oZ-nl-GQ1"/>
+                        <outlet property="radio2" destination="99H-2h-R2k" id="B5f-7s-yLJ"/>
+                        <outlet property="radio3" destination="iGy-02-DUB" id="5Nd-GV-1AB"/>
+                        <outlet property="radio4" destination="oJi-fc-DTC" id="AvY-Y4-p7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiJ-yc-IW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -10037,8 +10049,20 @@ if you want..</string>
         </scene>
     </scenes>
     <designables>
+        <designable name="99H-2h-R2k">
+            <size key="intrinsicContentSize" width="104.5" height="17"/>
+        </designable>
+        <designable name="LAe-iS-UNt">
+            <size key="intrinsicContentSize" width="115.5" height="14"/>
+        </designable>
         <designable name="eQ3-dB-Ilr">
             <size key="intrinsicContentSize" width="30" height="0.0"/>
+        </designable>
+        <designable name="iGy-02-DUB">
+            <size key="intrinsicContentSize" width="105.5" height="14"/>
+        </designable>
+        <designable name="oJi-fc-DTC">
+            <size key="intrinsicContentSize" width="53" height="17"/>
         </designable>
         <designable name="vP2-2h-58s">
             <size key="intrinsicContentSize" width="30" height="0.0"/>

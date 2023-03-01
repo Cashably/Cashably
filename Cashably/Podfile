@@ -15,9 +15,9 @@ target 'Cashably' do
     pod 'iOSDropDown'
     pod 'FlagPhoneNumber'
     pod 'MBCheckboxButton'
+    pod 'MBRadioButton'
 #    pod 'SVPinView', '~> 1.0'
     pod 'DPOTPView'
-    pod 'UIButtonExtension', '~> 0.3'
     pod 'FittedSheets'
     
     pod 'MKRingProgressView'
