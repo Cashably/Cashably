@@ -62,6 +62,8 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
         tfName.text = Shared.getUser().fullName
         tfDOB.text = Shared.getUser().dob
         tfSSN.text = Shared.getUser().SSN4
+        tfDOB.isEnabled = false
+        tfSSN.isEnabled = false
                
     }
     
