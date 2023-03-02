@@ -159,7 +159,6 @@ extension HomeVC: RequestOverdraftEnableDelegate {
 
 extension HomeVC: ConnectBankDelegate {
     func connected() {
-        let depositsVC = self.storyboard?.instantiateViewController(withIdentifier: "ApprovedVC") as! ApprovedVC
-        self.navigationController?.pushViewController(depositsVC, animated: true)
+        requestLoan()
     }    
 }
