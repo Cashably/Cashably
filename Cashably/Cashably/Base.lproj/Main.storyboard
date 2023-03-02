@@ -6292,7 +6292,7 @@ your money.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Do-cXB">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-Do-cXB">
                                         <rect key="frame" x="20" y="132.5" width="374" height="113"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select List" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNy-d4-oWe" customClass="DropDown" customModule="iOSDropDown">
@@ -10053,19 +10053,13 @@ if you want..</string>
             <size key="intrinsicContentSize" width="104.5" height="17"/>
         </designable>
         <designable name="LAe-iS-UNt">
-            <size key="intrinsicContentSize" width="115.5" height="14"/>
-        </designable>
-        <designable name="eQ3-dB-Ilr">
-            <size key="intrinsicContentSize" width="30" height="0.0"/>
+            <size key="intrinsicContentSize" width="109" height="17"/>
         </designable>
         <designable name="iGy-02-DUB">
-            <size key="intrinsicContentSize" width="105.5" height="14"/>
+            <size key="intrinsicContentSize" width="99.5" height="17"/>
         </designable>
         <designable name="oJi-fc-DTC">
             <size key="intrinsicContentSize" width="53" height="17"/>
-        </designable>
-        <designable name="vP2-2h-58s">
-            <size key="intrinsicContentSize" width="30" height="0.0"/>
         </designable>
     </designables>
     <resources>
