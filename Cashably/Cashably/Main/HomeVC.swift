@@ -67,13 +67,13 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     override func viewWillDisappear(_ animated: Bool) {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
-        
+
         if emptyView != nil {
-            emptyView?.removeFromSuperview()
+            emptyView?.isHidden = true
         }
         
         if payView != nil {
-            payView?.removeFromSuperview()
+            payView?.isHidden = true
         }
    }
     

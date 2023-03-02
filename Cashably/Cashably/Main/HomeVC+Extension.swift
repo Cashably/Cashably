@@ -16,18 +16,18 @@ extension HomeVC {
         lbName.text = Shared.getUser().fullName
         
         if self.loanAmount == 0 {
-            
-            emptyView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as? EmptyRequestPayView
-            self.emptyView!.onRequest = {() in self.onRequest()}
-            self.bottomView.addSubview(self.emptyView!)
-            self.emptyView!.translatesAutoresizingMaskIntoConstraints = false
-            self.emptyView!.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
-            self.emptyView!.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
-            self.emptyView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
-            self.emptyView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
-            
+            if emptyView == nil {
+                addEmptyView()
+            } else {
+                emptyView?.isHidden = false
+            }
         } else {
-            payView = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as? RequestPayView
+            if payView == nil {
+                addPayView()
+            } else {
+                payView?.isHidden = false
+            }
+            
             let storedLoan = Shared.getLoan()
             payView!.lbAmount.text = "$\(self.loanAmount)"
             payView!.lbDueDate.text = self.dueDate
@@ -35,24 +35,39 @@ extension HomeVC {
             availabeAmount = storedLoan.approved - storedLoan.amount
             if availabeAmount == 0 {
                 payView!.moreView.isHidden = true
+            } else {
+                payView!.moreView.isHidden = false
             }
             payView!.lbAvailableAmount.text = "$\(availabeAmount)"
-            payView!.onWithdrawMore = {() in self.onWithdrawMore()}
-            payView!.onPay = {() in self.onPay()}
-            payView!.onSnooze = {() in self.onSnooze()}
-            let payGesture = UITapGestureRecognizer(target: self, action: #selector(self.payAction(_:)))
-            let snoozeGesture = UITapGestureRecognizer(target: self, action: #selector(self.snoozeAction(_:)))
-            payView!.payView.addGestureRecognizer(payGesture)
-            payView!.snoozeView.addGestureRecognizer(snoozeGesture)
-            self.bottomView.addSubview(payView!)
-            payView!.translatesAutoresizingMaskIntoConstraints = false
-            payView!.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
-            payView!.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
-            payView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
-            payView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
-            
         }
-        
+    }
+    
+    func addPayView() {
+        payView = Bundle.main.loadNibNamed("RequestPayView", owner: self, options: nil)?[0] as? RequestPayView
+        payView!.onWithdrawMore = {() in self.onWithdrawMore()}
+        payView!.onPay = {() in self.onPay()}
+        payView!.onSnooze = {() in self.onSnooze()}
+        let payGesture = UITapGestureRecognizer(target: self, action: #selector(self.payAction(_:)))
+        let snoozeGesture = UITapGestureRecognizer(target: self, action: #selector(self.snoozeAction(_:)))
+        payView!.payView.addGestureRecognizer(payGesture)
+        payView!.snoozeView.addGestureRecognizer(snoozeGesture)
+        self.bottomView.addSubview(payView!)
+        payView!.translatesAutoresizingMaskIntoConstraints = false
+        payView!.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
+        payView!.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
+        payView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
+        payView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
+    }
+    
+    func addEmptyView() {
+        emptyView = Bundle.main.loadNibNamed("EmptyRequestPayView", owner: self, options: nil)?[0] as? EmptyRequestPayView
+        self.emptyView!.onRequest = {() in self.onRequest()}
+        self.bottomView.addSubview(self.emptyView!)
+        self.emptyView!.translatesAutoresizingMaskIntoConstraints = false
+        self.emptyView!.centerXAnchor.constraint(equalTo: self.bottomView.centerXAnchor).isActive = true
+        self.emptyView!.centerYAnchor.constraint(equalTo: self.bottomView.centerYAnchor).isActive = true
+        self.emptyView!.widthAnchor.constraint(equalTo: self.bottomView.widthAnchor).isActive = true
+        self.emptyView!.heightAnchor.constraint(equalTo: self.bottomView.heightAnchor).isActive = true
     }
     
     func checkFaceEnable() {
@@ -151,6 +166,7 @@ extension HomeVC {
             self.configure()
         }) { (error) in
             self.stopAnimating()
+            self.loanAmount = 0
             self.configure()
             
         }
