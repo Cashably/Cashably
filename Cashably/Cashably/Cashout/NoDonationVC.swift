@@ -29,14 +29,15 @@ class NoDonationVC: UIViewController {
     }
     
     @IBAction func actionContinue(_ sender: UIButton) {
-        guard let cardId = UserDefaults.standard.string(forKey: "cardid") else {
+        let cards = Shared.getCards()
+        if cards.count == 0 {
             let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
             addcardVC.delegate = self
             self.navigationController?.pushViewController(addcardVC, animated: true)
             return
+        } else {
+            self.withdraw()
         }
-        
-        self.withdraw()
     }
     @IBAction func actionBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true

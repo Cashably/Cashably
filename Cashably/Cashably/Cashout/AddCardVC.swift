@@ -18,11 +18,17 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnAddCard: UIButton!
     @IBOutlet weak var cardNoView: InputView!
+    @IBOutlet weak var nameView: InputView!
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tfCardNo: UITextField! {
         didSet {
             tfCardNo.delegate = self
+        }
+    }
+    @IBOutlet weak var tfHolderName: UITextField! {
+        didSet {
+            tfHolderName.delegate = self
         }
     }
     @IBOutlet weak var tfCardDate: UITextField! {
@@ -82,8 +88,42 @@ class AddCardVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     @IBAction func actionAddCard(_ sender: UIButton) {
-        UserDefaults.standard.set("123456789", forKey: "cardid")
-        self.delegate.addCard()
+        self.startAnimating()
+        if tfHolderName.text?.isEmpty == true {
+            tfHolderName.shake(6, withDelta: 10, speed: 0.06)
+            tfHolderName.becomeFirstResponder()
+            return
+        }
+        if tfCardNo.text?.isEmpty == true {
+            tfCardNo.shake(6, withDelta: 10, speed: 0.06)
+            tfCardNo.becomeFirstResponder()
+            return
+        }
+        if tfCardDate.text?.isEmpty == true {
+            tfCardDate.shake(6, withDelta: 10, speed: 0.06)
+            tfCardDate.becomeFirstResponder()
+            return
+        }
+        if tfCardCVV.text?.isEmpty == true {
+            tfCardCVV.shake(6, withDelta: 10, speed: 0.06)
+            tfCardCVV.becomeFirstResponder()
+            return
+        }
+        let params = ["holderName": tfHolderName.text!, "cardNumber": tfCardNo.text!, "ccv": tfCardCVV.text!, "expiredDay": tfCardDate.text!]
+        RequestHandler.postRequest(url:Constants.URL.CARD, parameter: params as! NSDictionary, success: { (successResponse) in
+            self.stopAnimating()
+            let dictionary = successResponse as! [String: Any]
+            if let data = dictionary["data"] as? [[String:Any]] {
+                Shared.storeCards(cards: data)
+            }
+            self.delegate.addCard()
+        }) { (error) in
+            self.stopAnimating()
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+            
+        }
+        
     }
     
     @IBAction func actionBack(_ sender: UIButton) {

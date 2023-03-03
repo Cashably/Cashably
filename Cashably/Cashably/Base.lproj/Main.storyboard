@@ -7176,11 +7176,11 @@ checking account you provided.</string>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ot3-0j-89E">
-                                                                <rect key="frame" x="20" y="349" width="374" height="111"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ot3-0j-89E" userLabel="button stack">
+                                                                <rect key="frame" x="20" y="400" width="374" height="60"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-fU-Jv8">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5L-fU-Jv8">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle.portrait.fill" catalog="system" title="I agree to the ACH Agreement" imagePadding="5">
                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
@@ -7193,7 +7193,7 @@ checking account you provided.</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKs-e5-ZPN">
-                                                                        <rect key="frame" x="0.0" y="51" width="374" height="60"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="60" id="F7T-SY-ilu"/>
                                                                         </constraints>
@@ -7216,91 +7216,149 @@ checking account you provided.</string>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ir1-2C-v9N" userLabel="card number view" customClass="InputView" customModule="Cashably" customModuleProvider="target">
-                                                                <rect key="frame" x="20" y="159.5" width="374" height="60"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rAQ-Zw-NZV" userLabel="card stack">
+                                                                <rect key="frame" x="20" y="151.5" width="374" height="229.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-98-LJu">
-                                                                        <rect key="frame" x="24" y="20" width="20" height="20"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ab8-h6-iRn" userLabel="name stack">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="89.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holder Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCQ-sc-eYh">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                                        <integer key="value" value="500"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbA-FS-25u" customClass="InputView" customModule="Cashably" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="29.5" width="374" height="60"/>
+                                                                                <subviews>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-Mt-TA9">
+                                                                                        <rect key="frame" x="24" y="20" width="20" height="20"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="20" id="2PD-Vj-lQQ"/>
+                                                                                            <constraint firstAttribute="width" constant="20" id="tae-8B-QJO"/>
+                                                                                        </constraints>
+                                                                                    </imageView>
+                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pH-NI-4oE">
+                                                                                        <rect key="frame" x="54" y="12" width="1" height="36"/>
+                                                                                        <color key="backgroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="1" id="7bw-OA-qBL"/>
+                                                                                            <constraint firstAttribute="height" constant="36" id="9Tg-oH-zpE"/>
+                                                                                        </constraints>
+                                                                                    </view>
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter holder name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7n7-E0-1cp">
+                                                                                        <rect key="frame" x="65" y="10" width="299" height="40"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="40" id="uf0-Oc-qPn"/>
+                                                                                        </constraints>
+                                                                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                                                                    </textField>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="0pH-NI-4oE" firstAttribute="leading" secondItem="vbA-FS-25u" secondAttribute="leading" constant="54" id="54n-nf-J7a"/>
+                                                                                    <constraint firstItem="7n7-E0-1cp" firstAttribute="centerY" secondItem="vbA-FS-25u" secondAttribute="centerY" id="JiT-ot-lus"/>
+                                                                                    <constraint firstItem="7n7-E0-1cp" firstAttribute="leading" secondItem="0pH-NI-4oE" secondAttribute="trailing" constant="10" id="Uad-8H-xxA"/>
+                                                                                    <constraint firstItem="ffc-Mt-TA9" firstAttribute="leading" secondItem="vbA-FS-25u" secondAttribute="leading" constant="24" id="Z4m-v8-xWJ"/>
+                                                                                    <constraint firstItem="ffc-Mt-TA9" firstAttribute="centerY" secondItem="vbA-FS-25u" secondAttribute="centerY" id="bsS-SP-0vd"/>
+                                                                                    <constraint firstItem="0pH-NI-4oE" firstAttribute="centerY" secondItem="vbA-FS-25u" secondAttribute="centerY" id="i8m-yc-UZf"/>
+                                                                                    <constraint firstAttribute="height" constant="60" id="kKz-Wv-d0J"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="7n7-E0-1cp" secondAttribute="trailing" constant="10" id="mof-ZJ-PbJ"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ir1-2C-v9N" userLabel="card number view" customClass="InputView" customModule="Cashably" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="99.5" width="374" height="60"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_card" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-98-LJu">
+                                                                                <rect key="frame" x="24" y="20" width="20" height="20"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="20" id="IxL-qb-Zrv"/>
+                                                                                    <constraint firstAttribute="width" constant="20" id="uT0-eo-ka9"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-sx-mhZ">
+                                                                                <rect key="frame" x="54" y="12" width="1" height="36"/>
+                                                                                <color key="backgroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="36" id="c5h-yv-h4b"/>
+                                                                                    <constraint firstAttribute="width" constant="1" id="xyR-zD-Xe4"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUE-1Y-Vsf">
+                                                                                <rect key="frame" x="65" y="10" width="299" height="40"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="40" id="ToB-g2-JuW"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                            </textField>
+                                                                        </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="20" id="IxL-qb-Zrv"/>
-                                                                            <constraint firstAttribute="width" constant="20" id="uT0-eo-ka9"/>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-sx-mhZ">
-                                                                        <rect key="frame" x="54" y="12" width="1" height="36"/>
-                                                                        <color key="backgroundColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="36" id="c5h-yv-h4b"/>
-                                                                            <constraint firstAttribute="width" constant="1" id="xyR-zD-Xe4"/>
+                                                                            <constraint firstItem="4Zr-98-LJu" firstAttribute="leading" secondItem="ir1-2C-v9N" secondAttribute="leading" constant="24" id="6mK-FZ-3wi"/>
+                                                                            <constraint firstAttribute="height" constant="60" id="7dv-Yl-7XT"/>
+                                                                            <constraint firstItem="7fR-sx-mhZ" firstAttribute="leading" secondItem="ir1-2C-v9N" secondAttribute="leading" constant="54" id="Oj3-ea-duw"/>
+                                                                            <constraint firstItem="vUE-1Y-Vsf" firstAttribute="leading" secondItem="7fR-sx-mhZ" secondAttribute="trailing" constant="10" id="USf-ov-Fy2"/>
+                                                                            <constraint firstItem="4Zr-98-LJu" firstAttribute="centerY" secondItem="ir1-2C-v9N" secondAttribute="centerY" id="Y2V-xl-GRo"/>
+                                                                            <constraint firstItem="vUE-1Y-Vsf" firstAttribute="centerY" secondItem="ir1-2C-v9N" secondAttribute="centerY" id="epN-7U-VC6"/>
+                                                                            <constraint firstItem="7fR-sx-mhZ" firstAttribute="centerY" secondItem="ir1-2C-v9N" secondAttribute="centerY" id="fzd-Ao-HQR"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="vUE-1Y-Vsf" secondAttribute="trailing" constant="10" id="g04-kQ-Iau"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUE-1Y-Vsf">
-                                                                        <rect key="frame" x="65" y="10" width="299" height="40"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-PI-xop">
+                                                                        <rect key="frame" x="0.0" y="169.5" width="374" height="60"/>
+                                                                        <subviews>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xi-Sm-K9p">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="60" id="ehO-hj-Sbe"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-bi-c2t">
+                                                                                <rect key="frame" x="197" y="0.0" width="177" height="60"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="60" id="Xj8-fX-LeV"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                            </textField>
+                                                                        </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="40" id="ToB-g2-JuW"/>
+                                                                            <constraint firstItem="eeP-bi-c2t" firstAttribute="width" secondItem="5xi-Sm-K9p" secondAttribute="width" id="o9L-Cg-B0g"/>
                                                                         </constraints>
-                                                                        <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                                    </textField>
+                                                                    </stackView>
                                                                 </subviews>
-                                                                <constraints>
-                                                                    <constraint firstItem="4Zr-98-LJu" firstAttribute="leading" secondItem="ir1-2C-v9N" secondAttribute="leading" constant="24" id="6mK-FZ-3wi"/>
-                                                                    <constraint firstAttribute="height" constant="60" id="7dv-Yl-7XT"/>
-                                                                    <constraint firstItem="7fR-sx-mhZ" firstAttribute="leading" secondItem="ir1-2C-v9N" secondAttribute="leading" constant="54" id="Oj3-ea-duw"/>
-                                                                    <constraint firstItem="vUE-1Y-Vsf" firstAttribute="leading" secondItem="7fR-sx-mhZ" secondAttribute="trailing" constant="10" id="USf-ov-Fy2"/>
-                                                                    <constraint firstItem="4Zr-98-LJu" firstAttribute="centerY" secondItem="ir1-2C-v9N" secondAttribute="centerY" id="Y2V-xl-GRo"/>
-                                                                    <constraint firstItem="vUE-1Y-Vsf" firstAttribute="centerY" secondItem="ir1-2C-v9N" secondAttribute="centerY" id="epN-7U-VC6"/>
-                                                                    <constraint firstItem="7fR-sx-mhZ" firstAttribute="centerY" secondItem="ir1-2C-v9N" secondAttribute="centerY" id="fzd-Ao-HQR"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="vUE-1Y-Vsf" secondAttribute="trailing" constant="10" id="g04-kQ-Iau"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Na5-PI-xop">
-                                                                <rect key="frame" x="20" y="239.5" width="374" height="60"/>
-                                                                <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xi-Sm-K9p">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="60" id="ehO-hj-Sbe"/>
-                                                                        </constraints>
-                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-bi-c2t">
-                                                                        <rect key="frame" x="197" y="0.0" width="177" height="60"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="60" id="Xj8-fX-LeV"/>
-                                                                        </constraints>
-                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                                <constraints>
-                                                                    <constraint firstItem="eeP-bi-c2t" firstAttribute="width" secondItem="5xi-Sm-K9p" secondAttribute="width" id="o9L-Cg-B0g"/>
-                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="Na5-PI-xop" secondAttribute="trailing" constant="20" id="1ed-ny-evd"/>
                                                             <constraint firstAttribute="trailing" secondItem="Ot3-0j-89E" secondAttribute="trailing" constant="20" id="3aP-f1-U4x"/>
-                                                            <constraint firstItem="Na5-PI-xop" firstAttribute="leading" secondItem="gcj-bS-iYt" secondAttribute="leading" constant="20" id="6MT-kR-AS2"/>
-                                                            <constraint firstAttribute="trailing" secondItem="ir1-2C-v9N" secondAttribute="trailing" constant="20" id="KJB-Nw-7qe"/>
                                                             <constraint firstItem="As0-z4-eyS" firstAttribute="leading" secondItem="gcj-bS-iYt" secondAttribute="leading" constant="30" id="PFV-On-eyd"/>
                                                             <constraint firstItem="As0-z4-eyS" firstAttribute="top" secondItem="gcj-bS-iYt" secondAttribute="top" id="Rqb-vx-KJv"/>
                                                             <constraint firstAttribute="trailing" secondItem="MqO-h7-7i0" secondAttribute="trailing" constant="55" id="SNI-M8-au0"/>
                                                             <constraint firstAttribute="height" constant="500" id="Sji-Vc-meh"/>
                                                             <constraint firstItem="MqO-h7-7i0" firstAttribute="leading" secondItem="gcj-bS-iYt" secondAttribute="leading" constant="55" id="UPr-cI-zD2"/>
+                                                            <constraint firstItem="rAQ-Zw-NZV" firstAttribute="leading" secondItem="Ot3-0j-89E" secondAttribute="leading" id="Uiy-YI-Pag"/>
                                                             <constraint firstAttribute="trailing" secondItem="As0-z4-eyS" secondAttribute="trailing" constant="30" id="ju4-Ab-jLv"/>
-                                                            <constraint firstItem="ir1-2C-v9N" firstAttribute="leading" secondItem="gcj-bS-iYt" secondAttribute="leading" constant="20" id="jxp-vX-cvQ"/>
                                                             <constraint firstItem="MqO-h7-7i0" firstAttribute="top" secondItem="As0-z4-eyS" secondAttribute="bottom" constant="10" id="keL-Yq-fyJ"/>
                                                             <constraint firstAttribute="bottom" secondItem="Ot3-0j-89E" secondAttribute="bottom" constant="40" id="l3S-Gb-hRe"/>
-                                                            <constraint firstItem="Na5-PI-xop" firstAttribute="top" secondItem="ir1-2C-v9N" secondAttribute="bottom" constant="20" id="lLM-kS-HJ9"/>
+                                                            <constraint firstItem="rAQ-Zw-NZV" firstAttribute="top" secondItem="MqO-h7-7i0" secondAttribute="bottom" constant="15" id="ncY-km-bv1"/>
+                                                            <constraint firstItem="rAQ-Zw-NZV" firstAttribute="trailing" secondItem="Ot3-0j-89E" secondAttribute="trailing" id="rNg-B2-NTF"/>
                                                             <constraint firstItem="Ot3-0j-89E" firstAttribute="leading" secondItem="gcj-bS-iYt" secondAttribute="leading" constant="20" id="rmv-j3-thj"/>
-                                                            <constraint firstItem="ir1-2C-v9N" firstAttribute="top" secondItem="MqO-h7-7i0" secondAttribute="bottom" constant="23" id="wr1-zT-U4A"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -7349,10 +7407,12 @@ checking account you provided.</string>
                         <outlet property="btnAddCard" destination="ZKs-e5-ZPN" id="rHa-Pe-fIF"/>
                         <outlet property="btnBack" destination="rG3-9r-GRR" id="k3D-Li-fDA"/>
                         <outlet property="cardNoView" destination="ir1-2C-v9N" id="Pah-7i-GJj"/>
+                        <outlet property="nameView" destination="vbA-FS-25u" id="Y6c-YY-ysC"/>
                         <outlet property="scrollView" destination="K6Z-3J-Sdl" id="Io8-DE-CIy"/>
                         <outlet property="tfCardCVV" destination="eeP-bi-c2t" id="f29-ID-AmX"/>
                         <outlet property="tfCardDate" destination="5xi-Sm-K9p" id="LQX-Me-pai"/>
                         <outlet property="tfCardNo" destination="vUE-1Y-Vsf" id="qhB-Gf-nMy"/>
+                        <outlet property="tfHolderName" destination="7n7-E0-1cp" id="PEy-Pw-LW0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gL3-bC-R4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
