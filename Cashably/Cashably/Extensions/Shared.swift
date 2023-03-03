@@ -33,11 +33,16 @@ class Shared{
     }
     
     static func storeUserToken(token: String) {
-        UserDefaults.standard.set(token, forKey: "token")
+        var user  = getUser1()
+        user["token"] = token
+        storeUser(user: user)
+//        UserDefaults.standard.set(token, forKey: "token")
     }
     
     static func getUserToken() -> String {
-        return UserDefaults.standard.string(forKey: "token") ?? ""
+        let user  = getUser()
+        return user.token ?? ""
+//        return UserDefaults.standard.string(forKey: "token") ?? ""
     }
     
     static func storeForgotToken(token: String) {
@@ -62,11 +67,34 @@ class Shared{
         return user
     }
     
+    static func getUser1() -> [String: Any] {
+        
+        let data = UserDefaults.standard.object(forKey: "user")
+        let objUser = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as! [String: Any]
+        return objUser
+    }
+    
     static func completeUserProfile(status: Bool) {
-        UserDefaults.standard.set(status, forKey: "completeUserProfile")
+        var user = getUser1()
+        user["isCompletedProfile"] = status
+        storeUser(user: user)
+//        UserDefaults.standard.set(status, forKey: "completeUserProfile")
     }
     
     static func isCompletedUserProfile() -> Bool {
-        return UserDefaults.standard.bool(forKey: "completeUserProfile")
+        let user = getUser()
+        return user.isCompletedProfile
+//        return UserDefaults.standard.bool(forKey: "completeUserProfile")
+    }
+    
+    static func storeCards(cards: [[String: Any]]) {
+        var user = getUser1()
+        user["cards"] = cards
+        storeUser(user: user)
+    }
+    
+    static func getCards() -> [Card] {
+        let user = getUser()
+        return user.cards
     }
 }

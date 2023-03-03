@@ -25,10 +25,10 @@ class RequestHandler {
             let status = dictionary["status"] as! Bool
             if status == true {
                 if let userData = dictionary["data"] as? [String:Any] {
-                    let accessToken = userData["token"] as! String
-                    Shared.storeUserToken(token: accessToken)
+//                    let accessToken = userData["token"] as! String
+//                    Shared.storeUserToken(token: accessToken)
                     Shared.storeUser(user: userData)
-                    Shared.completeUserProfile(status: userData["isCompletedProfile"] as! Bool)
+//                    Shared.completeUserProfile(status: userData["isCompletedProfile"] as! Bool)
                 }
                 
                 success(successResponse)
@@ -151,7 +151,10 @@ class RequestHandler {
             let dictionary = successResponse as! [String: Any]
             let status = dictionary["status"] as! Bool
             if status {
-                if let userData = dictionary["data"] as? [String:Any] {
+                if var userData = dictionary["data"] as? [String:Any] {
+                    let user = Shared.getUser()
+                    userData["token"] = user.token
+                    userData["isCompletedProfile"] = user.isCompletedProfile
                     Shared.storeUser(user: userData)
                 }
                 
