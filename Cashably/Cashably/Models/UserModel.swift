@@ -26,6 +26,12 @@ struct UserModel {
         SSN4 = dictionary["ssn"] as? String
         token = dictionary["token"] as? String
         isCompletedProfile = dictionary["isCompletedProfile"] as? Bool
-        cards = dictionary["cards"] as? [Card] ?? [Card]()
+        cards = [Card]()
+        if let tempCards = dictionary["cards"] as? [[String: Any]] {
+            for item in tempCards {
+                cards.append(Card(fromDictionary: item))
+            }
+        }
+        
     }
 }

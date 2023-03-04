@@ -19,6 +19,8 @@ class CardsVC: UIViewController {
     
     var groupContainer = RadioButtonContainer()
     
+    var cards: [Card]!
+    
     @IBOutlet weak var cardsCollectionView: UICollectionView! {
         didSet {
             cardsCollectionView.delegate = self
@@ -39,6 +41,8 @@ class CardsVC: UIViewController {
         
         groupContainer.addButtons([radio1, radio2, radio3, radio4])
         groupContainer.selectedButton = radio1
+        
+        cards = Shared.getCards()
         
     }
     
@@ -122,17 +126,15 @@ extension CardsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if UserDefaults.standard.string(forKey: "cardid") != nil {
-            return 3
-        } else {
-            return 1
-        }
+        return cards.count == 0 ? 1 : cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if UserDefaults.standard.string(forKey: "cardid") != nil {
+        if cards.count != 0 {
             let cell: CardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCell
-                    
+            let card = cards[indexPath.row]
+            cell.lbCardHolder.text = card.holderName
+            cell.lbCardNo.text = card.cardNumber
             cell.btnFullAction = { () in
                 cell.fullView.layer.borderWidth = 2
                 cell.fullView.layer.borderColor = UIColor(red: 0.024, green: 0.792, blue: 0.549, alpha: 1).cgColor
