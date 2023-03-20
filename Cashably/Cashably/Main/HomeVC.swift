@@ -104,7 +104,7 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     func onRequest() {
-        self.requestLoan()
+        self.checkBank()
     }
     
     func onWithdrawMore() {

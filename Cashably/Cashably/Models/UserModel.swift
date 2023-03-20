@@ -13,6 +13,7 @@ struct UserModel {
     var email: String!
     var dob: String!
     var SSN4: String!
+    var subscribed: Bool!
     var token: String!
     var isCompletedProfile: Bool!
     var cards: [Card]!
@@ -26,6 +27,11 @@ struct UserModel {
         SSN4 = dictionary["ssn"] as? String
         token = dictionary["token"] as? String
         isCompletedProfile = dictionary["isCompletedProfile"] as? Bool
+        if let subscribed = dictionary["subscribed"] as? Bool {
+            self.subscribed = subscribed
+        } else {
+            self.subscribed = false
+        }
         cards = [Card]()
         if let tempCards = dictionary["cards"] as? [[String: Any]] {
             for item in tempCards {

@@ -97,4 +97,10 @@ class Shared{
         let user = getUser()
         return user.cards
     }
+    
+    static func subscribed(status: Bool) {
+        var user = getUser1()
+        user["subscribed"] = status
+        storeUser(user: user)
+    }
 }

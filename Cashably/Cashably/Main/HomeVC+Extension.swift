@@ -173,19 +173,49 @@ extension HomeVC {
                
     }
     
+    func checkBank() {
+        self.startAnimating()
+        
+        RequestHandler.getRequest(url:Constants.URL.BANK_CHECK, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            
+            self.requestLoan()
+        }) { (error) in
+            self.stopAnimating()
+            
+            if error.status == Constants.NetworkError.generic {
+                let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
+                connectBankVC.delegate = self
+                self.navigationController?.pushViewController(connectBankVC, animated: true)
+            } else {
+                let alert = Alert.showBasicAlert(message: error.message)
+                self.presentVC(alert)
+            }
+            
+        }
+    }
+    
     func requestLoan() {
         self.startAnimating()
-                
+        
         RequestHandler.getRequest(url:Constants.URL.LOAN_REQUEST, parameter: [:], success: { (successResponse) in
             self.stopAnimating()
             let approvedVC = self.storyboard?.instantiateViewController(withIdentifier: "ApprovedVC") as! ApprovedVC
             self.navigationController?.pushViewController(approvedVC, animated: true)
         }) { (error) in
             self.stopAnimating()
-                        
-            let connectBankVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
-            connectBankVC.delegate = self
-            self.navigationController?.pushViewController(connectBankVC, animated: true)
+            
+            if error.status == Constants.NetworkError.generic {
+                let notapprovedVC = self.storyboard?.instantiateViewController(withIdentifier: "NotApprovedVC") as! NotApprovedVC
+                notapprovedVC.modalTransitionStyle = .coverVertical
+                notapprovedVC.modalPresentationStyle = .formSheet
+                notapprovedVC.message = error.message
+                self.navigationController?.pushViewController(notapprovedVC, animated: true)
+            } else {
+                let alert = Alert.showBasicAlert(message: error.message)
+                self.presentVC(alert)
+            }
+            
         }
     }
     

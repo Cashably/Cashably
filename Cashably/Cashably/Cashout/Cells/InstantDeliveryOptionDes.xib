@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="InstantDeliveryOptionDes" id="iN0-l3-epB" customClass="InstantDeliveryOptionDes" customModule="Cashably" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="181"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZA-Zp-nO6" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="137"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAk-3C-LbT" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                            <rect key="frame" x="334" y="67" width="96" height="96"/>
+                            <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="96" id="PHd-oj-682"/>
+                                <constraint firstAttribute="width" constant="96" id="m6s-9G-4kP"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                    <real key="value" value="48"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waterclock" translatesAutoresizingMaskIntoConstraints="NO" id="a9I-vC-hw8">
+                            <rect key="frame" x="328" y="40.5" width="56" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="SLU-de-s7y"/>
+                                <constraint firstAttribute="width" constant="56" id="wPg-5f-5Dd"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant delivery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpV-fh-9qR">
+                            <rect key="frame" x="16" y="22" width="111" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                    <integer key="value" value="600"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_lineHeight">
+                                    <real key="value" value="17"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sx-i0-Y3N">
+                            <rect key="frame" x="16" y="44.5" width="185" height="33.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="185" id="z6D-Vx-V3h"/>
+                            </constraints>
+                            <string key="text">Receive funds typically
+within 30 mins.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                    <integer key="value" value="400"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_lineHeight">
+                                    <real key="value" value="17"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.8862745098" green="0.98039215690000003" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="2Sx-i0-Y3N" firstAttribute="leading" secondItem="7ZA-Zp-nO6" secondAttribute="leading" constant="16" id="9qe-im-Mvl"/>
+                        <constraint firstAttribute="trailing" secondItem="a9I-vC-hw8" secondAttribute="trailing" constant="30" id="Mbw-aq-Dfk"/>
+                        <constraint firstItem="a9I-vC-hw8" firstAttribute="centerY" secondItem="7ZA-Zp-nO6" secondAttribute="centerY" id="Vbf-f4-bFi"/>
+                        <constraint firstItem="2Sx-i0-Y3N" firstAttribute="top" secondItem="gpV-fh-9qR" secondAttribute="bottom" constant="3" id="XDe-jQ-iUh"/>
+                        <constraint firstItem="gpV-fh-9qR" firstAttribute="leading" secondItem="7ZA-Zp-nO6" secondAttribute="leading" constant="16" id="dUy-aM-GJO"/>
+                        <constraint firstItem="gpV-fh-9qR" firstAttribute="top" secondItem="7ZA-Zp-nO6" secondAttribute="top" constant="22" id="mtR-xo-9ts"/>
+                        <constraint firstAttribute="bottom" secondItem="zAk-3C-LbT" secondAttribute="bottom" constant="-26" id="nFZ-Gh-Noa"/>
+                        <constraint firstAttribute="trailing" secondItem="zAk-3C-LbT" secondAttribute="trailing" constant="-16" id="sP7-ET-rPb"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7ZA-Zp-nO6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="B6w-CU-93T"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7ZA-Zp-nO6" secondAttribute="bottom" id="BrF-yX-lH4"/>
+                <constraint firstItem="7ZA-Zp-nO6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Zrh-zv-4UN"/>
+                <constraint firstAttribute="trailing" secondItem="7ZA-Zp-nO6" secondAttribute="trailing" id="zab-pw-koJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-173.77232142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="waterclock" width="56" height="56"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

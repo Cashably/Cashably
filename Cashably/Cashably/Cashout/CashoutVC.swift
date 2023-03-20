@@ -168,16 +168,12 @@ class CashoutVC: UIViewController {
 }
 
 extension CashoutVC: CashoutTipDelegate {
-    func cashout(data: WithdrawModel, donate: Bool) {
-        if donate == true {
-            let donationvc = storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
-            donationvc.withdrawData = data
-            self.navigationController?.pushViewController(donationvc, animated: true)
-        } else {
-            let nodonationvc = storyboard?.instantiateViewController(withIdentifier: "NoDonationVC") as! NoDonationVC
-            nodonationvc.withdrawData = data
-            self.navigationController?.pushViewController(nodonationvc, animated: true)
-        }
+    func cashout(amount: Double, donate: Double, company: String) {
+        let deliveryvc = storyboard?.instantiateViewController(withIdentifier: "DeliveryOptionVC") as! DeliveryOptionVC
+        deliveryvc.amount = amount
+        deliveryvc.donate = donate
+        deliveryvc.company = company
+        self.navigationController?.pushViewController(deliveryvc, animated: true)
     }
     
 }

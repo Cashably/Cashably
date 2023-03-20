@@ -53,38 +53,6 @@ extension CashoutTipVC {
         slider.centerYAnchor.constraint(equalTo: self.sliderView.centerYAnchor).isActive = true
         
     }
-    
-    func cashout(amount: Double, donate: Double, company: String = "") {
-        
-//        if donate > amount {
-//            let alert = Alert.showBasicAlert(message: "Can't cashout becuase donate is greater than cashout amount.")
-//            self.presentVC(alert)
-//            return
-//        }
-        self.startAnimating()
-        let params = ["amount": "\(amount)", "donate": "\(donate)", "company": company]
-        RequestHandler.postRequest(url:Constants.URL.WITHDRAW, parameter: params as! NSDictionary, success: { (successResponse) in
-            self.stopAnimating()
-            let dictionary = successResponse as! [String: Any]
-            if let data = dictionary["data"] as? [String:Any] {
-                let loan = WithdrawModel(fromDictionary: data)
-                self.dismiss(animated: true) {
-                    if donate == 0 {
-                        self.delegate?.cashout(data: loan, donate: false)
-                    } else {
-                        self.delegate?.cashout(data: loan, donate: true)
-                    }
-                }
-            }
-            
-        }) { (error) in
-            self.stopAnimating()
-            let alert = Alert.showBasicAlert(message: error.message)
-            self.presentVC(alert)
-            
-        }
-        
-    }
 }
 
 extension CashoutTipVC: MSCircularSliderDelegate {

@@ -11,7 +11,7 @@ import iOSDropDown
 import NVActivityIndicatorView
 
 protocol CashoutTipDelegate {
-    func cashout(data: WithdrawModel, donate: Bool)
+    func cashout(amount: Double, donate: Double, company: String)
 }
 
 class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
@@ -93,13 +93,11 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
     }
    
     @IBAction func actionCashout(_ sender: UIButton) {
-        
-        self.cashout(amount: self.amount, donate: 0)
+        self.delegate?.cashout(amount: self.amount, donate: 0, company: "")
     }
     
     @IBAction func actionCashoutWithTip(_ sender: UIButton) {
-        
-        self.cashout(amount: self.amount, donate: self.donate, company: company)
+        self.delegate?.cashout(amount: self.amount, donate: self.donate, company: company)
     }
 }
 
