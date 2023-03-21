@@ -66,6 +66,12 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
     @IBAction func actionFilter(_ sender: UIButton) {
     }
     
+    @IBAction func actionUpdate(_ sender: Any) {
+        let connectVC = self.storyboard?.instantiateViewController(withIdentifier: "ConnectBankVC") as! ConnectBankVC
+        connectVC.delegate = self
+        self.navigationController?.pushViewController(connectVC, animated: true)
+    }
+    
     func loadBank(duration: String = "week") {
         self.startAnimating()
         let params = ["duration": duration] as! NSDictionary
@@ -91,10 +97,10 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
             }
         }) { (error) in
             self.stopAnimating()
-            if error.status == Constants.NetworkError.generic {
-                let alert = Alert.showBasicAlert(message: error.message)
-                self.presentVC(alert)
-            }
+            
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+            
             
         }
     }
@@ -229,4 +235,14 @@ class BankVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     
+}
+
+extension BankVC: ConnectBankDelegate {
+    func updated() {
+//        self.loadBank()
+    }
+    
+    func connected() {
+        self.loadBank()
+    }
 }

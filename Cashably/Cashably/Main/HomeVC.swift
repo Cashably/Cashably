@@ -158,6 +158,10 @@ extension HomeVC: RequestOverdraftEnableDelegate {
 }
 
 extension HomeVC: ConnectBankDelegate {
+    func updated() {
+        
+    }
+    
     func connected() {
         requestLoan()
     }    

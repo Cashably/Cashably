@@ -3427,13 +3427,6 @@
                                                     <constraint firstItem="fmp-EW-IUp" firstAttribute="leading" secondItem="aXz-zI-n6B" secondAttribute="leading" constant="5" id="zyH-mw-xTP"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-6r-qCe">
-                                                <rect key="frame" x="0.0" y="454" width="414" height="25"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="CzU-vz-nA8"/>
-                                                </constraints>
-                                            </view>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgN-kR-rfr">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="429"/>
                                                 <subviews>
@@ -3463,6 +3456,40 @@
                                                 <viewLayoutGuide key="contentLayoutGuide" id="sn0-Ga-CBI"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="JqA-hb-4zX"/>
                                             </scrollView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-6r-qCe">
+                                                <rect key="frame" x="0.0" y="414" width="414" height="65"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZN-VB-hBN">
+                                                        <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="lwz-Ft-dwP"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Connect Bank">
+                                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                                <color key="backgroundColor" red="0.023529411760000001" green="0.79215686269999996" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                                <integer key="value" value="600"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionUpdate:" destination="AkM-s0-8Mx" eventType="primaryActionTriggered" id="oXh-Va-RXd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="CzU-vz-nA8"/>
+                                                    <constraint firstItem="GZN-VB-hBN" firstAttribute="leading" secondItem="uNh-6r-qCe" secondAttribute="leading" constant="20" id="NZQ-RJ-SPd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="GZN-VB-hBN" secondAttribute="bottom" constant="5" id="PNz-it-FYM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GZN-VB-hBN" secondAttribute="trailing" constant="20" id="szB-Cx-1sR"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -6406,7 +6433,7 @@ Approved for Loan</string>
         <!--Delivery OptionVC-->
         <scene sceneID="4gP-uv-SlI">
             <objects>
-                <viewController storyboardIdentifier="DeliveryOptionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nxQ-nl-gd2" customClass="DeliveryOptionVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeliveryOptionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nxQ-nl-gd2" customClass="DeliveryOptionVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QMl-Pf-CUA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -11013,7 +11040,7 @@ if you want..</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JNb-CW-sZZ" userLabel="radio stack">
-                                        <rect key="frame" x="20" y="90" width="374" height="94"/>
+                                        <rect key="frame" x="20" y="90" width="374" height="87"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select payment Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-Rj-C9h">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
@@ -11027,13 +11054,13 @@ if you want..</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TLd-eb-hBz">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="61"/>
+                                                <rect key="frame" x="0.0" y="33" width="374" height="54"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-hu-Vjx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAe-iS-UNt" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Net Banking">
@@ -11046,7 +11073,7 @@ if you want..</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99H-2h-R2k" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Credit Card">
@@ -11056,10 +11083,10 @@ if you want..</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-DM-Eim">
-                                                        <rect key="frame" x="0.0" y="40.5" width="374" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="37" width="374" height="17"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGy-02-DUB" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Debit Card">
@@ -11072,7 +11099,7 @@ if you want..</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJi-fc-DTC" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="UPI">
@@ -11086,7 +11113,7 @@ if you want..</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6It-aw-t58">
-                                        <rect key="frame" x="0.0" y="204" width="414" height="210"/>
+                                        <rect key="frame" x="0.0" y="197" width="414" height="210"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5z-ek-e4s">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
@@ -11140,7 +11167,7 @@ if you want..</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nw-xj-2Tq">
-                                        <rect key="frame" x="20" y="434" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="427" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="T0h-Wd-Zdd"/>
                                         </constraints>
@@ -11555,13 +11582,13 @@ if you want..</string>
             <size key="intrinsicContentSize" width="104.5" height="17"/>
         </designable>
         <designable name="LAe-iS-UNt">
-            <size key="intrinsicContentSize" width="123" height="20.5"/>
+            <size key="intrinsicContentSize" width="115.5" height="14"/>
         </designable>
         <designable name="eQ3-dB-Ilr">
             <size key="intrinsicContentSize" width="30" height="0.0"/>
         </designable>
         <designable name="iGy-02-DUB">
-            <size key="intrinsicContentSize" width="112" height="20.5"/>
+            <size key="intrinsicContentSize" width="105.5" height="14"/>
         </designable>
         <designable name="oJi-fc-DTC">
             <size key="intrinsicContentSize" width="53" height="17"/>

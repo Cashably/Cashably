@@ -13,6 +13,7 @@ import CoreData
 
 protocol ConnectBankDelegate {
     func connected()
+    func updated()
 }
 
 protocol LinkOAuthHandling {
@@ -104,8 +105,9 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
         ] as [String : Any]
         RequestHandler.postRequest(url:Constants.URL.PLAID_EXCHANGE_PUB_TOKEN, parameter: params as! NSDictionary, success: { (successResponse) in
             self.stopAnimating()
-            self.showToast(message: "Sent successfully")
-            self.delegate.connected()
+            self.showToast(message: "Connected successfully")
+            self.navigationController?.popViewController(animated: true)
+            self.delegate?.connected()
         }) { (error) in
             self.stopAnimating()
                         
@@ -127,6 +129,8 @@ class ConnectBankVC: UIViewController, LinkOAuthHandling, NVActivityIndicatorVie
 
 extension ConnectBankVC: ConnectProcessingDelegate {
     func connected() {
-        self.delegate.connected()
+        
+        self.delegate?.connected()
+        self.navigationController?.popViewController(animated: true)
     }
 }
