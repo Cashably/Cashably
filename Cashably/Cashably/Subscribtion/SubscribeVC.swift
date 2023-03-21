@@ -17,6 +17,10 @@ class SubscribeVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var lbMountOff: UILabel!
     @IBOutlet weak var btnSubscribe: UIButton!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
@@ -60,6 +64,7 @@ class SubscribeVC: UIViewController, NVActivityIndicatorViewable {
             let subVC = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeSuccessVC") as! SubscribeSuccessVC
             subVC.modalTransitionStyle = .coverVertical
             subVC.modalPresentationStyle = .overFullScreen
+            subVC.delegate = self
             self.presentVC(subVC)
             
         }) { (error) in

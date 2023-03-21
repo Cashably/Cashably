@@ -27,6 +27,11 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     @IBOutlet weak var btnExpress: UIButton!
     @IBOutlet weak var btnNormal: UIButton!
     
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
