@@ -12,6 +12,9 @@ import FirebaseAuth
 import Alamofire
 
 class RepayVC: UIViewController, NVActivityIndicatorViewable {
+    
+    var mLoan: LoanModel?
+    
     @IBOutlet weak var lbLoanAmount: UILabel!
     @IBOutlet weak var lbDueDate: UILabel!
     @IBOutlet weak var lbRemainDays: UILabel!
@@ -21,21 +24,17 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var loanAmount: Double = 0
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        lbLoanAmount.text = "$\(loanAmount)"
+        lbLoanAmount.text = "$\((mLoan!.amount)!)"
         
-        let loan: LoanModel = Shared.getLoan()
-        
-        lbLoanAmount.text = "$\((loan.total)!)"
+        lbLoanAmount.text = "$\((mLoan!.total)!)"
 //        lbDueDate.text = loan.dueDate
         
-        let dueTimestamp = loan.dueDateTimestamp
+        let dueTimestamp = mLoan!.dueDateTimestamp
         let timestamp = Date().secondsSince1970
         let days: Int64 = (dueTimestamp! - timestamp) / 3600 / 24
         lbRemainDays.text = "\(days) DAYS"
@@ -110,12 +109,12 @@ extension RepayVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: LoanTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "loanCell") as! LoanTableViewCell
         cell.selectionStyle = .none
-        let loan: LoanModel = Shared.getLoan()
-        cell.lbBankName.text = loan.to
-        cell.lbLoanAmount.text = "$ \(loan.amount!)"
-        cell.lbTotal.text = "$ \(loan.total!)"
-        let snoozepay = loan.snoozeFee * Double((3-loan.snooze))
-        let tip = loan.total - loan.amount - snoozepay
+        
+        cell.lbBankName.text = mLoan!.to
+        cell.lbLoanAmount.text = "$ \(mLoan!.amount!)"
+        cell.lbTotal.text = "$ \(mLoan!.total!)"
+        let snoozepay = mLoan!.snoozeFee * Double((3-mLoan!.snooze))
+        let tip = mLoan!.total - mLoan!.amount - snoozepay
         cell.lbSnoozePay.text = "$ \(snoozepay)"
         cell.lbTips.text = "$ \(tip)"
 //        cell.lbLoanId.text = Auth.auth().currentUser?.uid

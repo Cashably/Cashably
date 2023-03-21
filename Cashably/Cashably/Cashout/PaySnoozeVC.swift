@@ -13,6 +13,8 @@ import FirebaseAuth
 
 class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
     
+    var mLoan: LoanModel?
+    
     @IBOutlet weak var btnBack: UIButton!
     
     @IBOutlet weak var lbTerms: UILabel!
@@ -26,15 +28,14 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let loan: LoanModel = Shared.getLoan()
-        let createdAt = Date(milliseconds: loan.createdAtTimestamp * 1000).dateFormat(format: "dd/MM")
-        let dueAt = Date(milliseconds: loan.dueDateTimestamp * 1000).dateFormat(format: "dd/MM")
+        let createdAt = Date(milliseconds: mLoan!.createdAtTimestamp * 1000).dateFormat(format: "dd/MM")
+        let dueAt = Date(milliseconds: mLoan!.dueDateTimestamp * 1000).dateFormat(format: "dd/MM")
         lbTerms.text = "\(createdAt) - \(dueAt)"
-        lbAmount.text = "$\((loan.amount)!)"
-        lbSnoozeFee.text = "$\((loan.snoozeFee)!)"
-        lbRemainSnooze.text = "Left \((loan.snooze)!) snooze"
-        lbTotalAmount.text = "$\(loan.total + loan.snoozeFee)"
-        lbNextDueDate.text = loan.nextDueDate
+        lbAmount.text = "$\((mLoan!.amount)!)"
+        lbSnoozeFee.text = "$\((mLoan!.snoozeFee)!)"
+        lbRemainSnooze.text = "Left \((mLoan!.snooze)!) snooze"
+        lbTotalAmount.text = "$\(mLoan!.total + mLoan!.snoozeFee)"
+        lbNextDueDate.text = mLoan!.nextDueDate
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

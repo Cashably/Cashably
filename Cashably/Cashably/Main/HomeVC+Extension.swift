@@ -156,13 +156,14 @@ extension HomeVC {
             self.stopAnimating()
             let dictionary = successResponse as! [String: Any]
             if let loan = dictionary["data"] as? [String:Any] {
-                Shared.storeLoan(loan: loan)
-                self.mLoan = Shared.getLoan()
+                
+                self.mLoan = LoanModel(fromDictionary: loan)
             }
                 
             self.configure()
         }) { (error) in
             self.stopAnimating()
+            
             self.configure()
             
         }

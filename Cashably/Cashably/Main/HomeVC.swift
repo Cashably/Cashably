@@ -111,21 +111,22 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     func onPay() {
-        if mLoan!.amount == 0 {
-            self.showToast(message: "No received amount")
+        if mLoan == nil || mLoan!.amount == 0 {
+            self.showToast(message: "No received loan")
             return
         }
         let repayVC = self.storyboard?.instantiateViewController(withIdentifier: "RepayVC") as! RepayVC
-        repayVC.loanAmount = mLoan!.amount
+        repayVC.mLoan = mLoan
         self.navigationController?.pushViewController(repayVC, animated: true)
     }
     
     func onSnooze() {
-        if mLoan!.amount == 0 {
-            self.showToast(message: "No received amount")
+        if mLoan == nil || mLoan!.amount == 0 {
+            self.showToast(message: "No received loan")
             return
         }
         let paySnoozeVC = self.storyboard?.instantiateViewController(withIdentifier: "PaySnoozeVC") as! PaySnoozeVC
+        paySnoozeVC.mLoan = mLoan
         self.navigationController?.pushViewController(paySnoozeVC, animated: true)
     }
     
