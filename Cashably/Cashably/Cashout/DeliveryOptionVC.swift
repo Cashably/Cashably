@@ -25,7 +25,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     @IBOutlet weak var lbAmount: UILabel!
     @IBOutlet weak var unsubscribedStack: UIStackView!
     @IBOutlet weak var btnExpress: UIButton!
-    
+    @IBOutlet weak var btnNormal: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
@@ -39,6 +39,8 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lbAmount.text = "$\(amount!)"
         
         if Shared.getUser().subscribed {
             instantOptionView.setFree()
@@ -59,6 +61,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
             self.instantOptionView.unselectedView()
             self.instantOptionDesView.isHidden = true
             self.normalOptionDesView.isHidden = false
+            self.btnNormal.setTitle("Continue with Normal Delivery", for: .normal)
         }
         
         instantOptionView.btnFullAction = { () in
@@ -66,6 +69,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
             self.normalOptionView.unselectedView()
             self.instantOptionDesView.isHidden = false
             self.normalOptionDesView.isHidden = true
+            self.btnNormal.setTitle("Continue with Instant Delivery", for: .normal)
         }
         
     }

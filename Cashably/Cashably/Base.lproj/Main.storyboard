@@ -6450,22 +6450,6 @@ Approved for Loan</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6o-d4-SJC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dj-aO-CV9" userLabel="btn_back">
-                                        <rect key="frame" x="20" y="50" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="Gqe-bc-7Vd"/>
-                                            <constraint firstAttribute="height" constant="50" id="a8Q-6r-sra"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="ic_back">
-                                            <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            </backgroundConfiguration>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="actionBack:" destination="nxQ-nl-gd2" eventType="primaryActionTriggered" id="seT-PD-KW9"/>
-                                        </connections>
-                                    </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaH-kp-Rer">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                         <subviews>
@@ -6480,9 +6464,14 @@ Approved for Loan</string>
                                                             <constraint firstAttribute="width" constant="525" id="5bI-HB-V6T"/>
                                                             <constraint firstAttribute="height" constant="525" id="Z3J-AK-gPC"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                                <real key="value" value="262"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Qualify for a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huh-jr-pdI">
-                                                        <rect key="frame" x="147.5" y="120" width="119" height="19.5"/>
+                                                        <rect key="frame" x="147.5" y="70" width="119" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -6493,7 +6482,7 @@ Approved for Loan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50 Advance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBs-Pq-kDj">
-                                                        <rect key="frame" x="119" y="149.5" width="175.5" height="36"/>
+                                                        <rect key="frame" x="119" y="99.5" width="175.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -6506,10 +6495,10 @@ Approved for Loan</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoU-Be-TNR">
-                                                        <rect key="frame" x="138" y="195.5" width="138" height="138"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoU-Be-TNR" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                        <rect key="frame" x="138" y="145.5" width="138" height="138"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-in-EYP">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-in-EYP" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="7" width="124" height="124"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar_badge" translatesAutoresizingMaskIntoConstraints="NO" id="9Zk-CT-sC7">
@@ -6525,6 +6514,11 @@ Approved for Loan</string>
                                                                     <constraint firstItem="9Zk-CT-sC7" firstAttribute="centerX" secondItem="G5z-in-EYP" secondAttribute="centerX" id="6K3-5S-PGT"/>
                                                                     <constraint firstItem="9Zk-CT-sC7" firstAttribute="centerY" secondItem="G5z-in-EYP" secondAttribute="centerYWithinMargins" id="G7G-ig-ahE"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                                        <real key="value" value="66"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6536,22 +6530,27 @@ Approved for Loan</string>
                                                             <constraint firstAttribute="trailing" secondItem="G5z-in-EYP" secondAttribute="trailing" constant="7" id="uOP-GM-xZx"/>
                                                             <constraint firstItem="G5z-in-EYP" firstAttribute="leading" secondItem="zoU-Be-TNR" secondAttribute="leading" constant="7" id="x5C-Hb-e9x"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                                <real key="value" value="69"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5SQ-yI-SYE">
                                                         <rect key="frame" x="20" y="395" width="374" height="564.5"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b35-x5-zOo" userLabel="option stack">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="b35-x5-zOo" userLabel="option stack">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="131"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" restorationIdentifier="NormalDeliveryOption" translatesAutoresizingMaskIntoConstraints="NO" id="0EB-5C-8mW" customClass="NormalDeliveryOption" customModule="Cashably" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="131"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="131"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="131" id="0js-cW-W6Y"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZz-mm-tfl" customClass="InstantDeliveryOption" customModule="Cashably" customModuleProvider="target">
-                                                                        <rect key="frame" x="187" y="0.0" width="187" height="131"/>
+                                                                        <rect key="frame" x="194.5" y="0.0" width="179.5" height="131"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     </view>
                                                                 </subviews>
@@ -6682,7 +6681,7 @@ Approved for Loan</string>
                                                     <constraint firstItem="zoU-Be-TNR" firstAttribute="centerX" secondItem="zVQ-bu-EnY" secondAttribute="centerX" id="Ob6-Uu-6El"/>
                                                     <constraint firstItem="zoU-Be-TNR" firstAttribute="top" secondItem="oBs-Pq-kDj" secondAttribute="bottom" constant="10" id="cHs-IN-s4b"/>
                                                     <constraint firstAttribute="height" constant="1262" id="cSW-gO-Oth"/>
-                                                    <constraint firstItem="huh-jr-pdI" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="120" id="fci-SX-jgn"/>
+                                                    <constraint firstItem="huh-jr-pdI" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="70" id="fci-SX-jgn"/>
                                                     <constraint firstItem="oBs-Pq-kDj" firstAttribute="top" secondItem="huh-jr-pdI" secondAttribute="bottom" constant="10" id="naF-RB-GNt"/>
                                                     <constraint firstItem="5SQ-yI-SYE" firstAttribute="top" secondItem="zVQ-bu-EnY" secondAttribute="bottom" constant="20" id="rkr-G9-nji"/>
                                                     <constraint firstItem="huh-jr-pdI" firstAttribute="centerX" secondItem="kGK-0H-Xzr" secondAttribute="centerX" id="t6L-VI-Elf"/>
@@ -6701,6 +6700,22 @@ Approved for Loan</string>
                                         <viewLayoutGuide key="contentLayoutGuide" id="KlH-0R-kKn"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="yKP-av-qYT"/>
                                     </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dj-aO-CV9" userLabel="btn_back">
+                                        <rect key="frame" x="20" y="50" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Gqe-bc-7Vd"/>
+                                            <constraint firstAttribute="height" constant="50" id="a8Q-6r-sra"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_back">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="actionBack:" destination="nxQ-nl-gd2" eventType="primaryActionTriggered" id="seT-PD-KW9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6dj-aO-CV9" firstAttribute="leading" secondItem="c6o-d4-SJC" secondAttribute="leading" constant="20" id="Fzk-y6-LjE"/>
@@ -6723,6 +6738,7 @@ Approved for Loan</string>
                     </view>
                     <connections>
                         <outlet property="btnExpress" destination="6Qw-lM-l09" id="wO7-XE-BfH"/>
+                        <outlet property="btnNormal" destination="NTR-e7-twU" id="doH-2U-e7E"/>
                         <outlet property="instantOptionDesView" destination="9vB-ty-mmA" id="S5i-7T-6vz"/>
                         <outlet property="instantOptionView" destination="JZz-mm-tfl" id="Sbl-Ei-AGd"/>
                         <outlet property="lbAmount" destination="oBs-Pq-kDj" id="Kob-Mh-R3z"/>
@@ -11057,7 +11073,7 @@ if you want..</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JNb-CW-sZZ" userLabel="radio stack">
-                                        <rect key="frame" x="20" y="90" width="374" height="87"/>
+                                        <rect key="frame" x="20" y="90" width="374" height="94"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select payment Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-Rj-C9h">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
@@ -11071,13 +11087,13 @@ if you want..</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TLd-eb-hBz">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="54"/>
+                                                <rect key="frame" x="0.0" y="33" width="374" height="61"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-hu-Vjx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAe-iS-UNt" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Net Banking">
@@ -11090,7 +11106,7 @@ if you want..</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99H-2h-R2k" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Credit Card">
@@ -11100,10 +11116,10 @@ if you want..</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-DM-Eim">
-                                                        <rect key="frame" x="0.0" y="37" width="374" height="17"/>
+                                                        <rect key="frame" x="0.0" y="40.5" width="374" height="20.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGy-02-DUB" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Debit Card">
@@ -11116,7 +11132,7 @@ if you want..</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJi-fc-DTC" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="UPI">
@@ -11130,7 +11146,7 @@ if you want..</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6It-aw-t58">
-                                        <rect key="frame" x="0.0" y="197" width="414" height="210"/>
+                                        <rect key="frame" x="0.0" y="204" width="414" height="210"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5z-ek-e4s">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
@@ -11184,7 +11200,7 @@ if you want..</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nw-xj-2Tq">
-                                        <rect key="frame" x="20" y="427" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="434" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="T0h-Wd-Zdd"/>
                                         </constraints>
@@ -11599,13 +11615,13 @@ if you want..</string>
             <size key="intrinsicContentSize" width="104.5" height="17"/>
         </designable>
         <designable name="LAe-iS-UNt">
-            <size key="intrinsicContentSize" width="115.5" height="14"/>
+            <size key="intrinsicContentSize" width="123" height="20.5"/>
         </designable>
         <designable name="eQ3-dB-Ilr">
             <size key="intrinsicContentSize" width="30" height="0.0"/>
         </designable>
         <designable name="iGy-02-DUB">
-            <size key="intrinsicContentSize" width="105.5" height="14"/>
+            <size key="intrinsicContentSize" width="112" height="20.5"/>
         </designable>
         <designable name="oJi-fc-DTC">
             <size key="intrinsicContentSize" width="53" height="17"/>
