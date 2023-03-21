@@ -44,6 +44,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
         
         if Shared.getUser().subscribed {
             instantOptionView.setFree()
+            normalOptionView.unselectedView()
             normalOptionView.btnFull.isHidden = true
             unsubscribedStack.isHidden = true
         } else {
@@ -131,6 +132,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
                 let loan = LoanModel(fromDictionary: data)
                 let successVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutSuccessVC") as! CashoutSuccessVC
                 successVC.loan = loan
+                successVC.amount = self.amount
                 self.navigationController?.pushViewController(successVC, animated: true)
             }
             

@@ -28,6 +28,7 @@ class SubscribeSuccessVC: UIViewController {
    }
     
     @IBAction func actionViewDetails(_ sender: UIButton) {
+        self.dismissVC(completion: nil)
         self.delegate?.subscribed()
     }
     

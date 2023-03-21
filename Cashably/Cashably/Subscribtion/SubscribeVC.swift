@@ -20,7 +20,7 @@ class SubscribeVC: UIViewController, NVActivityIndicatorViewable {
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
-        
+        getSubPrice()
    }
 
     override func viewWillDisappear(_ animated: Bool) {
