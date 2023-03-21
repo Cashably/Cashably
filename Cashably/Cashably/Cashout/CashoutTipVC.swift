@@ -93,10 +93,12 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
     }
    
     @IBAction func actionCashout(_ sender: UIButton) {
+        self.dismissVC(completion: nil)
         self.delegate?.cashout(amount: self.amount, donate: 0, company: "")
     }
     
     @IBAction func actionCashoutWithTip(_ sender: UIButton) {
+        self.dismissVC(completion: nil)
         self.delegate?.cashout(amount: self.amount, donate: self.donate, company: company)
     }
 }
