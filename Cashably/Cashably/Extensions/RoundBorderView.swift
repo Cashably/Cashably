@@ -8,22 +8,50 @@
 import Foundation
 import UIKit
 
-open class RoundBorderView: UIView {
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        configure()
+@IBDesignable class RoundBorderView: UIView {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            layer.borderWidth
+        }
     }
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        configure()
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
     }
     
-    private func configure() {
-        self.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor(red: 0.918, green: 0.922, blue: 0.937, alpha: 1).cgColor
+    @IBInspectable var radius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+        get {
+            layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var enableShadow: Bool {
+        set {
+            if newValue {
+                shadow()
+            }
+        }
+        get {
+            return false
+        }
+    }
+    
+    
+    private func shadow() {
         
         let shadows = UIView()
         shadows.frame = self.frame
@@ -36,4 +64,5 @@ open class RoundBorderView: UIView {
         self.layer.shadowOffset = CGSize(width: 30, height: 50)
         self.layer.bounds = shadows.bounds
     }
+    
 }
