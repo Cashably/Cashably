@@ -3281,11 +3281,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yfa-7c-EOc">
                                         <rect key="frame" x="20" y="110" width="374" height="120"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqN-Qz-jHW" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqN-Qz-jHW" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="10" width="334" height="110"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="_radius">
                                                         <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -3426,6 +3429,17 @@
                                                     <constraint firstItem="fmp-EW-IUp" firstAttribute="centerY" secondItem="aXz-zI-n6B" secondAttribute="centerY" id="k38-co-PpS"/>
                                                     <constraint firstItem="fmp-EW-IUp" firstAttribute="leading" secondItem="aXz-zI-n6B" secondAttribute="leading" constant="5" id="zyH-mw-xTP"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.91764705879999997" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgN-kR-rfr">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="429"/>
@@ -3746,7 +3760,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8v1-CG-jBU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRw-ul-wGo" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRw-ul-wGo" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="20" y="130" width="60" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_airbnb" translatesAutoresizingMaskIntoConstraints="NO" id="0kU-Rp-l7O">
@@ -3760,6 +3774,11 @@
                                             <constraint firstItem="0kU-Rp-l7O" firstAttribute="centerX" secondItem="IRw-ul-wGo" secondAttribute="centerX" id="aJj-TN-RAf"/>
                                             <constraint firstAttribute="width" constant="60" id="aR3-rs-KAE"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uq5-9k-nf9" customClass="TopCornderRoundView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="337.5" width="414" height="524.5"/>
@@ -3774,7 +3793,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d0g-HR-h0h">
                                                 <rect key="frame" x="20" y="-20" width="374" height="86"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnU-qp-lPm" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnU-qp-lPm" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-dc-6Lz">
@@ -3808,8 +3827,13 @@
                                                             <constraint firstItem="hfJ-dc-6Lz" firstAttribute="centerX" secondItem="CnU-qp-lPm" secondAttribute="centerX" id="s6w-Hk-476"/>
                                                             <constraint firstItem="TWv-FX-kfO" firstAttribute="top" secondItem="hfJ-dc-6Lz" secondAttribute="bottom" constant="10" id="v1d-6K-jD0"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MF-b2-mkl" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MF-b2-mkl" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="96" y="0.0" width="86" height="86"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-KG-boh">
@@ -3843,8 +3867,13 @@
                                                             <constraint firstItem="f0J-KG-boh" firstAttribute="top" secondItem="6MF-b2-mkl" secondAttribute="top" constant="15" id="i9R-rx-fxA"/>
                                                             <constraint firstItem="f0J-KG-boh" firstAttribute="centerX" secondItem="6MF-b2-mkl" secondAttribute="centerX" id="oCv-Vo-j6V"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9z-Rf-YbQ" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9z-Rf-YbQ" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="192" y="0.0" width="86" height="86"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Sf-5rA">
@@ -3878,8 +3907,13 @@
                                                             <constraint firstItem="DkS-xs-gCf" firstAttribute="centerX" secondItem="M9z-Rf-YbQ" secondAttribute="centerX" id="kgA-rI-65l"/>
                                                             <constraint firstItem="DkS-xs-gCf" firstAttribute="top" secondItem="hS2-Sf-5rA" secondAttribute="bottom" constant="10" id="qLF-Yx-4hS"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olj-If-lat" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olj-If-lat" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="288" y="0.0" width="86" height="86"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvF-Um-iNW">
@@ -3913,6 +3947,11 @@
                                                             <constraint firstAttribute="width" secondItem="olj-If-lat" secondAttribute="height" multiplier="1:1" id="bUF-T1-cQ8"/>
                                                             <constraint firstItem="KvF-Um-iNW" firstAttribute="centerX" secondItem="olj-If-lat" secondAttribute="centerX" id="cQ7-O9-ZQy"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -4793,7 +4832,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGM-pb-N9Q">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrh-Lq-yLu" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrh-Lq-yLu" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                                         <rect key="frame" x="20" y="0.0" width="374" height="160"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Down Spending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0o-UT-S9k">
@@ -4909,6 +4948,11 @@
                                                                             <constraint firstAttribute="trailing" secondItem="0Rv-Eb-PtE" secondAttribute="trailing" constant="20" id="fCN-xE-NEo"/>
                                                                             <constraint firstAttribute="bottom" secondItem="0Rv-Eb-PtE" secondAttribute="bottom" constant="20" id="zeM-J4-RhJ"/>
                                                                         </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                                <real key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Y8-B3-sZe">
                                                                         <rect key="frame" x="0.0" y="160" width="414" height="240"/>
@@ -6283,7 +6327,7 @@ your money.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-UR-lrc" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-UR-lrc" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                 <rect key="frame" x="32" y="248" width="350" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEj-Gn-4Q4" userLabel="dog">
@@ -6419,6 +6463,9 @@ Approved for Loan</string>
                                     <userDefinedRuntimeAttribute type="number" keyPath="_radius">
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -6456,7 +6503,7 @@ Approved for Loan</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-0H-Xzr">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1262"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVQ-bu-EnY" userLabel="topBiCircle" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVQ-bu-EnY" userLabel="topBiCircle" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="-55.5" y="-150" width="525" height="525"/>
                                                         <color key="backgroundColor" red="0.023529411764705882" green="0.792156862745098" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="topBiCircle"/>
@@ -6466,6 +6513,9 @@ Approved for Loan</string>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                                <real key="value" value="262"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="262"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -6495,10 +6545,10 @@ Approved for Loan</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoU-Be-TNR" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoU-Be-TNR" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="138" y="145.5" width="138" height="138"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-in-EYP" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-in-EYP" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="7" width="124" height="124"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar_badge" translatesAutoresizingMaskIntoConstraints="NO" id="9Zk-CT-sC7">
@@ -6518,6 +6568,9 @@ Approved for Loan</string>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="_radius">
                                                                         <real key="value" value="66"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                        <real key="value" value="65"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
@@ -6532,6 +6585,9 @@ Approved for Loan</string>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                                <real key="value" value="69"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="69"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -6796,7 +6852,7 @@ our premium plan.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElU-KZ-PoE" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElU-KZ-PoE" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                         <rect key="frame" x="20" y="392" width="374" height="200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJD-OQ-wGY" userLabel="price stack">
@@ -6942,8 +6998,14 @@ our premium plan.</string>
                                             <constraint firstItem="cJD-OQ-wGY" firstAttribute="top" secondItem="ElU-KZ-PoE" secondAttribute="top" constant="20" id="zLc-g5-4T3"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                 <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.98039215686274506" green="0.69019607843137254" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -7055,7 +7117,7 @@ our premium plan.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7o-2x-RAy" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7o-2x-RAy" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                 <rect key="frame" x="7" y="248" width="400" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPb-2Y-T9V" userLabel="dog">
@@ -7159,8 +7221,8 @@ Premium user</string>
                                     <constraint firstItem="H2f-qQ-JO8" firstAttribute="top" secondItem="Syy-wg-txv" secondAttribute="bottom" constant="5" id="uwG-M3-ZpB"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
-                                        <real key="value" value="25"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -7226,7 +7288,7 @@ Premium user</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skZ-bL-ab8" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skZ-bL-ab8" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="39" width="374" height="128"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lQY-uh-7Y5">
@@ -7301,15 +7363,18 @@ Premium user</string>
                                                                     </stackView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOJ-z3-uoG" userLabel="inner" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOJ-z3-uoG" userLabel="inner" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                                 <rect key="frame" x="218" y="-18" width="206" height="206"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiU-md-0Kc" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiU-md-0Kc" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                                         <rect key="frame" x="20" y="20" width="166" height="166"/>
                                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="_radius">
                                                                                 <real key="value" value="94"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                                <real key="value" value="100"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
@@ -7325,6 +7390,9 @@ Premium user</string>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                                        <real key="value" value="103"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                         <real key="value" value="103"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
@@ -7349,7 +7417,7 @@ Premium user</string>
                                                             <constraint firstAttribute="trailing" secondItem="ZTP-0Q-v8W" secondAttribute="trailing" id="tX3-2L-Pi5"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="24"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
@@ -7386,7 +7454,7 @@ Premium user</string>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7un-pE-eCi" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7un-pE-eCi" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="26" width="374" height="124"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wse-n1-8A6">
@@ -7502,7 +7570,7 @@ Premium user</string>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="124" id="8oO-sQ-c4H"/>
                                                             <constraint firstAttribute="trailing" secondItem="wse-n1-8A6" secondAttribute="trailing" constant="16" id="GsR-Ic-74H"/>
@@ -7510,8 +7578,14 @@ Premium user</string>
                                                             <constraint firstItem="wse-n1-8A6" firstAttribute="top" secondItem="7un-pE-eCi" secondAttribute="top" constant="16" id="p2E-L7-aXL"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="_radius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -7627,7 +7701,7 @@ Premium user</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmX-jL-Nvj" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmX-jL-Nvj" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                 <rect key="frame" x="7" y="248" width="400" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1x-WP-PDU" userLabel="dog">
@@ -7731,8 +7805,8 @@ Maximum Funds!</string>
                                     <constraint firstItem="F1x-WP-PDU" firstAttribute="top" secondItem="YmX-jL-Nvj" secondAttribute="top" constant="20" id="zZZ-1s-71n"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="_radius">
-                                        <real key="value" value="25"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -9337,6 +9411,17 @@ for amount credited.</string>
                                                     <constraint firstAttribute="bottom" secondItem="wuS-Q1-V9o" secondAttribute="bottom" constant="10" id="iDJ-11-pFJ"/>
                                                     <constraint firstAttribute="trailing" secondItem="oTb-Fn-93k" secondAttribute="trailing" constant="20" id="mda-nZ-6kc"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.91764705879999997" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVv-1b-7jn">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="627"/>
@@ -9823,6 +9908,18 @@ you can Snooze as many times as you like.</string>
                                                     <constraint firstAttribute="bottom" secondItem="5lc-vg-H8r" secondAttribute="bottom" constant="15" id="htW-sO-dP5"/>
                                                     <constraint firstAttribute="height" constant="80" id="zq0-lR-R29"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.91764705882352937" green="0.92156862745098034" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZI-Vr-cXg">
                                                 <rect key="frame" x="0.0" y="60" width="414" height="442"/>
@@ -11073,7 +11170,7 @@ if you want..</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JNb-CW-sZZ" userLabel="radio stack">
-                                        <rect key="frame" x="20" y="90" width="374" height="94"/>
+                                        <rect key="frame" x="20" y="90" width="374" height="87"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select payment Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-Rj-C9h">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
@@ -11087,13 +11184,13 @@ if you want..</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TLd-eb-hBz">
-                                                <rect key="frame" x="0.0" y="33" width="374" height="61"/>
+                                                <rect key="frame" x="0.0" y="33" width="374" height="54"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-hu-Vjx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAe-iS-UNt" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Net Banking">
@@ -11106,7 +11203,7 @@ if you want..</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99H-2h-R2k" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Credit Card">
@@ -11116,10 +11213,10 @@ if you want..</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-DM-Eim">
-                                                        <rect key="frame" x="0.0" y="40.5" width="374" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="37" width="374" height="17"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGy-02-DUB" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Debit Card">
@@ -11132,7 +11229,7 @@ if you want..</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJi-fc-DTC" customClass="RadioButton" customModule="MBRadioButton">
-                                                                <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
+                                                                <rect key="frame" x="197" y="0.0" width="177" height="17"/>
                                                                 <color key="tintColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="UPI">
@@ -11146,7 +11243,7 @@ if you want..</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6It-aw-t58">
-                                        <rect key="frame" x="0.0" y="204" width="414" height="210"/>
+                                        <rect key="frame" x="0.0" y="197" width="414" height="210"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5z-ek-e4s">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
@@ -11200,7 +11297,7 @@ if you want..</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nw-xj-2Tq">
-                                        <rect key="frame" x="20" y="434" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="427" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="T0h-Wd-Zdd"/>
                                         </constraints>
@@ -11498,7 +11595,7 @@ if you want..</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6p-NK-HBU">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7q-i0-S5s" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7q-i0-S5s" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="10" width="40" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit_color" translatesAutoresizingMaskIntoConstraints="NO" id="8Jm-Vc-hWU">
@@ -11512,6 +11609,11 @@ if you want..</string>
                                                             <constraint firstItem="8Jm-Vc-hWU" firstAttribute="centerX" secondItem="c7q-i0-S5s" secondAttribute="centerX" id="Px9-w5-COl"/>
                                                             <constraint firstAttribute="height" constant="40" id="SPm-88-qzy"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Card Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3V-ao-AXo">
                                                         <rect key="frame" x="75" y="20.5" width="121" height="19.5"/>
@@ -11541,7 +11643,7 @@ if you want..</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6K-lG-WTG">
                                                 <rect key="frame" x="0.0" y="60" width="374" height="60"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgv-7i-N02" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgv-7i-N02" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="10" width="40" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_trash" translatesAutoresizingMaskIntoConstraints="NO" id="6im-pF-OmK">
@@ -11555,6 +11657,11 @@ if you want..</string>
                                                             <constraint firstAttribute="width" constant="40" id="qz7-Ln-y9f"/>
                                                             <constraint firstAttribute="height" constant="40" id="tKq-nA-gDN"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4B7-6g-pJO">
                                                         <rect key="frame" x="75" y="20.5" width="86" height="19.5"/>
@@ -11615,13 +11722,13 @@ if you want..</string>
             <size key="intrinsicContentSize" width="104.5" height="17"/>
         </designable>
         <designable name="LAe-iS-UNt">
-            <size key="intrinsicContentSize" width="123" height="20.5"/>
+            <size key="intrinsicContentSize" width="115.5" height="14"/>
         </designable>
         <designable name="eQ3-dB-Ilr">
             <size key="intrinsicContentSize" width="30" height="0.0"/>
         </designable>
         <designable name="iGy-02-DUB">
-            <size key="intrinsicContentSize" width="112" height="20.5"/>
+            <size key="intrinsicContentSize" width="105.5" height="14"/>
         </designable>
         <designable name="oJi-fc-DTC">
             <size key="intrinsicContentSize" width="53" height="17"/>

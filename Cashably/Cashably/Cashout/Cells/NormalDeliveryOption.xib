@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="278" height="170"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-UT-3yf" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-UT-3yf" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="278" height="126"/>
                     <subviews>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90h-Mr-fe4">
@@ -87,6 +87,7 @@
                             </connections>
                         </button>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="mgc-bW-221" firstAttribute="top" secondItem="e0E-UT-3yf" secondAttribute="top" id="L5z-yr-oUQ"/>
                         <constraint firstAttribute="trailing" secondItem="90h-Mr-fe4" secondAttribute="trailing" constant="17" id="aQ3-3a-dVy"/>
@@ -97,6 +98,17 @@
                         <constraint firstAttribute="bottom" secondItem="mgc-bW-221" secondAttribute="bottom" id="puL-y0-KJY"/>
                         <constraint firstItem="mgc-bW-221" firstAttribute="leading" secondItem="e0E-UT-3yf" secondAttribute="leading" id="vFB-hB-m82"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

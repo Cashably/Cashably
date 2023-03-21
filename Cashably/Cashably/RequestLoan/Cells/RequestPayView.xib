@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -94,6 +93,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                             </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="sRo-Rl-xzw" secondAttribute="trailing" constant="20" id="Age-EQ-ric"/>
                                 <constraint firstItem="3yd-v9-2Lu" firstAttribute="leading" secondItem="kxy-fe-24p" secondAttribute="leading" constant="20" id="BPW-cp-ABH"/>
@@ -107,6 +107,18 @@
                                 <constraint firstItem="3yd-v9-2Lu" firstAttribute="top" secondItem="mnC-l6-TGH" secondAttribute="bottom" constant="4" id="t5h-Yn-WKh"/>
                             </constraints>
                             <edgeInsets key="layoutMargins" top="13" left="20" bottom="13" right="20"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-1O-ekJ">
                             <rect key="frame" x="0.0" y="90" width="414" height="806"/>
@@ -123,7 +135,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2Z-W7-nZQ" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="177" height="130"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-XA-1Vv" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-XA-1Vv" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                                     <rect key="frame" x="15" y="15" width="40" height="40"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dollar" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-b2-eHn">
@@ -137,6 +149,11 @@
                                                                         <constraint firstAttribute="width" constant="40" id="cK4-dh-Ybh"/>
                                                                         <constraint firstItem="pHx-b2-eHn" firstAttribute="centerX" secondItem="l5n-XA-1Vv" secondAttribute="centerX" id="pWN-HG-7C7"/>
                                                                     </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_right_black" translatesAutoresizingMaskIntoConstraints="NO" id="3pU-d3-VJQ">
                                                                     <rect key="frame" x="148" y="29" width="7" height="12"/>
@@ -164,7 +181,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="3pU-d3-VJQ" firstAttribute="centerY" secondItem="l5n-XA-1Vv" secondAttribute="centerY" id="0CV-Oa-UBR"/>
                                                                 <constraint firstItem="NGr-nh-Sjt" firstAttribute="leading" secondItem="O2Z-W7-nZQ" secondAttribute="leading" constant="15" id="Hut-G4-R9f"/>
@@ -176,11 +193,22 @@
                                                                 <constraint firstItem="j9m-ak-2TY" firstAttribute="top" secondItem="NGr-nh-Sjt" secondAttribute="bottom" constant="15" id="tsh-X9-4VE"/>
                                                                 <constraint firstItem="NGr-nh-Sjt" firstAttribute="top" secondItem="l5n-XA-1Vv" secondAttribute="bottom" constant="15" id="zGF-pY-DBG"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ga-vg-4Kn" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                             <rect key="frame" x="197" y="0.0" width="177" height="130"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9P-Ki-MCh" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9P-Ki-MCh" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                                     <rect key="frame" x="15" y="15" width="40" height="40"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="hfg-fL-ehW">
@@ -194,6 +222,12 @@
                                                                         <constraint firstAttribute="height" constant="40" id="TaL-bc-hra"/>
                                                                         <constraint firstItem="hfg-fL-ehW" firstAttribute="centerX" secondItem="m9P-Ki-MCh" secondAttribute="centerX" id="aD1-gw-HFE"/>
                                                                     </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                            <real key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="NO"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_right_black" translatesAutoresizingMaskIntoConstraints="NO" id="DeE-M1-SGy">
                                                                     <rect key="frame" x="148" y="29" width="7" height="12"/>
@@ -225,7 +259,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="CZ6-Iy-zbp" firstAttribute="top" secondItem="m9P-Ki-MCh" secondAttribute="bottom" constant="15" id="37K-QF-Pjb"/>
                                                                 <constraint firstItem="fCp-Ih-dEQ" firstAttribute="leading" secondItem="7Ga-vg-4Kn" secondAttribute="leading" constant="15" id="4VN-hO-9af"/>
@@ -237,6 +271,17 @@
                                                                 <constraint firstItem="m9P-Ki-MCh" firstAttribute="top" secondItem="7Ga-vg-4Kn" secondAttribute="top" constant="15" id="nis-B6-LmT"/>
                                                                 <constraint firstItem="m9P-Ki-MCh" firstAttribute="leading" secondItem="7Ga-vg-4Kn" secondAttribute="leading" constant="15" id="sm7-Sc-lUp"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
@@ -354,6 +399,7 @@
                 <constraint firstAttribute="bottom" secondItem="3rt-Ny-DAi" secondAttribute="bottom" id="wLx-K7-UeI"/>
                 <constraint firstItem="3rt-Ny-DAi" firstAttribute="top" secondItem="XDi-Uk-6kp" secondAttribute="top" id="ypQ-zA-v2M"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="btnPay" destination="tER-tC-rcb" id="SvF-Ej-efJ"/>
                 <outlet property="btnRequest" destination="QQK-1X-mOu" id="qpu-pz-obc"/>
@@ -363,7 +409,7 @@
                 <outlet property="lbAvailableAmount" destination="cof-Do-qpf" id="4yJ-Ro-M1k"/>
                 <outlet property="lbDueDate" destination="CZ6-Iy-zbp" id="IVS-Zb-fVM"/>
                 <outlet property="moreView" destination="kxy-fe-24p" id="Twp-Vs-g3O"/>
-                <outlet property="payView" destination="O2Z-W7-nZQ" id="qC8-sM-UP0"/>
+                <outlet property="payView" destination="O2Z-W7-nZQ" id="ITb-3t-hkX"/>
                 <outlet property="snoozeView" destination="7Ga-vg-4Kn" id="DFF-5f-EXz"/>
             </connections>
             <point key="canvasLocation" x="393" y="139"/>
@@ -375,8 +421,5 @@
         <image name="ic_arrow_right_black" width="7" height="12"/>
         <image name="ic_calendar" width="20" height="22"/>
         <image name="ic_dollar" width="20" height="20"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

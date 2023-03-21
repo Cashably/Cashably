@@ -12,7 +12,7 @@ import NVActivityIndicatorView
 
 class BankVC: UIViewController, NVActivityIndicatorViewable {
     
-    @IBOutlet weak var viewBalance: RoundView! {
+    @IBOutlet weak var viewBalance: RoundBorderView! {
         didSet {
             viewBalance.alpha = 0.15
             viewBalance.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor

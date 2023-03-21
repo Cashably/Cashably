@@ -19,8 +19,8 @@ class RequestPayView: UIView {
     @IBOutlet weak var lbAvailableAmount: UILabel!
     @IBOutlet weak var lbApprovedAmount: UILabel!
     
-    @IBOutlet weak var payView: RoundView!
-    @IBOutlet weak var snoozeView: RoundView!
+    @IBOutlet weak var payView: RoundBorderView!
+    @IBOutlet weak var snoozeView: RoundBorderView!
     @IBOutlet weak var moreView: RoundBorderView!
     
     

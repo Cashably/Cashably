@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="484" height="229"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-Id-o1m" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-Id-o1m" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="484" height="229"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="gkA-7c-GNQ">

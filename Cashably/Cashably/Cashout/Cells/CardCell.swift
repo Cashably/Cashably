@@ -10,7 +10,7 @@ import UIKit
 
 class CardCell: UICollectionViewCell {
     
-    @IBOutlet weak var fullView: RoundView!
+    @IBOutlet weak var fullView: RoundBorderView!
     @IBOutlet weak var cardImg: UIImageView!
     @IBOutlet weak var lbCardNo: UILabel!
     @IBOutlet weak var lbCardHolder: UILabel!

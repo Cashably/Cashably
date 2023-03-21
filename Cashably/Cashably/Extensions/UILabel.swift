@@ -35,6 +35,7 @@ extension UILabel {
                 
         }
         get {
+            self.font = UIFont(name: "BRFirma-Regular", size: self.font.pointSize)
             return 400
         }
     }

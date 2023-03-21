@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="240" height="166"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQW-ec-cZa" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQW-ec-cZa" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="240" height="122"/>
                     <subviews>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdA-Yl-qkS">
@@ -98,6 +98,17 @@
                         <constraint firstAttribute="trailing" secondItem="kdA-Yl-qkS" secondAttribute="trailing" constant="17" id="xO3-L5-jCH"/>
                         <constraint firstItem="kdA-Yl-qkS" firstAttribute="leading" secondItem="fQW-ec-cZa" secondAttribute="leading" constant="17" id="zML-rY-ywy"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

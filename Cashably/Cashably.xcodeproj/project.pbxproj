@@ -57,7 +57,6 @@
 		F05365E5285FF4D200B771D9 /* DonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E4285FF4D200B771D9 /* DonationVC.swift */; };
 		F05365E8285FF59600B771D9 /* AddCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E7285FF59600B771D9 /* AddCardVC.swift */; };
 		F05365EA285FF5DF00B771D9 /* CashoutSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */; };
-		F062A7822861C37C00DBBCE4 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A7812861C37C00DBBCE4 /* RoundView.swift */; };
 		F062A83528629D5400DBBCE4 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83428629D5400DBBCE4 /* BalloonMarker.swift */; };
 		F062A83828629D9700DBBCE4 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83728629D9700DBBCE4 /* DateValueFormatter.swift */; };
 		F062A83A28629E2200DBBCE4 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062A83928629E2200DBBCE4 /* DayAxisValueFormatter.swift */; };
@@ -239,7 +238,6 @@
 		F05365E4285FF4D200B771D9 /* DonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationVC.swift; sourceTree = "<group>"; };
 		F05365E7285FF59600B771D9 /* AddCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardVC.swift; sourceTree = "<group>"; };
 		F05365E9285FF5DF00B771D9 /* CashoutSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutSuccessVC.swift; sourceTree = "<group>"; };
-		F062A7812861C37C00DBBCE4 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		F062A83428629D5400DBBCE4 /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		F062A83728629D9700DBBCE4 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		F062A83928629E2200DBBCE4 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
@@ -722,7 +720,6 @@
 				F0A04359285EA6E200E29CE0 /* InputView.swift */,
 				F062A84C286545C600DBBCE4 /* MTCircularSlider.swift */,
 				F0B853592860145B002F90DA /* RoundBorderView.swift */,
-				F062A7812861C37C00DBBCE4 /* RoundView.swift */,
 				F0CE9F482860C09D004B1515 /* ToggleButton.swift */,
 				F0A04357285DD48E00E29CE0 /* TopCornerRoundView.swift */,
 				F062F264286D8D3E007DE996 /* UIButton.swift */,
@@ -1183,7 +1180,6 @@
 				F062F265286D8D3E007DE996 /* UIButton.swift in Sources */,
 				F062A85928654DCA00DBBCE4 /* MSCircularSliderHandle.swift in Sources */,
 				F062A83828629D9700DBBCE4 /* DateValueFormatter.swift in Sources */,
-				F062A7822861C37C00DBBCE4 /* RoundView.swift in Sources */,
 				F05365D7285FF2C300B771D9 /* ConnectProcessingVC.swift in Sources */,
 				F00E4DDF285CBE1E00CB8DD6 /* SplashVC.swift in Sources */,
 				F0AB2562287C577500C6A593 /* SaveCardVC.swift in Sources */,

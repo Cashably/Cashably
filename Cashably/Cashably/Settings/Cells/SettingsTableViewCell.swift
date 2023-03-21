@@ -12,5 +12,5 @@ class SettingsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var imgIcon: UIImageView!
-    @IBOutlet weak var logoView: RoundView!
+    @IBOutlet weak var logoView: RoundBorderView!
 }

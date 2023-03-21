@@ -18,7 +18,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lsv-SV-Sv8">
                         <rect key="frame" x="0.0" y="0.0" width="423" height="60"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msy-9E-hgT" customClass="RoundView" customModule="Cashably" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msy-9E-hgT" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                 <rect key="frame" x="20" y="10" width="40" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_dollar" translatesAutoresizingMaskIntoConstraints="NO" id="PZK-yn-ahn">
@@ -32,6 +32,11 @@
                                     <constraint firstItem="PZK-yn-ahn" firstAttribute="centerY" secondItem="Msy-9E-hgT" secondAttribute="centerY" id="clk-gY-J4s"/>
                                     <constraint firstItem="PZK-yn-ahn" firstAttribute="centerX" secondItem="Msy-9E-hgT" secondAttribute="centerX" id="gcR-jd-FYh"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Transaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt8-xF-AUn">
                                 <rect key="frame" x="75" y="20.5" width="122" height="19.5"/>
