@@ -204,10 +204,10 @@ extension HomeVC {
             
             if error.status == Constants.NetworkError.generic {
                 let notapprovedVC = self.storyboard?.instantiateViewController(withIdentifier: "NotApprovedVC") as! NotApprovedVC
-                notapprovedVC.modalTransitionStyle = .coverVertical
-                notapprovedVC.modalPresentationStyle = .formSheet
                 notapprovedVC.message = error.message
-                self.navigationController?.pushViewController(notapprovedVC, animated: true)
+//                notapprovedVC.modalTransitionStyle = .coverVertical
+                notapprovedVC.modalPresentationStyle = .overFullScreen
+                self.presentVC(notapprovedVC)
             } else {
                 let alert = Alert.showBasicAlert(message: error.message)
                 self.presentVC(alert)

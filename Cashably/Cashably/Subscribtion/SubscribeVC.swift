@@ -59,8 +59,9 @@ class SubscribeVC: UIViewController, NVActivityIndicatorViewable {
             
             let subVC = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeSuccessVC") as! SubscribeSuccessVC
             subVC.modalTransitionStyle = .coverVertical
-            subVC.modalPresentationStyle = .formSheet
-            self.navigationController?.pushViewController(subVC, animated: true)
+            subVC.modalPresentationStyle = .overFullScreen
+            self.presentVC(subVC)
+            
         }) { (error) in
             self.stopAnimating()
                         

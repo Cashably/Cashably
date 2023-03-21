@@ -14,6 +14,17 @@ class NotApprovedVC: UIViewController {
     @IBOutlet weak var msgError: UILabel!
     @IBOutlet weak var btnDetail: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       self.navigationController?.isNavigationBarHidden = true
+        
+   }
+
+    override func viewWillDisappear(_ animated: Bool) {
+       super.viewWillDisappear(animated)
+       self.navigationController?.isNavigationBarHidden = false
+   }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,10 +33,11 @@ class NotApprovedVC: UIViewController {
     }
     
     @IBAction func actionViewDetail(_ sender: UIButton) {
+        print("selected1")
     }
+    
     @IBAction func actionLater(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    
+        print("selected")
+        self.dismissVC(completion: nil)
+    }    
 }
