@@ -31,7 +31,6 @@ class RepayVC: UIViewController, NVActivityIndicatorViewable {
         
         lbLoanAmount.text = "$\((mLoan!.amount)!)"
         
-        lbLoanAmount.text = "$\((mLoan!.total)!)"
 //        lbDueDate.text = loan.dueDate
         
         let dueTimestamp = mLoan!.dueDateTimestamp
@@ -113,10 +112,8 @@ extension RepayVC: UITableViewDataSource {
         cell.lbBankName.text = mLoan!.to
         cell.lbLoanAmount.text = "$ \(mLoan!.amount!)"
         cell.lbTotal.text = "$ \(mLoan!.total!)"
-        let snoozepay = mLoan!.snoozeFee * Double((3-mLoan!.snooze))
-        let tip = mLoan!.total - mLoan!.amount - snoozepay
-        cell.lbSnoozePay.text = "$ \(snoozepay)"
-        cell.lbTips.text = "$ \(tip)"
+        cell.lbSnoozePay.text = "$ \(mLoan!.snoozeFee!)"
+        cell.lbTips.text = "$\(mLoan!.donate!)"
 //        cell.lbLoanId.text = Auth.auth().currentUser?.uid
         return cell
     }

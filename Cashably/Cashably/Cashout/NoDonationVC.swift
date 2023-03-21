@@ -10,7 +10,7 @@ import UIKit
 
 class NoDonationVC: UIViewController {
     
-    public var withdrawData: WithdrawModel?
+    public var delegate: DonationDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
@@ -22,31 +22,11 @@ class NoDonationVC: UIViewController {
        self.navigationController?.isNavigationBarHidden = false
    }
     
-    private func withdraw() {
-        let successVC = storyboard?.instantiateViewController(withIdentifier: "CashoutSuccessVC") as! CashoutSuccessVC
-        successVC.withdrawData = self.withdrawData!
-        self.navigationController?.pushViewController(successVC, animated: true)
-    }
-    
     @IBAction func actionContinue(_ sender: UIButton) {
-        let cards = Shared.getCards()
-        if cards.count == 0 {
-            let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
-            addcardVC.delegate = self
-            self.navigationController?.pushViewController(addcardVC, animated: true)
-            return
-        } else {
-            self.withdraw()
-        }
+        self.delegate?.next()
     }
     @IBAction func actionBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true
         )
-    }
-}
-
-extension NoDonationVC: AddCardDelegate {
-    func addCard() {
-        self.withdraw()
     }
 }

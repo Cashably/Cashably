@@ -34,7 +34,7 @@ class SubscribeVC: UIViewController, NVActivityIndicatorViewable {
             self.stopAnimating()
             
             let dictionary = successResponse as! [String: Any]
-            if let price = dictionary["price"] as? [String:Any] {
+            if let price = dictionary["price"] {
                 self.lbPrice.text = "$\(price)"
             }
             

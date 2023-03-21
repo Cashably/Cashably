@@ -6504,7 +6504,7 @@ Approved for Loan</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1262"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVQ-bu-EnY" userLabel="topBiCircle" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
-                                                        <rect key="frame" x="-55.5" y="-150" width="525" height="525"/>
+                                                        <rect key="frame" x="-55.5" y="-200" width="525" height="525"/>
                                                         <color key="backgroundColor" red="0.023529411764705882" green="0.792156862745098" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration" label="topBiCircle"/>
                                                         <constraints>
@@ -6521,7 +6521,7 @@ Approved for Loan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Qualify for a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huh-jr-pdI">
-                                                        <rect key="frame" x="147.5" y="70" width="119" height="19.5"/>
+                                                        <rect key="frame" x="147.5" y="90" width="119" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -6532,7 +6532,7 @@ Approved for Loan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50 Advance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBs-Pq-kDj">
-                                                        <rect key="frame" x="119" y="99.5" width="175.5" height="36"/>
+                                                        <rect key="frame" x="119" y="119.5" width="175.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -6546,7 +6546,7 @@ Approved for Loan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoU-Be-TNR" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
-                                                        <rect key="frame" x="138" y="145.5" width="138" height="138"/>
+                                                        <rect key="frame" x="138" y="165.5" width="138" height="138"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-in-EYP" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="7" width="124" height="124"/>
@@ -6593,7 +6593,7 @@ Approved for Loan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5SQ-yI-SYE">
-                                                        <rect key="frame" x="20" y="395" width="374" height="564.5"/>
+                                                        <rect key="frame" x="20" y="345" width="374" height="564.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="b35-x5-zOo" userLabel="option stack">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="131"/>
@@ -6737,11 +6737,11 @@ Approved for Loan</string>
                                                     <constraint firstItem="zoU-Be-TNR" firstAttribute="centerX" secondItem="zVQ-bu-EnY" secondAttribute="centerX" id="Ob6-Uu-6El"/>
                                                     <constraint firstItem="zoU-Be-TNR" firstAttribute="top" secondItem="oBs-Pq-kDj" secondAttribute="bottom" constant="10" id="cHs-IN-s4b"/>
                                                     <constraint firstAttribute="height" constant="1262" id="cSW-gO-Oth"/>
-                                                    <constraint firstItem="huh-jr-pdI" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="70" id="fci-SX-jgn"/>
+                                                    <constraint firstItem="huh-jr-pdI" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="90" id="fci-SX-jgn"/>
                                                     <constraint firstItem="oBs-Pq-kDj" firstAttribute="top" secondItem="huh-jr-pdI" secondAttribute="bottom" constant="10" id="naF-RB-GNt"/>
                                                     <constraint firstItem="5SQ-yI-SYE" firstAttribute="top" secondItem="zVQ-bu-EnY" secondAttribute="bottom" constant="20" id="rkr-G9-nji"/>
                                                     <constraint firstItem="huh-jr-pdI" firstAttribute="centerX" secondItem="kGK-0H-Xzr" secondAttribute="centerX" id="t6L-VI-Elf"/>
-                                                    <constraint firstItem="zVQ-bu-EnY" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="-150" id="tbj-Zf-W2o"/>
+                                                    <constraint firstItem="zVQ-bu-EnY" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="-200" id="tbj-Zf-W2o"/>
                                                     <constraint firstItem="oBs-Pq-kDj" firstAttribute="centerX" secondItem="kGK-0H-Xzr" secondAttribute="centerX" id="up5-zI-KHL"/>
                                                 </constraints>
                                             </view>

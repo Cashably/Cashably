@@ -35,6 +35,7 @@ class Constants {
         static let LOAN_ACCEPT = USER_API + "/loan/accept"
         static let WITHDRAW = USER_API + "/withdraw"
         static let REPAY = USER_API + "/repay"
+        static let SNOOZE_PRICE = USER_API + "/snooze/price"
         static let SNOOZE_PAY = USER_API + "/snooze_pay"
         static let GET_TRANSACTIONS = USER_API + "/transactions"
         static let GET_BANK = USER_API + "/bank"

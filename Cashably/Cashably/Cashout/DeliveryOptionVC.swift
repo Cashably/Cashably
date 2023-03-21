@@ -80,7 +80,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
             self.stopAnimating()
             
             let dictionary = successResponse as! [String: Any]
-            if let price = dictionary["price"] as? [String:Any] {
+            if let price = dictionary["price"] {
                 self.instantOptionView.lbPrice.text = "$\(price)"
             }
             
@@ -97,7 +97,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     }
     
     @IBAction func actionNormal(_ sender: UIButton) {
-        withdraw()
+        requestWithdraw()
     }
     
     @IBAction func actionSubscribe(_ sender: UIButton) {
@@ -106,28 +106,32 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     }
     
     @IBAction func actionExpressInstant(_ sender: Any) {
-        withdraw()
+        requestWithdraw()
     }
     
-    func withdraw() {
+    func requestWithdraw() {
+        let cards = Shared.getCards()
+        if cards.count == 0 {
+            let addcardVC = storyboard?.instantiateViewController(withIdentifier: "AddCardVC") as! AddCardVC
+            addcardVC.delegate = self
+            self.navigationController?.pushViewController(addcardVC, animated: true)
+            return
+        } else {
+            withdraw()
+        }
+    }
+    
+    func withdraw() {        
         self.startAnimating()
         let params = ["amount": "\(amount!)", "donate": "\(donate!)", "company": company!, "instant": isInstant] as [String : Any]
         RequestHandler.postRequest(url:Constants.URL.WITHDRAW, parameter: params as! NSDictionary, success: { (successResponse) in
             self.stopAnimating()
             let dictionary = successResponse as! [String: Any]
             if let data = dictionary["data"] as? [String:Any] {
-                let loan = WithdrawModel(fromDictionary: data)
-                self.dismiss(animated: true) {
-                    if self.donate! > 0 {
-                        let donationvc = self.storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
-                        donationvc.withdrawData = loan
-                        self.navigationController?.pushViewController(donationvc, animated: true)
-                    } else {
-                        let nodonationvc = self.storyboard?.instantiateViewController(withIdentifier: "NoDonationVC") as! NoDonationVC
-                        nodonationvc.withdrawData = loan
-                        self.navigationController?.pushViewController(nodonationvc, animated: true)
-                    }
-                }
+                let loan = LoanModel(fromDictionary: data)
+                let successVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutSuccessVC") as! CashoutSuccessVC
+                successVC.loan = loan
+                self.navigationController?.pushViewController(successVC, animated: true)
             }
             
         }) { (error) in
@@ -136,5 +140,11 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
             self.presentVC(alert)
             
         }
+    }
+}
+
+extension DeliveryOptionVC: AddCardDelegate {
+    func addCard() {
+        self.withdraw()
     }
 }

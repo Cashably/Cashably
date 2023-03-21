@@ -32,9 +32,8 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
         let dueAt = Date(milliseconds: mLoan!.dueDateTimestamp * 1000).dateFormat(format: "dd/MM")
         lbTerms.text = "\(createdAt) - \(dueAt)"
         lbAmount.text = "$\((mLoan!.amount)!)"
-        lbSnoozeFee.text = "$\((mLoan!.snoozeFee)!)"
         lbRemainSnooze.text = "Left \((mLoan!.snooze)!) snooze"
-        lbTotalAmount.text = "$\(mLoan!.total + mLoan!.snoozeFee)"
+        lbTotalAmount.text = "$\(mLoan!.total!)"
         lbNextDueDate.text = mLoan!.nextDueDate
     }
     
@@ -46,12 +45,33 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
         setNeedsStatusBarAppearanceUpdate()
+        
+        getSnoozePrice()
    }
 
     override func viewWillDisappear(_ animated: Bool) {
        super.viewWillDisappear(animated)
        self.navigationController?.isNavigationBarHidden = false
    }
+    
+    func getSnoozePrice() {
+        self.startAnimating()
+        RequestHandler.getRequest(url:Constants.URL.SNOOZE_PRICE, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            
+            let dictionary = successResponse as! [String: Any]
+            if let price = dictionary["price"] {
+                
+                self.lbSnoozeFee.text = "$\(price)"
+            }
+            
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+        }
+    }
     
     func snoozePay() {
         self.startAnimating()

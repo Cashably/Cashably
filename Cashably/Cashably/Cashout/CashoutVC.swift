@@ -25,6 +25,8 @@ class CashoutVC: UIViewController {
     private var rateLabels: [UILabel] = []
     
     private var amount: Double = 0
+    private var donate: Double = 0
+    private var company: String = ""
     
     public var limitValue: Double = 100
     
@@ -147,7 +149,6 @@ class CashoutVC: UIViewController {
         }
         
         let tipVC = storyboard?.instantiateViewController(withIdentifier: "CashoutTipVC") as! CashoutTipVC
-        tipVC.amount = self.amount
         tipVC.delegate = self
         
         let sheetController = SheetViewController(
@@ -168,14 +169,31 @@ class CashoutVC: UIViewController {
 }
 
 extension CashoutVC: CashoutTipDelegate {
-    func cashout(amount: Double, donate: Double, company: String) {
+    func donate(amount: Double, company: String) {
+        self.donate = amount
+        self.company = company
+        
+        if donate > 0 {
+            let donationvc = self.storyboard?.instantiateViewController(withIdentifier: "DonationThanksVC") as! DonationThanksVC
+            donationvc.delegate = self
+            self.navigationController?.pushViewController(donationvc, animated: true)
+        } else {
+            let nodonationvc = self.storyboard?.instantiateViewController(withIdentifier: "NoDonationVC") as! NoDonationVC
+            nodonationvc.delegate = self
+            self.navigationController?.pushViewController(nodonationvc, animated: true)
+        }
+    }
+    
+}
+
+extension CashoutVC: DonationDelegate {
+    func next() {
         let deliveryvc = storyboard?.instantiateViewController(withIdentifier: "DeliveryOptionVC") as! DeliveryOptionVC
         deliveryvc.amount = amount
         deliveryvc.donate = donate
         deliveryvc.company = company
         self.navigationController?.pushViewController(deliveryvc, animated: true)
     }
-    
 }
 
 extension CashoutVC: MSCircularSliderDelegate {

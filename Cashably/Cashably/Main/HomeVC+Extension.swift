@@ -163,7 +163,7 @@ extension HomeVC {
             self.configure()
         }) { (error) in
             self.stopAnimating()
-            
+            self.mLoan = nil
             self.configure()
             
         }
