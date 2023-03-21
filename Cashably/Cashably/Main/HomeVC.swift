@@ -27,9 +27,8 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     }
     @IBOutlet weak var bottomView: UIView!
     
-    var loanAmount: Double = 0
-    var dueDate: String = ""
     var availabeAmount: Double = 0
+    var mLoan: LoanModel?
     
     var emptyView: EmptyRequestPayView?
     var payView: RequestPayView?
@@ -112,12 +111,20 @@ class HomeVC: UIViewController, NVActivityIndicatorViewable {
     }
     
     func onPay() {
+        if mLoan!.amount == 0 {
+            self.showToast(message: "No received amount")
+            return
+        }
         let repayVC = self.storyboard?.instantiateViewController(withIdentifier: "RepayVC") as! RepayVC
-        repayVC.loanAmount = self.loanAmount
+        repayVC.loanAmount = mLoan!.amount
         self.navigationController?.pushViewController(repayVC, animated: true)
     }
     
     func onSnooze() {
+        if mLoan!.amount == 0 {
+            self.showToast(message: "No received amount")
+            return
+        }
         let paySnoozeVC = self.storyboard?.instantiateViewController(withIdentifier: "PaySnoozeVC") as! PaySnoozeVC
         self.navigationController?.pushViewController(paySnoozeVC, animated: true)
     }

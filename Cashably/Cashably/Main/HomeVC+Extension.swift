@@ -15,7 +15,7 @@ extension HomeVC {
         lbEmail.text = Shared.getUser().email
         lbName.text = Shared.getUser().fullName
         
-        if self.loanAmount == 0 {
+        if self.mLoan == nil {
             if emptyView == nil {
                 addEmptyView()
             } else {
@@ -28,11 +28,10 @@ extension HomeVC {
                 payView?.isHidden = false
             }
             
-            let storedLoan = Shared.getLoan()
-            payView!.lbAmount.text = "$\(self.loanAmount)"
-            payView!.lbDueDate.text = self.dueDate
-            payView!.lbApprovedAmount.text = "of $\(storedLoan.approved!)"
-            availabeAmount = storedLoan.approved - storedLoan.amount
+            payView!.lbAmount.text = "$\(mLoan!.amount ?? 0)"
+            payView!.lbDueDate.text = mLoan!.dueDate
+            payView!.lbApprovedAmount.text = "of $\(mLoan!.approved!)"
+            availabeAmount = mLoan!.approved - mLoan!.amount
             if availabeAmount == 0 {
                 payView!.moreView.isHidden = true
             } else {
@@ -158,15 +157,12 @@ extension HomeVC {
             let dictionary = successResponse as! [String: Any]
             if let loan = dictionary["data"] as? [String:Any] {
                 Shared.storeLoan(loan: loan)
-                let storedLoan = Shared.getLoan()
-                self.loanAmount = storedLoan.amount
-                self.dueDate = storedLoan.dueDate
+                self.mLoan = Shared.getLoan()
             }
                 
             self.configure()
         }) { (error) in
             self.stopAnimating()
-            self.loanAmount = 0
             self.configure()
             
         }
