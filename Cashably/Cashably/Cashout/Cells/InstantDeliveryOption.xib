@@ -8,9 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstantDeliveryOption" customModule="Cashably" customModuleProvider="target">
+            <connections>
+                <outlet property="checkImg" destination="C5E-4R-0qK" id="oV5-Hw-e8e"/>
+                <outlet property="fullView" destination="fQW-ec-cZa" id="NJn-wG-vfB"/>
+                <outlet property="lbDes" destination="bQa-1d-FPh" id="lLX-Wd-cdl"/>
+                <outlet property="lbPrice" destination="6Cm-Zg-fXk" id="oVA-eP-L2F"/>
+                <outlet property="logo" destination="XHe-Xg-82V" id="NTE-ku-NHV"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="InstantDeliveryOption" id="iN0-l3-epB" customClass="InstantDeliveryOption" customModule="Cashably" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="InstantDeliveryOption" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="240" height="166"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -22,7 +30,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain"/>
                             <connections>
-                                <action selector="actionFull:" destination="iN0-l3-epB" eventType="primaryActionTriggered" id="NZv-G8-UFM"/>
+                                <action selector="actionFull:" destination="-1" eventType="primaryActionTriggered" id="dLp-Bj-Asb"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdA-Yl-qkS">
@@ -101,13 +109,6 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fQW-ec-cZa" secondAttribute="bottom" id="QUC-qE-gDs"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="checkImg" destination="C5E-4R-0qK" id="MWg-fW-xX3"/>
-                <outlet property="fullView" destination="fQW-ec-cZa" id="AXS-gv-O6m"/>
-                <outlet property="lbDes" destination="bQa-1d-FPh" id="5Ei-KS-UDU"/>
-                <outlet property="lbPrice" destination="6Cm-Zg-fXk" id="7p7-gr-NyY"/>
-                <outlet property="logo" destination="XHe-Xg-82V" id="WK8-Gv-XVr"/>
-            </connections>
             <point key="canvasLocation" x="11.594202898550726" y="-143.30357142857142"/>
         </view>
     </objects>
