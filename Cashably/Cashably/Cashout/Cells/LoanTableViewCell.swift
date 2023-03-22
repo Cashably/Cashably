@@ -15,5 +15,6 @@ class LoanTableViewCell: UITableViewCell {
     @IBOutlet weak var lbSnoozePay: UILabel!
     @IBOutlet weak var lbTotal: UILabel!
     
+    @IBOutlet weak var lbInstantFee: UILabel!
     @IBOutlet weak var lbLoanId: UILabel!
 }

@@ -18,8 +18,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0H4-wV-fIZ" customClass="InputView" customModule="Cashably" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="517" height="180"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="MmO-Qw-Hes">
-                                <rect key="frame" x="10" y="1" width="497" height="178"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MmO-Qw-Hes">
+                                <rect key="frame" x="10" y="0.5" width="497" height="179.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tV6-tl-6Wj">
                                         <rect key="frame" x="0.0" y="0.0" width="497" height="20.5"/>
@@ -49,7 +49,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-p5-0jb">
-                                        <rect key="frame" x="0.0" y="31.5" width="497" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="497" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bank Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tx-9f-RX6">
                                                 <rect key="frame" x="0.0" y="0.0" width="455.5" height="20.5"/>
@@ -76,7 +76,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQ8-z9-UQ3">
-                                        <rect key="frame" x="0.0" y="63" width="497" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="53" width="497" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Loan amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbi-pK-Gok">
                                                 <rect key="frame" x="0.0" y="0.0" width="455.5" height="20.5"/>
@@ -103,7 +103,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrS-bm-pB7">
-                                        <rect key="frame" x="0.0" y="94.5" width="497" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="79.5" width="497" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fm-Ui-EnB">
                                                 <rect key="frame" x="0.0" y="0.0" width="455.5" height="20.5"/>
@@ -129,8 +129,35 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf0-E6-Uhx">
+                                        <rect key="frame" x="0.0" y="106" width="497" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Instant Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZH-qK-pom">
+                                                <rect key="frame" x="0.0" y="0.0" width="455.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                        <integer key="value" value="400"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwD-jc-XCI">
+                                                <rect key="frame" x="455.5" y="0.0" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.070588235289999995" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_customFont">
+                                                        <integer key="value" value="500"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhQ-El-cXW">
-                                        <rect key="frame" x="0.0" y="126" width="497" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="132.5" width="497" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Snooze pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iw2-68-E9I">
                                                 <rect key="frame" x="0.0" y="0.0" width="455.5" height="20.5"/>
@@ -157,7 +184,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41c-TT-Ag8">
-                                        <rect key="frame" x="0.0" y="157.5" width="497" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="159" width="497" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Total repayment amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW8-YO-IDt">
                                                 <rect key="frame" x="0.0" y="0.0" width="455.5" height="20.5"/>
@@ -203,6 +230,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="lbBankName" destination="KHY-b0-0qb" id="NQy-pB-Qzv"/>
+                <outlet property="lbInstantFee" destination="iwD-jc-XCI" id="iR3-IJ-JC2"/>
                 <outlet property="lbLoanAmount" destination="d6o-7Z-n4F" id="8qB-vA-MwB"/>
                 <outlet property="lbLoanId" destination="bxa-qZ-PLm" id="5py-gi-jzi"/>
                 <outlet property="lbSnoozePay" destination="ZC3-Vm-60K" id="ODq-gc-RG5"/>

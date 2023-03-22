@@ -31,9 +31,9 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
         let createdAt = Date(milliseconds: mLoan!.createdAtTimestamp * 1000).dateFormat(format: "dd/MM")
         let dueAt = Date(milliseconds: mLoan!.dueDateTimestamp * 1000).dateFormat(format: "dd/MM")
         lbTerms.text = "\(createdAt) - \(dueAt)"
-        lbAmount.text = "$\((mLoan!.amount)!)"
+        lbAmount.text = "$\((mLoan!.total)!)"
         lbRemainSnooze.text = "Left \((mLoan!.snooze)!) snooze"
-        lbTotalAmount.text = "$\(mLoan!.total!)"
+        
         lbNextDueDate.text = mLoan!.nextDueDate
     }
     
@@ -60,9 +60,15 @@ class PaySnoozeVC: UIViewController, NVActivityIndicatorViewable {
             self.stopAnimating()
             
             let dictionary = successResponse as! [String: Any]
-            if let price = dictionary["price"] {
-                
-                self.lbSnoozeFee.text = "$\(price)"
+            if let price = dictionary["price"] as? Double {
+                if Shared.getUser().subscribed {
+                    self.lbSnoozeFee.text = "Free"
+                    self.lbTotalAmount.text = "$\(self.mLoan!.total!)"
+                }
+                else {
+                    self.lbSnoozeFee.text = "$\(price)"
+                    self.lbTotalAmount.text = "$\(self.mLoan!.total! + price)"
+                }
             }
             
         }) { (error) in

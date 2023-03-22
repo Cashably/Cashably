@@ -114,6 +114,7 @@ extension RepayVC: UITableViewDataSource {
         cell.lbTotal.text = "$ \(mLoan!.total!)"
         cell.lbSnoozePay.text = "$ \(mLoan!.snoozeFee!)"
         cell.lbTips.text = "$\(mLoan!.donate!)"
+        cell.lbInstantFee.text = "$\(mLoan!.instantFee!)"
 //        cell.lbLoanId.text = Auth.auth().currentUser?.uid
         return cell
     }
