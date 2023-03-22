@@ -6817,13 +6817,13 @@ Approved for Loan</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWG-CZ-eKo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="subscribe_bg" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-wN-EUJ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="462"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade to Cashably Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77V-R4-fHp">
-                                        <rect key="frame" x="78" y="70" width="258" height="29"/>
+                                        <rect key="frame" x="78" y="120" width="258" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -6837,7 +6837,7 @@ Approved for Loan</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tY4-5r-35S">
-                                        <rect key="frame" x="92" y="104" width="230" height="31.5"/>
+                                        <rect key="frame" x="92" y="154" width="230" height="31.5"/>
                                         <string key="text">Get Loan access instantly with
 our premium plan.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -7010,7 +7010,7 @@ our premium plan.</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pMY-ee-UAj">
-                                        <rect key="frame" x="20" y="677.5" width="374" height="120.5"/>
+                                        <rect key="frame" x="20" y="721.5" width="374" height="120.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start 14 Days free trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msU-rb-T0b">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -7053,7 +7053,7 @@ our premium plan.</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZP-pG-bjM" userLabel="btn_back">
-                                        <rect key="frame" x="20" y="10" width="50" height="50"/>
+                                        <rect key="frame" x="20" y="50" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="2Dw-le-OcX"/>
                                             <constraint firstAttribute="width" constant="50" id="jky-hC-Tby"/>
@@ -7077,13 +7077,13 @@ our premium plan.</string>
                                     <constraint firstItem="bZP-pG-bjM" firstAttribute="leading" secondItem="RWG-CZ-eKo" secondAttribute="leading" constant="20" id="Mf5-lq-JKF"/>
                                     <constraint firstItem="rH0-wN-EUJ" firstAttribute="leading" secondItem="RWG-CZ-eKo" secondAttribute="leading" id="Mht-Q0-1kF"/>
                                     <constraint firstItem="tY4-5r-35S" firstAttribute="top" secondItem="77V-R4-fHp" secondAttribute="bottom" constant="5" id="Tns-xI-uDj"/>
-                                    <constraint firstItem="bZP-pG-bjM" firstAttribute="top" secondItem="RWG-CZ-eKo" secondAttribute="top" constant="10" id="Zow-e4-X4g"/>
+                                    <constraint firstItem="bZP-pG-bjM" firstAttribute="top" secondItem="RWG-CZ-eKo" secondAttribute="top" constant="50" id="Zow-e4-X4g"/>
                                     <constraint firstItem="rH0-wN-EUJ" firstAttribute="top" secondItem="RWG-CZ-eKo" secondAttribute="top" id="eaI-0b-BH8"/>
                                     <constraint firstAttribute="trailing" secondItem="pMY-ee-UAj" secondAttribute="trailing" constant="20" id="hb7-04-EBC"/>
                                     <constraint firstItem="tY4-5r-35S" firstAttribute="leading" secondItem="RWG-CZ-eKo" secondAttribute="leading" constant="92" id="knE-Cj-Pic"/>
                                     <constraint firstItem="77V-R4-fHp" firstAttribute="centerX" secondItem="rH0-wN-EUJ" secondAttribute="centerX" id="l55-ic-USB"/>
                                     <constraint firstAttribute="trailing" secondItem="rH0-wN-EUJ" secondAttribute="trailing" id="laR-WR-dP1"/>
-                                    <constraint firstItem="77V-R4-fHp" firstAttribute="top" secondItem="RWG-CZ-eKo" secondAttribute="top" constant="70" id="qn0-QJ-Rrh"/>
+                                    <constraint firstItem="77V-R4-fHp" firstAttribute="top" secondItem="RWG-CZ-eKo" secondAttribute="top" constant="120" id="qn0-QJ-Rrh"/>
                                     <constraint firstItem="pMY-ee-UAj" firstAttribute="leading" secondItem="RWG-CZ-eKo" secondAttribute="leading" constant="20" id="v19-46-igJ"/>
                                     <constraint firstItem="ElU-KZ-PoE" firstAttribute="leading" secondItem="RWG-CZ-eKo" secondAttribute="leading" constant="20" id="ygL-Iy-Z5Z"/>
                                     <constraint firstItem="ElU-KZ-PoE" firstAttribute="top" secondItem="rH0-wN-EUJ" secondAttribute="bottom" constant="-70" id="zCc-r1-LmI"/>
@@ -7095,7 +7095,7 @@ our premium plan.</string>
                         <constraints>
                             <constraint firstItem="RWG-CZ-eKo" firstAttribute="leading" secondItem="7vA-2V-vlr" secondAttribute="leading" id="7pf-OJ-es5"/>
                             <constraint firstItem="7vA-2V-vlr" firstAttribute="bottom" secondItem="RWG-CZ-eKo" secondAttribute="bottom" id="Ug0-eS-HSB"/>
-                            <constraint firstItem="RWG-CZ-eKo" firstAttribute="top" secondItem="7vA-2V-vlr" secondAttribute="top" id="pcX-DF-qYN"/>
+                            <constraint firstItem="RWG-CZ-eKo" firstAttribute="top" secondItem="IxC-5J-plw" secondAttribute="top" id="pcX-DF-qYN"/>
                             <constraint firstItem="7vA-2V-vlr" firstAttribute="trailing" secondItem="RWG-CZ-eKo" secondAttribute="trailing" id="sSK-Zp-P4c"/>
                         </constraints>
                     </view>
@@ -7243,7 +7243,7 @@ Premium user</string>
         <!--My SubscribtionVC-->
         <scene sceneID="tVJ-Jp-jOK">
             <objects>
-                <viewController id="Ou2-i6-1HR" customClass="MySubscribtionVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MySubscribtionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ou2-i6-1HR" customClass="MySubscribtionVC" customModule="Cashably" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qzY-eU-uCc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7269,7 +7269,7 @@ Premium user</string>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="uoa-YE-dlQ">
-                                        <rect key="frame" x="20" y="132" width="374" height="352"/>
+                                        <rect key="frame" x="20" y="132" width="374" height="364"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VCp-MB-aMn">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="167"/>
@@ -7425,13 +7425,13 @@ Premium user</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="mVq-y1-D1O">
-                                                <rect key="frame" x="0.0" y="202" width="374" height="150"/>
+                                                <rect key="frame" x="0.0" y="202" width="374" height="162"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0P-MH-Hlp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="13"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5h-ME-jKu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="361" height="13"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="361" height="25"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" white="0.02" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -7445,17 +7445,17 @@ Premium user</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit_profile" translatesAutoresizingMaskIntoConstraints="NO" id="s5K-Zl-VDR">
-                                                                <rect key="frame" x="361" y="0.0" width="13" height="13"/>
+                                                                <rect key="frame" x="361" y="0.0" width="13" height="25"/>
                                                                 <color key="tintColor" white="0.02" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="13" id="CPw-py-Rfa"/>
-                                                                    <constraint firstAttribute="height" constant="13" id="gp7-zj-9h7"/>
+                                                                    <constraint firstAttribute="height" constant="25" id="gp7-zj-9h7"/>
                                                                 </constraints>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7un-pE-eCi" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="26" width="374" height="124"/>
+                                                        <rect key="frame" x="0.0" y="38" width="374" height="124"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wse-n1-8A6">
                                                                 <rect key="frame" x="16" y="16" width="342" height="88"/>
@@ -7641,9 +7641,8 @@ Premium user</string>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-zA-VpX">
-                                        <rect key="frame" x="142" y="64" width="131" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-zA-VpX">
+                                        <rect key="frame" x="142" y="64.5" width="130.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="0.02" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -7661,12 +7660,14 @@ Premium user</string>
                                 <constraints>
                                     <constraint firstItem="PHR-qF-f8c" firstAttribute="leading" secondItem="Cbr-lE-YVt" secondAttribute="leading" constant="20" id="99j-x4-C8L"/>
                                     <constraint firstAttribute="bottom" secondItem="qdk-Cb-ief" secondAttribute="bottom" constant="20" id="E80-aI-v8J"/>
+                                    <constraint firstItem="ohf-zA-VpX" firstAttribute="centerX" secondItem="Cbr-lE-YVt" secondAttribute="centerX" id="I2a-Ww-2Zp"/>
                                     <constraint firstItem="qdk-Cb-ief" firstAttribute="leading" secondItem="Cbr-lE-YVt" secondAttribute="leading" constant="20" id="LHq-oT-9cu"/>
                                     <constraint firstItem="uoa-YE-dlQ" firstAttribute="leading" secondItem="Cbr-lE-YVt" secondAttribute="leading" constant="20" id="Lfz-N9-ySz"/>
                                     <constraint firstAttribute="trailing" secondItem="uoa-YE-dlQ" secondAttribute="trailing" constant="20" id="Q5u-Tl-l9b"/>
                                     <constraint firstAttribute="trailing" secondItem="qdk-Cb-ief" secondAttribute="trailing" constant="20" id="WYm-l2-inQ"/>
                                     <constraint firstItem="uoa-YE-dlQ" firstAttribute="top" secondItem="Cbr-lE-YVt" secondAttribute="top" constant="132" id="hhX-mF-uUr"/>
                                     <constraint firstItem="PHR-qF-f8c" firstAttribute="top" secondItem="Cbr-lE-YVt" secondAttribute="top" constant="50" id="i7R-eB-hzF"/>
+                                    <constraint firstItem="ohf-zA-VpX" firstAttribute="centerY" secondItem="PHR-qF-f8c" secondAttribute="centerY" id="ijb-y4-AA8"/>
                                 </constraints>
                             </view>
                         </subviews>

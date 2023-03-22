@@ -38,8 +38,8 @@ class MySubscribtionVC: UIViewController, NVActivityIndicatorViewable {
         let user: UserModel = Shared.getUser()
         lbEmail.text = user.email
         lbName.text = user.fullName
-        lbPrice.text = "$\(subscribe?.price)"
-        lbValidate.text = "Validate till \(subscribe?.validate)"
+        lbPrice.text = "$\(subscribe!.price!)"
+        lbValidate.text = "Validate till \(subscribe!.validate!)"
         
     }
     
@@ -49,6 +49,7 @@ class MySubscribtionVC: UIViewController, NVActivityIndicatorViewable {
             self.stopAnimating()
             Shared.subscribed(status: false)
             self.btnUnsubscribe.isEnabled = false
+            self.btnRenewal.isEnabled = true
             self.showToast(message: "Cancelled your subscription successfully")
         }) { (error) in
             self.stopAnimating()
@@ -60,10 +61,11 @@ class MySubscribtionVC: UIViewController, NVActivityIndicatorViewable {
     
     func renewalSubscribe() {
         self.startAnimating()
-        RequestHandler.postRequest(url:Constants.URL.RENEWAL_SUBSCRIBE, parameter: [:], success: { (successResponse) in
+        RequestHandler.postRequest(url:Constants.URL.SUBSCRIBE, parameter: [:], success: { (successResponse) in
             self.stopAnimating()
             Shared.subscribed(status: true)
             self.btnRenewal.isEnabled = false
+            self.btnUnsubscribe.isEnabled = true
             self.showToast(message: "Renewaled your subscription successfully")
         }) { (error) in
             self.stopAnimating()

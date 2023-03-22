@@ -35,6 +35,24 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
+        
+        if Shared.getUser().subscribed {
+            instantOptionView.setFree()
+            normalOptionView.unselectedView()
+            normalOptionView.btnFull.isEnabled = false
+            unsubscribedStack.isHidden = true
+            btnExpress.isHidden = false
+        } else {
+            normalOptionView.btnFull.isEnabled = true
+            instantOptionDesView.isHidden = true
+            normalOptionDesView.isHidden = false
+            normalOptionView.selectedView()
+            instantOptionView.unselectedView()
+            unsubscribedStack.isHidden = false
+            btnExpress.isHidden = true
+            
+            getInstantPrice()
+        }
    }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,21 +64,6 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
         super.viewDidLoad()
         
         lbAmount.text = "$\(amount!)"
-        
-        if Shared.getUser().subscribed {
-            instantOptionView.setFree()
-            normalOptionView.unselectedView()
-            normalOptionView.btnFull.isHidden = true
-            unsubscribedStack.isHidden = true
-        } else {
-            instantOptionDesView.isHidden = true
-            normalOptionDesView.isHidden = false
-            normalOptionView.selectedView()
-            instantOptionView.unselectedView()
-            btnExpress.isHidden = true
-            
-            getInstantPrice()
-        }
         
         normalOptionView.btnFullAction = { () in
             self.isInstant = false
