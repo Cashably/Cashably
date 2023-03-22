@@ -6501,8 +6501,22 @@ Approved for Loan</string>
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-0H-Xzr">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1262"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="872"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-mN-lvd" userLabel="topBiCircleOuter" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
+                                                        <rect key="frame" x="-117" y="-250" width="588" height="588"/>
+                                                        <color key="backgroundColor" red="0.88627450980392153" green="0.98039215686274506" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration" label="topBiCircleOuter"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="588" id="UbW-eO-5cz"/>
+                                                            <constraint firstAttribute="width" constant="588" id="aqj-Qd-1vX"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <real key="value" value="262"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVQ-bu-EnY" userLabel="topBiCircle" customClass="RoundBorderView" customModule="Cashably" customModuleProvider="target">
                                                         <rect key="frame" x="-55.5" y="-200" width="525" height="525"/>
                                                         <color key="backgroundColor" red="0.023529411764705882" green="0.792156862745098" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6512,9 +6526,6 @@ Approved for Loan</string>
                                                             <constraint firstAttribute="height" constant="525" id="Z3J-AK-gPC"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="_radius">
-                                                                <real key="value" value="262"/>
-                                                            </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                 <real key="value" value="262"/>
                                                             </userDefinedRuntimeAttribute>
@@ -6593,7 +6604,7 @@ Approved for Loan</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5SQ-yI-SYE">
-                                                        <rect key="frame" x="20" y="345" width="374" height="564.5"/>
+                                                        <rect key="frame" x="20" y="375" width="374" height="564.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="b35-x5-zOo" userLabel="option stack">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="131"/>
@@ -6736,10 +6747,12 @@ Approved for Loan</string>
                                                     <constraint firstItem="zVQ-bu-EnY" firstAttribute="centerX" secondItem="kGK-0H-Xzr" secondAttribute="centerX" id="JJI-xR-ORy"/>
                                                     <constraint firstItem="zoU-Be-TNR" firstAttribute="centerX" secondItem="zVQ-bu-EnY" secondAttribute="centerX" id="Ob6-Uu-6El"/>
                                                     <constraint firstItem="zoU-Be-TNR" firstAttribute="top" secondItem="oBs-Pq-kDj" secondAttribute="bottom" constant="10" id="cHs-IN-s4b"/>
-                                                    <constraint firstAttribute="height" constant="1262" id="cSW-gO-Oth"/>
+                                                    <constraint firstAttribute="height" constant="872" id="cSW-gO-Oth"/>
                                                     <constraint firstItem="huh-jr-pdI" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="90" id="fci-SX-jgn"/>
+                                                    <constraint firstItem="qpO-mN-lvd" firstAttribute="centerX" secondItem="kGK-0H-Xzr" secondAttribute="centerX" constant="-30" id="kiv-Cr-qgQ"/>
                                                     <constraint firstItem="oBs-Pq-kDj" firstAttribute="top" secondItem="huh-jr-pdI" secondAttribute="bottom" constant="10" id="naF-RB-GNt"/>
-                                                    <constraint firstItem="5SQ-yI-SYE" firstAttribute="top" secondItem="zVQ-bu-EnY" secondAttribute="bottom" constant="20" id="rkr-G9-nji"/>
+                                                    <constraint firstItem="qpO-mN-lvd" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="-250" id="oNd-V4-OGA"/>
+                                                    <constraint firstItem="5SQ-yI-SYE" firstAttribute="top" secondItem="zVQ-bu-EnY" secondAttribute="bottom" constant="50" id="rkr-G9-nji"/>
                                                     <constraint firstItem="huh-jr-pdI" firstAttribute="centerX" secondItem="kGK-0H-Xzr" secondAttribute="centerX" id="t6L-VI-Elf"/>
                                                     <constraint firstItem="zVQ-bu-EnY" firstAttribute="top" secondItem="kGK-0H-Xzr" secondAttribute="top" constant="-200" id="tbj-Zf-W2o"/>
                                                     <constraint firstItem="oBs-Pq-kDj" firstAttribute="centerX" secondItem="kGK-0H-Xzr" secondAttribute="centerX" id="up5-zI-KHL"/>
@@ -6801,6 +6814,8 @@ Approved for Loan</string>
                         <outlet property="normalOptionDesView" destination="gkH-Gb-v1J" id="f7Q-hf-l7v"/>
                         <outlet property="normalOptionView" destination="0EB-5C-8mW" id="DKH-IJ-xIt"/>
                         <outlet property="optionDesView" destination="m9V-Hl-cFT" id="WrY-gd-gU2"/>
+                        <outlet property="topInnerCircleView" destination="zVQ-bu-EnY" id="iBP-E4-1d3"/>
+                        <outlet property="topOuterCircleView" destination="qpO-mN-lvd" id="Y0m-BJ-JBv"/>
                         <outlet property="unsubscribedStack" destination="WFn-GF-Y5j" id="FKO-tX-BNj"/>
                     </connections>
                 </viewController>
@@ -11779,7 +11794,7 @@ if you want..</string>
         <image name="ic_circle_dollar_black" width="22" height="22"/>
         <image name="ic_color_bank" width="40" height="40"/>
         <image name="ic_color_calendar" width="40" height="40"/>
-        <image name="ic_crown" width="20" height="20"/>
+        <image name="ic_crown" width="23" height="23"/>
         <image name="ic_decrease" width="10" height="16"/>
         <image name="ic_doc" width="20" height="22"/>
         <image name="ic_edit" width="15" height="18"/>

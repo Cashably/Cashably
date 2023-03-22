@@ -33,4 +33,38 @@ extension UIView {
         self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
     
+    func rotate(angle: CGFloat) {
+        let radians = angle / 180.0 * CGFloat.pi
+        let rotation = self.transform.rotated(by: radians);
+        self.transform = rotation
+    }
+    
+    func moveUp(value: Double) {
+        let delta = -value
+        UIView.animate(withDuration: 0.5, delay: 0.0, options:[], animations: {
+            self.transform = CGAffineTransform(translationX: 0, y: delta)
+        }, completion: nil)
+    }
+
+
+    func moveDown(value: Double) {
+        UIView.animate(withDuration: 0.5, delay: 0.0, options:[], animations: {
+//            let screenSize = UIScreen.main.bounds.size
+            self.transform = CGAffineTransform(translationX: 0, y: value)
+        }, completion: nil)
+    }
+    
+    func moveLeft(value: Double) {
+        let delta = -value
+        UIView.animate(withDuration: 0.5, delay: 0.0, options:[], animations: {
+            self.transform = CGAffineTransform(translationX: delta, y: 0)
+        }, completion: nil)
+    }
+    
+    func moveRight(value: Double) {
+        UIView.animate(withDuration: 0.5, delay: 0.0, options:[], animations: {
+            self.transform = CGAffineTransform(translationX: value, y: 0)
+        }, completion: nil)
+    }
+    
 }

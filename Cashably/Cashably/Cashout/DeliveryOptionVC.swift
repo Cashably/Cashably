@@ -26,7 +26,8 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     @IBOutlet weak var unsubscribedStack: UIStackView!
     @IBOutlet weak var btnExpress: UIButton!
     @IBOutlet weak var btnNormal: UIButton!
-    
+    @IBOutlet weak var topInnerCircleView: RoundBorderView!
+    @IBOutlet weak var topOuterCircleView: RoundBorderView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -42,6 +43,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
             normalOptionView.btnFull.isEnabled = false
             unsubscribedStack.isHidden = true
             btnExpress.isHidden = false
+            
         } else {
             normalOptionView.btnFull.isEnabled = true
             instantOptionDesView.isHidden = true
@@ -66,19 +68,27 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
         lbAmount.text = "$\(amount!)"
         
         normalOptionView.btnFullAction = { () in
+            if self.isInstant == false {
+                return
+            }
             self.isInstant = false
             self.instantOptionView.unselectedView()
             self.instantOptionDesView.isHidden = true
             self.normalOptionDesView.isHidden = false
             self.btnNormal.setTitle("Continue with Normal Delivery", for: .normal)
+            self.topOuterCircleView.moveRight(value: 60)
         }
         
         instantOptionView.btnFullAction = { () in
+            if self.isInstant == true {
+                return
+            }
             self.isInstant = true
             self.normalOptionView.unselectedView()
             self.instantOptionDesView.isHidden = false
             self.normalOptionDesView.isHidden = true
             self.btnNormal.setTitle("Continue with Instant Delivery", for: .normal)
+            self.topOuterCircleView.moveRight(value: 60)
         }
         
     }
