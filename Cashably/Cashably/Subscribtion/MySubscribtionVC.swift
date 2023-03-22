@@ -11,8 +11,6 @@ import NVActivityIndicatorView
 
 class MySubscribtionVC: UIViewController, NVActivityIndicatorViewable {
     
-    var subscribe: Subscribe?
-    
     @IBOutlet weak var lbEmail: UILabel!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbAddress: UILabel!
@@ -24,6 +22,8 @@ class MySubscribtionVC: UIViewController, NVActivityIndicatorViewable {
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
+        
+        loadSubscription()
         
    }
 
@@ -38,9 +38,27 @@ class MySubscribtionVC: UIViewController, NVActivityIndicatorViewable {
         let user: UserModel = Shared.getUser()
         lbEmail.text = user.email
         lbName.text = user.fullName
-        lbPrice.text = "$\(subscribe!.price!)"
-        lbValidate.text = "Validate till \(subscribe!.validate!)"
         
+    }
+    
+    func loadSubscription() {
+        self.startAnimating()
+        RequestHandler.getRequest(url:Constants.URL.SUBSCRIPTION, parameter: [:], success: { (successResponse) in
+            self.stopAnimating()
+            
+            let dictionary = successResponse as! [String: Any]
+            if let data = dictionary["data"] as? [String: Any] {
+                let subscribe = Subscribe(fromDictionary: data)
+                self.lbPrice.text = "$\(subscribe.price!)"
+                self.lbValidate.text = "Validate till \(subscribe.validate!)"
+            }
+            
+        }) { (error) in
+            self.stopAnimating()
+                        
+            let alert = Alert.showBasicAlert(message: error.message)
+            self.presentVC(alert)
+        }
     }
     
     func cancelSubscribe() {

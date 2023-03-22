@@ -30,6 +30,7 @@ class Constants {
         static let SUBSCRIBE_PRICE = USER_API + "/subscribe/price"
         static let SUBSCRIBE = USER_API + "/subscribe"
         static let UNSUBSCRIBE = USER_API + "/unsubscribe"
+        static let SUBSCRIPTION = USER_API + "/subscription"
         static let RENEWAL_SUBSCRIBE = USER_API + "/subscribe/renewal"
         static let LOAN_REQUEST = USER_API + "/loan/request"
         static let LOAN_ACCEPT = USER_API + "/loan/accept"

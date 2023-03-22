@@ -85,7 +85,6 @@ extension SubscribeVC: SubscribeSuccessDelegate {
         self.btnSubscribe.isEnabled = false
         
         let subVC = self.storyboard?.instantiateViewController(withIdentifier: "MySubscribtionVC") as! MySubscribtionVC
-        subVC.subscribe = subscribe
         self.navigationController?.pushViewController(subVC, animated: true)
     }
 }

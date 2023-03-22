@@ -20,13 +20,14 @@ class SettingsVC: UIViewController, NVActivityIndicatorViewable {
         case transactions
         case notification
         case cards
+        case subscription
         case about
         case chat
         case logout
         case none
     }
     
-    private var settings: [Settings] = [.transactions, .notification, .cards, .about, .chat, .logout, .none]
+    private var settings: [Settings] = [.transactions, .notification, .cards, .subscription, .about, .chat, .logout, .none]
     
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbEmail: UILabel!
@@ -309,13 +310,21 @@ extension SettingsVC: UITableViewDelegate {
             break
         case .none:
             break
+        case .subscription:
+            if Shared.getUser().subscribed {
+                let subVC = self.storyboard?.instantiateViewController(withIdentifier: "MySubscribtionVC") as! MySubscribtionVC
+                self.navigationController?.pushViewController(subVC, animated: true)
+            } else {
+                self.showToast(message: "No subscription yet")
+            }
+            break
         }
     }
 }
 
 extension SettingsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -338,16 +347,21 @@ extension SettingsVC: UITableViewDataSource {
             cell.logoView.backgroundColor = UIColor(red: 0.969, green: 0.576, blue: 0.102, alpha: 0.1)
             break
         case 3:
+            cell.imgIcon.image = UIImage(named: "ic_circle_dollar")
+            cell.lbTitle.text = "My Subscription"
+            cell.logoView.backgroundColor = UIColor(red: 0.133, green: 0.736, blue: 0.816, alpha: 0.1)
+            break
+        case 4:
             cell.imgIcon.image = UIImage(named: "ic_color_info")
             cell.lbTitle.text = "About Us"
             cell.logoView.backgroundColor = UIColor(red: 0.933, green: 0.292, blue: 0.74, alpha: 0.1)
             break
-        case 4:
+        case 5:
             cell.imgIcon.image = UIImage(named: "ic_color_msg")
             cell.lbTitle.text = "Chat With Us"
             cell.logoView.backgroundColor = UIColor(red: 0.314, green: 0.227, blue: 0.749, alpha: 0.1)
             break
-        case 5:
+        case 6:
             cell.imgIcon.image = UIImage(named: "ic_color_msg")
             cell.lbTitle.text = "Log out"
             break
