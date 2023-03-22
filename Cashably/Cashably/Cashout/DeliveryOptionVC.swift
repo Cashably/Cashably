@@ -156,8 +156,16 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
             
         }) { (error) in
             self.stopAnimating()
-            let alert = Alert.showBasicAlert(message: error.message)
-            self.presentVC(alert)
+            
+            if error.status == Constants.NetworkError.generic {
+                let limitVC = self.storyboard?.instantiateViewController(withIdentifier: "LimitFundVC") as! LimitFundVC
+                limitVC.modalTransitionStyle = .coverVertical
+                limitVC.modalPresentationStyle = .overFullScreen
+                self.presentVC(limitVC)
+            } else {
+                let alert = Alert.showBasicAlert(message: error.message)
+                self.presentVC(alert)
+            }
             
         }
     }
