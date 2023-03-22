@@ -69,15 +69,15 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
     func toggleCheckbox(_ gesture: UITapGestureRecognizer) {
         
         guard let text = self.termsText.text else { return }
-        if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Terms and Condition") {
+        if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Cashably's Terms of Service") {
             UIApplication.shared.open(URL(string: "https://cashably.com/terms-conditions/")!)
-        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Privacy Policy") {
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Privacy Policy,") {
             UIApplication.shared.open(URL(string: "https://cashably.com/privacy-policy/")!)
-        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Terms of service") {
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Dwolla's Terms of Service") {
             UIApplication.shared.open(URL(string: "https://www.dwolla.com/legal/tos/")!)
-        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Dwolla Privacy Policy") {
+        } else if gesture.didTapAttributedTextInLabel(label: termsText, targetText: "Privacy Policy.") {
             UIApplication.shared.open(URL(string: "https://www.dwolla.com/legal/privacy/")!)
-        }
+        } 
     }
     
     @IBAction func actionSignup(_ sender: UIButton) {

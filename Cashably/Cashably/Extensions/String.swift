@@ -38,14 +38,14 @@ extension String {
         guard let data = data(using: .utf8) else { return nil }
         
         let attributedTermsTitle = NSMutableAttributedString()
-        attributedTermsTitle.append(NSAttributedString(string: "By continuing, I agree to ", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!]))
-        attributedTermsTitle.append(NSAttributedString(string: "Terms and Condition", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: "terms"]))
+        attributedTermsTitle.append(NSAttributedString(string: "By checking this box, you agree to ", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!]))
+        attributedTermsTitle.append(NSAttributedString(string: "Cashably's Terms of Service", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: "terms"]))
         attributedTermsTitle.append(NSAttributedString(string: " and ", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!]))
-        attributedTermsTitle.append(NSAttributedString(string: "Privacy Policy", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: "policy"]))
-        attributedTermsTitle.append(NSAttributedString(string: " authorize.  Cashably to obtain, use and share consumer reports about me. Agree Dwolla ", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!]))
-        attributedTermsTitle.append(NSAttributedString(string: "Terms of service", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: "dwolla-terms"]))
+        attributedTermsTitle.append(NSAttributedString(string: "Privacy Policy,", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: "policy"]))
+        attributedTermsTitle.append(NSAttributedString(string: ", as well as our partner ", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!]))
+        attributedTermsTitle.append(NSAttributedString(string: "Dwolla's Terms of Service", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: "dwolla-terms"]))
         attributedTermsTitle.append(NSAttributedString(string: " and ", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!]))
-        attributedTermsTitle.append(NSAttributedString(string: "Dwolla Privacy Policy", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: URL(string: "https://www.dwolla.com/legal/privacy/")!]))
+        attributedTermsTitle.append(NSAttributedString(string: "Privacy Policy.", attributes: [NSAttributedString.Key.font:UIFont(name: "BRFirma-Regular", size: 12)!, NSAttributedString.Key.link: URL(string: "https://www.dwolla.com/legal/privacy/")!]))
         
         return attributedTermsTitle
         
