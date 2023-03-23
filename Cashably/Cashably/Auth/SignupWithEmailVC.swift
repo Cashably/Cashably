@@ -97,6 +97,22 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
             return
         }
         
+        let regexEmail = try! NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+        
+        if regexEmail.matches(tfEmail.text!) == false {
+            tfEmail.becomeFirstResponder()
+            self.showToast(message: "Invalid email format.")
+            return
+        }
+        
+        let regex = try! NSRegularExpression(pattern: "[A-Za-z0-9!?@#$%^&*()<>_-+=,./|].{11,}")
+        
+        if regex.matches(tfPassword.text!) == false {
+            tfPassword.becomeFirstResponder()
+            self.showToast(message: "Must be a 12+ character password including 1 letter, 1 number & 1 symbol")
+            return
+        }
+        
         self.startAnimating()
         RequestHandler.registerUser(email: (tfEmail.text)!, password: (tfPassword.text)!, success: { (successResponse) in
             self.stopAnimating()

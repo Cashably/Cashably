@@ -161,6 +161,7 @@
 		F0CE9F5528612546004B1515 /* PaySnoozeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE9F5428612546004B1515 /* PaySnoozeVC.swift */; };
 		F0D2047029C8F3FB0059E541 /* Subscribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D2046F29C8F3FB0059E541 /* Subscribe.swift */; };
 		F0D3093E2885D9880083C89B /* BalloonMarker1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3093D2885D9880083C89B /* BalloonMarker1.swift */; };
+		F0EC3D1329CBFCB3005E71FC /* NSRegularExpression .swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC3D1229CBFCB3005E71FC /* NSRegularExpression .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +346,7 @@
 		F0CE9F5428612546004B1515 /* PaySnoozeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaySnoozeVC.swift; sourceTree = "<group>"; };
 		F0D2046F29C8F3FB0059E541 /* Subscribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscribe.swift; sourceTree = "<group>"; };
 		F0D3093D2885D9880083C89B /* BalloonMarker1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker1.swift; sourceTree = "<group>"; };
+		F0EC3D1229CBFCB3005E71FC /* NSRegularExpression .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,6 +739,7 @@
 				F064BB5E288E87B600C0FF41 /* Shared.swift */,
 				F0B9293728D6490B00A7AA77 /* String.swift */,
 				F0B9293928D742A200A7AA77 /* MultipleTapLabel.swift */,
+				F0EC3D1229CBFCB3005E71FC /* NSRegularExpression .swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1149,6 +1152,7 @@
 				F0D3093E2885D9880083C89B /* BalloonMarker1.swift in Sources */,
 				F064BB642892764700C0FF41 /* NetworkHandler.swift in Sources */,
 				F0643D042856C62600CAB86F /* SceneDelegate.swift in Sources */,
+				F0EC3D1329CBFCB3005E71FC /* NSRegularExpression .swift in Sources */,
 				F000087B29C316B400B3ED7C /* DeliveryOptionVC.swift in Sources */,
 				F05365D5285FF27100B771D9 /* ConnectBankVC.swift in Sources */,
 				F05365C9285F76D700B771D9 /* RequestNotificationEnableVC.swift in Sources */,
