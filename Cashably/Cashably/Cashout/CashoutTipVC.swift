@@ -44,6 +44,7 @@ class CashoutTipVC: UIViewController, NVActivityIndicatorViewable {
     
     var donate: Double = 0
     var company = ""
+    public var limitValue: Double = 14
     
     override func viewDidLoad() {
         super.viewDidLoad()

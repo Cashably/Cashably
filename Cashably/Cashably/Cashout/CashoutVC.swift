@@ -150,6 +150,7 @@ class CashoutVC: UIViewController {
         
         let tipVC = storyboard?.instantiateViewController(withIdentifier: "CashoutTipVC") as! CashoutTipVC
         tipVC.delegate = self
+        tipVC.limitValue = floor(amount * 0.2)
         
         let sheetController = SheetViewController(
             controller: tipVC,

@@ -17,8 +17,29 @@ extension CashoutTipVC {
         
         slider.lineWidth = 15
         
-        slider.minimumValue = 2
-        slider.maximumValue = 14
+        slider.maximumValue = self.limitValue
+        
+        if self.limitValue > 10 {
+            slider.minimumValue = 8
+            self.rates = [String]()
+            let n = 5
+            for i in 0..<n {
+                let term = Int(self.limitValue) / 4 * i
+                if term < 10 {
+                    self.rates.append("$\(term)\n  |")
+                }
+                else { self.rates.append("$\(term)\n    |") }
+            }
+            self.rates[4] = "$\(Int(self.limitValue))\n    |"
+        } else if self.limitValue <= 10 {
+            slider.minimumValue = 1
+            self.rates = [String]()
+            let n = Int(self.limitValue) + 1
+            print(floor(self.limitValue))
+            for i in 1..<n {
+                self.rates.append("$\(i)\n  |")
+            }
+        }
 
         slider.filledColor =  UIColor(red: 0.953, green: 0.953, blue: 0.953, alpha: 1)
         slider.unfilledColor =  .white
@@ -43,7 +64,7 @@ extension CashoutTipVC {
         
         slider.enableOuterLine = true
         
-        slider.currentValue = 8
+        slider.currentValue = 1
         
         slider.translatesAutoresizingMaskIntoConstraints = false
         
@@ -59,32 +80,33 @@ extension CashoutTipVC: MSCircularSliderDelegate {
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
         self.lbAmount.text = "$\(ceil(value))"
         self.donate = ceil(value)
+        let percent = value / self.limitValue
         
-        if value >= 2 && value < 4 {
+        if percent < 0.2 {
             emoWorriedView.active()
             emoSmileView.inactive()
             emoLoveView.inactive()
             emoBlushView.inactive()
             emoHeartView.inactive()
-        } else if value >= 4 && value < 8 {
+        } else if percent >= 0.2 && percent < 0.4 {
             emoWorriedView.inactive()
             emoSmileView.active()
             emoLoveView.inactive()
             emoBlushView.inactive()
             emoHeartView.inactive()
-        } else if value >= 8 && value < 10 {
+        } else if percent >= 0.4 && percent < 0.6 {
             emoWorriedView.inactive()
             emoSmileView.inactive()
             emoLoveView.inactive()
             emoBlushView.active()
             emoHeartView.inactive()
-        } else if value >= 10 && value < 12 {
+        } else if percent >= 0.6 && percent < 0.8 {
             emoWorriedView.inactive()
             emoSmileView.inactive()
             emoLoveView.inactive()
             emoBlushView.inactive()
             emoHeartView.active()
-        } else if value >= 12 {
+        } else if percent >= 0.8 {
             emoWorriedView.inactive()
             emoSmileView.inactive()
             emoLoveView.active()
