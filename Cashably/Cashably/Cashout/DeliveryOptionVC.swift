@@ -116,7 +116,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     }
     
     @IBAction func actionNormal(_ sender: UIButton) {
-        requestWithdraw()
+        withdraw()
     }
     
     @IBAction func actionSubscribe(_ sender: UIButton) {
@@ -125,7 +125,7 @@ class DeliveryOptionVC: UIViewController , NVActivityIndicatorViewable{
     }
     
     @IBAction func actionExpressInstant(_ sender: Any) {
-        requestWithdraw()
+        withdraw()
     }
     
     func requestWithdraw() {
