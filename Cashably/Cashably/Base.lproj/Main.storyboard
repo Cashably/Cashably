@@ -6313,6 +6313,7 @@ your money.</string>
                     <connections>
                         <outlet property="btnAccept" destination="xBD-Hb-hTS" id="vqu-NF-bUm"/>
                         <outlet property="btnBack" destination="4PO-pn-PLM" id="UgY-L7-sSO"/>
+                        <outlet property="lbAmount" destination="Adc-06-4fC" id="iOc-f5-lo7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="563-uW-Vbi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -11738,13 +11739,13 @@ if you want..</string>
             <size key="intrinsicContentSize" width="104.5" height="17"/>
         </designable>
         <designable name="LAe-iS-UNt">
-            <size key="intrinsicContentSize" width="115.5" height="14"/>
+            <size key="intrinsicContentSize" width="109" height="17"/>
         </designable>
         <designable name="eQ3-dB-Ilr">
             <size key="intrinsicContentSize" width="30" height="0.0"/>
         </designable>
         <designable name="iGy-02-DUB">
-            <size key="intrinsicContentSize" width="105.5" height="14"/>
+            <size key="intrinsicContentSize" width="99.5" height="17"/>
         </designable>
         <designable name="oJi-fc-DTC">
             <size key="intrinsicContentSize" width="53" height="17"/>

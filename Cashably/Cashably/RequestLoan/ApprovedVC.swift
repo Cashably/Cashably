@@ -17,10 +17,12 @@ class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var lbAmount: UILabel!
     
+    public var approved: Double! = 25
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        lbAmount.text = "$\(approved!)"
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -30,6 +32,7 @@ class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.navigationController?.isNavigationBarHidden = true
+        
    }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,6 +46,7 @@ class ApprovedVC: UIViewController, NVActivityIndicatorViewable {
         RequestHandler.postRequest(url:Constants.URL.LOAN_ACCEPT, parameter: [:], success: { (successResponse) in
             self.stopAnimating()
             let cashoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CashoutVC") as! CashoutVC
+            cashoutVC.limitValue = self.approved
             self.navigationController?.pushViewController(cashoutVC, animated: true)
         }) { (error) in
             self.stopAnimating()

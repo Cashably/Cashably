@@ -199,6 +199,11 @@ extension HomeVC {
             self.stopAnimating()
             let approvedVC = self.storyboard?.instantiateViewController(withIdentifier: "ApprovedVC") as! ApprovedVC
             self.navigationController?.pushViewController(approvedVC, animated: true)
+            let dictionary = successResponse as! [String: Any]
+            if let amount = dictionary["approved"] as? Double {
+                approvedVC.approved = amount
+            }
+            
         }) { (error) in
             self.stopAnimating()
             
