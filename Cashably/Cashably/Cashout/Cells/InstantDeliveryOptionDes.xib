@@ -60,7 +60,7 @@
                                 <constraint firstAttribute="width" constant="185" id="z6D-Vx-V3h"/>
                             </constraints>
                             <string key="text">Receive funds typically
-within 30 mins.</string>
+within 24 hours.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>

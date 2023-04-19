@@ -7474,7 +7474,7 @@ Premium user</string>
                                                         <rect key="frame" x="0.0" y="38" width="374" height="124"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wse-n1-8A6">
-                                                                <rect key="frame" x="16" y="16" width="342" height="88"/>
+                                                                <rect key="frame" x="16" y="16" width="342" height="36"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="P7J-fV-V7m">
                                                                         <rect key="frame" x="0.0" y="0.0" width="342" height="36"/>
@@ -7550,11 +7550,11 @@ Premium user</string>
                                                                             <constraint firstItem="AII-N9-kh7" firstAttribute="width" secondItem="cAL-M3-sxg" secondAttribute="width" id="DUd-ri-Vvz"/>
                                                                         </constraints>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="HNb-7U-Flq">
-                                                                        <rect key="frame" x="0.0" y="52" width="342" height="36"/>
+                                                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="HNb-7U-Flq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="2"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAP-9D-SJT">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="0.0"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <color key="textColor" red="0.63137254899999995" green="0.65098039220000004" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -7568,7 +7568,7 @@ Premium user</string>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awI-Rd-agJ">
-                                                                                <rect key="frame" x="0.0" y="19" width="342" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="2" width="342" height="0.0"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <color key="textColor" white="0.02" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -7700,7 +7700,7 @@ Premium user</string>
                         <outlet property="btnRenewal" destination="nTW-LF-ax4" id="EUc-DA-RVy"/>
                         <outlet property="btnUnsubscribe" destination="p1L-a8-5dg" id="Jlq-Lp-VLN"/>
                         <outlet property="lbAddress" destination="awI-Rd-agJ" id="xqm-nK-eYW"/>
-                        <outlet property="lbEmail" destination="H2K-K0-qLZ" id="THB-GX-ZcJ"/>
+                        <outlet property="lbEmail" destination="6wk-8f-adz" id="ii8-zm-9mu"/>
                         <outlet property="lbName" destination="yu2-pi-MTq" id="OzN-wy-NR6"/>
                         <outlet property="lbPrice" destination="qbv-mG-fjo" id="Qzb-sU-2XX"/>
                         <outlet property="lbValidate" destination="oYF-S8-3EL" id="WBb-Tw-n1h"/>
@@ -11735,20 +11735,8 @@ if you want..</string>
         </scene>
     </scenes>
     <designables>
-        <designable name="99H-2h-R2k">
-            <size key="intrinsicContentSize" width="104.5" height="17"/>
-        </designable>
-        <designable name="LAe-iS-UNt">
-            <size key="intrinsicContentSize" width="109" height="17"/>
-        </designable>
         <designable name="eQ3-dB-Ilr">
             <size key="intrinsicContentSize" width="30" height="0.0"/>
-        </designable>
-        <designable name="iGy-02-DUB">
-            <size key="intrinsicContentSize" width="99.5" height="17"/>
-        </designable>
-        <designable name="oJi-fc-DTC">
-            <size key="intrinsicContentSize" width="53" height="17"/>
         </designable>
         <designable name="vP2-2h-58s">
             <size key="intrinsicContentSize" width="30" height="0.0"/>
