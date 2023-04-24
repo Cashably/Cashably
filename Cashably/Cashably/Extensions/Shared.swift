@@ -10,16 +10,16 @@ import Foundation
 class Shared{
     
     static func storeUserToken(token: String) {
-        var user  = getUser1()
-        user["token"] = token
-        storeUser(user: user)
-//        UserDefaults.standard.set(token, forKey: "token")
+//        var user  = getUser1()
+//        user["token"] = token
+//        storeUser(user: user)
+        UserDefaults.standard.set(token, forKey: "token")
     }
     
     static func getUserToken() -> String {
-        let user  = getUser()
-        return user.token ?? ""
-//        return UserDefaults.standard.string(forKey: "token") ?? ""
+//        let user  = getUser()
+//        return user.token ?? ""
+        return UserDefaults.standard.string(forKey: "token") ?? ""
     }
     
     static func storeForgotToken(token: String) {
@@ -39,6 +39,7 @@ class Shared{
     static func getUser() -> UserModel {
         
         let data = UserDefaults.standard.object(forKey: "user")
+            
         let objUser = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as! [String: Any]
         let user = UserModel(fromDictionary: objUser)
         return user

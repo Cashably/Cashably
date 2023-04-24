@@ -26,7 +26,11 @@ struct UserModel {
         dob = dictionary["dob"] as? String
         SSN4 = dictionary["ssn"] as? String
         token = dictionary["token"] as? String
-        isCompletedProfile = dictionary["isCompletedProfile"] as? Bool
+        if let isCompletedProfile = dictionary["isCompletedProfile"] as? Bool {
+            self.isCompletedProfile = isCompletedProfile
+        } else {
+            self.isCompletedProfile = false
+        }
         if let subscribed = dictionary["subscribed"] as? Bool {
             self.subscribed = subscribed
         } else {

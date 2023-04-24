@@ -148,16 +148,20 @@ class CashoutVC: UIViewController {
             return
         }
         
-        let tipVC = storyboard?.instantiateViewController(withIdentifier: "CashoutTipVC") as! CashoutTipVC
-        tipVC.delegate = self
-        tipVC.limitValue = floor(amount * 0.2)
-        
-        let sheetController = SheetViewController(
-            controller: tipVC,
-            sizes: [.fixed(700)])
-        sheetController.cornerRadius = 25
-        sheetController.shouldRecognizePanGestureWithUIControls = false
-        self.present(sheetController, animated: true, completion: nil)
+        if amount >= 5 {
+            let tipVC = storyboard?.instantiateViewController(withIdentifier: "CashoutTipVC") as! CashoutTipVC
+            tipVC.delegate = self
+            tipVC.limitValue = floor(amount * 0.2)
+            
+            let sheetController = SheetViewController(
+                controller: tipVC,
+                sizes: [.fixed(700)])
+            sheetController.cornerRadius = 25
+            sheetController.shouldRecognizePanGestureWithUIControls = false
+            self.present(sheetController, animated: true, completion: nil)
+        } else {
+            next()
+        }
     }
     
     @IBAction func actionInfo(_ sender: UIButton) {

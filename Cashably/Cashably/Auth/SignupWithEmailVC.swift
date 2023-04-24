@@ -105,11 +105,11 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
             return
         }
         
-        let regex = try! NSRegularExpression(pattern: "[A-Za-z0-9!?@#$%^&*()<>_-+=,./|].{11,}")
+        let regex = try! NSRegularExpression(pattern: "[A-Za-z0-9!?@#$%^&*].{11,}")
         
         if regex.matches(tfPassword.text!) == false {
             tfPassword.becomeFirstResponder()
-            self.showToast(message: "Must be a 12+ character password including 1 letter, 1 number & 1 symbol")
+            self.showToast(message: "Must be a 12+ character password including 1 capital letter, 1 number & 1 symbol")
             return
         }
         
