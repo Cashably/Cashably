@@ -109,7 +109,9 @@ class SignupWithEmailVC: UIViewController, NVActivityIndicatorViewable {
         
         if regex.matches(tfPassword.text!) == false {
             tfPassword.becomeFirstResponder()
-            self.showToast(message: "Must be a 12+ character password including 1 capital letter, 1 number & 1 symbol")
+//            self.showToast(message: "Must be a 12+ character password including 1 capital letter, 1 number & 1 symbol")
+            let alert = Alert.showBasicAlert(message: "Must be a 12+ character password including 1 capital letter, 1 number & 1 symbol")
+            self.presentVC(alert)
             return
         }
         
