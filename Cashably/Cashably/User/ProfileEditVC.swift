@@ -85,9 +85,23 @@ class ProfileEditVC: UIViewController, NVActivityIndicatorViewable {
             tfName.becomeFirstResponder()
             return
         }
+        let regexName = try! NSRegularExpression(pattern: "^([a-zA-ZÀ-ú]{2,} [a-zA-ZÀ-ú]{1,}'?[a-zA-ZÀ-ú]{1,})$")
+        
+        if regexName.matches(tfName.text!) == false {
+            tfEmail.becomeFirstResponder()
+            self.showToast(message: "Invalid full name.")
+            return
+        }
         if tfEmail.text?.isEmpty == true {
             self.tfEmail.shake(6, withDelta: 10, speed: 0.06)
             tfEmail.becomeFirstResponder()
+            return
+        }
+        let regexEmail = try! NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+        
+        if regexEmail.matches(tfEmail.text!) == false {
+            tfEmail.becomeFirstResponder()
+            self.showToast(message: "Invalid email format.")
             return
         }
         
