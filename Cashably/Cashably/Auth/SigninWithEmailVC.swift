@@ -69,6 +69,14 @@ class SigninWithEmailVC: UIViewController, NVActivityIndicatorViewable {
             tfPassword.becomeFirstResponder()
             return
         }
+        
+        let regexEmail = try! NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+        
+        if regexEmail.matches(tfEmail.text!) == false {
+            tfEmail.becomeFirstResponder()
+            self.showToast(message: "Invalid email format.")
+            return
+        }
 
         self.startAnimating()
         RequestHandler.loginUser(email: (tfEmail.text)!, password: (tfPassword.text)!, success: { (successResponse) in

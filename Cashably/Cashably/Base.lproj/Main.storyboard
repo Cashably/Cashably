@@ -11735,11 +11735,17 @@ if you want..</string>
         </scene>
     </scenes>
     <designables>
-        <designable name="eQ3-dB-Ilr">
-            <size key="intrinsicContentSize" width="30" height="0.0"/>
+        <designable name="99H-2h-R2k">
+            <size key="intrinsicContentSize" width="104.5" height="17"/>
         </designable>
-        <designable name="vP2-2h-58s">
-            <size key="intrinsicContentSize" width="30" height="0.0"/>
+        <designable name="LAe-iS-UNt">
+            <size key="intrinsicContentSize" width="109" height="17"/>
+        </designable>
+        <designable name="iGy-02-DUB">
+            <size key="intrinsicContentSize" width="99.5" height="17"/>
+        </designable>
+        <designable name="oJi-fc-DTC">
+            <size key="intrinsicContentSize" width="53" height="17"/>
         </designable>
     </designables>
     <resources>
