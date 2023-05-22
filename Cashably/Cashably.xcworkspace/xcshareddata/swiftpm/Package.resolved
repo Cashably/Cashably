@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Intercom",
-        "repositoryURL": "https://github.com/intercom/intercom-ios",
-        "state": {
-          "branch": null,
-          "revision": "cf2b2621105ef9d04ff4a0743f1903526c422203",
-          "version": "9.3.6"
-        }
+  "pins" : [
+    {
+      "identity" : "intercom-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/intercom/intercom-ios",
+      "state" : {
+        "revision" : "cf2b2621105ef9d04ff4a0743f1903526c422203",
+        "version" : "9.3.6"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

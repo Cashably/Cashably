@@ -596,7 +596,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
-  - Alamofire (5.5.0)
+  - Alamofire (5.7.1)
   - BoringSSL-GRPC (0.0.24):
     - BoringSSL-GRPC/Implementation (= 0.0.24)
     - BoringSSL-GRPC/Interface (= 0.0.24)
@@ -607,8 +607,8 @@ PODS:
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
   - DPOTPView (1.5.12)
-  - FirebaseAnalytics (9.4.0):
-    - FirebaseAnalytics/AdIdSupport (= 9.4.0)
+  - FirebaseAnalytics (9.6.0):
+    - FirebaseAnalytics/AdIdSupport (= 9.6.0)
     - FirebaseCore (~> 9.0)
     - FirebaseInstallations (~> 9.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -616,37 +616,37 @@ PODS:
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - FirebaseAnalytics/AdIdSupport (9.4.0):
+  - FirebaseAnalytics/AdIdSupport (9.6.0):
     - FirebaseCore (~> 9.0)
     - FirebaseInstallations (~> 9.0)
-    - GoogleAppMeasurement (= 9.4.0)
+    - GoogleAppMeasurement (= 9.6.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - FirebaseAppCheckInterop (9.4.0)
-  - FirebaseAuth (9.4.0):
+  - FirebaseAppCheckInterop (9.6.0)
+  - FirebaseAuth (9.6.0):
     - FirebaseCore (~> 9.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/Environment (~> 7.7)
     - GTMSessionFetcher/Core (< 3.0, >= 1.7)
-  - FirebaseAuthInterop (9.4.0)
-  - FirebaseCore (9.4.0):
+  - FirebaseAuthInterop (9.6.0)
+  - FirebaseCore (9.6.0):
     - FirebaseCoreDiagnostics (~> 9.0)
     - FirebaseCoreInternal (~> 9.0)
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/Logger (~> 7.7)
-  - FirebaseCoreDiagnostics (9.4.0):
+  - FirebaseCoreDiagnostics (9.6.0):
     - GoogleDataTransport (< 10.0.0, >= 9.1.4)
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/Logger (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - FirebaseCoreExtension (9.4.0):
+  - FirebaseCoreExtension (9.6.0):
     - FirebaseCore (~> 9.0)
-  - FirebaseCoreInternal (9.4.0):
+  - FirebaseCoreInternal (9.6.0):
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
-  - FirebaseFirestore (9.4.0):
+  - FirebaseFirestore (9.6.0):
     - abseil/algorithm (~> 1.20211102.0)
     - abseil/base (~> 1.20211102.0)
     - abseil/container/flat_hash_map (~> 1.20211102.0)
@@ -659,66 +659,66 @@ PODS:
     - "gRPC-C++ (~> 1.44.0)"
     - leveldb-library (~> 1.22)
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - FirebaseInstallations (9.4.0):
+  - FirebaseInstallations (9.6.0):
     - FirebaseCore (~> 9.0)
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/UserDefaults (~> 7.7)
     - PromisesObjC (~> 2.1)
-  - FirebaseStorage (9.4.0):
+  - FirebaseStorage (9.6.0):
     - FirebaseAppCheckInterop (~> 9.0)
     - FirebaseAuthInterop (~> 9.0)
     - FirebaseCore (~> 9.0)
     - FirebaseCoreExtension (~> 9.0)
     - FirebaseStorageInternal (~> 9.0)
-  - FirebaseStorageInternal (9.4.0):
+  - FirebaseStorageInternal (9.6.0):
     - FirebaseCore (~> 9.0)
     - GTMSessionFetcher/Core (< 3.0, >= 1.7)
-  - FittedSheets (2.4.2)
+  - FittedSheets (2.5.3)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
-  - GoogleAppMeasurement (9.4.0):
-    - GoogleAppMeasurement/AdIdSupport (= 9.4.0)
+  - GoogleAppMeasurement (9.6.0):
+    - GoogleAppMeasurement/AdIdSupport (= 9.6.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - GoogleAppMeasurement/AdIdSupport (9.4.0):
-    - GoogleAppMeasurement/WithoutAdIdSupport (= 9.4.0)
+  - GoogleAppMeasurement/AdIdSupport (9.6.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 9.6.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - GoogleAppMeasurement/WithoutAdIdSupport (9.4.0):
+  - GoogleAppMeasurement/WithoutAdIdSupport (9.6.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
-  - GoogleDataTransport (9.2.0):
+  - GoogleDataTransport (9.2.3):
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleUtilities/AppDelegateSwizzler (7.7.0):
+  - GoogleUtilities/AppDelegateSwizzler (7.11.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (7.7.0):
+  - GoogleUtilities/Environment (7.11.1):
     - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleUtilities/Logger (7.7.0):
+  - GoogleUtilities/Logger (7.11.1):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (7.7.0):
+  - GoogleUtilities/MethodSwizzler (7.11.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (7.7.0):
+  - GoogleUtilities/Network (7.11.1):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (7.7.0)"
-  - GoogleUtilities/Reachability (7.7.0):
+  - "GoogleUtilities/NSData+zlib (7.11.1)"
+  - GoogleUtilities/Reachability (7.11.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (7.7.0):
+  - GoogleUtilities/UserDefaults (7.11.1):
     - GoogleUtilities/Logger
   - "gRPC-C++ (1.44.0)":
     - "gRPC-C++/Implementation (= 1.44.0)"
@@ -771,11 +771,11 @@ PODS:
     - gRPC-Core/Interface (= 1.44.0)
     - Libuv-gRPC (= 0.0.10)
   - gRPC-Core/Interface (1.44.0)
-  - GTMSessionFetcher/Core (2.0.0)
-  - iOSDropDown (0.3.4)
-  - IQKeyboardManagerSwift (6.5.9)
+  - GTMSessionFetcher/Core (2.3.0)
+  - iOSDropDown (0.4.0)
+  - IQKeyboardManagerSwift (6.5.11)
   - JGProgressHUD (2.2)
-  - leveldb-library (1.22.1)
+  - leveldb-library (1.22.2)
   - Libuv-gRPC (0.0.10):
     - Libuv-gRPC/Implementation (= 0.0.10)
     - Libuv-gRPC/Interface (= 0.0.10)
@@ -794,13 +794,13 @@ PODS:
   - NVActivityIndicatorView/Base (5.1.1)
   - NVActivityIndicatorView/Extended (5.1.1):
     - NVActivityIndicatorView/Base
-  - Plaid (3.1.0)
-  - PromisesObjC (2.1.1)
+  - Plaid (4.3.1)
+  - PromisesObjC (2.2.0)
   - "UITextField+Shake (1.2.1)"
 
 DEPENDENCIES:
   - Alamofire
-  - Charts
+  - Charts (~> 3.6.0)
   - DPOTPView
   - FirebaseAnalytics (~> 9.0)
   - FirebaseAuth (~> 9.0)
@@ -863,34 +863,34 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
-  FirebaseAnalytics: a1a24e72b7ba7f47045a4633f1abb545c07bd29c
-  FirebaseAppCheckInterop: 63119cdfc94b16c3e9421513c17f597aee2ea225
-  FirebaseAuth: ae5d4402e1516497357d909162b091b3ca2a2e9c
-  FirebaseAuthInterop: 826d3d772b554e3675ceaab8c665008277ca9d1c
-  FirebaseCore: 9a2b10270a854731c4d4d8a97d0aa8380ec3458d
-  FirebaseCoreDiagnostics: aaa87098082c4d4bdd1a9557b1186d18ca85ce8c
-  FirebaseCoreExtension: 2cf8c542b54ad3c2d4b746c22e8828b670dcd9b0
-  FirebaseCoreInternal: a13302b0088fbf5f38b79b6ece49c2af7d3e05d6
-  FirebaseFirestore: 945196dd78f4e92de6fc47b38569a1e7088af81f
-  FirebaseInstallations: 61db1054e688d2bdc4e2b3f744c1b086e913b742
-  FirebaseStorage: 160ba975dd3452d9c59a3bf5ea9bf70ff96bd3c2
-  FirebaseStorageInternal: 425c7dc7de44d9b7e07a9f8d6515bab0f1266b87
-  FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
+  FirebaseAnalytics: 89ad762c6c3852a685794174757e2c60a36b6a82
+  FirebaseAppCheckInterop: d5ecda0c09f8069406643d6e0fa12c09d1b736e3
+  FirebaseAuth: e4a5d3c36e778e41141b91cc861103a441d80bcc
+  FirebaseAuthInterop: b6cf02117f13a8400c8c8b4421e12c6e850bcaf3
+  FirebaseCore: 2082fffcd855f95f883c0a1641133eb9bbe76d40
+  FirebaseCoreDiagnostics: 99a495094b10a57eeb3ae8efa1665700ad0bdaa6
+  FirebaseCoreExtension: e83465d1236b166d1d445bbf0e82b65acb30b73b
+  FirebaseCoreInternal: bca76517fe1ed381e989f5e7d8abb0da8d85bed3
+  FirebaseFirestore: c09ce6d050745a45fb75ebd901005ed3279c3caf
+  FirebaseInstallations: 0a115432c4e223c5ab20b0dbbe4cbefa793a0e8e
+  FirebaseStorage: 1fead543a1f441c3b434c1c9f12560dd82f8b568
+  FirebaseStorageInternal: 81d8a597324ccd06c41a43c5700bc1185a2fc328
+  FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
-  GoogleAppMeasurement: 5d69e04287fc2c10cc43724bfa4bf31fc12c3dff
-  GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
-  GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
+  GoogleAppMeasurement: 6de2b1a69e4326eb82ee05d138f6a5cb7311bcb1
+  GoogleDataTransport: f0308f5905a745f94fb91fea9c6cbaf3831cb1bd
+  GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
-  GTMSessionFetcher: 681175626052e03fdde7952f7e9c7a9785719506
-  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
-  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  GTMSessionFetcher: 3a63d75eecd6aa32c2fc79f578064e1214dfdec2
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
-  leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   MBCheckboxButton: 6ad0b46b111c59ea9dec558e0df1973cee2eb3aa
   MBRadioButton: dcf111c9bb633d4cf6e83200d804af6e025033c8
@@ -898,10 +898,10 @@ SPEC CHECKSUMS:
   MKRingProgressView: f534209b9a1edc0beb2ea613e6b953ea2195b565
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
-  Plaid: 024ce0c2b8d10dae27218331917ee5a824eda63b
-  PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  Plaid: 69a20b259a2d2b10b6b6fb5e801ac9cc4d51db4c
+  PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   "UITextField+Shake": 298ac5a0f239d731bdab999b19b628c956ca0ac3
 
-PODFILE CHECKSUM: ba9c3acaf0cc2f0e5271ab5b74e3cb40d2ab13d0
+PODFILE CHECKSUM: ed9eaccc00ada25972901cf5a17439557fe0266f
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1

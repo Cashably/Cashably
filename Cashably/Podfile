@@ -21,7 +21,7 @@ target 'Cashably' do
     pod 'FittedSheets'
     
     pod 'MKRingProgressView'
-    pod 'Charts'
+    pod 'Charts', '~>3.6.0'
     pod 'MKMagneticProgress'
     
     pod 'IQKeyboardManagerSwift'
